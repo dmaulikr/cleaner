@@ -28,7 +28,6 @@
 		DA9386D71CAC9078006B3213 /* updater.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93862D1CAC9078006B3213 /* updater.m */; };
 		DA9386DA1CAC9078006B3213 /* cgame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93863A1CAC9078006B3213 /* cgame.m */; };
 		DA9386DB1CAC9078006B3213 /* cgameloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93863C1CAC9078006B3213 /* cgameloader.m */; };
-		DA9386DC1CAC9078006B3213 /* cgamesetup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93863E1CAC9078006B3213 /* cgamesetup.m */; };
 		DA9386DD1CAC9078006B3213 /* chome.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386411CAC9078006B3213 /* chome.m */; };
 		DA9386DE1CAC9078006B3213 /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386441CAC9078006B3213 /* cmain.m */; };
 		DA9386DF1CAC9078006B3213 /* cpages.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386461CAC9078006B3213 /* cpages.m */; };
@@ -70,9 +69,6 @@
 		DA9387031CAC9078006B3213 /* vgame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386A41CAC9078006B3213 /* vgame.m */; };
 		DA9387041CAC9078006B3213 /* vgamehub.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386A61CAC9078006B3213 /* vgamehub.m */; };
 		DA9387051CAC9078006B3213 /* vgameloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386A91CAC9078006B3213 /* vgameloader.m */; };
-		DA9387061CAC9078006B3213 /* vgamesetup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386AC1CAC9078006B3213 /* vgamesetup.m */; };
-		DA9387071CAC9078006B3213 /* vgamesetuplocation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386AE1CAC9078006B3213 /* vgamesetuplocation.m */; };
-		DA9387081CAC9078006B3213 /* vgamesetuplocationgradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386B01CAC9078006B3213 /* vgamesetuplocationgradient.m */; };
 		DA9387091CAC9078006B3213 /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386B31CAC9078006B3213 /* valert.m */; };
 		DA93870A1CAC9078006B3213 /* vblur.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386B51CAC9078006B3213 /* vblur.m */; };
 		DA93870B1CAC9078006B3213 /* viewbase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386B71CAC9078006B3213 /* viewbase.m */; };
@@ -123,8 +119,6 @@
 		DA93863A1CAC9078006B3213 /* cgame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgame.m; sourceTree = "<group>"; };
 		DA93863B1CAC9078006B3213 /* cgameloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgameloader.h; sourceTree = "<group>"; };
 		DA93863C1CAC9078006B3213 /* cgameloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgameloader.m; sourceTree = "<group>"; };
-		DA93863D1CAC9078006B3213 /* cgamesetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgamesetup.h; sourceTree = "<group>"; };
-		DA93863E1CAC9078006B3213 /* cgamesetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgamesetup.m; sourceTree = "<group>"; };
 		DA9386401CAC9078006B3213 /* chome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chome.h; sourceTree = "<group>"; };
 		DA9386411CAC9078006B3213 /* chome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chome.m; sourceTree = "<group>"; };
 		DA9386431CAC9078006B3213 /* cmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmain.h; sourceTree = "<group>"; };
@@ -211,12 +205,6 @@
 		DA9386A61CAC9078006B3213 /* vgamehub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgamehub.m; sourceTree = "<group>"; };
 		DA9386A81CAC9078006B3213 /* vgameloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgameloader.h; sourceTree = "<group>"; };
 		DA9386A91CAC9078006B3213 /* vgameloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgameloader.m; sourceTree = "<group>"; };
-		DA9386AB1CAC9078006B3213 /* vgamesetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgamesetup.h; sourceTree = "<group>"; };
-		DA9386AC1CAC9078006B3213 /* vgamesetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgamesetup.m; sourceTree = "<group>"; };
-		DA9386AD1CAC9078006B3213 /* vgamesetuplocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgamesetuplocation.h; sourceTree = "<group>"; };
-		DA9386AE1CAC9078006B3213 /* vgamesetuplocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgamesetuplocation.m; sourceTree = "<group>"; };
-		DA9386AF1CAC9078006B3213 /* vgamesetuplocationgradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgamesetuplocationgradient.h; sourceTree = "<group>"; };
-		DA9386B01CAC9078006B3213 /* vgamesetuplocationgradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgamesetuplocationgradient.m; sourceTree = "<group>"; };
 		DA9386B21CAC9078006B3213 /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
 		DA9386B31CAC9078006B3213 /* valert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = valert.m; sourceTree = "<group>"; };
 		DA9386B41CAC9078006B3213 /* vblur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vblur.h; sourceTree = "<group>"; };
@@ -405,8 +393,6 @@
 				DA93863A1CAC9078006B3213 /* cgame.m */,
 				DA93863B1CAC9078006B3213 /* cgameloader.h */,
 				DA93863C1CAC9078006B3213 /* cgameloader.m */,
-				DA93863D1CAC9078006B3213 /* cgamesetup.h */,
-				DA93863E1CAC9078006B3213 /* cgamesetup.m */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -634,7 +620,6 @@
 			children = (
 				DA9386A21CAC9078006B3213 /* game */,
 				DA9386A71CAC9078006B3213 /* gameloader */,
-				DA9386AA1CAC9078006B3213 /* gamesetup */,
 				DA9386B11CAC9078006B3213 /* general */,
 				DA9386BA1CAC9078006B3213 /* home */,
 				DA9386BD1CAC9078006B3213 /* store */,
@@ -661,19 +646,6 @@
 				DA9386A91CAC9078006B3213 /* vgameloader.m */,
 			);
 			path = gameloader;
-			sourceTree = "<group>";
-		};
-		DA9386AA1CAC9078006B3213 /* gamesetup */ = {
-			isa = PBXGroup;
-			children = (
-				DA9386AB1CAC9078006B3213 /* vgamesetup.h */,
-				DA9386AC1CAC9078006B3213 /* vgamesetup.m */,
-				DA9386AD1CAC9078006B3213 /* vgamesetuplocation.h */,
-				DA9386AE1CAC9078006B3213 /* vgamesetuplocation.m */,
-				DA9386AF1CAC9078006B3213 /* vgamesetuplocationgradient.h */,
-				DA9386B01CAC9078006B3213 /* vgamesetuplocationgradient.m */,
-			);
-			path = gamesetup;
 			sourceTree = "<group>";
 		};
 		DA9386B11CAC9078006B3213 /* general */ = {
@@ -881,7 +853,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9386F41CAC9078006B3213 /* mfoeiteminvader.m in Sources */,
-				DA9387081CAC9078006B3213 /* vgamesetuplocationgradient.m in Sources */,
 				DA9386E41CAC9078006B3213 /* gimage.m in Sources */,
 				DA9387041CAC9078006B3213 /* vgamehub.m in Sources */,
 				DA9386F11CAC9078006B3213 /* mdirs.m in Sources */,
@@ -898,7 +869,6 @@
 				DA9386D71CAC9078006B3213 /* updater.m in Sources */,
 				DA9386F01CAC9078006B3213 /* mdbcreate.m in Sources */,
 				DA9386D61CAC9078006B3213 /* uifont+uifontmain.m in Sources */,
-				DA9387061CAC9078006B3213 /* vgamesetup.m in Sources */,
 				DA9386DA1CAC9078006B3213 /* cgame.m in Sources */,
 				DA93870F1CAC9078006B3213 /* vstorebar.m in Sources */,
 				DA9386DE1CAC9078006B3213 /* cmain.m in Sources */,
@@ -918,11 +888,9 @@
 				DA9386F61CAC9078006B3213 /* mgame.m in Sources */,
 				DA9386EF1CAC9078006B3213 /* mdb.m in Sources */,
 				DA9386D31CAC9078006B3213 /* nsnotification+nsnotificationmain.m in Sources */,
-				DA9387071CAC9078006B3213 /* vgamesetuplocation.m in Sources */,
 				DA9386FD1CAC9078006B3213 /* mstorepurchasesitem.m in Sources */,
 				DA9386D41CAC9078006B3213 /* tools.m in Sources */,
 				DA93870A1CAC9078006B3213 /* vblur.m in Sources */,
-				DA9386DC1CAC9078006B3213 /* cgamesetup.m in Sources */,
 				DA9386FC1CAC9078006B3213 /* mstorepurchases.m in Sources */,
 				DA9386E51CAC9078006B3213 /* gspatial.m in Sources */,
 				DA93870C1CAC9078006B3213 /* vspinner.m in Sources */,
