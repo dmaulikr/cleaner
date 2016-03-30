@@ -7,6 +7,6 @@
 	<key>version</key>
 	<integer>10</integer>
 	<key>dbname</key>
-	<string>turingcop.db</string>
+	<string>cleaner.db</string>
 </dict>
 </plist>

@@ -3,7 +3,6 @@
 #import <UIKit/UIKit.h>
 #import <Google/Analytics.h>
 #import <StoreKit/StoreKit.h>
-#import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <GLKit/GLKit.h>
 #import "db.h"
