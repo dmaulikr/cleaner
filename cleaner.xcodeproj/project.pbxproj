@@ -26,8 +26,6 @@
 		DA9386D51CAC9078006B3213 /* uicolor+uicolormain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386291CAC9078006B3213 /* uicolor+uicolormain.m */; };
 		DA9386D61CAC9078006B3213 /* uifont+uifontmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93862B1CAC9078006B3213 /* uifont+uifontmain.m */; };
 		DA9386D71CAC9078006B3213 /* updater.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93862D1CAC9078006B3213 /* updater.m */; };
-		DA9386D81CAC9078006B3213 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9386331CAC9078006B3213 /* libdb.a */; };
-		DA9386D91CAC9078006B3213 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9386341CAC9078006B3213 /* libtimerbg.a */; };
 		DA9386DA1CAC9078006B3213 /* cgame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93863A1CAC9078006B3213 /* cgame.m */; };
 		DA9386DB1CAC9078006B3213 /* cgameloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93863C1CAC9078006B3213 /* cgameloader.m */; };
 		DA9386DC1CAC9078006B3213 /* cgamesetup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93863E1CAC9078006B3213 /* cgamesetup.m */; };
@@ -83,6 +81,8 @@
 		DA93870E1CAC9078006B3213 /* vstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386BF1CAC9078006B3213 /* vstore.m */; };
 		DA93870F1CAC9078006B3213 /* vstorebar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386C11CAC9078006B3213 /* vstorebar.m */; };
 		DA9387101CAC9078006B3213 /* vstorecell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386C31CAC9078006B3213 /* vstorecell.m */; };
+		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
+		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,8 +118,6 @@
 		DA93862D1CAC9078006B3213 /* updater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updater.m; sourceTree = "<group>"; };
 		DA9386301CAC9078006B3213 /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
 		DA9386321CAC9078006B3213 /* timerbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timerbg.h; sourceTree = "<group>"; };
-		DA9386331CAC9078006B3213 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
-		DA9386341CAC9078006B3213 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DA9386371CAC9078006B3213 /* c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA9386391CAC9078006B3213 /* cgame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cgame.h; sourceTree = "<group>"; };
 		DA93863A1CAC9078006B3213 /* cgame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cgame.m; sourceTree = "<group>"; };
@@ -238,6 +236,8 @@
 		DA9386C41CAC9078006B3213 /* v.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
 		DA9387121CAC92A7006B3213 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA9387131CAC92A7006B3213 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
+		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
+		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DAB7A05D1CAC8C210047A49E /* cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E930DA81122C155ADF580860 /* Pods-cleaner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.release.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,9 +247,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA9386D91CAC9078006B3213 /* libtimerbg.a in Frameworks */,
-				DA9386D81CAC9078006B3213 /* libdb.a in Frameworks */,
+				DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */,
 				B18D6C00B8D9A96A0AD3BEB9 /* libPods-cleaner.a in Frameworks */,
+				DAB443931CAC97D500D04286 /* libdb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,8 +311,6 @@
 				DA93861B1CAC9078006B3213 /* core */,
 				DA9386201CAC9078006B3213 /* generic */,
 				DA93862E1CAC9078006B3213 /* lib */,
-				DA9386331CAC9078006B3213 /* libdb.a */,
-				DA9386341CAC9078006B3213 /* libtimerbg.a */,
 				DA9386351CAC9078006B3213 /* source */,
 			);
 			path = sourceteq;
@@ -352,6 +350,8 @@
 		DA93862E1CAC9078006B3213 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				DAB443911CAC97D500D04286 /* libdb.a */,
+				DAB443921CAC97D500D04286 /* libtimerbg.a */,
 				DA93862F1CAC9078006B3213 /* db */,
 				DA9386311CAC9078006B3213 /* timerbg */,
 			);
@@ -1055,6 +1055,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/cleaner/sourceteq",
+					"$(PROJECT_DIR)/cleaner/sourceteq/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.cleaner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1072,6 +1073,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/cleaner/sourceteq",
+					"$(PROJECT_DIR)/cleaner/sourceteq/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.cleaner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
