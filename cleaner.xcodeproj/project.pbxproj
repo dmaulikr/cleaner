@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B18D6C00B8D9A96A0AD3BEB9 /* libPods-cleaner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */; };
-		DA9386C51CAC9078006B3213 /* turingcop.db in Resources */ = {isa = PBXBuildFile; fileRef = DA93860C1CAC9078006B3213 /* turingcop.db */; };
 		DA9386C61CAC9078006B3213 /* building.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860E1CAC9078006B3213 /* building.xcassets */; };
 		DA9386C71CAC9078006B3213 /* foe.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860F1CAC9078006B3213 /* foe.xcassets */; };
 		DA9386C81CAC9078006B3213 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9386101CAC9078006B3213 /* generic.xcassets */; };
@@ -79,12 +78,12 @@
 		DA9387101CAC9078006B3213 /* vstorecell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386C31CAC9078006B3213 /* vstorecell.m */; };
 		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
+		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		884B2C09E1EC31FB2597D8A6 /* Pods-cleaner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cleaner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA93860C1CAC9078006B3213 /* turingcop.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = turingcop.db; sourceTree = "<group>"; };
 		DA93860E1CAC9078006B3213 /* building.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = building.xcassets; sourceTree = "<group>"; };
 		DA93860F1CAC9078006B3213 /* foe.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = foe.xcassets; sourceTree = "<group>"; };
 		DA9386101CAC9078006B3213 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -226,6 +225,7 @@
 		DA9387131CAC92A7006B3213 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
+		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
 		DAB7A05D1CAC8C210047A49E /* cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E930DA81122C155ADF580860 /* Pods-cleaner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.release.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,7 +264,7 @@
 		DA93860B1CAC9078006B3213 /* db */ = {
 			isa = PBXGroup;
 			children = (
-				DA93860C1CAC9078006B3213 /* turingcop.db */,
+				DAB443951CAC9C5300D04286 /* cleaner.db */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -784,11 +784,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA9386C51CAC9078006B3213 /* turingcop.db in Resources */,
 				DA9386C81CAC9078006B3213 /* generic.xcassets in Resources */,
 				DA9386C71CAC9078006B3213 /* foe.xcassets in Resources */,
 				DA9386CB1CAC9078006B3213 /* buildings.plist in Resources */,
 				DA9386CD1CAC9078006B3213 /* Localizable.strings in Resources */,
+				DAB443961CAC9C5300D04286 /* cleaner.db in Resources */,
 				DA9386C91CAC9078006B3213 /* loader.xcassets in Resources */,
 				DA9386C61CAC9078006B3213 /* building.xcassets in Resources */,
 				DA9386CC1CAC9078006B3213 /* defs.plist in Resources */,
