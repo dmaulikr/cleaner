@@ -234,6 +234,8 @@
 		DA9386C21CAC9078006B3213 /* vstorecell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstorecell.h; sourceTree = "<group>"; };
 		DA9386C31CAC9078006B3213 /* vstorecell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstorecell.m; sourceTree = "<group>"; };
 		DA9386C41CAC9078006B3213 /* v.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
+		DA9387121CAC92A7006B3213 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
+		DA9387131CAC92A7006B3213 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DAB7A05D1CAC8C210047A49E /* cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -284,6 +286,7 @@
 		DA93861A1CAC9078006B3213 /* sourceteq */ = {
 			isa = PBXGroup;
 			children = (
+				DA9387111CAC92A7006B3213 /* private */,
 				DA93861B1CAC9078006B3213 /* core */,
 				DA9386201CAC9078006B3213 /* generic */,
 				DA93862E1CAC9078006B3213 /* lib */,
@@ -687,6 +690,15 @@
 				DA9386C31CAC9078006B3213 /* vstorecell.m */,
 			);
 			path = store;
+			sourceTree = "<group>";
+		};
+		DA9387111CAC92A7006B3213 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				DA9387121CAC92A7006B3213 /* private.h */,
+				DA9387131CAC92A7006B3213 /* privateconstants.h */,
+			);
+			path = private;
 			sourceTree = "<group>";
 		};
 		DAB7A0541CAC8C210047A49E = {
