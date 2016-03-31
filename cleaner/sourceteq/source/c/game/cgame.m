@@ -52,7 +52,7 @@ static NSUInteger const framespersecond = 60;
 
 -(void)glkViewController:(GLKViewController*)controller willPause:(BOOL)pause
 {
-    NSLog(@"will pause");
+    NSLog(@"will pause %@", @(pause));
 }
 
 -(void)glkViewControllerUpdate:(GLKViewController*)controller

@@ -30,12 +30,12 @@
 
 -(void)draw:(GLKBaseEffect*)effect
 {
-//    glEnableVertexAttribArray(GLKVertexAttribColor);
-//    glVertexAttribPointer(GLKVertexAttribColor, 2, GL_FLOAT, GL_FALSE, 0, self.pointercolor);
+    glEnableVertexAttribArray(GLKVertexAttribColor);
+    glVertexAttribPointer(GLKVertexAttribColor, 2, GL_FLOAT, GL_FALSE, 0, self.pointercolor);
 
     [super draw:effect];
     
-//    glDisable(GLKVertexAttribColor);
+    glDisableVertexAttribArray(GLKVertexAttribColor);
 }
 
 @end

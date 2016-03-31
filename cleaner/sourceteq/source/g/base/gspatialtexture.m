@@ -32,12 +32,12 @@
 {
     effect.texture2d0.name = self.image.current;
     effect.constantColor = self.color;
-//    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
-//    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, self.pointertexture);
+    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
+    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, self.pointertexture);
     
     [super draw:effect];
     
-//    glDisable(GLKVertexAttribTexCoord0);
+    glDisableVertexAttribArray(GLKVertexAttribTexCoord0);
 }
 
 @end

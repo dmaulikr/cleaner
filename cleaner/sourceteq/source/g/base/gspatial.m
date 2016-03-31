@@ -12,7 +12,7 @@
 -(instancetype)init
 {
     self = [super init];
-    self.repos = YES;
+    self.repos = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
