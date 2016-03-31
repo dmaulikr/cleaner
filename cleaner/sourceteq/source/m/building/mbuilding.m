@@ -23,12 +23,4 @@
     [self.items addObject:building];
 }
 
--(void)addbuildings:(NSUInteger)count
-{
-    for(NSUInteger i = 0; i < count; i++)
-    {
-        
-    }
-}
-
 @end

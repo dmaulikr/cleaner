@@ -25,8 +25,8 @@
                        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                                       ^
                                       {
+                                          weakself.modelarea = [[marea alloc] init];
                                           weakself.modelbuilding = [[mbuilding alloc] init];
-                                          [weakself.modelbuilding addbuildings:10];
                                           weakself.modelfoe = [[mfoe alloc] init];
                                           
                                           dispatch_async(dispatch_get_main_queue(),
