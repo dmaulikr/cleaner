@@ -28,6 +28,7 @@
 
 -(void)draw:(GLKBaseEffect*)effect
 {
+    effect.texture2d0.envMode = GLKTextureEnvModeModulate;
     effect.texture2d0.name = self.image.current;
     effect.constantColor = self.color;
     glEnableVertexAttribArray(GLKVertexAttribTexCoord0);

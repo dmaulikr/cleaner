@@ -13,6 +13,8 @@
 {
     self = [super init];
     self.repos = NO;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkdraw:) name:notification_glkdraw object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
@@ -24,6 +26,13 @@
 }
 
 #pragma mark notifications
+
+-(void)notifiedglkdraw:(NSNotification*)notification
+{
+    mgameeffect *modeleffect = (mgameeffect*)notification.userInfo;
+    GLKBaseEffect *effect = modeleffect.effect;
+    [self draw:effect];
+}
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
@@ -43,6 +52,13 @@
 }
 
 #pragma mark public
+
+-(void)draw:(GLKBaseEffect*)effect
+{
+    glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, 0, self.pointerposition);
+    [effect prepareToDraw];
+    glDrawArrays(GL_TRIANGLES, 0, vectorcorners);
+}
 
 -(void)rasterize
 {
@@ -66,13 +82,6 @@
     [self vector:index++ x:maxx y:maxy];
     [self vector:index++ x:maxx y:miny];
     [self vector:index++ x:minx y:miny];
-}
-
--(void)draw:(GLKBaseEffect*)effect
-{
-    glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, 0, self.pointerposition);
-    [effect prepareToDraw];
-    glDrawArrays(GL_TRIANGLES, 0, vectorcorners);
 }
 
 @end

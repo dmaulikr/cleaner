@@ -33,7 +33,6 @@
 		DA9386E01CAC9078006B3213 /* cstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386491CAC9078006B3213 /* cstore.m */; };
 		DA9386E11CAC9078006B3213 /* garea.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93864D1CAC9078006B3213 /* garea.m */; };
 		DA9386E21CAC9078006B3213 /* gareaspatial.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93864F1CAC9078006B3213 /* gareaspatial.m */; };
-		DA9386E31CAC9078006B3213 /* gbase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386521CAC9078006B3213 /* gbase.m */; };
 		DA9386E41CAC9078006B3213 /* gimage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386541CAC9078006B3213 /* gimage.m */; };
 		DA9386E51CAC9078006B3213 /* gspatial.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386561CAC9078006B3213 /* gspatial.m */; };
 		DA9386E61CAC9078006B3213 /* gbuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386591CAC9078006B3213 /* gbuilding.m */; };
@@ -131,8 +130,6 @@
 		DA93864D1CAC9078006B3213 /* garea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = garea.m; sourceTree = "<group>"; };
 		DA93864E1CAC9078006B3213 /* gareaspatial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gareaspatial.h; sourceTree = "<group>"; };
 		DA93864F1CAC9078006B3213 /* gareaspatial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gareaspatial.m; sourceTree = "<group>"; };
-		DA9386511CAC9078006B3213 /* gbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gbase.h; sourceTree = "<group>"; };
-		DA9386521CAC9078006B3213 /* gbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gbase.m; sourceTree = "<group>"; };
 		DA9386531CAC9078006B3213 /* gimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gimage.h; sourceTree = "<group>"; };
 		DA9386541CAC9078006B3213 /* gimage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gimage.m; sourceTree = "<group>"; };
 		DA9386551CAC9078006B3213 /* gspatial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gspatial.h; sourceTree = "<group>"; };
@@ -455,8 +452,6 @@
 		DA9386501CAC9078006B3213 /* base */ = {
 			isa = PBXGroup;
 			children = (
-				DA9386511CAC9078006B3213 /* gbase.h */,
-				DA9386521CAC9078006B3213 /* gbase.m */,
 				DA9386531CAC9078006B3213 /* gimage.h */,
 				DA9386541CAC9078006B3213 /* gimage.m */,
 				DA9386551CAC9078006B3213 /* gspatial.h */,
@@ -887,7 +882,6 @@
 				DA9386FA1CAC9078006B3213 /* msettings.m in Sources */,
 				DA9387101CAC9078006B3213 /* vstorecell.m in Sources */,
 				DA9386E81CAC9078006B3213 /* gfoe.m in Sources */,
-				DA9386E31CAC9078006B3213 /* gbase.m in Sources */,
 				DA9386E61CAC9078006B3213 /* gbuilding.m in Sources */,
 				DA9386EA1CAC9078006B3213 /* gfoeiteminvader.m in Sources */,
 				DA9386D51CAC9078006B3213 /* uicolor+uicolormain.m in Sources */,
