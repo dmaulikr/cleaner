@@ -13,12 +13,4 @@
     return self;
 }
 
-#pragma mark -
-#pragma mark spatial
-
--(void)draw:(GLKBaseEffect*)effect
-{
-    [super draw:effect];
-}
-
 @end

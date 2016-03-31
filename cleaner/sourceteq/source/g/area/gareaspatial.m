@@ -10,16 +10,8 @@
     self.y = 0;
     self.width = model.screenwidth;
     self.height = model.screenheight;
-    [super render];
     
     return self;
-}
-
-#pragma mark -
-#pragma mark spatial
-
--(void)render
-{
 }
 
 @end

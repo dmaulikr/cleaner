@@ -13,7 +13,7 @@
 {
     self = [super init];
     
-    self.datacolor = [NSMutableData dataWithLength:vectorcorners * sizeof(GLKVector2)];
+    self.datacolor = [NSMutableData dataWithLength:vectorcorners * sizeof(GLKVector4)];
     self.pointercolor = self.datacolor.mutableBytes;
     self.pointercolor[0] = [self.colorlefttop asvector];
     self.pointercolor[1] = [self.colorleftbottom asvector];
@@ -30,12 +30,12 @@
 
 -(void)draw:(GLKBaseEffect*)effect
 {
-    glEnableVertexAttribArray(GLKVertexAttribColor);
-    glVertexAttribPointer(GLKVertexAttribColor, 2, GL_FLOAT, GL_FALSE, 0, self.pointercolor);
-    
+//    glEnableVertexAttribArray(GLKVertexAttribColor);
+//    glVertexAttribPointer(GLKVertexAttribColor, 2, GL_FLOAT, GL_FALSE, 0, self.pointercolor);
+
     [super draw:effect];
     
-    glDisable(GLKVertexAttribColor);
+//    glDisable(GLKVertexAttribColor);
 }
 
 @end

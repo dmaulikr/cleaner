@@ -1,9 +1,9 @@
 #import "appdel.h"
-#import "gspatial.h"
+#import "gspatialgradient.h"
 
 @class marea;
 
-@interface gareaspatial:gspatial
+@interface gareaspatial:gspatialgradient
 
 -(instancetype)init:(marea*)model;
 
