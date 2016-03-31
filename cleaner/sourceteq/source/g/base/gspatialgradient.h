@@ -3,4 +3,6 @@
 
 @interface gspatialgradient:gspatial
 
+@property(nonatomic)GLKVector4 *pointercolor;
+
 @end

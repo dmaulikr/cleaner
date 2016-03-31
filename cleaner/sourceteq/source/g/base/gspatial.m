@@ -62,7 +62,7 @@ static GLsizei const size = 6;
     [self vector:index++ x:maxx y:maxy];
     [self vector:index++ x:maxx y:maxy];
     [self vector:index++ x:maxx y:miny];
-    [self vector:index++x:minx y:miny];
+    [self vector:index++ x:minx y:miny];
 }
 
 -(void)draw:(GLKBaseEffect*)effect

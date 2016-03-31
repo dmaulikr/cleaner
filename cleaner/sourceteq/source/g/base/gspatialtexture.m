@@ -1,6 +1,6 @@
 #import "gspatialtexture.h"
 
-@interface gspatial ()
+@interface gspatialtexture ()
 
 @property(strong, nonatomic)NSMutableData *datatexture;
 
@@ -23,6 +23,21 @@
     self.image = [[gimage alloc] init];
     
     return self;
+}
+
+#pragma mark -
+#pragma mark spatial
+
+-(void)draw:(GLKBaseEffect*)effect
+{
+    effect.texture2d0.name = self.image.current;
+    effect.constantColor = self.color;
+    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
+    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, self.pointertexture);
+    
+    [super draw:effect];
+    
+    glDisable(GLKVertexAttribColor);
 }
 
 @end

@@ -53,12 +53,10 @@
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glEnableVertexAttribArray(GLKVertexAttribPosition);
-    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
     
     [self notifydraw];
     
     glDisableVertexAttribArray(GLKVertexAttribPosition);
-    glDisableVertexAttribArray(GLKVertexAttribTexCoord0);
     glDisable(GL_BLEND);
 }
 
