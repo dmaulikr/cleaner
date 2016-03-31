@@ -35,9 +35,9 @@
 		DA9386E41CAC9078006B3213 /* gimage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386541CAC9078006B3213 /* gimage.m */; };
 		DA9386E51CAC9078006B3213 /* gspatial.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386561CAC9078006B3213 /* gspatial.m */; };
 		DA9386E71CAC9078006B3213 /* gbuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93865B1CAC9078006B3213 /* gbuilding.m */; };
-		DA9386E91CAC9078006B3213 /* gfoeitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386601CAC9078006B3213 /* gfoeitem.m */; };
-		DA9386EA1CAC9078006B3213 /* gfoeiteminvader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386621CAC9078006B3213 /* gfoeiteminvader.m */; };
-		DA9386EB1CAC9078006B3213 /* gfoeitemocto.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386641CAC9078006B3213 /* gfoeitemocto.m */; };
+		DA9386E91CAC9078006B3213 /* gfoe.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386601CAC9078006B3213 /* gfoe.m */; };
+		DA9386EA1CAC9078006B3213 /* gfoeinvader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386621CAC9078006B3213 /* gfoeinvader.m */; };
+		DA9386EB1CAC9078006B3213 /* gfoeocto.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386641CAC9078006B3213 /* gfoeocto.m */; };
 		DA9386ED1CAC9078006B3213 /* mbuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93866B1CAC9078006B3213 /* mbuilding.m */; };
 		DA9386EE1CAC9078006B3213 /* mbuildingitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93866D1CAC9078006B3213 /* mbuildingitem.m */; };
 		DA9386EF1CAC9078006B3213 /* mdb.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386701CAC9078006B3213 /* mdb.m */; };
@@ -131,12 +131,12 @@
 		DA9386561CAC9078006B3213 /* gspatial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gspatial.m; sourceTree = "<group>"; };
 		DA93865A1CAC9078006B3213 /* gbuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gbuilding.h; sourceTree = "<group>"; };
 		DA93865B1CAC9078006B3213 /* gbuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gbuilding.m; sourceTree = "<group>"; };
-		DA93865F1CAC9078006B3213 /* gfoeitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfoeitem.h; sourceTree = "<group>"; };
-		DA9386601CAC9078006B3213 /* gfoeitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gfoeitem.m; sourceTree = "<group>"; };
-		DA9386611CAC9078006B3213 /* gfoeiteminvader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfoeiteminvader.h; sourceTree = "<group>"; };
-		DA9386621CAC9078006B3213 /* gfoeiteminvader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gfoeiteminvader.m; sourceTree = "<group>"; };
-		DA9386631CAC9078006B3213 /* gfoeitemocto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfoeitemocto.h; sourceTree = "<group>"; };
-		DA9386641CAC9078006B3213 /* gfoeitemocto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gfoeitemocto.m; sourceTree = "<group>"; };
+		DA93865F1CAC9078006B3213 /* gfoe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfoe.h; sourceTree = "<group>"; };
+		DA9386601CAC9078006B3213 /* gfoe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gfoe.m; sourceTree = "<group>"; };
+		DA9386611CAC9078006B3213 /* gfoeinvader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfoeinvader.h; sourceTree = "<group>"; };
+		DA9386621CAC9078006B3213 /* gfoeinvader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gfoeinvader.m; sourceTree = "<group>"; };
+		DA9386631CAC9078006B3213 /* gfoeocto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfoeocto.h; sourceTree = "<group>"; };
+		DA9386641CAC9078006B3213 /* gfoeocto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gfoeocto.m; sourceTree = "<group>"; };
 		DA9386671CAC9078006B3213 /* g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = g.h; sourceTree = "<group>"; };
 		DA93866A1CAC9078006B3213 /* mbuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbuilding.h; sourceTree = "<group>"; };
 		DA93866B1CAC9078006B3213 /* mbuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbuilding.m; sourceTree = "<group>"; };
@@ -465,12 +465,12 @@
 		DA93865C1CAC9078006B3213 /* foe */ = {
 			isa = PBXGroup;
 			children = (
-				DA93865F1CAC9078006B3213 /* gfoeitem.h */,
-				DA9386601CAC9078006B3213 /* gfoeitem.m */,
-				DA9386611CAC9078006B3213 /* gfoeiteminvader.h */,
-				DA9386621CAC9078006B3213 /* gfoeiteminvader.m */,
-				DA9386631CAC9078006B3213 /* gfoeitemocto.h */,
-				DA9386641CAC9078006B3213 /* gfoeitemocto.m */,
+				DA93865F1CAC9078006B3213 /* gfoe.h */,
+				DA9386601CAC9078006B3213 /* gfoe.m */,
+				DA9386611CAC9078006B3213 /* gfoeinvader.h */,
+				DA9386621CAC9078006B3213 /* gfoeinvader.m */,
+				DA9386631CAC9078006B3213 /* gfoeocto.h */,
+				DA9386641CAC9078006B3213 /* gfoeocto.m */,
 			);
 			path = foe;
 			sourceTree = "<group>";
@@ -847,7 +847,7 @@
 				DA9386F51CAC9078006B3213 /* mfoeitemocto.m in Sources */,
 				DA9386D11CAC9078006B3213 /* main.m in Sources */,
 				DA9386E11CAC9078006B3213 /* garea.m in Sources */,
-				DA9386E91CAC9078006B3213 /* gfoeitem.m in Sources */,
+				DA9386E91CAC9078006B3213 /* gfoe.m in Sources */,
 				DA9386E01CAC9078006B3213 /* cstore.m in Sources */,
 				DA9386DF1CAC9078006B3213 /* cpages.m in Sources */,
 				DA9386F31CAC9078006B3213 /* mfoeitem.m in Sources */,
@@ -865,7 +865,7 @@
 				DA9386DD1CAC9078006B3213 /* chome.m in Sources */,
 				DA9386FA1CAC9078006B3213 /* msettings.m in Sources */,
 				DA9387101CAC9078006B3213 /* vstorecell.m in Sources */,
-				DA9386EA1CAC9078006B3213 /* gfoeiteminvader.m in Sources */,
+				DA9386EA1CAC9078006B3213 /* gfoeinvader.m in Sources */,
 				DA9386D51CAC9078006B3213 /* uicolor+uicolormain.m in Sources */,
 				DA9386F61CAC9078006B3213 /* mgame.m in Sources */,
 				DA9386EF1CAC9078006B3213 /* mdb.m in Sources */,
@@ -882,7 +882,7 @@
 				DA93870B1CAC9078006B3213 /* viewbase.m in Sources */,
 				DA9386FB1CAC9078006B3213 /* mstore.m in Sources */,
 				DA9386F21CAC9078006B3213 /* mfoe.m in Sources */,
-				DA9386EB1CAC9078006B3213 /* gfoeitemocto.m in Sources */,
+				DA9386EB1CAC9078006B3213 /* gfoeocto.m in Sources */,
 				DA9386FE1CAC9078006B3213 /* mstorestatus.m in Sources */,
 				DAB4439D1CACA80700D04286 /* gspatialtexture.m in Sources */,
 				DA9387091CAC9078006B3213 /* valert.m in Sources */,
