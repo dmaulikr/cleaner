@@ -32,12 +32,9 @@
 		DA9386DF1CAC9078006B3213 /* cpages.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386461CAC9078006B3213 /* cpages.m */; };
 		DA9386E01CAC9078006B3213 /* cstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386491CAC9078006B3213 /* cstore.m */; };
 		DA9386E11CAC9078006B3213 /* garea.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93864D1CAC9078006B3213 /* garea.m */; };
-		DA9386E21CAC9078006B3213 /* gareaspatial.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93864F1CAC9078006B3213 /* gareaspatial.m */; };
 		DA9386E41CAC9078006B3213 /* gimage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386541CAC9078006B3213 /* gimage.m */; };
 		DA9386E51CAC9078006B3213 /* gspatial.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386561CAC9078006B3213 /* gspatial.m */; };
-		DA9386E61CAC9078006B3213 /* gbuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386591CAC9078006B3213 /* gbuilding.m */; };
 		DA9386E71CAC9078006B3213 /* gbuildingitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93865B1CAC9078006B3213 /* gbuildingitem.m */; };
-		DA9386E81CAC9078006B3213 /* gfoe.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93865E1CAC9078006B3213 /* gfoe.m */; };
 		DA9386E91CAC9078006B3213 /* gfoeitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386601CAC9078006B3213 /* gfoeitem.m */; };
 		DA9386EA1CAC9078006B3213 /* gfoeiteminvader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386621CAC9078006B3213 /* gfoeiteminvader.m */; };
 		DA9386EB1CAC9078006B3213 /* gfoeitemocto.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386641CAC9078006B3213 /* gfoeitemocto.m */; };
@@ -128,18 +125,12 @@
 		DA9386491CAC9078006B3213 /* cstore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cstore.m; sourceTree = "<group>"; };
 		DA93864C1CAC9078006B3213 /* garea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = garea.h; sourceTree = "<group>"; };
 		DA93864D1CAC9078006B3213 /* garea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = garea.m; sourceTree = "<group>"; };
-		DA93864E1CAC9078006B3213 /* gareaspatial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gareaspatial.h; sourceTree = "<group>"; };
-		DA93864F1CAC9078006B3213 /* gareaspatial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gareaspatial.m; sourceTree = "<group>"; };
 		DA9386531CAC9078006B3213 /* gimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gimage.h; sourceTree = "<group>"; };
 		DA9386541CAC9078006B3213 /* gimage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gimage.m; sourceTree = "<group>"; };
 		DA9386551CAC9078006B3213 /* gspatial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gspatial.h; sourceTree = "<group>"; };
 		DA9386561CAC9078006B3213 /* gspatial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gspatial.m; sourceTree = "<group>"; };
-		DA9386581CAC9078006B3213 /* gbuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gbuilding.h; sourceTree = "<group>"; };
-		DA9386591CAC9078006B3213 /* gbuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gbuilding.m; sourceTree = "<group>"; };
 		DA93865A1CAC9078006B3213 /* gbuildingitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gbuildingitem.h; sourceTree = "<group>"; };
 		DA93865B1CAC9078006B3213 /* gbuildingitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gbuildingitem.m; sourceTree = "<group>"; };
-		DA93865D1CAC9078006B3213 /* gfoe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfoe.h; sourceTree = "<group>"; };
-		DA93865E1CAC9078006B3213 /* gfoe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gfoe.m; sourceTree = "<group>"; };
 		DA93865F1CAC9078006B3213 /* gfoeitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfoeitem.h; sourceTree = "<group>"; };
 		DA9386601CAC9078006B3213 /* gfoeitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gfoeitem.m; sourceTree = "<group>"; };
 		DA9386611CAC9078006B3213 /* gfoeiteminvader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfoeiteminvader.h; sourceTree = "<group>"; };
@@ -443,8 +434,6 @@
 			children = (
 				DA93864C1CAC9078006B3213 /* garea.h */,
 				DA93864D1CAC9078006B3213 /* garea.m */,
-				DA93864E1CAC9078006B3213 /* gareaspatial.h */,
-				DA93864F1CAC9078006B3213 /* gareaspatial.m */,
 			);
 			path = area;
 			sourceTree = "<group>";
@@ -467,8 +456,6 @@
 		DA9386571CAC9078006B3213 /* building */ = {
 			isa = PBXGroup;
 			children = (
-				DA9386581CAC9078006B3213 /* gbuilding.h */,
-				DA9386591CAC9078006B3213 /* gbuilding.m */,
 				DA93865A1CAC9078006B3213 /* gbuildingitem.h */,
 				DA93865B1CAC9078006B3213 /* gbuildingitem.m */,
 			);
@@ -478,8 +465,6 @@
 		DA93865C1CAC9078006B3213 /* foe */ = {
 			isa = PBXGroup;
 			children = (
-				DA93865D1CAC9078006B3213 /* gfoe.h */,
-				DA93865E1CAC9078006B3213 /* gfoe.m */,
 				DA93865F1CAC9078006B3213 /* gfoeitem.h */,
 				DA9386601CAC9078006B3213 /* gfoeitem.m */,
 				DA9386611CAC9078006B3213 /* gfoeiteminvader.h */,
@@ -861,7 +846,6 @@
 				DA9386F71CAC9078006B3213 /* mgameeffect.m in Sources */,
 				DA9386F51CAC9078006B3213 /* mfoeitemocto.m in Sources */,
 				DA9386D11CAC9078006B3213 /* main.m in Sources */,
-				DA9386E21CAC9078006B3213 /* gareaspatial.m in Sources */,
 				DA9386E11CAC9078006B3213 /* garea.m in Sources */,
 				DA9386E91CAC9078006B3213 /* gfoeitem.m in Sources */,
 				DA9386E01CAC9078006B3213 /* cstore.m in Sources */,
@@ -881,8 +865,6 @@
 				DA9386DD1CAC9078006B3213 /* chome.m in Sources */,
 				DA9386FA1CAC9078006B3213 /* msettings.m in Sources */,
 				DA9387101CAC9078006B3213 /* vstorecell.m in Sources */,
-				DA9386E81CAC9078006B3213 /* gfoe.m in Sources */,
-				DA9386E61CAC9078006B3213 /* gbuilding.m in Sources */,
 				DA9386EA1CAC9078006B3213 /* gfoeiteminvader.m in Sources */,
 				DA9386D51CAC9078006B3213 /* uicolor+uicolormain.m in Sources */,
 				DA9386F61CAC9078006B3213 /* mgame.m in Sources */,
