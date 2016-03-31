@@ -1,13 +1,10 @@
 #import "appdel.h"
-#import "gbase.h"
+#import "gspatialgradient.h"
 
-@class gareaspatial;
-@class mgamearea;
+@interface garea:gspatialgradient
 
-@interface garea:gbase
+-(instancetype)init:(marea*)model;
 
--(instancetype)init:(mgamearea*)model;
-
-@property(strong, nonatomic)gareaspatial *spatial;
+@property(weak, nonatomic)marea *model;
 
 @end

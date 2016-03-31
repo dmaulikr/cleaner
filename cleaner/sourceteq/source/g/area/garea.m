@@ -2,21 +2,12 @@
 
 @implementation garea
 
--(instancetype)init:(mgamearea*)model
+-(instancetype)init:(marea*)model
 {
     self = [super init];
-    self.spatial = [[gareaspatial alloc] init:model];
+    self.model = model;
     
     return self;
-}
-
-#pragma mark -
-#pragma mark gbase
-
--(void)draw:(GLKBaseEffect*)effect
-{
-    effect.texture2d0.envMode = GLKTextureEnvModeReplace;
-    [self.spatial draw:effect];
 }
 
 @end
