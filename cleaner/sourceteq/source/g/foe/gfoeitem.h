@@ -1,10 +1,10 @@
 #import <Foundation/Foundation.h>
-#import "gspatial.h"
+#import "gspatialtexture.h"
 
 @class mfoeitem;
 @class gfoeshadow;
 
-@interface gfoeitem:gspatial
+@interface gfoeitem:gspatialtexture
 
 -(instancetype)init:(mfoeitem*)model;
 
