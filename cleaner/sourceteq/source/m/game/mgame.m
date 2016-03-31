@@ -16,30 +16,23 @@
 {
     __weak typeof(self) weakself = self;
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+    dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
-                       weakself.modelarea = controller.modelarea;
+                       weakself.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+                       [EAGLContext setCurrentContext:weakself.context];
                        
-                       dispatch_async(dispatch_get_main_queue(),
+                       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                                       ^
                                       {
-                                          weakself.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-                                          [EAGLContext setCurrentContext:weakself.context];
+                                          weakself.modelbuilding = [[mbuilding alloc] init];
+                                          [weakself.modelbuilding addbuildings:10];
+                                          weakself.modelfoe = [[mfoe alloc] init];
                                           
-                                          dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                                          dispatch_async(dispatch_get_main_queue(),
                                                          ^
                                                          {
-                                                             [weakself.modelarea loadarea];
-                                                             weakself.modelbuilding = [[mbuilding alloc] init];
-                                                             [weakself.modelbuilding addbuildings:10];
-                                                             weakself.modelfoe = [[mfoe alloc] init];
-                                                             
-                                                             dispatch_async(dispatch_get_main_queue(),
-                                                                            ^
-                                                                            {
-                                                                                [controller loadingfinished];
-                                                                            });
+                                                             [controller loadingfinished];
                                                          });
                                       });
                    });

@@ -5,10 +5,9 @@
 
 @interface cgameloader:UIViewController
 
--(instancetype)init:(mgamearea*)modelarea;
 -(void)loadingfinished;
 
 @property(strong, nonatomic)mgame *model;
-@property(strong, nonatomic)mgamearea *modelarea;
+@property(nonatomic)BOOL firsttime;
 
 @end

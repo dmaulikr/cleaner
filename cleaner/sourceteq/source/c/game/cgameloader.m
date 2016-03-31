@@ -7,19 +7,8 @@
 @end
 
 @implementation cgameloader
-{
-    BOOL firsttime;
-}
 
 @dynamic view;
-
--(instancetype)init:(mgamearea*)modelarea
-{
-    self = [super init];
-    self.modelarea = modelarea;
-    
-    return self;
-}
 
 -(void)viewDidLoad
 {
@@ -28,16 +17,16 @@
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
-    firsttime = YES;
+    self.firsttime = YES;
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    if(firsttime)
+    if(self.firsttime)
     {
-        firsttime = NO;
+        self.firsttime = NO;
         [self startloading];
     }
 }

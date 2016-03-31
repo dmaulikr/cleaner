@@ -54,8 +54,6 @@
 		DA9386F51CAC9078006B3213 /* mfoeitemocto.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93867E1CAC9078006B3213 /* mfoeitemocto.m */; };
 		DA9386F61CAC9078006B3213 /* mgame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386811CAC9078006B3213 /* mgame.m */; };
 		DA9386F71CAC9078006B3213 /* mgameeffect.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386831CAC9078006B3213 /* mgameeffect.m */; };
-		DA9386F81CAC9078006B3213 /* mgamearea.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386861CAC9078006B3213 /* mgamearea.m */; };
-		DA9386F91CAC9078006B3213 /* mgameareadelta.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386881CAC9078006B3213 /* mgameareadelta.m */; };
 		DA9386FA1CAC9078006B3213 /* msettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93868C1CAC9078006B3213 /* msettings.m */; };
 		DA9386FB1CAC9078006B3213 /* mstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386901CAC9078006B3213 /* mstore.m */; };
 		DA9386FC1CAC9078006B3213 /* mstorepurchases.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386921CAC9078006B3213 /* mstorepurchases.m */; };
@@ -79,6 +77,7 @@
 		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
+		DAB4439A1CACA00E00D04286 /* marea.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB443991CACA00E00D04286 /* marea.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,10 +172,6 @@
 		DA9386811CAC9078006B3213 /* mgame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgame.m; sourceTree = "<group>"; };
 		DA9386821CAC9078006B3213 /* mgameeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgameeffect.h; sourceTree = "<group>"; };
 		DA9386831CAC9078006B3213 /* mgameeffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgameeffect.m; sourceTree = "<group>"; };
-		DA9386851CAC9078006B3213 /* mgamearea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgamearea.h; sourceTree = "<group>"; };
-		DA9386861CAC9078006B3213 /* mgamearea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgamearea.m; sourceTree = "<group>"; };
-		DA9386871CAC9078006B3213 /* mgameareadelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgameareadelta.h; sourceTree = "<group>"; };
-		DA9386881CAC9078006B3213 /* mgameareadelta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgameareadelta.m; sourceTree = "<group>"; };
 		DA93868A1CAC9078006B3213 /* mgeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgeneral.h; sourceTree = "<group>"; };
 		DA93868B1CAC9078006B3213 /* msettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msettings.h; sourceTree = "<group>"; };
 		DA93868C1CAC9078006B3213 /* msettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msettings.m; sourceTree = "<group>"; };
@@ -226,6 +221,8 @@
 		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
+		DAB443981CACA00E00D04286 /* marea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = marea.h; sourceTree = "<group>"; };
+		DAB443991CACA00E00D04286 /* marea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = marea.m; sourceTree = "<group>"; };
 		DAB7A05D1CAC8C210047A49E /* cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E930DA81122C155ADF580860 /* Pods-cleaner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.release.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -493,12 +490,12 @@
 		DA9386681CAC9078006B3213 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DAB443971CAC9FB300D04286 /* area */,
 				DA9386691CAC9078006B3213 /* building */,
 				DA93866E1CAC9078006B3213 /* db */,
 				DA9386731CAC9078006B3213 /* dirs */,
 				DA9386761CAC9078006B3213 /* foe */,
 				DA93867F1CAC9078006B3213 /* game */,
-				DA9386841CAC9078006B3213 /* gamearea */,
 				DA9386891CAC9078006B3213 /* general */,
 				DA93868D1CAC9078006B3213 /* m.h */,
 				DA93868E1CAC9078006B3213 /* store */,
@@ -561,17 +558,6 @@
 				DA9386831CAC9078006B3213 /* mgameeffect.m */,
 			);
 			path = game;
-			sourceTree = "<group>";
-		};
-		DA9386841CAC9078006B3213 /* gamearea */ = {
-			isa = PBXGroup;
-			children = (
-				DA9386851CAC9078006B3213 /* mgamearea.h */,
-				DA9386861CAC9078006B3213 /* mgamearea.m */,
-				DA9386871CAC9078006B3213 /* mgameareadelta.h */,
-				DA9386881CAC9078006B3213 /* mgameareadelta.m */,
-			);
-			path = gamearea;
 			sourceTree = "<group>";
 		};
 		DA9386891CAC9078006B3213 /* general */ = {
@@ -692,6 +678,15 @@
 				DA9387131CAC92A7006B3213 /* privateconstants.h */,
 			);
 			path = private;
+			sourceTree = "<group>";
+		};
+		DAB443971CAC9FB300D04286 /* area */ = {
+			isa = PBXGroup;
+			children = (
+				DAB443981CACA00E00D04286 /* marea.h */,
+				DAB443991CACA00E00D04286 /* marea.m */,
+			);
+			path = area;
 			sourceTree = "<group>";
 		};
 		DAB7A0541CAC8C210047A49E = {
@@ -852,6 +847,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB4439A1CACA00E00D04286 /* marea.m in Sources */,
 				DA9386F41CAC9078006B3213 /* mfoeiteminvader.m in Sources */,
 				DA9386E41CAC9078006B3213 /* gimage.m in Sources */,
 				DA9387041CAC9078006B3213 /* vgamehub.m in Sources */,
@@ -901,9 +897,7 @@
 				DA9386F21CAC9078006B3213 /* mfoe.m in Sources */,
 				DA9386EB1CAC9078006B3213 /* gfoeitemocto.m in Sources */,
 				DA9386FE1CAC9078006B3213 /* mstorestatus.m in Sources */,
-				DA9386F81CAC9078006B3213 /* mgamearea.m in Sources */,
 				DA9387091CAC9078006B3213 /* valert.m in Sources */,
-				DA9386F91CAC9078006B3213 /* mgameareadelta.m in Sources */,
 				DA9386EE1CAC9078006B3213 /* mbuildingitem.m in Sources */,
 				DA9387001CAC9078006B3213 /* mstorestatusnew.m in Sources */,
 				DA9386D21CAC9078006B3213 /* analytics.m in Sources */,
