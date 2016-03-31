@@ -3,7 +3,7 @@
 
 @class mbuildingitem;
 
-@interface gbuildingitem:gspatialtexture
+@interface gbuilding:gspatialtexture
 
 -(instancetype)init:(mbuildingitem*)model;
 

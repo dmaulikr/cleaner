@@ -1,6 +1,6 @@
-#import "gbuildingitem.h"
+#import "gbuilding.h"
 
-@implementation gbuildingitem
+@implementation gbuilding
 
 -(instancetype)init:(mbuildingitem*)model
 {
@@ -9,6 +9,7 @@
     self.color = GLKVector4Make(1, 1, 1, 0);
     self.image.srgb = YES;
     [self.image loadtextures:@[model.assetname]];
+    
     return self;
 }
 
