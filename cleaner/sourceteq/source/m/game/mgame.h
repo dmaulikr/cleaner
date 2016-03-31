@@ -1,7 +1,7 @@
 #import "appdel.h"
 
 @class cgameloader;
-@class mgamearea;
+@class marea;
 @class mfoe;
 @class mbuilding;
 
@@ -10,7 +10,7 @@
 -(instancetype)init:(cgameloader*)controller;
 
 @property(strong, nonatomic)EAGLContext *context;
-@property(strong, nonatomic)mgamearea *modelarea;
+@property(strong, nonatomic)marea *modelarea;
 @property(strong, nonatomic)mfoe *modelfoe;
 @property(strong, nonatomic)mbuilding *modelbuilding;
 

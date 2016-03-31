@@ -2,18 +2,24 @@
 
 @implementation gareaspatial
 
--(instancetype)init:(mgamearea*)model
+-(instancetype)init:(marea*)model
 {
     self = [super init];
     self.model = model;
-    self.x = model.x;
-    self.y = model.y;
-    self.width = model.width;
-    self.height = model.height;
-    [self.image loadtextureimage:model.image];
-    [self render];
+    self.x = 0;
+    self.y = 0;
+    self.width = model.screenwidth;
+    self.height = model.screenheight;
+    [super render];
     
     return self;
+}
+
+#pragma mark -
+#pragma mark spatial
+
+-(void)render
+{
 }
 
 @end

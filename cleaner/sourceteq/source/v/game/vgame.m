@@ -30,7 +30,7 @@
 
 -(void)starteffect
 {
-    mgamearea *modelarea = self.controller.model.modelarea;
+    marea *modelarea = self.controller.model.modelarea;
     self.effect = [[GLKBaseEffect alloc] init];
     self.effect.transform.projectionMatrix = GLKMatrix4MakeOrtho(0, modelarea.screenwidth, modelarea.screenheight, 0, 1, -1);
     self.effect.texture2d0.target = GLKTextureTarget2D;

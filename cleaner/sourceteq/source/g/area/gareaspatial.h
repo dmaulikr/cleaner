@@ -1,12 +1,12 @@
 #import "appdel.h"
 #import "gspatial.h"
 
-@class mgamearea;
+@class marea;
 
 @interface gareaspatial:gspatial
 
--(instancetype)init:(mgamearea*)model;
+-(instancetype)init:(marea*)model;
 
-@property(weak, nonatomic)mgamearea *model;
+@property(weak, nonatomic)marea *model;
 
 @end
