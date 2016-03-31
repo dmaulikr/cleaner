@@ -1,8 +1,6 @@
 #import "gspatial.h"
 #import "appdel.h"
 
-static GLsizei const size = 6;
-
 @interface gspatial ()
 
 @property(strong, nonatomic)NSMutableData *dataposition;

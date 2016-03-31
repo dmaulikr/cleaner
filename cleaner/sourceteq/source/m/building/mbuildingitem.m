@@ -7,10 +7,10 @@
     self = [super init];
     self.spatial = [[gbuildingitem alloc] init:self];
     self.assetname = dictionary[@"asset"];
-    self.width = [dictionary[@"width"] floatValue];
-    self.height = [dictionary[@"height"] floatValue];
-    self.x = x;
-    self.y = y;
+    self.spatial.x = x;
+    self.spatial.y = y;
+    self.spatial.width = [dictionary[@"width"] floatValue];
+    self.spatial.height = [dictionary[@"height"] floatValue];
     
     return self;
 }

@@ -15,7 +15,6 @@
     
     self.datacolor = [NSMutableData dataWithLength:vectorcorners * sizeof(GLKVector2)];
     self.pointercolor = self.datacolor.mutableBytes;
-    
     self.pointercolor[0] = [self.colorlefttop asvector];
     self.pointercolor[1] = [self.colorleftbottom asvector];
     self.pointercolor[2] = [self.colorrightbottom asvector];
