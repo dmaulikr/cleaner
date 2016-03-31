@@ -1,6 +1,10 @@
 #import "appdel.h"
-#import "gfoeitem.h"
+#import "gfoe.h"
 
-@interface gfoeitemocto:gfoeitem
+@class mfoeitemocto;
+
+@interface gfoeocto:gfoe
+
+@property(weak, nonatomic)mfoeitemocto *model;
 
 @end

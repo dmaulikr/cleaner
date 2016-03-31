@@ -5,7 +5,7 @@
 -(instancetype)init:(NSDictionary*)dictionary x:(CGFloat)x y:(CGFloat)y
 {
     self = [super init];
-    self.spatial = [[gbuildingitem alloc] init:self];
+    self.spatial = [[gbuilding alloc] init:self];
     self.assetname = dictionary[@"asset"];
     self.spatial.x = x;
     self.spatial.y = y;

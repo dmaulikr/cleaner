@@ -1,6 +1,10 @@
 #import "appdel.h"
-#import "gfoeitem.h"
+#import "gfoe.h"
 
-@interface gfoeiteminvader:gfoeitem
+@class mfoeiteminvader;
+
+@interface gfoeinvader:gfoe
+
+@property(weak, nonatomic)mfoeiteminvader *model;
 
 @end

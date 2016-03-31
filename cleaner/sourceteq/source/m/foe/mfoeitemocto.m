@@ -5,7 +5,7 @@
 -(instancetype)init
 {
     self = [super init];
-    self.spatial = [[gfoeitemocto alloc] init:self];
+    self.spatial = [[gfoeocto alloc] init:self];
     
     return self;
 }

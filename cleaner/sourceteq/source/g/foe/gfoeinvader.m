@@ -1,12 +1,6 @@
-#import "gfoeiteminvader.h"
+#import "gfoeinvader.h"
 
-@interface gfoeiteminvader ()
-
-@property(weak, nonatomic)mfoeiteminvader *model;
-
-@end
-
-@implementation gfoeiteminvader
+@implementation gfoeinvader
 
 @dynamic model;
 

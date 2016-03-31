@@ -1,12 +1,12 @@
 #import "appdel.h"
 
-@class gbuildingitem;
+@class gbuilding;
 
 @interface mbuildingitem:NSObject
 
 -(instancetype)init:(NSDictionary*)dictionary x:(CGFloat)x y:(CGFloat)y;
 
-@property(strong, nonatomic)gbuildingitem *spatial;
+@property(strong, nonatomic)gbuilding *spatial;
 @property(copy, nonatomic)NSString *assetname;
 
 @end

@@ -1,6 +1,6 @@
-#import "gfoeitem.h"
+#import "gfoe.h"
 
-@implementation gfoeitem
+@implementation gfoe
 
 -(instancetype)init:(mfoeitem*)model
 {

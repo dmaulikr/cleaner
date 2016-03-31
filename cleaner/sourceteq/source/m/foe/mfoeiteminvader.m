@@ -5,7 +5,7 @@
 -(instancetype)init
 {
     self = [super init];
-    self.spatial = [[gfoeiteminvader alloc] init:self];
+    self.spatial = [[gfoeinvader alloc] init:self];
     
     return self;
 }

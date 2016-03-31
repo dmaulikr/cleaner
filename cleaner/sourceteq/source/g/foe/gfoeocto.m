@@ -1,12 +1,6 @@
-#import "gfoeitemocto.h"
+#import "gfoeocto.h"
 
-@interface gfoeitemocto ()
-
-@property(weak, nonatomic)mfoeitemocto *model;
-
-@end
-
-@implementation gfoeitemocto
+@implementation gfoeocto
 
 @dynamic model;
 

@@ -3,7 +3,7 @@
 
 @class mfoeitem;
 
-@interface gfoeitem:gspatialtexture
+@interface gfoe:gspatialtexture
 
 -(instancetype)init:(mfoeitem*)model;
 
