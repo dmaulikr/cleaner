@@ -23,4 +23,13 @@
     return self;
 }
 
+#pragma mark public
+
+-(GLKMatrix4)asprojectionmatrix
+{
+    GLKMatrix4 matrix = GLKMatrix4MakeOrtho(0, self.screenwidth, self.screenheight, 0, 1, -1);
+    
+    return matrix;
+}
+
 @end
