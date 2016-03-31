@@ -1,10 +1,11 @@
 #import "gspatial.h"
 #import "appdel.h"
 
+static GLsizei const size = 6;
+
 @interface gspatial ()
 
 @property(strong, nonatomic)NSMutableData *dataposition;
-@property(strong, nonatomic)NSMutableData *datatexture;
 
 @end
 
@@ -13,17 +14,7 @@
 -(instancetype)init
 {
     self = [super init];
-    
-    self.datatexture = [NSMutableData dataWithLength:6 * sizeof(GLKVector2)];
-    self.pointertexture = self.datatexture.mutableBytes;
-    self.pointertexture[0] = GLKVector2Make(0, 0);
-    self.pointertexture[1] = GLKVector2Make(0, 1);
-    self.pointertexture[2] = GLKVector2Make(1, 1);
-    self.pointertexture[3] = GLKVector2Make(1, 1);
-    self.pointertexture[4] = GLKVector2Make(1, 0);
-    self.pointertexture[5] = GLKVector2Make(0, 0);
-    self.image = [[gimage alloc] init];
-    
+    self.repos = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
@@ -38,48 +29,47 @@
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
-    [self render];
+    if(self.repos)
+    {
+        [self render];
+    }
 }
 
 #pragma mark functionality
 
--(void)vectorx:(CGFloat)x y:(CGFloat)y
+-(void)vector:(NSUInteger)index x:(CGFloat)x y:(CGFloat)y
 {
     [self.dataposition appendData:[NSMutableData dataWithLength:sizeof(GLKVector2)]];
     self.pointerposition = self.dataposition.mutableBytes;
-    self.pointerposition[self.size] = GLKVector2Make(x, y);
-    self.size++;
+    self.pointerposition[index] = GLKVector2Make(x, y);
 }
 
 #pragma mark public
 
 -(void)render
 {
-    self.size = 0;
+    self.repos = NO;
     self.dataposition = [NSMutableData data];
     
+    NSUInteger index = 0;
     CGFloat minx = self.x;
     CGFloat maxx = minx + self.width;
     CGFloat miny = self.y;
     CGFloat maxy = miny + self.height;
     
-    [self vectorx:minx y:miny];
-    [self vectorx:minx y:maxy];
-    [self vectorx:maxx y:maxy];
-    [self vectorx:maxx y:maxy];
-    [self vectorx:maxx y:miny];
-    [self vectorx:minx y:miny];
+    [self vector:index++ x:minx y:miny];
+    [self vector:index++ x:minx y:maxy];
+    [self vector:index++ x:maxx y:maxy];
+    [self vector:index++ x:maxx y:maxy];
+    [self vector:index++ x:maxx y:miny];
+    [self vector:index++x:minx y:miny];
 }
 
 -(void)draw:(GLKBaseEffect*)effect
 {
-    effect.texture2d0.name = self.image.current;
-    effect.constantColor = self.color;
-    [effect prepareToDraw];
-    
-    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, self.pointertexture);
     glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, 0, self.pointerposition);
-    glDrawArrays(GL_TRIANGLES, 0, self.size);
+    [effect prepareToDraw];
+    glDrawArrays(GL_TRIANGLES, 0, vectorcorners);
 }
 
 @end

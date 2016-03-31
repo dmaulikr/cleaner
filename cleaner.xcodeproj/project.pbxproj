@@ -78,6 +78,8 @@
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
 		DAB4439A1CACA00E00D04286 /* marea.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB443991CACA00E00D04286 /* marea.m */; };
+		DAB4439D1CACA80700D04286 /* gspatialtexture.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4439C1CACA80700D04286 /* gspatialtexture.m */; };
+		DAB443A01CACA82100D04286 /* gspatialgradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4439F1CACA82100D04286 /* gspatialgradient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -223,6 +225,10 @@
 		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
 		DAB443981CACA00E00D04286 /* marea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = marea.h; sourceTree = "<group>"; };
 		DAB443991CACA00E00D04286 /* marea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = marea.m; sourceTree = "<group>"; };
+		DAB4439B1CACA80700D04286 /* gspatialtexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gspatialtexture.h; sourceTree = "<group>"; };
+		DAB4439C1CACA80700D04286 /* gspatialtexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gspatialtexture.m; sourceTree = "<group>"; };
+		DAB4439E1CACA82100D04286 /* gspatialgradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gspatialgradient.h; sourceTree = "<group>"; };
+		DAB4439F1CACA82100D04286 /* gspatialgradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gspatialgradient.m; sourceTree = "<group>"; };
 		DAB7A05D1CAC8C210047A49E /* cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E930DA81122C155ADF580860 /* Pods-cleaner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.release.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -455,6 +461,10 @@
 				DA9386541CAC9078006B3213 /* gimage.m */,
 				DA9386551CAC9078006B3213 /* gspatial.h */,
 				DA9386561CAC9078006B3213 /* gspatial.m */,
+				DAB4439B1CACA80700D04286 /* gspatialtexture.h */,
+				DAB4439C1CACA80700D04286 /* gspatialtexture.m */,
+				DAB4439E1CACA82100D04286 /* gspatialgradient.h */,
+				DAB4439F1CACA82100D04286 /* gspatialgradient.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -871,6 +881,7 @@
 				DA9387051CAC9078006B3213 /* vgameloader.m in Sources */,
 				DA9386CF1CAC9078006B3213 /* appdel.m in Sources */,
 				DA9386E71CAC9078006B3213 /* gbuildingitem.m in Sources */,
+				DAB443A01CACA82100D04286 /* gspatialgradient.m in Sources */,
 				DA9386FF1CAC9078006B3213 /* mstorestatusdeferred.m in Sources */,
 				DA9386DD1CAC9078006B3213 /* chome.m in Sources */,
 				DA9386FA1CAC9078006B3213 /* msettings.m in Sources */,
@@ -897,6 +908,7 @@
 				DA9386F21CAC9078006B3213 /* mfoe.m in Sources */,
 				DA9386EB1CAC9078006B3213 /* gfoeitemocto.m in Sources */,
 				DA9386FE1CAC9078006B3213 /* mstorestatus.m in Sources */,
+				DAB4439D1CACA80700D04286 /* gspatialtexture.m in Sources */,
 				DA9387091CAC9078006B3213 /* valert.m in Sources */,
 				DA9386EE1CAC9078006B3213 /* mbuildingitem.m in Sources */,
 				DA9387001CAC9078006B3213 /* mstorestatusnew.m in Sources */,
