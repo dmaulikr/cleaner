@@ -1,4 +1,5 @@
 #import "gspatialgradient.h"
+#import "mcolor.h"
 
 @interface gspatialgradient ()
 
@@ -14,12 +15,13 @@
     
     self.datacolor = [NSMutableData dataWithLength:vectorcorners * sizeof(GLKVector2)];
     self.pointercolor = self.datacolor.mutableBytes;
-    self.pointercolor[0] = GLKVector2Make(0, 0);
-    self.pointercolor[1] = GLKVector2Make(0, 1);
-    self.pointercolor[2] = GLKVector2Make(1, 1);
-    self.pointercolor[3] = GLKVector2Make(1, 1);
-    self.pointercolor[4] = GLKVector2Make(1, 0);
-    self.pointercolor[5] = GLKVector2Make(0, 0);
+    
+    self.pointercolor[0] = [self.colorlefttop asvector];
+    self.pointercolor[1] = [self.colorleftbottom asvector];
+    self.pointercolor[2] = [self.colorrightbottom asvector];
+    self.pointercolor[3] = [self.colorrightbottom asvector];
+    self.pointercolor[4] = [self.colorrighttop asvector];
+    self.pointercolor[5] = [self.colorlefttop asvector];
     
     return self;
 }

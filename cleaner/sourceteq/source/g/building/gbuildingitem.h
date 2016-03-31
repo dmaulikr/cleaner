@@ -1,9 +1,9 @@
 #import "appdel.h"
-#import "gspatial.h"
+#import "gspatialtexture.h"
 
 @class mbuildingitem;
 
-@interface gbuildingitem:gspatial
+@interface gbuildingitem:gspatialtexture
 
 -(instancetype)init:(mbuildingitem*)model;
 
