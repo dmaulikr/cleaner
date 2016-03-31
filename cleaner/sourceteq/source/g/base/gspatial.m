@@ -44,6 +44,11 @@
 
 #pragma mark public
 
+-(void)rasterize
+{
+    [self render];
+}
+
 -(void)render
 {
     self.repos = NO;

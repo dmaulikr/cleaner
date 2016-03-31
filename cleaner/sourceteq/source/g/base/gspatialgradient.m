@@ -9,10 +9,11 @@
 
 @implementation gspatialgradient
 
--(instancetype)init
+#pragma mark -
+#pragma mark spatial
+
+-(void)rasterize
 {
-    self = [super init];
-    
     self.datacolor = [NSMutableData dataWithLength:vectorcorners * sizeof(GLKVector4)];
     self.pointercolor = self.datacolor.mutableBytes;
     self.pointercolor[0] = [self.colorlefttop asvector];
@@ -22,11 +23,8 @@
     self.pointercolor[4] = [self.colorrighttop asvector];
     self.pointercolor[5] = [self.colorlefttop asvector];
     
-    return self;
+    [super rasterize];
 }
-
-#pragma mark -
-#pragma mark spatial
 
 -(void)draw:(GLKBaseEffect*)effect
 {

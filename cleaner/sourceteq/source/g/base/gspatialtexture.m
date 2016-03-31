@@ -8,10 +8,11 @@
 
 @implementation gspatialtexture
 
--(instancetype)init
+#pragma mark -
+#pragma mark spatial
+
+-(void)rasterize
 {
-    self = [super init];
-    
     self.datatexture = [NSMutableData dataWithLength:vectorcorners * sizeof(GLKVector2)];
     self.pointertexture = self.datatexture.mutableBytes;
     self.pointertexture[0] = GLKVector2Make(0, 0);
@@ -22,11 +23,8 @@
     self.pointertexture[5] = GLKVector2Make(0, 0);
     self.image = [[gimage alloc] init];
     
-    return self;
+    [super rasterize];
 }
-
-#pragma mark -
-#pragma mark spatial
 
 -(void)draw:(GLKBaseEffect*)effect
 {

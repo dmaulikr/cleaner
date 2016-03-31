@@ -5,6 +5,7 @@ static GLsizei const vectorcorners = 6;
 
 @interface gspatial:NSObject
 
+-(void)rasterize;
 -(void)render;
 -(void)draw:(GLKBaseEffect*)effect;
 
