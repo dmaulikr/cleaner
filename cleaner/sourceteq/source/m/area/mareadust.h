@@ -1,7 +1,7 @@
 #import "appdel.h"
 
 @class marea;
-@class gareadust;
+@class mareadustitem;
 
 @interface mareadust:NSObject
 
@@ -9,6 +9,6 @@
 -(void)add;
 
 @property(strong, nonatomic)marea *modelarea;
-@property(strong, nonatomic)NSMutableArray<gareadust*> *items;
+@property(strong, nonatomic)NSMutableArray<mareadustitem*> *items;
 
 @end

@@ -15,9 +15,10 @@
 
 -(void)add
 {
-    CGFloat y = 100;
+    CGFloat y = self.modelarea.screenheight;
     CGFloat x = arc4random_uniform(self.modelarea.screenwidth);
-    gareadust *dust = [[gareadust alloc] init:<#(marea *)#>];
+    mareadustitem *dust = [[mareadustitem alloc] init:self x:x y:y];
+    [self.items addObject:dust];
 }
 
 @end

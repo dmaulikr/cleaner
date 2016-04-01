@@ -31,7 +31,7 @@ static NSUInteger const speedaddfoe = 100;
 {
     counteraddfoe++;
     
-    if(counteraddfoe >= speedaddfoe)
+    if(counteraddfoe > speedaddfoe)
     {
         counteraddfoe = 0;
         [self addfoe];

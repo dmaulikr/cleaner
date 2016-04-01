@@ -1,6 +1,6 @@
 #import "gareadust.h"
 
-static NSUInteger const size = 23;
+static NSUInteger const size = 11;
 
 @implementation gareadust
 
