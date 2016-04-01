@@ -1,6 +1,11 @@
 #import "mfoe.h"
 
+static NSUInteger const speedaddfoe = 100;
+
 @implementation mfoe
+{
+    NSUInteger counteraddfoe;
+}
 
 -(instancetype)init:(marea*)modelarea
 {
@@ -8,8 +13,30 @@
     self.modelarea = modelarea;
     self.items = [NSMutableArray array];
     self.rawfoes = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"foes" withExtension:@"plist"]];
+    counteraddfoe = 0;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedglkmove:(NSNotification*)notification
+{
+    counteraddfoe++;
+    
+    if(counteraddfoe >= speedaddfoe)
+    {
+        counteraddfoe = 0;
+        [self addfoe];
+        [self.modelarea.spatial movetotop];
+    }
 }
 
 #pragma mark public

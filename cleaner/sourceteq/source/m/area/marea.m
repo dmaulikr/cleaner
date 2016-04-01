@@ -4,6 +4,7 @@ static CGFloat const deltalefttop = -0.9;
 static CGFloat const deltaleftbottom = -0.4;
 static CGFloat const deltarighttop = -0.9;
 static CGFloat const deltarightbottom = -0.4;
+static CGFloat const ratioadddust = 50;
 
 @implementation marea
 
@@ -25,7 +26,26 @@ static CGFloat const deltarightbottom = -0.4;
         self.screenheight = rawscreenwidth;
     }
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
+    
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedglkmove:(NSNotification*)notification
+{
+    NSUInteger shouldadd = arc4random_uniform(ratioadddust);
+    
+    if(!shouldadd)
+    {
+        [self.modeldust add];
+    }
 }
 
 #pragma mark functionality
@@ -46,6 +66,7 @@ static CGFloat const deltarightbottom = -0.4;
 
 -(void)rasterize
 {
+    self.modeldust = [[mareadust alloc] init:self];
     self.spatial = [[garea alloc] init:self];
     [self randomcolor];
     [self.spatial rasterize];

@@ -10,6 +10,8 @@
 		B18D6C00B8D9A96A0AD3BEB9 /* libPods-cleaner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */; };
 		DA37B5141CAEBF7A00015AC2 /* foes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA37B5131CAEBF7A00015AC2 /* foes.plist */; };
 		DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5161CAEE89300015AC2 /* gareadust.m */; };
+		DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51C1CAEEDE400015AC2 /* mareadust.m */; };
+		DA37B5201CAEF52C00015AC2 /* mareadustitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51F1CAEF52C00015AC2 /* mareadustitem.m */; };
 		DA9386C61CAC9078006B3213 /* building.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860E1CAC9078006B3213 /* building.xcassets */; };
 		DA9386C71CAC9078006B3213 /* foe.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860F1CAC9078006B3213 /* foe.xcassets */; };
 		DA9386C81CAC9078006B3213 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9386101CAC9078006B3213 /* generic.xcassets */; };
@@ -84,6 +86,10 @@
 		DA37B5131CAEBF7A00015AC2 /* foes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foes.plist; sourceTree = "<group>"; };
 		DA37B5151CAEE89300015AC2 /* gareadust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gareadust.h; sourceTree = "<group>"; };
 		DA37B5161CAEE89300015AC2 /* gareadust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gareadust.m; sourceTree = "<group>"; };
+		DA37B51B1CAEEDE400015AC2 /* mareadust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mareadust.h; sourceTree = "<group>"; };
+		DA37B51C1CAEEDE400015AC2 /* mareadust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mareadust.m; sourceTree = "<group>"; };
+		DA37B51E1CAEF52C00015AC2 /* mareadustitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mareadustitem.h; sourceTree = "<group>"; };
+		DA37B51F1CAEF52C00015AC2 /* mareadustitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mareadustitem.m; sourceTree = "<group>"; };
 		DA93860E1CAC9078006B3213 /* building.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = building.xcassets; sourceTree = "<group>"; };
 		DA93860F1CAC9078006B3213 /* foe.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = foe.xcassets; sourceTree = "<group>"; };
 		DA9386101CAC9078006B3213 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -669,6 +675,10 @@
 			children = (
 				DAB443981CACA00E00D04286 /* marea.h */,
 				DAB443991CACA00E00D04286 /* marea.m */,
+				DA37B51B1CAEEDE400015AC2 /* mareadust.h */,
+				DA37B51C1CAEEDE400015AC2 /* mareadust.m */,
+				DA37B51E1CAEF52C00015AC2 /* mareadustitem.h */,
+				DA37B51F1CAEF52C00015AC2 /* mareadustitem.m */,
 			);
 			path = area;
 			sourceTree = "<group>";
@@ -855,11 +865,13 @@
 				DA9386DE1CAC9078006B3213 /* cmain.m in Sources */,
 				DA9387051CAC9078006B3213 /* vgameloader.m in Sources */,
 				DA9386CF1CAC9078006B3213 /* appdel.m in Sources */,
+				DA37B5201CAEF52C00015AC2 /* mareadustitem.m in Sources */,
 				DA9386E71CAC9078006B3213 /* gbuilding.m in Sources */,
 				DAB443A01CACA82100D04286 /* gspatialgradient.m in Sources */,
 				DA9386FF1CAC9078006B3213 /* mstorestatusdeferred.m in Sources */,
 				DA9386DD1CAC9078006B3213 /* chome.m in Sources */,
 				DA9386FA1CAC9078006B3213 /* msettings.m in Sources */,
+				DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */,
 				DA9387101CAC9078006B3213 /* vstorecell.m in Sources */,
 				DA9386D51CAC9078006B3213 /* uicolor+uicolormain.m in Sources */,
 				DA9386F61CAC9078006B3213 /* mgame.m in Sources */,

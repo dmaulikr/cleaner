@@ -14,6 +14,8 @@
 #import "mgame.h"
 #import "mgameeffect.h"
 #import "marea.h"
+#import "mareadust.h"
+#import "mareadustitem.h"
 #import "mfoe.h"
 #import "mfoeitem.h"
 #import "mbuilding.h"
