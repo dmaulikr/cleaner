@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>life</key>
+		<integer>20</integer>
+		<key>width</key>
+		<integer>20</integer>
+		<key>height</key>
+		<integer>20</integer>
+		<key>assets</key>
+		<array>
+			<string>foe_invader0</string>
+			<string>foe_invader1</string>
+			<string>foe_invader2</string>
+		</array>
+	</dict>
+    <dict>
+        <key>life</key>
+        <integer>30</integer>
+        <key>width</key>
+        <integer>20</integer>
+        <key>height</key>
+        <integer>20</integer>
+        <key>assets</key>
+        <array>
+            <string>foe_octo0</string>
+            <string>foe_octo1</string>
+            <string>foe_octo2</string>
+        </array>
+    </dict>
+</array>
+</plist>
