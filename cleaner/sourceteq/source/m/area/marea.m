@@ -25,10 +25,6 @@ static CGFloat const deltarightbottom = -0.4;
         self.screenheight = rawscreenwidth;
     }
     
-    self.glkarea = [[garea alloc] init:self];
-    [self randomcolor];
-    [self.glkarea rasterize];
-    
     return self;
 }
 
@@ -47,6 +43,13 @@ static CGFloat const deltarightbottom = -0.4;
 }
 
 #pragma mark public
+
+-(void)rasterize
+{
+    self.glkarea = [[garea alloc] init:self];
+    [self randomcolor];
+    [self.glkarea rasterize];
+}
 
 -(GLKMatrix4)asprojectionmatrix
 {

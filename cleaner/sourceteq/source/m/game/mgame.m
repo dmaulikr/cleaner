@@ -25,8 +25,9 @@
                        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                                       ^
                                       {
-                                          weakself.modelbuilding = [[mbuilding alloc] init];
                                           weakself.modelarea = [[marea alloc] init];
+                                          weakself.modelbuilding = [[mbuilding alloc] init:weakself.modelarea];
+                                          [weakself.modelarea rasterize];
                                           weakself.modelfoe = [[mfoe alloc] init];
                                           
                                           dispatch_async(dispatch_get_main_queue(),

@@ -47,6 +47,13 @@ static NSUInteger const framespersecond = 60;
     [[NSNotificationCenter defaultCenter] postNotificationName:notification_glkmove object:nil userInfo:nil];
 }
 
+#pragma mark public
+
+-(void)exitgame
+{
+    [[cmain singleton].pages sectionhome:YES direction:UIPageViewControllerNavigationDirectionReverse];
+}
+
 #pragma mark -
 #pragma mark glk del
 

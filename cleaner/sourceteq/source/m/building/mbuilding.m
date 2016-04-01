@@ -1,25 +1,30 @@
 #import "mbuilding.h"
 
+static CGFloat const buildingpadding = 20;
+
 @implementation mbuilding
 
--(instancetype)init
+-(instancetype)init:(marea*)modelarea
 {
     self = [super init];
     self.items = [NSMutableArray array];
     self.rawbuldings = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"buildings" withExtension:@"plist"]];
 
-    [self addbuildingatx:100 y:100];
+    [self addbuilding];
     
     return self;
 }
 
 #pragma mark public
 
--(void)addbuildingatx:(CGFloat)x y:(CGFloat)y
+-(void)addbuilding
 {
     NSUInteger index = arc4random_uniform((CGFloat)self.rawbuldings.count);
     NSDictionary *rawbuilding = self.rawbuldings[index];
-    mbuildingitem *building = [[mbuildingitem alloc] init:rawbuilding x:x y:y];
+    mbuildingitem *building = [[mbuildingitem alloc] init:rawbuilding];
+    building.spatial.x = 100;
+    building.spatial.y = self.modelarea.screenheight - (building.spatial.height - buildingpadding);
+    [building.spatial rasterize];
     
     [self.items addObject:building];
 }
