@@ -4,7 +4,7 @@ static CGFloat const deltalefttop = -0.9;
 static CGFloat const deltaleftbottom = -0.4;
 static CGFloat const deltarighttop = -0.9;
 static CGFloat const deltarightbottom = -0.4;
-static CGFloat const ratioadddust = 50;
+static CGFloat const ratioadddust = 350;
 
 @implementation marea
 
