@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B18D6C00B8D9A96A0AD3BEB9 /* libPods-cleaner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */; };
 		DA37B5141CAEBF7A00015AC2 /* foes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA37B5131CAEBF7A00015AC2 /* foes.plist */; };
+		DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5161CAEE89300015AC2 /* gareadust.m */; };
 		DA9386C61CAC9078006B3213 /* building.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860E1CAC9078006B3213 /* building.xcassets */; };
 		DA9386C71CAC9078006B3213 /* foe.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860F1CAC9078006B3213 /* foe.xcassets */; };
 		DA9386C81CAC9078006B3213 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9386101CAC9078006B3213 /* generic.xcassets */; };
@@ -81,6 +82,8 @@
 		884B2C09E1EC31FB2597D8A6 /* Pods-cleaner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cleaner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA37B5131CAEBF7A00015AC2 /* foes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foes.plist; sourceTree = "<group>"; };
+		DA37B5151CAEE89300015AC2 /* gareadust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gareadust.h; sourceTree = "<group>"; };
+		DA37B5161CAEE89300015AC2 /* gareadust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gareadust.m; sourceTree = "<group>"; };
 		DA93860E1CAC9078006B3213 /* building.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = building.xcassets; sourceTree = "<group>"; };
 		DA93860F1CAC9078006B3213 /* foe.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = foe.xcassets; sourceTree = "<group>"; };
 		DA9386101CAC9078006B3213 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -431,6 +434,8 @@
 			children = (
 				DA93864C1CAC9078006B3213 /* garea.h */,
 				DA93864D1CAC9078006B3213 /* garea.m */,
+				DA37B5151CAEE89300015AC2 /* gareadust.h */,
+				DA37B5161CAEE89300015AC2 /* gareadust.m */,
 			);
 			path = area;
 			sourceTree = "<group>";
@@ -845,6 +850,7 @@
 				DA9386F01CAC9078006B3213 /* mdbcreate.m in Sources */,
 				DA9386D61CAC9078006B3213 /* uifont+uifontmain.m in Sources */,
 				DA9386DA1CAC9078006B3213 /* cgame.m in Sources */,
+				DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */,
 				DA93870F1CAC9078006B3213 /* vstorebar.m in Sources */,
 				DA9386DE1CAC9078006B3213 /* cmain.m in Sources */,
 				DA9387051CAC9078006B3213 /* vgameloader.m in Sources */,
