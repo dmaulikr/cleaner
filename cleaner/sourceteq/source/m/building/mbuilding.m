@@ -1,12 +1,11 @@
 #import "mbuilding.h"
 
-static CGFloat const buildingpadding = 20;
-
 @implementation mbuilding
 
 -(instancetype)init:(marea*)modelarea
 {
     self = [super init];
+    self.modelarea = modelarea;
     self.items = [NSMutableArray array];
     self.rawbuldings = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"buildings" withExtension:@"plist"]];
 
@@ -23,7 +22,7 @@ static CGFloat const buildingpadding = 20;
     NSDictionary *rawbuilding = self.rawbuldings[index];
     mbuildingitem *building = [[mbuildingitem alloc] init:rawbuilding];
     building.spatial.x = 100;
-    building.spatial.y = self.modelarea.screenheight - (building.spatial.height - buildingpadding);
+    building.spatial.y = self.modelarea.screenheight - building.spatial.height;
     [building.spatial rasterize];
     
     [self.items addObject:building];
