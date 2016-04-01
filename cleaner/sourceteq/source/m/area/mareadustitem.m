@@ -45,7 +45,6 @@ static NSUInteger const minspeed = 1;
         speedcounter = 0;
         self.spatial.x += direction;
         self.spatial.y -= 1;
-        self.spatial.repos = YES;
         
         if(self.spatial.y < - self.spatial.height)
         {
@@ -63,6 +62,10 @@ static NSUInteger const minspeed = 1;
         if(remove)
         {
             [self.model.items removeObject:self];
+        }
+        else
+        {
+            [self.spatial render];
         }
     }
 }

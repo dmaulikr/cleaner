@@ -17,6 +17,5 @@ static GLsizei const vectorcorners = 6;
 @property(nonatomic)CGFloat height;
 @property(nonatomic)CGFloat x;
 @property(nonatomic)CGFloat y;
-@property(nonatomic)BOOL repos;
 
 @end

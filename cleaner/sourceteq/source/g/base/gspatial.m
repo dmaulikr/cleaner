@@ -9,14 +9,6 @@
 
 @implementation gspatial
 
--(instancetype)init
-{
-    self = [super init];
-    self.repos = NO;
-    
-    return self;
-}
-
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -29,14 +21,6 @@
     mgameeffect *modeleffect = (mgameeffect*)notification.userInfo;
     GLKBaseEffect *effect = modeleffect.effect;
     [self draw:effect];
-}
-
--(void)notifiedglkmove:(NSNotification*)notification
-{
-    if(self.repos)
-    {
-        [self render];
-    }
 }
 
 #pragma mark functionality
@@ -62,12 +46,10 @@
     [self render];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkdraw:) name:notification_glkdraw object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
 }
 
 -(void)render
 {
-    self.repos = NO;
     self.dataposition = [NSMutableData data];
     
     NSUInteger index = 0;
