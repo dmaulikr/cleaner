@@ -41,10 +41,9 @@ static NSUInteger const minspeed = 1;
     if(speedcounter > speed)
     {
         BOOL remove = NO;
-        
         speedcounter = 0;
         self.spatial.x += direction;
-        self.spatial.y -= 1;
+        self.spatial.y--;
         
         if(self.spatial.y < - self.spatial.height)
         {

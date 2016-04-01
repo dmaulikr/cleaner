@@ -1,7 +1,7 @@
 #import "mfoe.h"
 
-static CGFloat const ratioaddfoe = 100;
-static NSUInteger const speedaddfoe = 5;
+static CGFloat const ratioaddfoe = 25;
+static NSUInteger const speedaddfoe = 2;
 
 @implementation mfoe
 {
@@ -50,7 +50,7 @@ static NSUInteger const speedaddfoe = 5;
 {
     NSUInteger index = arc4random_uniform((CGFloat)self.rawfoes.count);
     NSDictionary *rawfoe = self.rawfoes[index];
-    mfoeitem *foe = [[mfoeitem alloc] init:rawfoe];
+    mfoeitem *foe = [[mfoeitem alloc] init:rawfoe model:self];
     CGFloat maxx = self.modelarea.screenwidth - foe.spatial.width;
     CGFloat x = arc4random_uniform(maxx);
     
