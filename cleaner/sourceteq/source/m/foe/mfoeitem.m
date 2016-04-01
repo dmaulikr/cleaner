@@ -1,6 +1,6 @@
 #import "mfoeitem.h"
 
-static CGFloat const maxspeed = 30;
+static CGFloat const maxspeed = 15;
 static CGFloat const ratiochangedirection = 30;
 static NSUInteger const minspeed = 1;
 
