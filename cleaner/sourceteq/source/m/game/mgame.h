@@ -4,6 +4,7 @@
 @class marea;
 @class mfoe;
 @class mbuilding;
+@class mgun;
 
 @interface mgame:NSObject
 
@@ -13,5 +14,6 @@
 @property(strong, nonatomic)marea *modelarea;
 @property(strong, nonatomic)mfoe *modelfoe;
 @property(strong, nonatomic)mbuilding *modelbuilding;
+@property(strong, nonatomic)mgun *modelgun;
 
 @end
