@@ -10,6 +10,7 @@ static GLsizei const vectorcorners = 6;
 -(void)draw:(GLKBaseEffect*)effect;
 -(void)rasterize;
 -(void)render;
+-(void)movetotop;
 
 @property(nonatomic)GLKVector2 *pointerposition;
 @property(nonatomic)CGFloat width;

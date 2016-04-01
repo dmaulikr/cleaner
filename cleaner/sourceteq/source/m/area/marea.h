@@ -7,7 +7,7 @@
 -(GLKMatrix4)asprojectionmatrix;
 -(void)rasterize;
 
-@property(strong, nonatomic)garea *glkarea;
+@property(strong, nonatomic)garea *spatial;
 @property(nonatomic)CGFloat screenwidth;
 @property(nonatomic)CGFloat screenheight;
 

@@ -84,4 +84,10 @@
     [self vector:index++ x:minx y:miny];
 }
 
+-(void)movetotop
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:notification_glkdraw object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkdraw:) name:notification_glkdraw object:nil];
+}
+
 @end

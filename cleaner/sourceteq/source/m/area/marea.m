@@ -36,19 +36,19 @@ static CGFloat const deltarightbottom = -0.4;
     CGFloat count = basecolors.count;
     NSUInteger index = arc4random_uniform(count);
     NSDictionary *basecolor = basecolors[index];
-    self.glkarea.colorlefttop = [mcolor basecolor:basecolor delta:deltalefttop];
-    self.glkarea.colorleftbottom = [mcolor basecolor:basecolor delta:deltaleftbottom];
-    self.glkarea.colorrighttop = [mcolor basecolor:basecolor delta:deltarighttop];
-    self.glkarea.colorrightbottom = [mcolor basecolor:basecolor delta:deltarightbottom];
+    self.spatial.colorlefttop = [mcolor basecolor:basecolor delta:deltalefttop];
+    self.spatial.colorleftbottom = [mcolor basecolor:basecolor delta:deltaleftbottom];
+    self.spatial.colorrighttop = [mcolor basecolor:basecolor delta:deltarighttop];
+    self.spatial.colorrightbottom = [mcolor basecolor:basecolor delta:deltarightbottom];
 }
 
 #pragma mark public
 
 -(void)rasterize
 {
-    self.glkarea = [[garea alloc] init:self];
+    self.spatial = [[garea alloc] init:self];
     [self randomcolor];
-    [self.glkarea rasterize];
+    [self.spatial rasterize];
 }
 
 -(GLKMatrix4)asprojectionmatrix

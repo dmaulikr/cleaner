@@ -34,6 +34,7 @@ static NSUInteger const speedaddfoe = 100;
     {
         counteraddfoe = 0;
         [self.modelfoe addfoe];
+        [self.modelarea.spatial movetotop];
     }
 }
 
@@ -54,7 +55,7 @@ static NSUInteger const speedaddfoe = 100;
                                       {
                                           weakself.modelarea = [[marea alloc] init];
                                           weakself.modelbuilding = [[mbuilding alloc] init:weakself.modelarea];
-                                          weakself.modelfoe = [[mfoe alloc] init];
+                                          weakself.modelfoe = [[mfoe alloc] init:weakself.modelarea];
                                           [weakself.modelarea rasterize];
                                           
                                           dispatch_async(dispatch_get_main_queue(),
