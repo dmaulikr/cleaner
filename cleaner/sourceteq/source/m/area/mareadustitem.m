@@ -1,11 +1,13 @@
 #import "mareadustitem.h"
 
-static CGFloat const moveratio = 10;
-static NSUInteger const speed = 3;
+static CGFloat const maxspeed = 40;
+static NSUInteger const minspeed = 2;
 
 @implementation mareadustitem
 {
+    NSUInteger speed;
     NSUInteger speedcounter;
+    NSUInteger direction;
 }
 
 -(instancetype)init:(mareadust*)model x:(CGFloat)x y:(CGFloat)y
@@ -17,6 +19,8 @@ static NSUInteger const speed = 3;
     self.spatial.y = y;
     [self.spatial rasterize];
     speedcounter = 0;
+    speed = arc4random_uniform(maxspeed) + minspeed;
+    direction = arc4random_uniform(3.0) - 1.0;
  
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
@@ -26,8 +30,6 @@ static NSUInteger const speed = 3;
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    NSLog(@"dealloced dust");
 }
 
 #pragma mark notified
@@ -38,22 +40,29 @@ static NSUInteger const speed = 3;
     
     if(speedcounter > speed)
     {
+        BOOL remove = NO;
+        
         speedcounter = 0;
+        self.spatial.x += direction;
+        self.spatial.y -= 1;
+        self.spatial.repos = YES;
         
-        NSUInteger shouldmove = arc4random_uniform(moveratio);
-        
-        if(!shouldmove)
+        if(self.spatial.y < - self.spatial.height)
         {
-            NSInteger direction = arc4random_uniform(3.0) - 1.0;
-            
-            self.spatial.x += direction;
-            self.spatial.y -= 1;
-            self.spatial.repos = YES;
-            
-            if(self.spatial.y < - self.spatial.height)
-            {
-                [self.model.items removeObject:self];
-            }
+            remove = YES;
+        }
+        else if(self.spatial.x < - self.spatial.width)
+        {
+            remove = YES;
+        }
+        else if(self.spatial.x > self.model.modelarea.screenwidth)
+        {
+            remove = YES;
+        }
+        
+        if(remove)
+        {
+            [self.model.items removeObject:self];
         }
     }
 }
