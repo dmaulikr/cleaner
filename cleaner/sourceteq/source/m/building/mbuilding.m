@@ -5,9 +5,10 @@
 -(instancetype)init
 {
     self = [super init];
-    self.glkbuilding = [[gbuilding alloc] init:self];
     self.items = [NSMutableArray array];
     self.rawbuldings = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"buildings" withExtension:@"plist"]];
+
+    [self addbuildingatx:100 y:100];
     
     return self;
 }

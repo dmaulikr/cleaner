@@ -6,6 +6,5 @@
 
 @property(strong, nonatomic)gimage *image;
 @property(nonatomic)GLKVector2 *pointertexture;
-@property(nonatomic)GLKVector4 color;
 
 @end

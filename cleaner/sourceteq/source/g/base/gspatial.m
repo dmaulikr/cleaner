@@ -14,9 +14,6 @@
     self = [super init];
     self.repos = NO;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkdraw:) name:notification_glkdraw object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
-    
     return self;
 }
 
@@ -63,6 +60,9 @@
 -(void)rasterize
 {
     [self render];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkdraw:) name:notification_glkdraw object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
 }
 
 -(void)render

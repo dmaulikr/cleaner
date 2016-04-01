@@ -12,7 +12,7 @@
     self.width = 50;
     self.height = 50;
     [self.image loadtextures:@[@"foe_octo0", @"foe_octo1", @"foe_octo2"]];
-    [self render];
+    [self rasterize];
     
     return self;
 }
