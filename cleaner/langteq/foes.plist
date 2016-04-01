@@ -6,9 +6,9 @@
 		<key>life</key>
 		<integer>20</integer>
 		<key>width</key>
-		<integer>20</integer>
+		<integer>15</integer>
 		<key>height</key>
-		<integer>20</integer>
+		<integer>15</integer>
 		<key>assets</key>
 		<array>
 			<string>foe_invader0</string>
@@ -20,9 +20,9 @@
         <key>life</key>
         <integer>30</integer>
         <key>width</key>
-        <integer>20</integer>
+        <integer>15</integer>
         <key>height</key>
-        <integer>20</integer>
+        <integer>15</integer>
         <key>assets</key>
         <array>
             <string>foe_octo0</string>

@@ -5,7 +5,7 @@
 @interface mfoeitem:NSObject
 
 -(instancetype)init:(NSDictionary*)dictionary;
--(void)initialx:(CGFloat)x y:(CGFloat)y;
+-(void)rasterize:(CGFloat)x;
 
 @property(strong, nonatomic)gfoe *spatial;
 

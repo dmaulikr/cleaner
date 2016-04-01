@@ -13,6 +13,7 @@
     
     self.spatial.width = width;
     self.spatial.height = height;
+    self.spatial.y = -height;
     [self.spatial.image loadtextures:assets];
     
     return self;
@@ -20,10 +21,9 @@
 
 #pragma mark public
 
--(void)initialx:(CGFloat)x y:(CGFloat)y
+-(void)rasterize:(CGFloat)x
 {
     self.spatial.x = x;
-    self.spatial.y = y;
     [self.spatial rasterize];
 }
 
