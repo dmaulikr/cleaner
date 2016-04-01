@@ -6,17 +6,17 @@
 		<key>asset</key>
 		<string>building0</string>
 		<key>width</key>
-		<integer>76</integer>
+		<integer>150</integer>
 		<key>height</key>
-		<string>184</string>
+		<string>367</string>
 	</dict>
     <dict>
         <key>asset</key>
         <string>building1</string>
         <key>width</key>
-        <integer>76</integer>
+        <integer>150</integer>
         <key>height</key>
-        <string>201</string>
+        <string>400</string>
     </dict>
 </array>
 </plist>

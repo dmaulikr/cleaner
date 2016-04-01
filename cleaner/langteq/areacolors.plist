@@ -12,5 +12,15 @@
 		<key>alpha</key>
 		<integer>1</integer>
 	</dict>
+    <dict>
+        <key>red</key>
+        <integer>1</integer>
+        <key>green</key>
+        <real>0.9098</real>
+        <key>blue</key>
+        <real>0.4392</real>
+        <key>alpha</key>
+        <integer>1</integer>
+    </dict>
 </array>
 </plist>

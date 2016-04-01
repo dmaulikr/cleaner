@@ -77,6 +77,7 @@
 		DAB443A01CACA82100D04286 /* gspatialgradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4439F1CACA82100D04286 /* gspatialgradient.m */; };
 		DAE218CD1CAD7CC5007AE65C /* mcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE218CC1CAD7CC5007AE65C /* mcolor.m */; };
 		DAE218CF1CADF7B0007AE65C /* areacolors.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAE218CE1CADF7B0007AE65C /* areacolors.plist */; };
+		DAE218D51CAE0D12007AE65C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE218D41CAE0D12007AE65C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,6 +221,7 @@
 		DAE218CB1CAD7CC5007AE65C /* mcolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcolor.h; sourceTree = "<group>"; };
 		DAE218CC1CAD7CC5007AE65C /* mcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcolor.m; sourceTree = "<group>"; };
 		DAE218CE1CADF7B0007AE65C /* areacolors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = areacolors.plist; sourceTree = "<group>"; };
+		DAE218D41CAE0D12007AE65C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		E930DA81122C155ADF580860 /* Pods-cleaner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.release.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +267,7 @@
 		DA93860D1CAC9078006B3213 /* imateq */ = {
 			isa = PBXGroup;
 			children = (
+				DAE218D41CAE0D12007AE65C /* Images.xcassets */,
 				DA93860E1CAC9078006B3213 /* building.xcassets */,
 				DA93860F1CAC9078006B3213 /* foe.xcassets */,
 				DA9386101CAC9078006B3213 /* generic.xcassets */,
@@ -781,6 +784,7 @@
 				DA9386C91CAC9078006B3213 /* loader.xcassets in Resources */,
 				DA9386C61CAC9078006B3213 /* building.xcassets in Resources */,
 				DA9386CC1CAC9078006B3213 /* defs.plist in Resources */,
+				DAE218D51CAE0D12007AE65C /* Images.xcassets in Resources */,
 				DA9386CA1CAC9078006B3213 /* analytics.plist in Resources */,
 				DA9386CE1CAC9078006B3213 /* purchases.plist in Resources */,
 			);
@@ -1003,6 +1007,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 884B2C09E1EC31FB2597D8A6 /* Pods-cleaner.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/cleaner/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1021,6 +1027,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E930DA81122C155ADF580860 /* Pods-cleaner.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/cleaner/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
