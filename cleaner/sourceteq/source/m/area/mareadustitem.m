@@ -1,6 +1,6 @@
 #import "mareadustitem.h"
 
-static CGFloat const maxspeed = 10;
+static CGFloat const maxspeed = 5;
 static NSUInteger const minspeed = 1;
 
 @implementation mareadustitem
