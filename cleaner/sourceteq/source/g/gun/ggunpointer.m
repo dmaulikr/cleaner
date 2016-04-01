@@ -1,5 +1,5 @@
-#import "ggun.h"
+#import "ggunpointer.h"
 
-@implementation ggun
+@implementation ggunpointer
 
 @end
