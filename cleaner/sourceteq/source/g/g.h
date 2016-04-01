@@ -3,4 +3,5 @@
 #import "gfoe.h"
 #import "gspatial.h"
 #import "gareadust.h"
-#import "ggun.h"
+#import "ggunpointer.h"
+#import "gguntarget.h"

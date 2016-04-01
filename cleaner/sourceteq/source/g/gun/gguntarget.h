@@ -1,13 +1,6 @@
-//
-//  gguntarget.h
-//  cleaner
-//
-//  Created by zero on 4/1/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "gspatialtexture.h"
 
-#import <Foundation/Foundation.h>
-
-@interface gguntarget : NSObject
+@interface gguntarget:gspatialtexture
 
 @end
