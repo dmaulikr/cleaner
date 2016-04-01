@@ -1,9 +1,9 @@
 #import "marea.h"
 
-static CGFloat const deltalefttop = -0.5;
-static CGFloat const deltaleftbottom = -0.3;
-static CGFloat const deltarighttop = -0.5;
-static CGFloat const deltarightbottom = -0.3;
+static CGFloat const deltalefttop = -0.9;
+static CGFloat const deltaleftbottom = -0.4;
+static CGFloat const deltarighttop = -0.9;
+static CGFloat const deltarightbottom = -0.4;
 
 @implementation marea
 
