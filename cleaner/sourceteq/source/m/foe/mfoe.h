@@ -1,11 +1,15 @@
 #import "appdel.h"
 
-@class gfoe;
 @class mfoeitem;
+@class marea;
 
 @interface mfoe:NSObject
 
-@property(strong, nonatomic)gfoe *glkfoe;
+-(instancetype)init:(marea*)modelarea;
+-(void)addfoe;
+
+@property(weak, nonatomic)marea *modelarea;
 @property(strong, nonatomic)NSMutableArray<mfoeitem*> *items;
+@property(strong, nonatomic)NSArray *rawfoes;
 
 @end

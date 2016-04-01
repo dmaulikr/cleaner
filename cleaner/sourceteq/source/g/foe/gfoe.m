@@ -1,5 +1,7 @@
 #import "gfoe.h"
 
+static NSUInteger const imagespeed = 180;
+
 @implementation gfoe
 
 -(instancetype)init:(mfoeitem*)model
@@ -8,7 +10,7 @@
     self.model = model;
     self.image.random = YES;
     self.image.srgb = YES;
-    self.image.speed = 180;
+    self.image.speed = imagespeed;
 
     return self;
 }

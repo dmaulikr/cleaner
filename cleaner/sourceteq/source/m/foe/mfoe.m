@@ -2,15 +2,22 @@
 
 @implementation mfoe
 
--(instancetype)init
+-(instancetype)init:(marea*)modelarea
 {
     self = [super init];
-    self.glkfoe = [[gfoe alloc] init:self];
+    self.modelarea = modelarea;
     self.items = [NSMutableArray array];
-    [self.items addObject:[[mfoeiteminvader alloc] init]];
-    [self.items addObject:[[mfoeitemocto alloc] init]];
+    self.rawfoes = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"foes" withExtension:@"plist"]];
     
     return self;
+}
+
+#pragma mark public
+
+-(void)addfoe
+{
+    NSUInteger index = arc4random_uniform((CGFloat)self.rawfoes.count);
+    NSDictionary *rawfoe = self.rawfoes[index];
 }
 
 @end
