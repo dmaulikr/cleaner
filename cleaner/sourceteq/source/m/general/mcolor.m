@@ -5,6 +5,42 @@
 +(instancetype)basecolor:(NSDictionary*)basecolor delta:(CGFloat)delta
 {
     mcolor *color;
+    CGFloat basered = [basecolor[@"red"] floatValue];
+    CGFloat basegreen = [basecolor[@"green"] floatValue];
+    CGFloat baseblue = [basecolor[@"blue"] floatValue];
+    CGFloat basealpha = [basecolor[@"alpha"] floatValue];
+    CGFloat red = basered + delta;
+    CGFloat green = basegreen + delta;
+    CGFloat blue = baseblue + delta;
+    
+    if(red > 1)
+    {
+        red = 1;
+    }
+    else if(red < 0)
+    {
+        red = 0;
+    }
+    
+    if(green > 1)
+    {
+        green = 1;
+    }
+    else if(green < 0)
+    {
+        green = 0;
+    }
+    
+    if(blue > 1)
+    {
+        blue = 1;
+    }
+    else if(blue < 0)
+    {
+        blue = 0;
+    }
+    
+    color = [mcolor red:red green:green blue:blue alpha:basealpha];
     
     return color;
 }
