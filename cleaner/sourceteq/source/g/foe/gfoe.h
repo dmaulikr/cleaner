@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import "appdel.h"
 #import "gspatialtexture.h"
 
 @class mfoeitem;

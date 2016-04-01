@@ -1,9 +1,9 @@
-#import <Foundation/Foundation.h>
+#import "appdel.h"
 
-@class gspatialtexture;
+@class gfoe;
 
 @interface mfoeitem:NSObject
 
-@property(strong, nonatomic)gspatialtexture *spatial;
+@property(strong, nonatomic)gfoe *spatial;
 
 @end
