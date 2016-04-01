@@ -1,6 +1,6 @@
 #import "appdel.h"
 #import "gspatialtexture.h"
 
-@interface gareadust:gspatial
+@interface gareadust:gspatialtexture
 
 @end

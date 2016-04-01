@@ -9,6 +9,7 @@ static NSUInteger const size = 23;
     self = [super init];
     self.width = size;
     self.height = size;
+    [self.image loadtextures:@[@"dust"]];
     
     return self;
 }
