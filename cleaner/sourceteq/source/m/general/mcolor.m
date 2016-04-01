@@ -2,6 +2,13 @@
 
 @implementation mcolor
 
++(instancetype)basecolor:(NSDictionary*)basecolor delta:(CGFloat)delta
+{
+    mcolor *color;
+    
+    return color;
+}
+
 +(instancetype)red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha
 {
     mcolor *color = [[mcolor alloc] init];

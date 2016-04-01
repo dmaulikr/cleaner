@@ -32,6 +32,10 @@
 -(void)randomcolor
 {
     NSArray *basecolors = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"areacolors" withExtension:@"plist"]];
+    CGFloat count = basecolors.count;
+    NSUInteger index = arc4random_uniform(count);
+    NSDictionary *color = basecolors[index];
+    mcolor *colorlefttop;
 }
 
 #pragma mark public
