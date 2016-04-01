@@ -12,6 +12,9 @@
 		DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5161CAEE89300015AC2 /* gareadust.m */; };
 		DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51C1CAEEDE400015AC2 /* mareadust.m */; };
 		DA37B5201CAEF52C00015AC2 /* mareadustitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51F1CAEF52C00015AC2 /* mareadustitem.m */; };
+		DA37B5241CAF366300015AC2 /* mgun.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5231CAF366300015AC2 /* mgun.m */; };
+		DA37B5291CAF379100015AC2 /* ggunpointer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5281CAF379100015AC2 /* ggunpointer.m */; };
+		DA37B52C1CAF38DB00015AC2 /* gguntarget.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B52B1CAF38DB00015AC2 /* gguntarget.m */; };
 		DA9386C61CAC9078006B3213 /* building.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860E1CAC9078006B3213 /* building.xcassets */; };
 		DA9386C71CAC9078006B3213 /* foe.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860F1CAC9078006B3213 /* foe.xcassets */; };
 		DA9386C81CAC9078006B3213 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9386101CAC9078006B3213 /* generic.xcassets */; };
@@ -90,6 +93,12 @@
 		DA37B51C1CAEEDE400015AC2 /* mareadust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mareadust.m; sourceTree = "<group>"; };
 		DA37B51E1CAEF52C00015AC2 /* mareadustitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mareadustitem.h; sourceTree = "<group>"; };
 		DA37B51F1CAEF52C00015AC2 /* mareadustitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mareadustitem.m; sourceTree = "<group>"; };
+		DA37B5221CAF366300015AC2 /* mgun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgun.h; sourceTree = "<group>"; };
+		DA37B5231CAF366300015AC2 /* mgun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgun.m; sourceTree = "<group>"; };
+		DA37B5281CAF379100015AC2 /* ggunpointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggunpointer.m; sourceTree = "<group>"; };
+		DA37B52A1CAF38DB00015AC2 /* gguntarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gguntarget.h; sourceTree = "<group>"; };
+		DA37B52B1CAF38DB00015AC2 /* gguntarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gguntarget.m; sourceTree = "<group>"; };
+		DA37B52D1CAF38FD00015AC2 /* ggunpointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggunpointer.h; sourceTree = "<group>"; };
 		DA93860E1CAC9078006B3213 /* building.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = building.xcassets; sourceTree = "<group>"; };
 		DA93860F1CAC9078006B3213 /* foe.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = foe.xcassets; sourceTree = "<group>"; };
 		DA9386101CAC9078006B3213 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -253,6 +262,26 @@
 				B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA37B5211CAF365900015AC2 /* gun */ = {
+			isa = PBXGroup;
+			children = (
+				DA37B5221CAF366300015AC2 /* mgun.h */,
+				DA37B5231CAF366300015AC2 /* mgun.m */,
+			);
+			path = gun;
+			sourceTree = "<group>";
+		};
+		DA37B5261CAF378200015AC2 /* gun */ = {
+			isa = PBXGroup;
+			children = (
+				DA37B52D1CAF38FD00015AC2 /* ggunpointer.h */,
+				DA37B5281CAF379100015AC2 /* ggunpointer.m */,
+				DA37B52A1CAF38DB00015AC2 /* gguntarget.h */,
+				DA37B52B1CAF38DB00015AC2 /* gguntarget.m */,
+			);
+			path = gun;
 			sourceTree = "<group>";
 		};
 		DA93860B1CAC9078006B3213 /* db */ = {
@@ -426,6 +455,7 @@
 		DA93864A1CAC9078006B3213 /* g */ = {
 			isa = PBXGroup;
 			children = (
+				DA37B5261CAF378200015AC2 /* gun */,
 				DA93864B1CAC9078006B3213 /* area */,
 				DA9386501CAC9078006B3213 /* base */,
 				DA9386571CAC9078006B3213 /* building */,
@@ -482,6 +512,7 @@
 		DA9386681CAC9078006B3213 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DA37B5211CAF365900015AC2 /* gun */,
 				DAB443971CAC9FB300D04286 /* area */,
 				DA9386691CAC9078006B3213 /* building */,
 				DA93866E1CAC9078006B3213 /* db */,
@@ -489,8 +520,8 @@
 				DA9386761CAC9078006B3213 /* foe */,
 				DA93867F1CAC9078006B3213 /* game */,
 				DA9386891CAC9078006B3213 /* general */,
-				DA93868D1CAC9078006B3213 /* m.h */,
 				DA93868E1CAC9078006B3213 /* store */,
+				DA93868D1CAC9078006B3213 /* m.h */,
 			);
 			path = m;
 			sourceTree = "<group>";
@@ -875,6 +906,7 @@
 				DA9387101CAC9078006B3213 /* vstorecell.m in Sources */,
 				DA9386D51CAC9078006B3213 /* uicolor+uicolormain.m in Sources */,
 				DA9386F61CAC9078006B3213 /* mgame.m in Sources */,
+				DA37B5291CAF379100015AC2 /* ggunpointer.m in Sources */,
 				DA9386EF1CAC9078006B3213 /* mdb.m in Sources */,
 				DA9386D31CAC9078006B3213 /* nsnotification+nsnotificationmain.m in Sources */,
 				DA9386FD1CAC9078006B3213 /* mstorepurchasesitem.m in Sources */,
@@ -884,6 +916,7 @@
 				DA9386E51CAC9078006B3213 /* gspatial.m in Sources */,
 				DA93870C1CAC9078006B3213 /* vspinner.m in Sources */,
 				DAE218CD1CAD7CC5007AE65C /* mcolor.m in Sources */,
+				DA37B5241CAF366300015AC2 /* mgun.m in Sources */,
 				DA9386ED1CAC9078006B3213 /* mbuilding.m in Sources */,
 				DA9387031CAC9078006B3213 /* vgame.m in Sources */,
 				DA93870B1CAC9078006B3213 /* viewbase.m in Sources */,
@@ -899,6 +932,7 @@
 				DA93870D1CAC9078006B3213 /* vhome.m in Sources */,
 				DA9387011CAC9078006B3213 /* mstorestatuspurchased.m in Sources */,
 				DA9387021CAC9078006B3213 /* mstorestatuspurchasing.m in Sources */,
+				DA37B52C1CAF38DB00015AC2 /* gguntarget.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
