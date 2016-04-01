@@ -35,6 +35,7 @@
 
 -(void)draw:(GLKBaseEffect*)effect
 {
+    effect.texture2d0.enabled = YES;
     effect.texture2d0.envMode = GLKTextureEnvModeReplace;
     effect.texture2d0.name = self.image.current;
     glEnableVertexAttribArray(GLKVertexAttribTexCoord0);

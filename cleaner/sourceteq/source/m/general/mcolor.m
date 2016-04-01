@@ -9,38 +9,18 @@
     CGFloat basegreen = [basecolor[@"green"] floatValue];
     CGFloat baseblue = [basecolor[@"blue"] floatValue];
     CGFloat basealpha = [basecolor[@"alpha"] floatValue];
-    CGFloat red = basered + delta;
-    CGFloat green = basegreen + delta;
-    CGFloat blue = baseblue + delta;
+    CGFloat alpha = basealpha + delta;
     
-    if(red > 1)
+    if(alpha > 1)
     {
-        red = 1;
+        alpha = 1;
     }
-    else if(red < 0)
+    else if(alpha < 0)
     {
-        red = 0;
+        alpha = 0;
     }
     
-    if(green > 1)
-    {
-        green = 1;
-    }
-    else if(green < 0)
-    {
-        green = 0;
-    }
-    
-    if(blue > 1)
-    {
-        blue = 1;
-    }
-    else if(blue < 0)
-    {
-        blue = 0;
-    }
-    
-    color = [mcolor red:red green:green blue:blue alpha:basealpha];
+    color = [mcolor red:basered green:basegreen blue:baseblue alpha:alpha];
     
     return color;
 }

@@ -14,7 +14,7 @@
 
 -(void)rasterize
 {
-    self.datacolor = [NSMutableData dataWithLength:vectorcorners * sizeof(GLKVector4)];
+    self.datacolor = [NSMutableData dataWithLength:6 * sizeof(GLKVector4)];
     self.pointercolor = self.datacolor.mutableBytes;
     self.pointercolor[0] = [self.colorlefttop asvector];
     self.pointercolor[1] = [self.colorleftbottom asvector];
@@ -28,9 +28,10 @@
 
 -(void)draw:(GLKBaseEffect*)effect
 {
+    effect.texture2d0.enabled = NO;
     glEnableVertexAttribArray(GLKVertexAttribColor);
-    glVertexAttribPointer(GLKVertexAttribColor, 2, GL_FLOAT, GL_FALSE, 0, self.pointercolor);
-
+    glVertexAttribPointer(GLKVertexAttribColor, 4, GL_FLOAT, GL_FALSE, 0, self.pointercolor);
+    
     [super draw:effect];
     
     glDisableVertexAttribArray(GLKVertexAttribColor);

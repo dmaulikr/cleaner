@@ -10,7 +10,7 @@
 		<key>blue</key>
 		<real>0.6117</real>
 		<key>alpha</key>
-		<real>0.5</real>
+		<integer>1</integer>
 	</dict>
 </array>
 </plist>

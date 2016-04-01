@@ -1,5 +1,10 @@
 #import "marea.h"
 
+static CGFloat const deltalefttop = -0.5;
+static CGFloat const deltaleftbottom = -0.3;
+static CGFloat const deltarighttop = -0.5;
+static CGFloat const deltarightbottom = -0.3;
+
 @implementation marea
 
 -(instancetype)init
@@ -34,8 +39,11 @@
     NSArray *basecolors = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"areacolors" withExtension:@"plist"]];
     CGFloat count = basecolors.count;
     NSUInteger index = arc4random_uniform(count);
-    NSDictionary *color = basecolors[index];
-    mcolor *colorlefttop;
+    NSDictionary *basecolor = basecolors[index];
+    self.glkarea.colorlefttop = [mcolor basecolor:basecolor delta:deltalefttop];
+    self.glkarea.colorleftbottom = [mcolor basecolor:basecolor delta:deltaleftbottom];
+    self.glkarea.colorrighttop = [mcolor basecolor:basecolor delta:deltarighttop];
+    self.glkarea.colorrightbottom = [mcolor basecolor:basecolor delta:deltarightbottom];
 }
 
 #pragma mark public
