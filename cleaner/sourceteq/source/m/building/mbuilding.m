@@ -9,19 +9,20 @@
     self.items = [NSMutableArray array];
     self.rawbuldings = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"buildings" withExtension:@"plist"]];
 
-    [self addbuilding];
+    [self addbuilding:50];
+    [self addbuilding:400];
     
     return self;
 }
 
 #pragma mark public
 
--(void)addbuilding
+-(void)addbuilding:(CGFloat)x
 {
     NSUInteger index = arc4random_uniform((CGFloat)self.rawbuldings.count);
     NSDictionary *rawbuilding = self.rawbuldings[index];
     mbuildingitem *building = [[mbuildingitem alloc] init:rawbuilding];
-    building.spatial.x = 100;
+    building.spatial.x = x;
     building.spatial.y = self.modelarea.screenheight - building.spatial.height;
     [building.spatial rasterize];
     
