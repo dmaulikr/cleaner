@@ -27,8 +27,8 @@
                                       {
                                           weakself.modelarea = [[marea alloc] init];
                                           weakself.modelbuilding = [[mbuilding alloc] init:weakself.modelarea];
-                                          [weakself.modelarea rasterize];
                                           weakself.modelfoe = [[mfoe alloc] init];
+                                          [weakself.modelarea rasterize];
                                           
                                           dispatch_async(dispatch_get_main_queue(),
                                                          ^
