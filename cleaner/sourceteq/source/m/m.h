@@ -15,5 +15,6 @@
 #import "mgameeffect.h"
 #import "marea.h"
 #import "mfoe.h"
+#import "mfoeitem.h"
 #import "mbuilding.h"
 #import "mbuildingitem.h"
