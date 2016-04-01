@@ -76,6 +76,7 @@
 		DAB4439D1CACA80700D04286 /* gspatialtexture.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4439C1CACA80700D04286 /* gspatialtexture.m */; };
 		DAB443A01CACA82100D04286 /* gspatialgradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4439F1CACA82100D04286 /* gspatialgradient.m */; };
 		DAE218CD1CAD7CC5007AE65C /* mcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE218CC1CAD7CC5007AE65C /* mcolor.m */; };
+		DAE218CF1CADF7B0007AE65C /* areacolors.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAE218CE1CADF7B0007AE65C /* areacolors.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -218,6 +219,7 @@
 		DAB7A05D1CAC8C210047A49E /* cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE218CB1CAD7CC5007AE65C /* mcolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcolor.h; sourceTree = "<group>"; };
 		DAE218CC1CAD7CC5007AE65C /* mcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcolor.m; sourceTree = "<group>"; };
+		DAE218CE1CADF7B0007AE65C /* areacolors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = areacolors.plist; sourceTree = "<group>"; };
 		E930DA81122C155ADF580860 /* Pods-cleaner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.release.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,6 +281,7 @@
 				DA9386151CAC9078006B3213 /* defs.plist */,
 				DA9386161CAC9078006B3213 /* Localizable.strings */,
 				DA9386191CAC9078006B3213 /* purchases.plist */,
+				DAE218CE1CADF7B0007AE65C /* areacolors.plist */,
 			);
 			path = langteq;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 			files = (
 				DA9386C81CAC9078006B3213 /* generic.xcassets in Resources */,
 				DA9386C71CAC9078006B3213 /* foe.xcassets in Resources */,
+				DAE218CF1CADF7B0007AE65C /* areacolors.plist in Resources */,
 				DA9386CB1CAC9078006B3213 /* buildings.plist in Resources */,
 				DA9386CD1CAC9078006B3213 /* Localizable.strings in Resources */,
 				DAB443961CAC9C5300D04286 /* cleaner.db in Resources */,
