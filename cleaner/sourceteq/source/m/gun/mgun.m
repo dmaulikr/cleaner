@@ -138,11 +138,11 @@ static NSInteger const deltaspeed = 3;
     self.expectedx = x;
     self.expectedy = y;
     
-    if(deltax > 0)
+    if(deltax < 0)
     {
         self.deltahr = delta_move_add;
     }
-    else if(deltax < 0)
+    else if(deltax > 0)
     {
         self.deltahr = delta_move_subs;
     }
@@ -151,11 +151,11 @@ static NSInteger const deltaspeed = 3;
         self.deltahr = delta_move_none;
     }
     
-    if(deltay > 0)
+    if(deltay < 0)
     {
         self.deltavr = delta_move_add;
     }
-    else if(deltay < 0)
+    else if(deltay > 0)
     {
         self.deltavr = delta_move_subs;
     }
