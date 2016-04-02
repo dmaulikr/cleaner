@@ -1,6 +1,6 @@
 #import "ggunpointer.h"
 
-static CGFloat const minsize = 30;
+static CGFloat const minsize = 20;
 static CGFloat const maxsize = 70;
 
 @implementation ggunpointer

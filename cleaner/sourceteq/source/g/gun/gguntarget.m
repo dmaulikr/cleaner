@@ -1,6 +1,6 @@
 #import "gguntarget.h"
 
-static CGFloat const minsize = 40;
+static CGFloat const minsize = 30;
 static CGFloat const maxsize = 60;
 
 @implementation gguntarget
