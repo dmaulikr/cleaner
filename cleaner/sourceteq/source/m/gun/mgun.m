@@ -7,7 +7,7 @@ typedef NS_ENUM(NSUInteger, delta_move)
     delta_move_none
 };
 
-static NSInteger const deltaspeed = 3;
+static NSInteger const deltaspeed = 10;
 
 @interface mgun ()
 
@@ -48,8 +48,8 @@ static NSInteger const deltaspeed = 3;
 -(void)notifiedglkmove:(NSNotification*)notification
 {
     BOOL edited = NO;
-    NSInteger newx = 0;
-    NSInteger newy = 0;
+    NSInteger newx = self.x;
+    NSInteger newy = self.y;
     
     if(self.deltahr != delta_move_none)
     {

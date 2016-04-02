@@ -12,6 +12,7 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setMultipleTouchEnabled:YES];
     self.controller = controller;
     
     UIButton *button = [[UIButton alloc] init];
@@ -37,12 +38,18 @@
 
 -(void)touchesBegan:(NSSet<UITouch*>*)touches withEvent:(UIEvent*)event
 {
-    [self movegun:touches];
+    if(touches.count == 2)
+    {
+        [self movegun:touches];
+    }
 }
 
 -(void)touchesMoved:(NSSet<UITouch*>*)touches withEvent:(UIEvent*)event
 {
-    [self movegun:touches];
+    if(touches.count == 2)
+    {
+        [self movegun:touches];
+    }
 }
 
 #pragma mark actions
