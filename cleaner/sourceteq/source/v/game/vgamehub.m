@@ -35,6 +35,16 @@
 
 #pragma mark gestures
 
+-(void)touchesBegan:(NSSet<UITouch*>*)touches withEvent:(UIEvent*)event
+{
+    [self movegun:touches];
+}
+
+-(void)touchesMoved:(NSSet<UITouch*>*)touches withEvent:(UIEvent*)event
+{
+    [self movegun:touches];
+}
+
 #pragma mark actions
 
 -(void)actionexit:(UIButton*)button
@@ -43,5 +53,19 @@
 }
 
 #pragma mark functionality
+
+-(void)movegun:(NSSet<UITouch*>*)touches
+{
+    UITouch *touch = touches.anyObject;
+    
+    if(touch)
+    {
+        CGPoint location = [touch locationInView:self];
+        NSInteger x = roundf(location.x);
+        NSInteger y = roundf(location.y);
+        
+        [self.controller.model.modelgun movetox:x y:y];
+    }
+}
 
 @end
