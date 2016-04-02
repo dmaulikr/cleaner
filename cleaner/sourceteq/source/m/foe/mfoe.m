@@ -1,12 +1,8 @@
 #import "mfoe.h"
 
-static CGFloat const ratioaddfoe = 25;
-static NSUInteger const speedaddfoe = 2;
+static CGFloat const ratioaddfoe = 30;
 
 @implementation mfoe
-{
-    NSUInteger counteraddfoe;
-}
 
 -(instancetype)init:(marea*)modelarea
 {
@@ -14,7 +10,6 @@ static NSUInteger const speedaddfoe = 2;
     self.modelarea = modelarea;
     self.items = [NSMutableArray array];
     self.rawfoes = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"foes" withExtension:@"plist"]];
-    counteraddfoe = 0;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
@@ -30,17 +25,11 @@ static NSUInteger const speedaddfoe = 2;
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
-    counteraddfoe++;
+    NSUInteger shouldadd = arc4random_uniform(ratioaddfoe);
     
-    if(counteraddfoe > speedaddfoe)
+    if(!shouldadd)
     {
-        counteraddfoe = 0;
-        NSUInteger shouldadd = arc4random_uniform(ratioaddfoe);
-        
-        if(!shouldadd)
-        {
-            [self addfoe];
-        }
+        [self addfoe];
     }
 }
 

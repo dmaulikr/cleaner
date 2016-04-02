@@ -26,6 +26,8 @@ static CGFloat const ratioadddust = 100;
         self.screenheight = rawscreenwidth;
     }
     
+    self.centerx = self.screenwidth / 2.0;
+    self.centery = self.screenheight / 2.0;
     [self rasterize];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
