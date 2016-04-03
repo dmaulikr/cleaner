@@ -5,4 +5,6 @@
 
 -(void)centerx:(NSInteger)x y:(NSInteger)y;
 
+@property(nonatomic)BOOL active;
+
 @end

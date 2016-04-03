@@ -10,6 +10,7 @@ static CGFloat const gunsize = 40;
 -(instancetype)init
 {
     self = [super init];
+    self.active = NO;
     gunsize_2 = gunsize / 2.0;
     
     return self;
@@ -19,12 +20,24 @@ static CGFloat const gunsize = 40;
 
 -(void)centerx:(NSInteger)x y:(NSInteger)y
 {
+    self.active = YES;
     self.width = gunsize;
     self.height = gunsize;
     self.x = x - gunsize_2;
     self.y = y - gunsize_2;
     
     [self render];
+}
+
+#pragma mark -
+#pragma mark gspatial
+
+-(void)draw:(GLKBaseEffect*)effect
+{
+    if(self.active)
+    {
+        [super draw:effect];
+    }
 }
 
 @end

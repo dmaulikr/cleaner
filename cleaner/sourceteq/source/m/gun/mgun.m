@@ -89,23 +89,6 @@
     [self.spatialtarget movetotop];
 }
 
-#pragma mark functionality
-
--(void)innermovetox:(NSInteger)x y:(NSInteger)y
-{
-    BOOL focused = NO;
-    
-    if(self.deltavr == delta_move_none && self.deltahr == delta_move_none)
-    {
-        focused = YES;
-    }
-    
-    self.x = x;
-    self.y = y;
-    [self.spatialpointer centeronx:x y:y focused:focused];
-    [self.spatialtarget centeronx:x y:y focused:focused];
-}
-
 #pragma mark public
 
 -(void)movetox:(NSInteger)x y:(NSInteger)y
@@ -144,12 +127,13 @@
 
 -(void)startloopat:(CGPoint)point
 {
-    
+    self.loopstart = point;
 }
 
 -(void)closeloopat:(CGPoint)point
 {
-    
+    self.loopend = point;
+    self.closedloop = YES;
 }
 
 @end
