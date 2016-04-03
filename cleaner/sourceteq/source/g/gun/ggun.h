@@ -3,7 +3,7 @@
 
 @interface ggun:gspatialtexture
 
--(void)centerx:(NSInteger)x y:(NSInteger)y;
+-(void)initialx:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height;
 
 @property(nonatomic)BOOL active;
 

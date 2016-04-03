@@ -12,13 +12,13 @@
 
 #pragma mark public
 
--(void)centerx:(NSInteger)x y:(NSInteger)y
+-(void)initialx:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height
 {
     self.active = YES;
-    self.width = gunsize;
-    self.height = gunsize;
-    self.x = x - gunsize_2;
-    self.y = y - gunsize_2;
+    self.x = x;
+    self.y = y;
+    self.width = width;
+    self.height = height;
     
     [self render];
     [self movetotop];

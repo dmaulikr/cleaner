@@ -52,8 +52,11 @@ static CGFloat const gunsize = 40;
 
 -(void)centerx:(NSInteger)x y:(NSInteger)y
 {
-    [self.spatialpointer centerx:x y:y];
-    [self.spatialtarget centerx:x y:y];
+    NSInteger initialx = x - gunsize_2;
+    NSInteger initialy = y - gunsize_2;
+    
+    [self.spatialpointer initialx:initialx y:initialy width:gunsize height:gunsize];
+    [self.spatialtarget initialx:initialx y:initialy width:gunsize height:gunsize];
 }
 
 #pragma mark public
