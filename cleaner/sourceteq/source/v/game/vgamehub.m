@@ -81,12 +81,30 @@
     if(count)
     {
         UITouch *toucha = tarray[0];
-        self.modelgun.touchstart = toucha;
+        
+        if(!self.modelgun.touchstart)
+        {
+            if(self.modelgun.touchend != toucha)
+            {
+                self.modelgun.touchstart = toucha;
+            }
+        }
         
         if(count > 1)
         {
             UITouch *touchb = tarray[1];
-            self.modelgun.touchend = touchb;
+            
+            if(!self.modelgun.touchend)
+            {
+                if(self.modelgun.touchstart != touchb)
+                {
+                    self.modelgun.touchend = touchb;
+                }
+                else
+                {
+                    self.modelgun.touchend = toucha;
+                }
+            }
         }
     }
 }
