@@ -1,13 +1,13 @@
-//
-//  mgunshot.h
-//  cleaner
-//
-//  Created by zero on 4/3/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface mgunshot:NSDictionary
 
-@interface mgunshot : NSObject
+-(instancetype)init:(NSInteger)caliber minx:(NSInteger)minx miny:(NSInteger)miny maxx:(NSInteger)maxx maxy:(NSInteger)maxy;
+
+@property(nonatomic)NSInteger caliber;
+@property(nonatomic)NSInteger minx;
+@property(nonatomic)NSInteger miny;
+@property(nonatomic)NSInteger maxx;
+@property(nonatomic)NSInteger maxy;
 
 @end

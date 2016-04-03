@@ -21,3 +21,4 @@
 #import "mbuilding.h"
 #import "mbuildingitem.h"
 #import "mgun.h"
+#import "mgunshot.h"
