@@ -26,8 +26,14 @@
 {
     if(self.closedloop)
     {
-        NSInteger x;
-        NSInteger y;
+        CGFloat xa = self.loopstart.x;
+        CGFloat ya = self.loopstart.y;
+        CGFloat xb = self.loopend.x;
+        CGFloat yb = self.loopend.y;
+        CGFloat deltax = xa - xb;
+        CGFloat deltay = ya - yb;
+        NSInteger x = roundf(xa - deltax);
+        NSInteger y = roundf(yb - deltay);
         
         [self.spatialpointer centerx:x y:y];
         [self.spatialtarget centerx:x y:y];
