@@ -8,7 +8,6 @@
     self.modelarea = modelarea;
     self.spatialpointer = [[ggunpointer alloc] init];
     self.spatialtarget = [[gguntarget alloc] init];
-    [self innermovetox:self.expectedx y:self.expectedy];
     [self.spatialtarget rasterize];
     [self.spatialpointer rasterize];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
