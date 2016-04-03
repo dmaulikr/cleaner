@@ -1,17 +1,11 @@
 #import "ggun.h"
 
-static CGFloat const gunsize = 40;
-
 @implementation ggun
-{
-    CGFloat gunsize_2;
-}
 
 -(instancetype)init
 {
     self = [super init];
     self.active = NO;
-    gunsize_2 = gunsize / 2.0;
     
     return self;
 }

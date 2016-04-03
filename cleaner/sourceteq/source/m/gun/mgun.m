@@ -1,6 +1,11 @@
 #import "mgun.h"
 
+static CGFloat const gunsize = 40;
+
 @implementation mgun
+{
+    CGFloat gunsize_2;
+}
 
 -(instancetype)init:(marea*)modelarea
 {
@@ -10,6 +15,7 @@
     self.spatialtarget = [[gguntarget alloc] init];
     [self.spatialtarget rasterize];
     [self.spatialpointer rasterize];
+    gunsize_2 = gunsize / 2.0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
@@ -38,10 +44,16 @@
         CGFloat deltay_2 = deltay / 2.0;
         NSInteger x = roundf(xa - deltax_2);
         NSInteger y = roundf(ya - deltay_2);
-        
-        [self.spatialpointer centerx:x y:y];
-        [self.spatialtarget centerx:x y:y];
+        [self centerx:x y:y];
     }
+}
+
+#pragma mark functionality
+
+-(void)centerx:(NSInteger)x y:(NSInteger)y
+{
+    [self.spatialpointer centerx:x y:y];
+    [self.spatialtarget centerx:x y:y];
 }
 
 #pragma mark public
