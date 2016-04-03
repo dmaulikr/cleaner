@@ -165,4 +165,14 @@ static NSInteger const deltaspeed = 10;
     }
 }
 
+-(void)startloopat:(CGPoint)point
+{
+    
+}
+
+-(void)closeloopat:(CGPoint)point
+{
+    
+}
+
 @end

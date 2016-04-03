@@ -58,12 +58,19 @@
 -(void)movegun:(NSSet<UITouch*>*)touches
 {
     NSArray<UITouch*> *tarray = touches.allObjects;
-    UITouch *toucha = tarray[0];
-    UITouch *touchb = tarray[1];
+    NSUInteger count = tarray.count;
     
-    CGPoint location = [touch locationInView:self];
-    NSInteger x = roundf(location.x);
-    NSInteger y = roundf(location.y);
+    if(count)
+    {
+        UITouch *toucha = tarray[0];
+        CGPoint locationa = [toucha locationInView:self];
+        
+        if(count > 1)
+        {
+            UITouch *touchb = tarray[1];
+            CGPoint locationb = [touchb locationInView:self];
+        }
+    }
     
     [self.controller.model.modelgun movetox:x y:y];
 }

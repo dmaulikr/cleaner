@@ -7,7 +7,8 @@
 @interface mgun:NSObject
 
 -(instancetype)init:(marea*)modelarea;
--(void)movetox:(NSInteger)x y:(NSInteger)y;
+-(void)startloopat:(CGPoint)point;
+-(void)closeloopat:(CGPoint)point;
 
 @property(weak, nonatomic)marea *modelarea;
 @property(strong, nonatomic)gguntarget *spatialtarget;
