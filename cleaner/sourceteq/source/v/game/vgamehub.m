@@ -1,5 +1,11 @@
 #import "vgamehub.h"
 
+@interface vgamehub ()
+
+@property(weak, nonatomic)mgun *modelgun;
+
+@end
+
 @implementation vgamehub
 {
     CGFloat originx;
@@ -14,6 +20,7 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setMultipleTouchEnabled:YES];
     self.controller = controller;
+    self.modelgun = controller.model.modelgun;
     
     UIButton *button = [[UIButton alloc] init];
     [button setBackgroundColor:[UIColor main]];
@@ -65,14 +72,16 @@
         UITouch *toucha = tarray[0];
         CGPoint locationa = [toucha locationInView:self];
         
+        [self.modelgun startloopat:locationa];
+        
         if(count > 1)
         {
             UITouch *touchb = tarray[1];
             CGPoint locationb = [touchb locationInView:self];
+            
+            [self.modelgun closeloopat:locationb];
         }
     }
-    
-    [self.controller.model.modelgun movetox:x y:y];
 }
 
 @end
