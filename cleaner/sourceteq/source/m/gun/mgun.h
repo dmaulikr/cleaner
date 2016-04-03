@@ -13,7 +13,8 @@
 @property(weak, nonatomic)marea *modelarea;
 @property(strong, nonatomic)gguntarget *spatialtarget;
 @property(strong, nonatomic)ggunpointer *spatialpointer;
-@property(nonatomic)NSInteger x;
-@property(nonatomic)NSInteger y;
+@property(nonatomic)CGPoint loopstart;
+@property(nonatomic)CGPoint loopend;
+@property(nonatomic)BOOL closedloop;
 
 @end

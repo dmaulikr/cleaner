@@ -1,23 +1,5 @@
 #import "mgun.h"
 
-typedef NS_ENUM(NSUInteger, delta_move)
-{
-    delta_move_add,
-    delta_move_subs,
-    delta_move_none
-};
-
-static NSInteger const deltaspeed = 10;
-
-@interface mgun ()
-
-@property(nonatomic)delta_move deltahr;
-@property(nonatomic)delta_move deltavr;
-@property(nonatomic)NSInteger expectedx;
-@property(nonatomic)NSInteger expectedy;
-
-@end
-
 @implementation mgun
 
 -(instancetype)init:(marea*)modelarea
@@ -26,10 +8,6 @@ static NSInteger const deltaspeed = 10;
     self.modelarea = modelarea;
     self.spatialpointer = [[ggunpointer alloc] init];
     self.spatialtarget = [[gguntarget alloc] init];
-    self.deltahr = delta_move_none;
-    self.deltavr = delta_move_none;
-    self.expectedx = modelarea.centerx;
-    self.expectedy = modelarea.centery;
     [self innermovetox:self.expectedx y:self.expectedy];
     [self.spatialtarget rasterize];
     [self.spatialpointer rasterize];
