@@ -24,16 +24,20 @@
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
-    if(self.closedloop)
+    if(self.touchstart && self.touchend)
     {
-        CGFloat xa = self.loopstart.x;
-        CGFloat ya = self.loopstart.y;
-        CGFloat xb = self.loopend.x;
-        CGFloat yb = self.loopend.y;
+        CGPoint pointstart = [self.touchstart locationInView:self.hub];
+        CGPoint pointend = [self.touchend locationInView:self.hub];
+        CGFloat xa = pointstart.x;
+        CGFloat ya = pointstart.y;
+        CGFloat xb = pointend.x;
+        CGFloat yb = pointend.y;
         CGFloat deltax = xa - xb;
         CGFloat deltay = ya - yb;
-        NSInteger x = roundf(xa - deltax);
-        NSInteger y = roundf(yb - deltay);
+        CGFloat deltax_2 = deltax / 2.0;
+        CGFloat deltay_2 = deltay / 2.0;
+        NSInteger x = roundf(xa - deltax_2);
+        NSInteger y = roundf(ya - deltay_2);
         
         [self.spatialpointer centerx:x y:y];
         [self.spatialtarget centerx:x y:y];
@@ -42,15 +46,10 @@
 
 #pragma mark public
 
--(void)startloopat:(CGPoint)point
+-(void)clearloop
 {
-    self.loopstart = point;
-}
-
--(void)closeloopat:(CGPoint)point
-{
-    self.loopend = point;
-    self.closedloop = YES;
+    self.spatialtarget.active = NO;
+    self.spatialpointer.active = NO;
 }
 
 @end

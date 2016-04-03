@@ -21,6 +21,7 @@
     [self setMultipleTouchEnabled:YES];
     self.controller = controller;
     self.modelgun = controller.model.modelgun;
+    self.modelgun.hub = self;
     
     UIButton *button = [[UIButton alloc] init];
     [button setBackgroundColor:[UIColor main]];
@@ -53,6 +54,16 @@
     [self movegun:touches];
 }
 
+-(void)touchesEnded:(NSSet<UITouch*>*)touches withEvent:(UIEvent*)event
+{
+    [self.modelgun clearloop];
+}
+
+-(void)touchesCancelled:(NSSet<UITouch*>*)touches withEvent:(UIEvent*)event
+{
+    [self.modelgun clearloop];
+}
+
 #pragma mark actions
 
 -(void)actionexit:(UIButton*)button
@@ -70,16 +81,12 @@
     if(count)
     {
         UITouch *toucha = tarray[0];
-        CGPoint locationa = [toucha locationInView:self];
-        
-        [self.modelgun startloopat:locationa];
+        self.modelgun.touchstart = toucha;
         
         if(count > 1)
         {
             UITouch *touchb = tarray[1];
-            CGPoint locationb = [touchb locationInView:self];
-            
-            [self.modelgun closeloopat:locationb];
+            self.modelgun.touchend = touchb;
         }
     }
 }
