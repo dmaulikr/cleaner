@@ -1,6 +1,7 @@
 #import "mgun.h"
 
 static CGFloat const gunsize = 40;
+static NSInteger const caliber = 5;
 
 @implementation mgun
 {
@@ -54,9 +55,14 @@ static CGFloat const gunsize = 40;
 {
     NSInteger initialx = x - gunsize_2;
     NSInteger initialy = y - gunsize_2;
+    NSInteger finalx = x + gunsize_2;
+    NSInteger finaly = y + gunsize_2;
     
     [self.spatialpointer initialx:initialx y:initialy width:gunsize height:gunsize];
     [self.spatialtarget initialx:initialx y:initialy width:gunsize height:gunsize];
+    
+    mgunshot *gunshot = [[mgunshot alloc] init:caliber minx:initialx miny:initialy maxx:finalx maxy:finaly];
+    [[NSNotificationCenter defaultCenter] postNotificationName:notification_gunshot object:nil userInfo:gunshot];
 }
 
 #pragma mark public
