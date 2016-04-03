@@ -27,6 +27,7 @@ static CGFloat const gunsize = 40;
     self.y = y - gunsize_2;
     
     [self render];
+    [self movetotop];
 }
 
 #pragma mark -
