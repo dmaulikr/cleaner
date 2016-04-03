@@ -38,18 +38,12 @@
 
 -(void)touchesBegan:(NSSet<UITouch*>*)touches withEvent:(UIEvent*)event
 {
-    if(touches.count == 2)
-    {
-        [self movegun:touches];
-    }
+    [self movegun:touches];
 }
 
 -(void)touchesMoved:(NSSet<UITouch*>*)touches withEvent:(UIEvent*)event
 {
-    if(touches.count == 2)
-    {
-        [self movegun:touches];
-    }
+    [self movegun:touches];
 }
 
 #pragma mark actions
