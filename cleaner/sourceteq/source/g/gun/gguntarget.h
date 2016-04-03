@@ -1,7 +1,6 @@
 #import "appdel.h"
-#import "gspatialtexture.h"
-#import "ggunprotocol.h"
+#import "ggun.h"
 
-@interface gguntarget:gspatialtexture<ggunprotocol>
+@interface gguntarget:ggun
 
 @end

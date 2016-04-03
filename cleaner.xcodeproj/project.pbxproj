@@ -102,7 +102,6 @@
 		DA37B52B1CAF38DB00015AC2 /* gguntarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gguntarget.m; sourceTree = "<group>"; };
 		DA37B52D1CAF38FD00015AC2 /* ggunpointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggunpointer.h; sourceTree = "<group>"; };
 		DA37B52E1CAF3A3400015AC2 /* gun.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = gun.xcassets; sourceTree = "<group>"; };
-		DA37B5301CAF54F000015AC2 /* ggunprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggunprotocol.h; sourceTree = "<group>"; };
 		DA38D6631CB09EA200A02B82 /* ggun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggun.h; sourceTree = "<group>"; };
 		DA38D6641CB09EA200A02B82 /* ggun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggun.m; sourceTree = "<group>"; };
 		DA93860E1CAC9078006B3213 /* building.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = building.xcassets; sourceTree = "<group>"; };
@@ -284,7 +283,6 @@
 			children = (
 				DA38D6631CB09EA200A02B82 /* ggun.h */,
 				DA38D6641CB09EA200A02B82 /* ggun.m */,
-				DA37B5301CAF54F000015AC2 /* ggunprotocol.h */,
 				DA37B52D1CAF38FD00015AC2 /* ggunpointer.h */,
 				DA37B5281CAF379100015AC2 /* ggunpointer.m */,
 				DA37B52A1CAF38DB00015AC2 /* gguntarget.h */,
