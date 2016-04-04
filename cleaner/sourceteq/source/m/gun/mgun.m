@@ -4,11 +4,13 @@ static CGFloat const gunsize = 40;
 static CGFloat const fingersize = 120;
 static NSInteger const caliber = 5;
 static NSInteger const deltamargin = 5;
+static NSInteger const shootspeed = 30;
 
 @implementation mgun
 {
     CGFloat gunsize_2;
     CGFloat fingersize_2;
+    NSInteger shootcurrent;
 }
 
 -(instancetype)init:(marea*)modelarea
@@ -22,6 +24,7 @@ static NSInteger const deltamargin = 5;
     self.modelwaves = [[mgunwaves alloc] init];
     gunsize_2 = gunsize / 2.0;
     fingersize_2 = fingersize / 2.0;
+    shootcurrent = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
@@ -85,14 +88,21 @@ static NSInteger const deltamargin = 5;
     [self.spatialpointer initialx:initialx y:initialy width:gunsize height:gunsize];
     [self.spatialtarget initialx:initialx y:initialy width:gunsize height:gunsize];
     
-    mgunshot *gunshot = [[mgunshot alloc] init:caliber minx:initialx miny:initialy maxx:finalx maxy:finaly];
-    [[NSNotificationCenter defaultCenter] postNotificationName:notification_gunshot object:nil userInfo:gunshot];
+    shootcurrent++;
+    
+    if(shootcurrent > shootspeed)
+    {
+        shootcurrent = 0;
+        mgunshot *gunshot = [[mgunshot alloc] init:caliber minx:initialx miny:initialy maxx:finalx maxy:finaly];
+        [[NSNotificationCenter defaultCenter] postNotificationName:notification_gunshot object:nil userInfo:gunshot];
+    }
 }
 
 #pragma mark public
 
 -(void)clearloop
 {
+    shootcurrent = 0;
     self.spatialtarget.active = NO;
     self.spatialpointer.active = NO;
     self.fingera.active = NO;

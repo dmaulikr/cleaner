@@ -45,18 +45,18 @@ static NSUInteger const minspeed = 0;
     CGFloat spatialx = self.spatial.x;
     CGFloat spatialy = self.spatial.y;
     
-    if(spatialx + self.spatial.width > gunshot.minx)
+    if(spatialx < gunshot.maxx)
     {
-        if(spatialx < gunshot.maxx)
-        {
-            if(spatialy + self.spatial.height > gunshot.miny)
-            {
-                if(spatialy < gunshot.miny)
-                {
-                    NSLog(@"gunned");
-                }
-            }
-        }
+       if(spatialx + self.spatial.width > gunshot.minx)
+       {
+           if(spatialy < gunshot.maxy)
+           {
+               if(spatialy + self.spatial.height > gunshot.miny)
+               {
+                   NSLog(@"gunned");
+               }
+           }
+       }
     }
 }
 
