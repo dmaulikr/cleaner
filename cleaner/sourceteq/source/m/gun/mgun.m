@@ -1,8 +1,9 @@
 #import "mgun.h"
 
 static CGFloat const gunsize = 40;
-static CGFloat const fingersize = 100;
+static CGFloat const fingersize = 120;
 static NSInteger const caliber = 5;
+static NSInteger const deltamargin = 5;
 
 @implementation mgun
 {
@@ -67,7 +68,7 @@ static NSInteger const caliber = 5;
         NSInteger x = roundf(xa - deltax_2);
         NSInteger y = roundf(ya - deltay_2);
         
-        [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:gunsize_2];
+        [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:gunsize_2 - deltamargin];
         [self centerx:x y:y];
     }
 }

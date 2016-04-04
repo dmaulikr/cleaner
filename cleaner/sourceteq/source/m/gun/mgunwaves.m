@@ -1,6 +1,6 @@
 #import "mgunwaves.h"
 
-static CGFloat const maxwavelong = 20;
+static NSInteger const maxwavelong = 20;
 static NSInteger const minwavelong = 1;
 static NSInteger const waveshort = 2;
 static NSInteger const interitem = 2;
@@ -8,6 +8,7 @@ static NSInteger const maxttl = 3;
 
 @implementation mgunwaves
 {
+    NSInteger wavelength;
     NSInteger waveshort_2;
     NSInteger ttl;
 }
@@ -15,6 +16,7 @@ static NSInteger const maxttl = 3;
 -(instancetype)init
 {
     self = [super init];
+    wavelength = waveshort + interitem;
     waveshort_2 = waveshort / 2.0;
     ttl = 0;
     
@@ -47,26 +49,17 @@ static NSInteger const maxttl = 3;
         CGFloat auxy = inity;
         CGFloat deltax = fabs(adjacent);
         CGFloat deltay = fabs(opposite);
-        CGFloat wavelength = waveshort + interitem;
-        CGFloat tanangle;
+        CGFloat angle;
+        CGFloat wx = 0;
+        CGFloat wy = 0;
+        CGFloat wwidth = 0;
+        CGFloat wheight = 0;
         NSInteger total;
         NSInteger editorhr = 0;
         NSInteger editorvr = 0;
-        
-        if(deltay > deltax)
-        {
-            horizontal = NO;
-            tanangle = (1 - adjacent) / opposite;
-            total = deltay / wavelength;
-            deltaother = deltax / total;
-        }
-        else
-        {
-            horizontal = YES;
-            tanangle = (1 + opposite) / adjacent;
-            total = deltax / wavelength;
-            deltaother = deltay / total;
-        }
+        NSInteger interitemeditor;
+        NSInteger waveshorteditor;
+        NSInteger deltaothereditor;
         
         if(initx > finalx)
         {
@@ -86,23 +79,41 @@ static NSInteger const maxttl = 3;
             editorvr = 1;
         }
         
-        CGFloat angle = tanangle;
-//        NSLog(@"%@", @(angle));
+        if(deltay > deltax)
+        {
+            horizontal = NO;
+            angle = (1 - adjacent) / opposite;
+            total = deltay / wavelength;
+            deltaother = deltax / total;
+            interitemeditor = interitem * editorvr;
+            waveshorteditor = waveshort * editorvr;
+            deltaothereditor = deltaother * editorhr;
+            wy = -waveshort_2;
+            wheight = waveshort;
+        }
+        else
+        {
+            horizontal = YES;
+            angle = (1 + opposite) / adjacent;
+            total = deltax / wavelength;
+            deltaother = deltay / total;
+            interitemeditor = interitem * editorhr;
+            waveshorteditor = waveshort * editorhr;
+            deltaothereditor = deltaother * editorvr;
+            wx = -waveshort_2;
+            wwidth = waveshort;
+        }
         
         for(NSInteger i = 0; i < total; i++)
         {
             CGFloat randomwave = arc4random_uniform(maxwavelong) + minwavelong;
             CGFloat randomwave_2 = randomwave / 2.0;
-            CGFloat wx = 0;
-            CGFloat wy = 0;
-            CGFloat wwidth = 0;
-            CGFloat wheight = 0;
             BOOL draw = NO;
             
             if(horizontal)
             {
-                auxx += waveshort * editorhr;
-                auxy += deltaother * editorvr;
+                auxx += waveshorteditor;
+                auxy += deltaothereditor;
                 
                 if(fabs(auxx - centerx) < pointermargin)
                 {
@@ -111,16 +122,14 @@ static NSInteger const maxttl = 3;
                 else
                 {
                     draw = YES;
-                    wx = -waveshort_2;
                     wy = -randomwave_2;
-                    wwidth = waveshort;
                     wheight = randomwave;
                 }
             }
             else
             {
-                auxx += deltaother * editorhr;
-                auxy += waveshort * editorvr;
+                auxx += deltaothereditor;
+                auxy += waveshorteditor;
                 
                 if(fabs(auxy - centery) < pointermargin)
                 {
@@ -130,9 +139,7 @@ static NSInteger const maxttl = 3;
                 {
                     draw = YES;
                     wx = -randomwave_2;
-                    wy = -waveshort_2;
                     wwidth = randomwave;
-                    wheight = waveshort;
                 }
             }
             
@@ -144,11 +151,11 @@ static NSInteger const maxttl = 3;
             
             if(horizontal)
             {
-                auxx += interitem * editorhr;
+                auxx += interitemeditor;
             }
             else
             {
-                auxy += interitem * editorvr;
+                auxy += interitemeditor;
             }
         }
     }
