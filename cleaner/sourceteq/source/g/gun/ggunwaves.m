@@ -3,7 +3,7 @@
 static CGFloat const red = 1;
 static CGFloat const green = 1;
 static CGFloat const blue = 1;
-static CGFloat const alpha = 0.4;
+static CGFloat const alpha = 0.6;
 
 @interface ggunwaves ()
 

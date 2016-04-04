@@ -67,7 +67,7 @@ static NSInteger const caliber = 5;
         NSInteger x = roundf(xa - deltax_2);
         NSInteger y = roundf(ya - deltay_2);
         
-        [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb];
+        [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:gunsize_2];
         [self centerx:x y:y];
     }
 }
