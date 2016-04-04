@@ -7,22 +7,21 @@ static CGFloat const alpha = 1;
 
 @interface ggunwaves ()
 
-@property(nonatomic)CGFloat minx;
-@property(nonatomic)CGFloat miny;
-@property(nonatomic)CGFloat maxx;
-@property(nonatomic)CGFloat maxy;
+@property(nonatomic)NSInteger realx;
+@property(nonatomic)NSInteger realy;
 
 @end
 
 @implementation ggunwaves
 
--(instancetype)init:(CGFloat)minx miny:(CGFloat)miny maxx:(CGFloat)maxx maxy:(CGFloat)maxy
+-(instancetype)init:(CGFloat)rotation x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height realx:(NSInteger)realx realy:(NSInteger)realy
 {
     self = [super init:[mcolor red:red green:green blue:blue alpha:alpha]];
-    self.minx = minx;
-    self.miny = miny;
-    self.maxx = maxx;
-    self.maxy = maxy;
+    self.rotation = rotation;
+    self.x = x;
+    self.y = y;
+    self.width = width;
+    self.height = height;
     [self rasterize];
     
     return self;
@@ -31,22 +30,11 @@ static CGFloat const alpha = 1;
 #pragma mark -
 #pragma mark g spatial
 
--(void)render
+-(void)draw:(GLKBaseEffect*)effect
 {
-    self.dataposition = [NSMutableData data];
-    
-    NSUInteger index = 0;
-    CGFloat minx = self.minx;
-    CGFloat maxx = self.maxx;
-    CGFloat miny = self.miny;
-    CGFloat maxy = self.maxy;
-    
-    [self vector:index++ x:minx y:miny];
-    [self vector:index++ x:minx y:maxy];
-    [self vector:index++ x:maxx y:maxy];
-    [self vector:index++ x:maxx y:maxy];
-    [self vector:index++ x:maxx y:miny];
-    [self vector:index++ x:minx y:miny];
+    effect.transform.modelviewMatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(self.x + (self.width / 2.0), self.y + (self.height / 2.0), 0), GLKMatrix4MakeRotation(self.rotation, 0, 0, 1));
+    [super draw:effect];
+    effect.transform.modelviewMatrix = GLKMatrix4MakeRotation(0, 0, 0, 1);
 }
 
 @end

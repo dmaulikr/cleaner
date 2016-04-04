@@ -3,6 +3,8 @@
 
 @interface ggunwaves:gspatialcolor
 
--(instancetype)init:(CGFloat)minx miny:(CGFloat)miny maxx:(CGFloat)maxx maxy:(CGFloat)maxy;
+-(instancetype)init:(CGFloat)rotation x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height realx:(NSInteger)realx realy:(NSInteger)realy;
+
+@property(nonatomic)CGFloat rotation;
 
 @end
