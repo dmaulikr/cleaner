@@ -7,6 +7,8 @@ static CGFloat const alpha = 0.6;
 
 @interface ggunwaves ()
 
+@property(nonatomic)GLKMatrix4 rotationmatrix;
+@property(nonatomic)GLKMatrix4 rotationclear;
 @property(nonatomic)NSInteger realx;
 @property(nonatomic)NSInteger realy;
 
@@ -24,6 +26,8 @@ static CGFloat const alpha = 0.6;
     self.height = height;
     self.realx = realx;
     self.realy = realy;
+    self.rotationmatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(self.realx, self.realy, 0), GLKMatrix4MakeRotation(self.rotation, 0, 0, 1));
+    self.rotationclear = GLKMatrix4MakeRotation(0, 0, 0, 1);
     [self rasterize];
     
     return self;
@@ -34,9 +38,10 @@ static CGFloat const alpha = 0.6;
 
 -(void)draw:(GLKBaseEffect*)effect
 {
-    effect.transform.modelviewMatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(self.realx, self.realy, 0), GLKMatrix4MakeRotation(self.rotation, 0, 0, 1));
+    
+    effect.transform.modelviewMatrix = self.rotationmatrix;
     [super draw:effect];
-    effect.transform.modelviewMatrix = GLKMatrix4MakeRotation(0, 0, 0, 1);
+    effect.transform.modelviewMatrix = self.rotationclear;
 }
 
 @end

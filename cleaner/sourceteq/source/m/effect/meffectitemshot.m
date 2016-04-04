@@ -20,9 +20,4 @@ static NSInteger const shotttl = 100;
     return self;
 }
 
--(void)dealloc
-{
-    NSLog(@"dealloced effect model");
-}
-
 @end
