@@ -1,13 +1,6 @@
-//
-//  ggunfinger.h
-//  cleaner
-//
-//  Created by zero on 4/4/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "ggun.h"
 
-#import <Foundation/Foundation.h>
-
-@interface ggunfinger : NSObject
+@interface ggunfinger:ggun
 
 @end

@@ -31,14 +31,25 @@ static NSInteger const caliber = 5;
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
+    CGPoint pointstart = [self.touchstart locationInView:self.hub];
+    CGPoint pointend = [self.touchend locationInView:self.hub];
+    CGFloat xa = pointstart.x;
+    CGFloat ya = pointstart.y;
+    CGFloat xb = pointend.x;
+    CGFloat yb = pointend.y;
+    
+    if(self.touchstart)
+    {
+        
+    }
+    
+    if(self.touchend)
+    {
+        
+    }
+    
     if(self.touchstart && self.touchend)
     {
-        CGPoint pointstart = [self.touchstart locationInView:self.hub];
-        CGPoint pointend = [self.touchend locationInView:self.hub];
-        CGFloat xa = pointstart.x;
-        CGFloat ya = pointstart.y;
-        CGFloat xb = pointend.x;
-        CGFloat yb = pointend.y;
         CGFloat deltax = xa - xb;
         CGFloat deltay = ya - yb;
         CGFloat deltax_2 = deltax / 2.0;

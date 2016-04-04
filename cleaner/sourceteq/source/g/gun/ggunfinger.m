@@ -1,13 +1,13 @@
-//
-//  ggunfinger.m
-//  cleaner
-//
-//  Created by zero on 4/4/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "ggunfinger.h"
 
 @implementation ggunfinger
+
+-(instancetype)init
+{
+    self = [super init];
+    [self.image loadtextures:@[@"finger"]];
+    
+    return self;
+}
 
 @end
