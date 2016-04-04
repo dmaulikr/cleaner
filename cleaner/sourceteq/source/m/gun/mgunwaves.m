@@ -1,6 +1,5 @@
 #import "mgunwaves.h"
 
-static NSInteger const marginwave = 40;
 static NSInteger const maxwavelong = 10;
 static NSInteger const minwavelong = 1;
 static NSInteger const waveshort = 2;
@@ -37,13 +36,13 @@ static NSInteger const maxttl = 3;
         ttl = maxttl;
         self.items = [NSMutableArray array];
         BOOL horizontal;
-        CGFloat opposite;
-        CGFloat adjacent;
+        CGFloat opposite = finaly - inity;
+        CGFloat adjacent = finalx - initx;
         CGFloat deltaother;
-        CGFloat auxx;
-        CGFloat auxy;
-        CGFloat deltax;
-        CGFloat deltay;
+        CGFloat auxx = initx;
+        CGFloat auxy = inity;
+        CGFloat deltax = fabs(adjacent);
+        CGFloat deltay = fabs(opposite);
         CGFloat angle;
         CGFloat wx = 0;
         CGFloat wy = 0;
@@ -51,44 +50,31 @@ static NSInteger const maxttl = 3;
         CGFloat wheight = 0;
         CGFloat deltaothereditor;
         NSInteger total;
-        NSInteger interitemeditor;
-        NSInteger waveshorteditor;
         NSInteger editorhr = 0;
         NSInteger editorvr = 0;
+        NSInteger interitemeditor;
+        NSInteger waveshorteditor;
+        
+        if(initx > finalx)
+        {
+            editorhr = -1;
+        }
+        else
+        {
+            editorhr = 1;
+        }
+        
+        if(inity > finaly)
+        {
+            editorvr = -1;
+        }
+        else
+        {
+            editorvr = 1;
+        }
         
         if(deltay > deltax)
         {
-            if(initx > finalx)
-            {
-                editorhr = -1;
-            }
-            else
-            {
-                editorhr = 1;
-            }
-            
-            if(inity > finaly)
-            {
-                inity -= marginwave;
-                finaly += marginwave;
-                
-                editorvr = -1;
-            }
-            else
-            {
-                inity += marginwave;
-                finaly -= marginwave;
-                
-                editorvr = 1;
-            }
-            
-            opposite = finaly - inity;
-            adjacent = finalx - initx;
-            auxx = initx;
-            auxy = inity;
-            deltax = fabs(adjacent);
-            deltay = fabs(opposite);
-            
             if(!opposite)
             {
                 opposite = 1;
@@ -106,37 +92,6 @@ static NSInteger const maxttl = 3;
         }
         else
         {
-            if(initx > finalx)
-            {
-                initx -= marginwave;
-                finalx += marginwave;
-                
-                editorhr = -1;
-            }
-            else
-            {
-                initx += marginwave;
-                finalx -= marginwave;
-                
-                editorhr = 1;
-            }
-            
-            if(inity > finaly)
-            {
-                editorvr = -1;
-            }
-            else
-            {
-                editorvr = 1;
-            }
-            
-            opposite = finaly - inity;
-            adjacent = finalx - initx;
-            auxx = initx;
-            auxy = inity;
-            deltax = fabs(adjacent);
-            deltay = fabs(opposite);
-            
             if(!adjacent)
             {
                 adjacent = 1;
