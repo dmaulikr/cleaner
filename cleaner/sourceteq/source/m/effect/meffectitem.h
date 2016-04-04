@@ -1,13 +1,8 @@
-//
-//  meffectitem.h
-//  cleaner
-//
-//  Created by zero on 4/4/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import <UIKit/UIKit.h>
 
-#import <Foundation/Foundation.h>
+@interface meffectitem:NSObject
 
-@interface meffectitem : NSObject
+@property(strong, nonatomic)geffect *spatial;
+@property(copy, nonatomic)NSString *assetname;
 
 @end

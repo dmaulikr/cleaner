@@ -1,13 +1,6 @@
-//
-//  meffectitemshot.h
-//  cleaner
-//
-//  Created by zero on 4/4/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "meffectitem.h"
 
-#import <Foundation/Foundation.h>
-
-@interface meffectitemshot : NSObject
+@interface meffectitemshot:meffectitem
 
 @end

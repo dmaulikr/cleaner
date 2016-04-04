@@ -7,3 +7,4 @@
 #import "gguntarget.h"
 #import "ggunfinger.h"
 #import "ggunwaves.h"
+#import "geffect.h"
