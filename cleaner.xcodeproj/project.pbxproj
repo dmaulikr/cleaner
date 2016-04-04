@@ -22,6 +22,7 @@
 		DA38D6711CB2B29300A02B82 /* ggunwaves.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6701CB2B29300A02B82 /* ggunwaves.m */; };
 		DA38D6741CB2B4E600A02B82 /* mgunwaves.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6731CB2B4E600A02B82 /* mgunwaves.m */; };
 		DA38D6771CB2B9A900A02B82 /* gspatialcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6761CB2B9A900A02B82 /* gspatialcolor.m */; };
+		DA38D6791CB31EF700A02B82 /* effect.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA38D6781CB31EF700A02B82 /* effect.xcassets */; };
 		DA9386C61CAC9078006B3213 /* building.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860E1CAC9078006B3213 /* building.xcassets */; };
 		DA9386C71CAC9078006B3213 /* foe.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860F1CAC9078006B3213 /* foe.xcassets */; };
 		DA9386C81CAC9078006B3213 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9386101CAC9078006B3213 /* generic.xcassets */; };
@@ -119,6 +120,7 @@
 		DA38D6731CB2B4E600A02B82 /* mgunwaves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgunwaves.m; sourceTree = "<group>"; };
 		DA38D6751CB2B9A900A02B82 /* gspatialcolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gspatialcolor.h; sourceTree = "<group>"; };
 		DA38D6761CB2B9A900A02B82 /* gspatialcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gspatialcolor.m; sourceTree = "<group>"; };
+		DA38D6781CB31EF700A02B82 /* effect.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = effect.xcassets; sourceTree = "<group>"; };
 		DA93860E1CAC9078006B3213 /* building.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = building.xcassets; sourceTree = "<group>"; };
 		DA93860F1CAC9078006B3213 /* foe.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = foe.xcassets; sourceTree = "<group>"; };
 		DA9386101CAC9078006B3213 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				DA9386101CAC9078006B3213 /* generic.xcassets */,
 				DA9386111CAC9078006B3213 /* loader.xcassets */,
 				DA37B52E1CAF3A3400015AC2 /* gun.xcassets */,
+				DA38D6781CB31EF700A02B82 /* effect.xcassets */,
 			);
 			path = imateq;
 			sourceTree = "<group>";
@@ -845,6 +848,7 @@
 				DA9386CB1CAC9078006B3213 /* buildings.plist in Resources */,
 				DA9386CD1CAC9078006B3213 /* Localizable.strings in Resources */,
 				DAB443961CAC9C5300D04286 /* cleaner.db in Resources */,
+				DA38D6791CB31EF700A02B82 /* effect.xcassets in Resources */,
 				DA9386C91CAC9078006B3213 /* loader.xcassets in Resources */,
 				DA9386C61CAC9078006B3213 /* building.xcassets in Resources */,
 				DA9386CC1CAC9078006B3213 /* defs.plist in Resources */,
