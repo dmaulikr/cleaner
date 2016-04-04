@@ -38,7 +38,6 @@ static CGFloat const alpha = 0.6;
 
 -(void)draw:(GLKBaseEffect*)effect
 {
-    
     effect.transform.modelviewMatrix = self.rotationmatrix;
     [super draw:effect];
     effect.transform.modelviewMatrix = self.rotationclear;

@@ -8,5 +8,8 @@
 -(instancetype)init:(meffectitem*)model;
 
 @property(weak, nonatomic)meffectitem *model;
+@property(nonatomic)CGFloat realx;
+@property(nonatomic)CGFloat realy;
+@property(nonatomic)CGFloat rotation;
 
 @end

@@ -1,6 +1,13 @@
 #import "geffect.h"
 #import "meffectitem.h"
 
+@interface geffect ()
+
+@property(nonatomic)GLKMatrix4 rotationmatrix;
+@property(nonatomic)GLKMatrix4 rotationclear;
+
+@end
+
 @implementation geffect
 
 -(instancetype)init:(meffectitem*)model
@@ -18,7 +25,17 @@
 -(void)rasterize
 {
     [self.image loadtextures:@[self.model.assetname]];
+    self.rotationmatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(self.realx, self.realy, 0), GLKMatrix4MakeRotation(self.rotation, 0, 0, 1));
+    self.rotationclear = GLKMatrix4MakeRotation(0, 0, 0, 1);
     [super rasterize];
 }
+
+-(void)draw:(GLKBaseEffect*)effect
+{
+    effect.transform.modelviewMatrix = self.rotationmatrix;
+    [super draw:effect];
+    effect.transform.modelviewMatrix = self.rotationclear;
+}
+
 
 @end

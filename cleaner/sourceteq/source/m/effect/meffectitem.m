@@ -8,8 +8,8 @@
     self = [super init];
     self.model = model;
     self.spatial = [[geffect alloc] init:self];
-    self.spatial.x = x;
-    self.spatial.y = y;
+    self.spatial.realx = x;
+    self.spatial.realy = y;
     
     return self;
 }
