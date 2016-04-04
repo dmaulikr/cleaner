@@ -45,8 +45,8 @@ static NSInteger const maxttl = 3;
         CGFloat deltaother;
         CGFloat auxx = initx;
         CGFloat auxy = inity;
-        CGFloat deltax = fabs(initx - finalx);
-        CGFloat deltay = fabs(inity - finaly);
+        CGFloat deltax = fabs(adjacent);
+        CGFloat deltay = fabs(opposite);
         CGFloat wavelength = waveshort + interitem;
         CGFloat tanangle;
         NSInteger total;
@@ -56,14 +56,14 @@ static NSInteger const maxttl = 3;
         if(deltay > deltax)
         {
             horizontal = NO;
-            tanangle = adjacent / opposite;
+            tanangle = (1 - adjacent) / opposite;
             total = deltay / wavelength;
             deltaother = deltax / total;
         }
         else
         {
             horizontal = YES;
-            tanangle = opposite / adjacent;
+            tanangle = (1 + opposite) / adjacent;
             total = deltax / wavelength;
             deltaother = deltay / total;
         }
@@ -86,7 +86,8 @@ static NSInteger const maxttl = 3;
             editorvr = 1;
         }
         
-        CGFloat angle = atan(tanangle);
+        CGFloat angle = tanangle;
+//        NSLog(@"%@", @(angle));
         
         for(NSInteger i = 0; i < total; i++)
         {

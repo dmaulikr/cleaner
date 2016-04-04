@@ -82,7 +82,14 @@
     {
         UITouch *toucha = tarray[0];
         
-        if(!self.modelgun.touchstart)
+        if(self.modelgun.touchstart)
+        {
+            if(self.modelgun.touchstart != toucha)
+            {
+                self.modelgun.touchend = toucha;
+            }
+        }
+        else
         {
             if(self.modelgun.touchend != toucha)
             {
