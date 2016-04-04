@@ -10,4 +10,12 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)shotatx:(CGFloat)x y:(CGFloat)y
+{
+    meffectitemshot *effect = [[meffectitemshot alloc] init:self x:x y:y];
+    [self.items addObject:effect];
+}
+
 @end

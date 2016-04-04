@@ -107,7 +107,7 @@ static NSUInteger const minspeed = 0;
 
 -(void)gunshot:(NSInteger)caliber
 {
-    
+    [self.model.modeleffect shotatx:self.spatial.x y:self.spatial.y];
 }
 
 -(void)choosedirection
