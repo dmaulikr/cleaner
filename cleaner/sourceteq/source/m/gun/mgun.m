@@ -18,6 +18,7 @@ static NSInteger const caliber = 5;
     self.spatialtarget = [[gguntarget alloc] init];
     self.fingera = [[ggunfinger alloc] init];
     self.fingerb = [[ggunfinger alloc] init];
+    self.modelwaves = [[mgunwaves alloc] init];
     gunsize_2 = gunsize / 2.0;
     fingersize_2 = fingersize / 2.0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
@@ -93,6 +94,7 @@ static NSInteger const caliber = 5;
     self.spatialpointer.active = NO;
     self.fingera.active = NO;
     self.fingerb.active = NO;
+    [self.modelwaves clear];
 }
 
 @end
