@@ -4,10 +4,11 @@ static CGFloat const ratioaddfoe = 30;
 
 @implementation mfoe
 
--(instancetype)init:(marea*)modelarea
+-(instancetype)init:(marea*)modelarea effect:(meffect*)modeleffect
 {
     self = [super init];
     self.modelarea = modelarea;
+    self.modeleffect = modeleffect;
     self.items = [NSMutableArray array];
     self.rawfoes = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"foes" withExtension:@"plist"]];
     

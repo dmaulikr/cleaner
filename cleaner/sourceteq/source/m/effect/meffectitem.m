@@ -27,7 +27,7 @@
     
     if(self.ttl < 1)
     {
-//        self.model.item
+        [self.model.items removeObject:self];
     }
 }
 
