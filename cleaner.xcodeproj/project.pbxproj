@@ -24,6 +24,9 @@
 		DA38D6771CB2B9A900A02B82 /* gspatialcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6761CB2B9A900A02B82 /* gspatialcolor.m */; };
 		DA38D6791CB31EF700A02B82 /* effect.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA38D6781CB31EF700A02B82 /* effect.xcassets */; };
 		DA38D67D1CB31F4D00A02B82 /* geffect.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D67C1CB31F4D00A02B82 /* geffect.m */; };
+		DA38D6821CB3202400A02B82 /* meffect.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6811CB3202400A02B82 /* meffect.m */; };
+		DA38D6851CB3204100A02B82 /* meffectitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6841CB3204100A02B82 /* meffectitem.m */; };
+		DA38D6881CB3205900A02B82 /* meffectitemshot.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6871CB3205900A02B82 /* meffectitemshot.m */; };
 		DA9386C61CAC9078006B3213 /* building.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860E1CAC9078006B3213 /* building.xcassets */; };
 		DA9386C71CAC9078006B3213 /* foe.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860F1CAC9078006B3213 /* foe.xcassets */; };
 		DA9386C81CAC9078006B3213 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9386101CAC9078006B3213 /* generic.xcassets */; };
@@ -124,6 +127,12 @@
 		DA38D6781CB31EF700A02B82 /* effect.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = effect.xcassets; sourceTree = "<group>"; };
 		DA38D67B1CB31F4D00A02B82 /* geffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geffect.h; sourceTree = "<group>"; };
 		DA38D67C1CB31F4D00A02B82 /* geffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = geffect.m; sourceTree = "<group>"; };
+		DA38D6801CB3202400A02B82 /* meffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meffect.h; sourceTree = "<group>"; };
+		DA38D6811CB3202400A02B82 /* meffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = meffect.m; sourceTree = "<group>"; };
+		DA38D6831CB3204100A02B82 /* meffectitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meffectitem.h; sourceTree = "<group>"; };
+		DA38D6841CB3204100A02B82 /* meffectitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = meffectitem.m; sourceTree = "<group>"; };
+		DA38D6861CB3205900A02B82 /* meffectitemshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meffectitemshot.h; sourceTree = "<group>"; };
+		DA38D6871CB3205900A02B82 /* meffectitemshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = meffectitemshot.m; sourceTree = "<group>"; };
 		DA93860E1CAC9078006B3213 /* building.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = building.xcassets; sourceTree = "<group>"; };
 		DA93860F1CAC9078006B3213 /* foe.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = foe.xcassets; sourceTree = "<group>"; };
 		DA9386101CAC9078006B3213 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -324,6 +333,19 @@
 			children = (
 				DA38D67B1CB31F4D00A02B82 /* geffect.h */,
 				DA38D67C1CB31F4D00A02B82 /* geffect.m */,
+			);
+			path = effect;
+			sourceTree = "<group>";
+		};
+		DA38D67F1CB3201C00A02B82 /* effect */ = {
+			isa = PBXGroup;
+			children = (
+				DA38D6801CB3202400A02B82 /* meffect.h */,
+				DA38D6811CB3202400A02B82 /* meffect.m */,
+				DA38D6831CB3204100A02B82 /* meffectitem.h */,
+				DA38D6841CB3204100A02B82 /* meffectitem.m */,
+				DA38D6861CB3205900A02B82 /* meffectitemshot.h */,
+				DA38D6871CB3205900A02B82 /* meffectitemshot.m */,
 			);
 			path = effect;
 			sourceTree = "<group>";
@@ -561,6 +583,7 @@
 		DA9386681CAC9078006B3213 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DA38D67F1CB3201C00A02B82 /* effect */,
 				DA37B5211CAF365900015AC2 /* gun */,
 				DAB443971CAC9FB300D04286 /* area */,
 				DA9386691CAC9078006B3213 /* building */,
@@ -932,6 +955,7 @@
 				DA38D6711CB2B29300A02B82 /* ggunwaves.m in Sources */,
 				DA9387041CAC9078006B3213 /* vgamehub.m in Sources */,
 				DA38D67D1CB31F4D00A02B82 /* geffect.m in Sources */,
+				DA38D6821CB3202400A02B82 /* meffect.m in Sources */,
 				DA9386F11CAC9078006B3213 /* mdirs.m in Sources */,
 				DA9386DB1CAC9078006B3213 /* cgameloader.m in Sources */,
 				DA9386F71CAC9078006B3213 /* mgameeffect.m in Sources */,
@@ -985,8 +1009,10 @@
 				DA9387091CAC9078006B3213 /* valert.m in Sources */,
 				DA9386EE1CAC9078006B3213 /* mbuildingitem.m in Sources */,
 				DA9387001CAC9078006B3213 /* mstorestatusnew.m in Sources */,
+				DA38D6851CB3204100A02B82 /* meffectitem.m in Sources */,
 				DA9386D21CAC9078006B3213 /* analytics.m in Sources */,
 				DA93870E1CAC9078006B3213 /* vstore.m in Sources */,
+				DA38D6881CB3205900A02B82 /* meffectitemshot.m in Sources */,
 				DA93870D1CAC9078006B3213 /* vhome.m in Sources */,
 				DA9387011CAC9078006B3213 /* mstorestatuspurchased.m in Sources */,
 				DA9387021CAC9078006B3213 /* mstorestatuspurchasing.m in Sources */,

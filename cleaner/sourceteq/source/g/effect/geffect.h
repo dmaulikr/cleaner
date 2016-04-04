@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+#import "appdel.h"
 #import "gspatialtexture.h"
 
 @interface geffect:gspatialtexture
