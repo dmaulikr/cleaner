@@ -1,12 +1,6 @@
 #import "gspatial.h"
 #import "appdel.h"
 
-@interface gspatial ()
-
-@property(strong, nonatomic)NSMutableData *dataposition;
-
-@end
-
 @implementation gspatial
 
 -(void)dealloc
@@ -23,7 +17,7 @@
     [self draw:effect];
 }
 
-#pragma mark functionality
+#pragma mark public
 
 -(void)vector:(NSUInteger)index x:(CGFloat)x y:(CGFloat)y
 {
@@ -31,8 +25,6 @@
     self.pointerposition = self.dataposition.mutableBytes;
     self.pointerposition[index] = GLKVector2Make(x, y);
 }
-
-#pragma mark public
 
 -(void)draw:(GLKBaseEffect*)effect
 {
