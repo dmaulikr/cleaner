@@ -1,6 +1,6 @@
 #import "mgunwaves.h"
 
-static NSInteger const maxwavelong = 20;
+static NSInteger const maxwavelong = 10;
 static NSInteger const minwavelong = 1;
 static NSInteger const waveshort = 2;
 static NSInteger const interitem = 2;
@@ -54,12 +54,12 @@ static NSInteger const maxttl = 3;
         CGFloat wy = 0;
         CGFloat wwidth = 0;
         CGFloat wheight = 0;
+        CGFloat deltaothereditor;
         NSInteger total;
         NSInteger editorhr = 0;
         NSInteger editorvr = 0;
         NSInteger interitemeditor;
         NSInteger waveshorteditor;
-        NSInteger deltaothereditor;
         
         if(initx > finalx)
         {
@@ -106,8 +106,8 @@ static NSInteger const maxttl = 3;
         
         for(NSInteger i = 0; i < total; i++)
         {
-            CGFloat randomwave = arc4random_uniform(maxwavelong) + minwavelong;
-            CGFloat randomwave_2 = randomwave / 2.0;
+            CGFloat randomwave_2 = arc4random_uniform(maxwavelong) + minwavelong;
+            CGFloat randomwave = randomwave_2 + randomwave_2;
             BOOL draw = NO;
             
             if(horizontal)
