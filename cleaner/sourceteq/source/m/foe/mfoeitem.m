@@ -38,6 +38,28 @@ static NSUInteger const minspeed = 0;
 
 #pragma mark notified
 
+-(void)notifiedgunshot:(NSNotification*)notification
+{
+    mgunshot *gunshot = (mgunshot*)notification.userInfo;
+    
+    CGFloat spatialx = self.spatial.x;
+    CGFloat spatialy = self.spatial.y;
+    
+    if(spatialx + self.spatial.width > gunshot.minx)
+    {
+        if(spatialx < gunshot.maxx)
+        {
+            if(spatialy + self.spatial.height > gunshot.miny)
+            {
+                if(spatialy < gunshot.miny)
+                {
+                    NSLog(@"gunned");
+                }
+            }
+        }
+    }
+}
+
 -(void)notifiedglkmove:(NSNotification*)notification
 {
     speedcounter++;
@@ -96,6 +118,7 @@ static NSUInteger const minspeed = 0;
     [self.spatial rasterize];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedgunshot:) name:notification_gunshot object:nil];
 }
 
 @end
