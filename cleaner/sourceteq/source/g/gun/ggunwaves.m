@@ -22,6 +22,8 @@ static CGFloat const alpha = 1;
     self.y = y;
     self.width = width;
     self.height = height;
+    self.realx = realx;
+    self.realy = realy;
     [self rasterize];
     
     return self;
@@ -32,7 +34,7 @@ static CGFloat const alpha = 1;
 
 -(void)draw:(GLKBaseEffect*)effect
 {
-    effect.transform.modelviewMatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(self.x + (self.width / 2.0), self.y + (self.height / 2.0), 0), GLKMatrix4MakeRotation(self.rotation, 0, 0, 1));
+    effect.transform.modelviewMatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(self.realx, self.realy, 0), GLKMatrix4MakeRotation(self.rotation, 0, 0, 1));
     [super draw:effect];
     effect.transform.modelviewMatrix = GLKMatrix4MakeRotation(0, 0, 0, 1);
 }
