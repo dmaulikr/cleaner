@@ -3,6 +3,7 @@
 static NSString* const shotasset = @"effect_shot";
 static CGFloat const shotwidth = 20;
 static CGFloat const shotheight = 20;
+static NSInteger const shotttl = 100;
 
 @implementation meffectitemshot
 
@@ -12,11 +13,16 @@ static CGFloat const shotheight = 20;
     self.assetname = shotasset;
     self.spatial.width = shotwidth;
     self.spatial.height = shotheight;
-    self.ttl = 500;
+    self.ttl = shotttl;
     
     [self rasterize];
     
     return self;
+}
+
+-(void)dealloc
+{
+    NSLog(@"dealloced effect model");
 }
 
 @end

@@ -12,6 +12,11 @@
     return self;
 }
 
+-(void)dealloc
+{
+    NSLog(@"dealloced effect");
+}
+
 #pragma mark -
 #pragma mark spatial
 
