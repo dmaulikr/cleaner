@@ -24,3 +24,4 @@
 #import "mgunshot.h"
 #import "mgunwaves.h"
 #import "meffect.h"
+#import "meffectitemshot.h"

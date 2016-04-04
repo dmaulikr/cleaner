@@ -1,13 +1,7 @@
-//
-//  meffect.h
-//  cleaner
-//
-//  Created by zero on 4/4/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface meffect:NSObject
 
-@interface meffect : NSObject
+@property(strong, nonatomic)NSMutableArray<meffectitem*> *items;
 
 @end

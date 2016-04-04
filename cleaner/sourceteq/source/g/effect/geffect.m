@@ -8,9 +8,17 @@
     self = [super init];
     self.model = model;
     self.image.srgb = YES;
-    [self.image loadtextures:@[model.assetname]];
     
     return self;
+}
+
+#pragma mark -
+#pragma mark spatial
+
+-(void)rasterize
+{
+    [self.image loadtextures:@[self.model.assetname]];
+    [super rasterize];
 }
 
 @end

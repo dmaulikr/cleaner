@@ -23,7 +23,12 @@
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
+    self.ttl--;
     
+    if(self.ttl < 1)
+    {
+//        self.model.item
+    }
 }
 
 #pragma mark public
