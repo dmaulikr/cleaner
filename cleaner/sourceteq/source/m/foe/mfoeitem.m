@@ -53,7 +53,7 @@ static NSUInteger const minspeed = 0;
            {
                if(spatialy + self.spatial.height > gunshot.miny)
                {
-                   NSLog(@"gunned");
+                   [self gunshot:gunshot.caliber];
                }
            }
        }
@@ -104,6 +104,11 @@ static NSUInteger const minspeed = 0;
 }
 
 #pragma mark functionality
+
+-(void)gunshot:(NSInteger)caliber
+{
+    
+}
 
 -(void)choosedirection
 {
