@@ -66,6 +66,8 @@ static NSInteger const caliber = 5;
         CGFloat deltay_2 = deltay / 2.0;
         NSInteger x = roundf(xa - deltax_2);
         NSInteger y = roundf(ya - deltay_2);
+        
+        [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb];
         [self centerx:x y:y];
     }
 }

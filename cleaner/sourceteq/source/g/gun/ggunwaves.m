@@ -1,5 +1,10 @@
 #import "ggunwaves.h"
 
+static CGFloat const red = 1;
+static CGFloat const green = 1;
+static CGFloat const blue = 1;
+static CGFloat const alpha = 1;
+
 @interface ggunwaves ()
 
 @property(nonatomic)CGFloat minx;
@@ -13,11 +18,12 @@
 
 -(instancetype)init:(CGFloat)minx miny:(CGFloat)miny maxx:(CGFloat)maxx maxy:(CGFloat)maxy
 {
-    self = [super init];
+    self = [super init:[mcolor red:red green:green blue:blue alpha:alpha]];
     self.minx = minx;
     self.miny = miny;
     self.maxx = maxx;
     self.maxy = maxy;
+    [self rasterize];
     
     return self;
 }
@@ -30,10 +36,10 @@
     self.dataposition = [NSMutableData data];
     
     NSUInteger index = 0;
-    CGFloat minx = self.x;
-    CGFloat maxx = minx + self.width;
-    CGFloat miny = self.y;
-    CGFloat maxy = miny + self.height;
+    CGFloat minx = self.minx;
+    CGFloat maxx = self.maxx;
+    CGFloat miny = self.miny;
+    CGFloat maxy = self.maxy;
     
     [self vector:index++ x:minx y:miny];
     [self vector:index++ x:minx y:maxy];
