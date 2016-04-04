@@ -1,7 +1,7 @@
 #import "mgun.h"
 
 static CGFloat const gunsize = 40;
-static CGFloat const fingersize = 70;
+static CGFloat const fingersize = 100;
 static NSInteger const caliber = 5;
 
 @implementation mgun
