@@ -1,6 +1,6 @@
 #import "mgunwaves.h"
 
-static CGFloat const maxwavelong = 30;
+static CGFloat const maxwavelong = 60;
 static NSInteger const minwavelong = 1;
 static NSInteger const waveshort = 6;
 static NSInteger const interitem = 2;
@@ -24,13 +24,22 @@ static NSInteger const interitem = 2;
 {
     self.items = [NSMutableArray array];
     BOOL horizontal;
-    CGFloat angle = atan((finaly - inity) / (finalx - initx));
+    CGFloat opposite = finaly - inity;
+    CGFloat adjacent = finalx - initx;
+    
+    if(!adjacent)
+    {
+        adjacent = 1;
+    }
+    
+    CGFloat tanangle = opposite / adjacent;
+    CGFloat angle = atan(tanangle);
     CGFloat deltaother;
-    NSInteger auxx = initx;
-    NSInteger auxy = inity;
-    NSInteger deltax = fabs(initx - finalx);
-    NSInteger deltay = fabs(inity - finaly);
-    NSInteger wavelength = waveshort + interitem;
+    CGFloat auxx = initx;
+    CGFloat auxy = inity;
+    CGFloat deltax = fabs(initx - finalx);
+    CGFloat deltay = fabs(inity - finaly);
+    CGFloat wavelength = waveshort + interitem;
     NSInteger total;
     NSInteger editorhr = 0;
     NSInteger editorvr = 0;
@@ -39,13 +48,13 @@ static NSInteger const interitem = 2;
     {
         horizontal = NO;
         total = deltay / wavelength;
-        deltaother = deltax / (CGFloat) total;
+        deltaother = deltax / total;
     }
     else
     {
         horizontal = YES;
         total = deltax / wavelength;
-        deltaother = deltay / (CGFloat) total;
+        deltaother = deltay / total;
     }
     
     if(initx > finalx)
@@ -68,12 +77,12 @@ static NSInteger const interitem = 2;
     
     for(NSInteger i = 0; i < total; i++)
     {
-        NSInteger randomwave = arc4random_uniform(maxwavelong) + minwavelong;
-        NSInteger randomwave_2 = randomwave / 2.0;
-        NSInteger wx;
-        NSInteger wy;
-        NSInteger wwidth;
-        NSInteger wheight;
+        CGFloat randomwave = arc4random_uniform(maxwavelong) + minwavelong;
+        CGFloat randomwave_2 = randomwave / 2.0;
+        CGFloat wx;
+        CGFloat wy;
+        CGFloat wwidth;
+        CGFloat wheight;
         
         if(horizontal)
         {
