@@ -15,6 +15,7 @@
     self.textures = [NSMutableArray array];
     self.random = NO;
     self.srgb = NO;
+    self.loading = YES;
     speedcounter = 0;
     
     return self;
@@ -102,6 +103,8 @@
                        {
                            [[NSNotificationCenter defaultCenter] addObserver:weakself selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
                        }
+                       
+                       weakself.loading = NO;
                    });
 }
 
@@ -115,6 +118,7 @@
                        [weakself addimage:image];
                        weakself.current = 0;
                        [weakself loadcurrent];
+                       weakself.loading = NO;
                    });
 }
 
