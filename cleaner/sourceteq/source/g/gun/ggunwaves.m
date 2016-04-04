@@ -1,9 +1,24 @@
 #import "ggunwaves.h"
 
+@interface ggunwaves ()
+
+@property(nonatomic)CGFloat minx;
+@property(nonatomic)CGFloat miny;
+@property(nonatomic)CGFloat maxx;
+@property(nonatomic)CGFloat maxy;
+
+@end
+
 @implementation ggunwaves
 
--(instancetype)init:(CGFloat)x y:(CGFloat)y width:(CGFloat)width
+-(instancetype)init:(CGFloat)minx miny:(CGFloat)miny maxx:(CGFloat)maxx maxy:(CGFloat)maxy
 {
+    self = [super init];
+    self.minx = minx;
+    self.miny = miny;
+    self.maxx = maxx;
+    self.maxy = maxy;
+    
     return self;
 }
 

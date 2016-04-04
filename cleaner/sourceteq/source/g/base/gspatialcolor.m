@@ -1,4 +1,5 @@
 #import "gspatialcolor.h"
+#import "mcolor.h"
 
 @implementation gspatialcolor
 

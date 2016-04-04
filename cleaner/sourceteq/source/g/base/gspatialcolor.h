@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "gspatial.h"
-#import "mcolor.h"
+
+@class mcolor;
 
 @interface gspatialcolor:gspatial
 
