@@ -1,11 +1,13 @@
 #import "mgun.h"
 
 static CGFloat const gunsize = 40;
+static CGFloat const fingersize = 70;
 static NSInteger const caliber = 5;
 
 @implementation mgun
 {
     CGFloat gunsize_2;
+    CGFloat fingersize_2;
 }
 
 -(instancetype)init:(marea*)modelarea
@@ -14,9 +16,10 @@ static NSInteger const caliber = 5;
     self.modelarea = modelarea;
     self.spatialpointer = [[ggunpointer alloc] init];
     self.spatialtarget = [[gguntarget alloc] init];
-    [self.spatialtarget rasterize];
-    [self.spatialpointer rasterize];
+    self.fingera = [[ggunfinger alloc] init];
+    self.fingerb = [[ggunfinger alloc] init];
     gunsize_2 = gunsize / 2.0;
+    fingersize_2 = fingersize / 2.0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
@@ -40,12 +43,18 @@ static NSInteger const caliber = 5;
     
     if(self.touchstart)
     {
+        NSInteger x = xa - fingersize_2;
+        NSInteger y = ya - fingersize_2;
         
+        [self.fingera initialx:x y:y width:fingersize height:fingersize];
     }
     
     if(self.touchend)
     {
+        NSInteger x = xb - fingersize_2;
+        NSInteger y = yb - fingersize_2;
         
+        [self.fingerb initialx:x y:y width:fingersize height:fingersize];
     }
     
     if(self.touchstart && self.touchend)
@@ -82,6 +91,8 @@ static NSInteger const caliber = 5;
 {
     self.spatialtarget.active = NO;
     self.spatialpointer.active = NO;
+    self.fingera.active = NO;
+    self.fingerb.active = NO;
 }
 
 @end

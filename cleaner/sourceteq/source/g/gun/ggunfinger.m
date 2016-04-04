@@ -5,7 +5,8 @@
 -(instancetype)init
 {
     self = [super init];
-    [self.image loadtextures:@[@"finger"]];
+    [self.image loadtextures:@[@"gun_finger"]];
+    [self rasterize];
     
     return self;
 }

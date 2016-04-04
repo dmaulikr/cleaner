@@ -4,6 +4,7 @@
 @class marea;
 @class ggunpointer;
 @class gguntarget;
+@class ggunfinger;
 
 @interface mgun:NSObject
 
@@ -12,6 +13,8 @@
 
 @property(strong, nonatomic)gguntarget *spatialtarget;
 @property(strong, nonatomic)ggunpointer *spatialpointer;
+@property(strong, nonatomic)ggunfinger *fingera;
+@property(strong, nonatomic)ggunfinger *fingerb;
 @property(weak, nonatomic)vgamehub *hub;
 @property(weak, nonatomic)marea *modelarea;
 @property(weak, nonatomic)UITouch *touchstart;

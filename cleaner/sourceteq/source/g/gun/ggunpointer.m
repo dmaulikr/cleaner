@@ -6,6 +6,7 @@
 {
     self = [super init];
     [self.image loadtextures:@[@"gun_pointer"]];
+    [self rasterize];
     
     return self;
 }
