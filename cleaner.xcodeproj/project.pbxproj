@@ -19,6 +19,7 @@
 		DA38D6651CB09EA200A02B82 /* ggun.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6641CB09EA200A02B82 /* ggun.m */; };
 		DA38D6681CB1DD3E00A02B82 /* mgunshot.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6671CB1DD3E00A02B82 /* mgunshot.m */; };
 		DA38D66B1CB2A2D900A02B82 /* ggunfinger.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D66A1CB2A2D900A02B82 /* ggunfinger.m */; };
+		DA38D6711CB2B29300A02B82 /* ggunwaves.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6701CB2B29300A02B82 /* ggunwaves.m */; };
 		DA9386C61CAC9078006B3213 /* building.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860E1CAC9078006B3213 /* building.xcassets */; };
 		DA9386C71CAC9078006B3213 /* foe.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA93860F1CAC9078006B3213 /* foe.xcassets */; };
 		DA9386C81CAC9078006B3213 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9386101CAC9078006B3213 /* generic.xcassets */; };
@@ -110,6 +111,8 @@
 		DA38D6671CB1DD3E00A02B82 /* mgunshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgunshot.m; sourceTree = "<group>"; };
 		DA38D6691CB2A2D900A02B82 /* ggunfinger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggunfinger.h; sourceTree = "<group>"; };
 		DA38D66A1CB2A2D900A02B82 /* ggunfinger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggunfinger.m; sourceTree = "<group>"; };
+		DA38D66F1CB2B29300A02B82 /* ggunwaves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggunwaves.h; sourceTree = "<group>"; };
+		DA38D6701CB2B29300A02B82 /* ggunwaves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggunwaves.m; sourceTree = "<group>"; };
 		DA93860E1CAC9078006B3213 /* building.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = building.xcassets; sourceTree = "<group>"; };
 		DA93860F1CAC9078006B3213 /* foe.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = foe.xcassets; sourceTree = "<group>"; };
 		DA9386101CAC9078006B3213 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 				DA37B52B1CAF38DB00015AC2 /* gguntarget.m */,
 				DA38D6691CB2A2D900A02B82 /* ggunfinger.h */,
 				DA38D66A1CB2A2D900A02B82 /* ggunfinger.m */,
+				DA38D66F1CB2B29300A02B82 /* ggunwaves.h */,
+				DA38D6701CB2B29300A02B82 /* ggunwaves.m */,
 			);
 			path = gun;
 			sourceTree = "<group>";
@@ -897,6 +902,7 @@
 				DAB4439A1CACA00E00D04286 /* marea.m in Sources */,
 				DA9386E41CAC9078006B3213 /* gimage.m in Sources */,
 				DA38D6681CB1DD3E00A02B82 /* mgunshot.m in Sources */,
+				DA38D6711CB2B29300A02B82 /* ggunwaves.m in Sources */,
 				DA9387041CAC9078006B3213 /* vgamehub.m in Sources */,
 				DA9386F11CAC9078006B3213 /* mdirs.m in Sources */,
 				DA9386DB1CAC9078006B3213 /* cgameloader.m in Sources */,
