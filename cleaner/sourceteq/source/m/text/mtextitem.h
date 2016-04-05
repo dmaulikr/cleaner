@@ -1,5 +1,7 @@
 #import "appdel.h"
 
-@interface mtextitem : NSObject
+@interface mtextitem:NSObject
+
+@property(strong, nonatomic)
 
 @end
