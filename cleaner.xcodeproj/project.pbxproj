@@ -14,6 +14,7 @@
 		DA22BEE81CB42BE800DDF53A /* mtextitemglyphnumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEE71CB42BE800DDF53A /* mtextitemglyphnumber.m */; };
 		DA22BEEB1CB42FF600DDF53A /* mtextitemglyph.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEEA1CB42FF600DDF53A /* mtextitemglyph.m */; };
 		DA22BEEE1CB439E800DDF53A /* gtext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEED1CB439E800DDF53A /* gtext.m */; };
+		DA22BEF11CB462B900DDF53A /* mtextitemscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEF01CB462B900DDF53A /* mtextitemscore.m */; };
 		DA37B5141CAEBF7A00015AC2 /* foes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA37B5131CAEBF7A00015AC2 /* foes.plist */; };
 		DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5161CAEE89300015AC2 /* gareadust.m */; };
 		DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51C1CAEEDE400015AC2 /* mareadust.m */; };
@@ -116,6 +117,8 @@
 		DA22BEEA1CB42FF600DDF53A /* mtextitemglyph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtextitemglyph.m; sourceTree = "<group>"; };
 		DA22BEEC1CB439E800DDF53A /* gtext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gtext.h; sourceTree = "<group>"; };
 		DA22BEED1CB439E800DDF53A /* gtext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gtext.m; sourceTree = "<group>"; };
+		DA22BEEF1CB462B900DDF53A /* mtextitemscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtextitemscore.h; sourceTree = "<group>"; };
+		DA22BEF01CB462B900DDF53A /* mtextitemscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtextitemscore.m; sourceTree = "<group>"; };
 		DA37B5131CAEBF7A00015AC2 /* foes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foes.plist; sourceTree = "<group>"; };
 		DA37B5151CAEE89300015AC2 /* gareadust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gareadust.h; sourceTree = "<group>"; };
 		DA37B5161CAEE89300015AC2 /* gareadust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gareadust.m; sourceTree = "<group>"; };
@@ -334,6 +337,8 @@
 				DA22BEDE1CB42BA100DDF53A /* mtext.m */,
 				DA22BEE31CB42BDD00DDF53A /* mtextitem.h */,
 				DA22BEE41CB42BDD00DDF53A /* mtextitem.m */,
+				DA22BEEF1CB462B900DDF53A /* mtextitemscore.h */,
+				DA22BEF01CB462B900DDF53A /* mtextitemscore.m */,
 				DA22BEE91CB42FF600DDF53A /* mtextitemglyph.h */,
 				DA22BEEA1CB42FF600DDF53A /* mtextitemglyph.m */,
 				DA22BEE61CB42BE800DDF53A /* mtextitemglyphnumber.h */,
@@ -1044,6 +1049,7 @@
 				DA22BEDF1CB42BA100DDF53A /* mtext.m in Sources */,
 				DA22BEE81CB42BE800DDF53A /* mtextitemglyphnumber.m in Sources */,
 				DA9386D31CAC9078006B3213 /* nsnotification+nsnotificationmain.m in Sources */,
+				DA22BEF11CB462B900DDF53A /* mtextitemscore.m in Sources */,
 				DA9386FD1CAC9078006B3213 /* mstorepurchasesitem.m in Sources */,
 				DA9386D41CAC9078006B3213 /* tools.m in Sources */,
 				DA93870A1CAC9078006B3213 /* vblur.m in Sources */,

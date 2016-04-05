@@ -27,5 +27,5 @@
 #import "meffectitemshot.h"
 #import "meffectitemsmoke.h"
 #import "mtext.h"
-#import "mtextitem.h"
+#import "mtextitemscore.h"
 #import "mtextitemglyphnumber.h"

@@ -1,6 +1,6 @@
 #import "mtext.h"
 
-static CGFloat const sizescore = 0.4;
+static CGFloat const sizescore = 0.3;
 static NSInteger const ttlscore = 100;
 
 @implementation mtext

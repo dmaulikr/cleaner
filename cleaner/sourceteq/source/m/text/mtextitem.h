@@ -1,4 +1,4 @@
-#import "appdel.h"
+#import <UIKit/UIKit.h>
 
 @class mtext;
 @class mtextitemglyph;

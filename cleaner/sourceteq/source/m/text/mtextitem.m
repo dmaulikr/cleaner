@@ -1,4 +1,5 @@
 #import "mtextitem.h"
+#import "appdel.h"
 
 static CGFloat const paddingnumbers = 6;
 
