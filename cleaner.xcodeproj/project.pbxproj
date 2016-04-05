@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B18D6C00B8D9A96A0AD3BEB9 /* libPods-cleaner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */; };
 		DA22BED71CB424AF00DDF53A /* text.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA22BED61CB424AF00DDF53A /* text.xcassets */; };
+		DA22BEDB1CB425DA00DDF53A /* gtextnumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */; };
 		DA37B5141CAEBF7A00015AC2 /* foes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA37B5131CAEBF7A00015AC2 /* foes.plist */; };
 		DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5161CAEE89300015AC2 /* gareadust.m */; };
 		DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51C1CAEEDE400015AC2 /* mareadust.m */; };
@@ -101,6 +102,8 @@
 		884B2C09E1EC31FB2597D8A6 /* Pods-cleaner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cleaner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA22BED61CB424AF00DDF53A /* text.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = text.xcassets; sourceTree = "<group>"; };
+		DA22BED91CB425DA00DDF53A /* gtextnumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gtextnumber.h; sourceTree = "<group>"; };
+		DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gtextnumber.m; sourceTree = "<group>"; };
 		DA37B5131CAEBF7A00015AC2 /* foes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foes.plist; sourceTree = "<group>"; };
 		DA37B5151CAEE89300015AC2 /* gareadust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gareadust.h; sourceTree = "<group>"; };
 		DA37B5161CAEE89300015AC2 /* gareadust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gareadust.m; sourceTree = "<group>"; };
@@ -301,6 +304,15 @@
 				B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA22BED81CB4258200DDF53A /* text */ = {
+			isa = PBXGroup;
+			children = (
+				DA22BED91CB425DA00DDF53A /* gtextnumber.h */,
+				DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */,
+			);
+			path = text;
 			sourceTree = "<group>";
 		};
 		DA37B5211CAF365900015AC2 /* gun */ = {
@@ -531,6 +543,7 @@
 		DA93864A1CAC9078006B3213 /* g */ = {
 			isa = PBXGroup;
 			children = (
+				DA22BED81CB4258200DDF53A /* text */,
 				DA38D67A1CB31F4200A02B82 /* effect */,
 				DA37B5261CAF378200015AC2 /* gun */,
 				DA93864B1CAC9078006B3213 /* area */,
@@ -1009,6 +1022,7 @@
 				DAE218CD1CAD7CC5007AE65C /* mcolor.m in Sources */,
 				DA37B5241CAF366300015AC2 /* mgun.m in Sources */,
 				DA9386ED1CAC9078006B3213 /* mbuilding.m in Sources */,
+				DA22BEDB1CB425DA00DDF53A /* gtextnumber.m in Sources */,
 				DA9387031CAC9078006B3213 /* vgame.m in Sources */,
 				DA93870B1CAC9078006B3213 /* viewbase.m in Sources */,
 				DA9386FB1CAC9078006B3213 /* mstore.m in Sources */,
