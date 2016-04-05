@@ -1,11 +1,5 @@
 #import "gspatialtexture.h"
 
-@interface gspatialtexture ()
-
-@property(strong, nonatomic)NSMutableData *datatexture;
-
-@end
-
 @implementation gspatialtexture
 
 -(instancetype)init
