@@ -34,7 +34,6 @@ static NSUInteger const minspeed = 0;
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    NSLog(@"died foe");
 }
 
 #pragma mark notified
@@ -85,7 +84,7 @@ static NSUInteger const minspeed = 0;
         
         if(remove)
         {
-            [self.model.items removeObject:self];
+            [self die:NO];
         }
         else
         {
@@ -116,14 +115,24 @@ static NSUInteger const minspeed = 0;
     
     if(self.life < 1)
     {
-        [self.model.modeleffect shotatx:x y:y];
-        [self.model.items removeObject:self];
+        [self.model.modeleffect smokeatx:x y:y];
+        [self die:YES];
     }
 }
 
 -(void)choosedirection
 {
     direction = arc4random_uniform(3.0) - 1.0;
+}
+
+-(void)die:(BOOL)points
+{
+    if(points)
+    {
+        
+    }
+    
+    [self.model.items removeObject:self];
 }
 
 #pragma mark public

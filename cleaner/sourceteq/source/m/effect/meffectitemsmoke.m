@@ -2,7 +2,7 @@
 
 static NSString* const shotasset = @"effect_smoke";
 static CGFloat const smokesize = 50;
-static NSInteger const smokettl = 40;
+static NSInteger const smokettl = 300;
 
 @implementation meffectitemsmoke
 
