@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>life</key>
-		<integer>20</integer>
+		<integer>10</integer>
 		<key>width</key>
 		<integer>15</integer>
 		<key>height</key>
@@ -16,19 +16,19 @@
 			<string>foe_invader2</string>
 		</array>
 	</dict>
-    <dict>
-        <key>life</key>
-        <integer>30</integer>
-        <key>width</key>
-        <integer>15</integer>
-        <key>height</key>
-        <integer>15</integer>
-        <key>assets</key>
-        <array>
-            <string>foe_octo0</string>
-            <string>foe_octo1</string>
-            <string>foe_octo2</string>
-        </array>
-    </dict>
+	<dict>
+		<key>life</key>
+		<integer>15</integer>
+		<key>width</key>
+		<integer>15</integer>
+		<key>height</key>
+		<integer>15</integer>
+		<key>assets</key>
+		<array>
+			<string>foe_octo0</string>
+			<string>foe_octo1</string>
+			<string>foe_octo2</string>
+		</array>
+	</dict>
 </array>
 </plist>
