@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B18D6C00B8D9A96A0AD3BEB9 /* libPods-cleaner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */; };
 		DA22BED71CB424AF00DDF53A /* text.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA22BED61CB424AF00DDF53A /* text.xcassets */; };
-		DA22BEDB1CB425DA00DDF53A /* gtextnumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */; };
 		DA22BEDF1CB42BA100DDF53A /* mtext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEDE1CB42BA100DDF53A /* mtext.m */; };
 		DA22BEE51CB42BDD00DDF53A /* mtextitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEE41CB42BDD00DDF53A /* mtextitem.m */; };
 		DA22BEE81CB42BE800DDF53A /* mtextitemglyphnumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEE71CB42BE800DDF53A /* mtextitemglyphnumber.m */; };
@@ -107,8 +106,6 @@
 		884B2C09E1EC31FB2597D8A6 /* Pods-cleaner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cleaner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA22BED61CB424AF00DDF53A /* text.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = text.xcassets; sourceTree = "<group>"; };
-		DA22BED91CB425DA00DDF53A /* gtextnumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gtextnumber.h; sourceTree = "<group>"; };
-		DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gtextnumber.m; sourceTree = "<group>"; };
 		DA22BEDD1CB42BA100DDF53A /* mtext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtext.h; sourceTree = "<group>"; };
 		DA22BEDE1CB42BA100DDF53A /* mtext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtext.m; sourceTree = "<group>"; };
 		DA22BEE31CB42BDD00DDF53A /* mtextitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtextitem.h; sourceTree = "<group>"; };
@@ -326,8 +323,6 @@
 			children = (
 				DA22BEEC1CB439E800DDF53A /* gtext.h */,
 				DA22BEED1CB439E800DDF53A /* gtext.m */,
-				DA22BED91CB425DA00DDF53A /* gtextnumber.h */,
-				DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */,
 			);
 			path = text;
 			sourceTree = "<group>";
@@ -1059,7 +1054,6 @@
 				DAE218CD1CAD7CC5007AE65C /* mcolor.m in Sources */,
 				DA37B5241CAF366300015AC2 /* mgun.m in Sources */,
 				DA9386ED1CAC9078006B3213 /* mbuilding.m in Sources */,
-				DA22BEDB1CB425DA00DDF53A /* gtextnumber.m in Sources */,
 				DA9387031CAC9078006B3213 /* vgame.m in Sources */,
 				DA93870B1CAC9078006B3213 /* viewbase.m in Sources */,
 				DA9386FB1CAC9078006B3213 /* mstore.m in Sources */,

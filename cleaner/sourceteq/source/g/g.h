@@ -8,4 +8,4 @@
 #import "ggunfinger.h"
 #import "ggunwaves.h"
 #import "geffect.h"
-#import "gtextnumber.h"
+#import "gtext.h"

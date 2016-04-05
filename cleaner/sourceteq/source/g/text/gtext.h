@@ -1,7 +1,11 @@
-#import <UIKit/UIKit.h>
+#import "appdel.h"
 #import "gspatialtexture.h"
 
+@class mtextitemglyph;
+
 @interface gtext:gspatialtexture
+
+-(instancetype)init:(mtextitemglyph*)model;
 
 @property(nonatomic)CGFloat leftmargin;
 @property(nonatomic)CGFloat topmargin;
