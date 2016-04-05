@@ -10,5 +10,6 @@
 
 @property(strong, nonatomic)gfoe *spatial;
 @property(weak, nonatomic)mfoe *model;
+@property(nonatomic)NSInteger life;
 
 @end

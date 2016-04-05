@@ -20,7 +20,7 @@ static NSUInteger const minspeed = 0;
     NSArray *assets = dictionary[@"assets"];
     CGFloat width = [dictionary[@"width"] floatValue];
     CGFloat height = [dictionary[@"height"] floatValue];
-    
+    self.life = [dictionary[@"life"] integerValue];
     self.spatial.width = width;
     self.spatial.height = height;
     self.spatial.y = -height;
@@ -34,6 +34,7 @@ static NSUInteger const minspeed = 0;
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"died foe");
 }
 
 #pragma mark notified
@@ -107,7 +108,17 @@ static NSUInteger const minspeed = 0;
 
 -(void)gunshot:(NSInteger)caliber
 {
-    [self.model.modeleffect shotatx:self.spatial.x + (self.spatial.width / 2.0) y:self.spatial.y + (self.spatial.height / 2.0)];
+    CGFloat x = self.spatial.x + (self.spatial.width / 2.0);
+    CGFloat y = self.spatial.y + (self.spatial.height / 2.0);
+    
+    [self.model.modeleffect shotatx:x y:y];
+    self.life -= caliber;
+    
+    if(self.life < 1)
+    {
+        [self.model.modeleffect shotatx:x y:y];
+        [self.model.items removeObject:self];
+    }
 }
 
 -(void)choosedirection
