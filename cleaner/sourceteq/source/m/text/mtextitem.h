@@ -5,7 +5,8 @@
 
 @interface mtextitem:NSObject
 
-+(instancetype)numbers:(mtext*)model text:(NSString*)text x:(NSInteger)x y:(NSInteger)y ttl:(NSInteger)ttl size:(CGFloat)size;
+-(instancetype)init:(mtext*)model;
+-(instancetype)init:(mtext*)model ttl:(NSInteger)ttl;
 
 @property(weak, nonatomic)mtext *model;
 @property(strong, nonatomic)NSMutableArray<mtextitemglyph*> *glyphs;

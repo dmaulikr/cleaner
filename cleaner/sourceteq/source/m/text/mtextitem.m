@@ -25,6 +25,13 @@ static CGFloat const paddingnumbers = 6;
     return item;
 }
 
+-(instancetype)init:(mtext*)model
+{
+    self = [super init:model ttl:0];
+    
+    return self;
+}
+
 -(instancetype)init:(mtext*)model ttl:(NSInteger)ttl
 {
     self = [super init];
