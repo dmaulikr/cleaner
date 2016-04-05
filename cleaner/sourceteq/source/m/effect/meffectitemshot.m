@@ -2,7 +2,7 @@
 
 static NSString* const shotasset = @"effect_shot";
 static CGFloat const shotsize = 40;
-static NSInteger const shotttl = 30;
+static NSInteger const shotttl = 25;
 
 @implementation meffectitemshot
 

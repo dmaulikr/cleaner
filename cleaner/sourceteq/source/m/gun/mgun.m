@@ -4,7 +4,7 @@ static CGFloat const gunsize = 40;
 static CGFloat const fingersize = 120;
 static NSInteger const caliber = 5;
 static NSInteger const deltamargin = 5;
-static NSInteger const shootspeed = 30;
+static NSInteger const shootspeed = 20;
 
 @implementation mgun
 {
