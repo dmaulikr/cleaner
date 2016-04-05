@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B18D6C00B8D9A96A0AD3BEB9 /* libPods-cleaner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */; };
+		DA22BED71CB424AF00DDF53A /* text.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA22BED61CB424AF00DDF53A /* text.xcassets */; };
 		DA37B5141CAEBF7A00015AC2 /* foes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA37B5131CAEBF7A00015AC2 /* foes.plist */; };
 		DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5161CAEE89300015AC2 /* gareadust.m */; };
 		DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51C1CAEEDE400015AC2 /* mareadust.m */; };
@@ -99,6 +100,7 @@
 /* Begin PBXFileReference section */
 		884B2C09E1EC31FB2597D8A6 /* Pods-cleaner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cleaner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA22BED61CB424AF00DDF53A /* text.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = text.xcassets; sourceTree = "<group>"; };
 		DA37B5131CAEBF7A00015AC2 /* foes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foes.plist; sourceTree = "<group>"; };
 		DA37B5151CAEE89300015AC2 /* gareadust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gareadust.h; sourceTree = "<group>"; };
 		DA37B5161CAEE89300015AC2 /* gareadust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gareadust.m; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				DA9386111CAC9078006B3213 /* loader.xcassets */,
 				DA37B52E1CAF3A3400015AC2 /* gun.xcassets */,
 				DA38D6781CB31EF700A02B82 /* effect.xcassets */,
+				DA22BED61CB424AF00DDF53A /* text.xcassets */,
 			);
 			path = imateq;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 				DA9386CC1CAC9078006B3213 /* defs.plist in Resources */,
 				DAE218D51CAE0D12007AE65C /* Images.xcassets in Resources */,
 				DA9386CA1CAC9078006B3213 /* analytics.plist in Resources */,
+				DA22BED71CB424AF00DDF53A /* text.xcassets in Resources */,
 				DA9386CE1CAC9078006B3213 /* purchases.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
