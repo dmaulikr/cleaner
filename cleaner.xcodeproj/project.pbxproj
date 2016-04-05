@@ -14,6 +14,7 @@
 		DA22BEE51CB42BDD00DDF53A /* mtextitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEE41CB42BDD00DDF53A /* mtextitem.m */; };
 		DA22BEE81CB42BE800DDF53A /* mtextitemglyphnumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEE71CB42BE800DDF53A /* mtextitemglyphnumber.m */; };
 		DA22BEEB1CB42FF600DDF53A /* mtextitemglyph.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEEA1CB42FF600DDF53A /* mtextitemglyph.m */; };
+		DA22BEEE1CB439E800DDF53A /* gtext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEED1CB439E800DDF53A /* gtext.m */; };
 		DA37B5141CAEBF7A00015AC2 /* foes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA37B5131CAEBF7A00015AC2 /* foes.plist */; };
 		DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5161CAEE89300015AC2 /* gareadust.m */; };
 		DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51C1CAEEDE400015AC2 /* mareadust.m */; };
@@ -116,6 +117,8 @@
 		DA22BEE71CB42BE800DDF53A /* mtextitemglyphnumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtextitemglyphnumber.m; sourceTree = "<group>"; };
 		DA22BEE91CB42FF600DDF53A /* mtextitemglyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtextitemglyph.h; sourceTree = "<group>"; };
 		DA22BEEA1CB42FF600DDF53A /* mtextitemglyph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtextitemglyph.m; sourceTree = "<group>"; };
+		DA22BEEC1CB439E800DDF53A /* gtext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gtext.h; sourceTree = "<group>"; };
+		DA22BEED1CB439E800DDF53A /* gtext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gtext.m; sourceTree = "<group>"; };
 		DA37B5131CAEBF7A00015AC2 /* foes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foes.plist; sourceTree = "<group>"; };
 		DA37B5151CAEE89300015AC2 /* gareadust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gareadust.h; sourceTree = "<group>"; };
 		DA37B5161CAEE89300015AC2 /* gareadust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gareadust.m; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 		DA22BED81CB4258200DDF53A /* text */ = {
 			isa = PBXGroup;
 			children = (
+				DA22BEEC1CB439E800DDF53A /* gtext.h */,
+				DA22BEED1CB439E800DDF53A /* gtext.m */,
 				DA22BED91CB425DA00DDF53A /* gtextnumber.h */,
 				DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */,
 			);
@@ -1059,6 +1064,7 @@
 				DA93870B1CAC9078006B3213 /* viewbase.m in Sources */,
 				DA9386FB1CAC9078006B3213 /* mstore.m in Sources */,
 				DA9386F21CAC9078006B3213 /* mfoe.m in Sources */,
+				DA22BEEE1CB439E800DDF53A /* gtext.m in Sources */,
 				DA9386FE1CAC9078006B3213 /* mstorestatus.m in Sources */,
 				DA38D68B1CB3398800A02B82 /* meffectitemsmoke.m in Sources */,
 				DAB4439D1CACA80700D04286 /* gspatialtexture.m in Sources */,
