@@ -27,8 +27,9 @@
                                       {
                                           weakself.modelarea = [[marea alloc] init];
                                           weakself.modeleffect = [[meffect alloc] init];
+                                          weakself.modeltext = [[mtext alloc] init];
                                           weakself.modelbuilding = [[mbuilding alloc] init:weakself.modelarea];
-                                          weakself.modelfoe = [[mfoe alloc] init:weakself.modelarea effect:weakself.modeleffect];
+                                          weakself.modelfoe = [[mfoe alloc] init:weakself.modelarea effect:weakself.modeleffect text:weakself.modeltext];
                                           weakself.modelgun = [[mgun alloc] init:weakself.modelarea];
                                           
                                           dispatch_async(dispatch_get_main_queue(),

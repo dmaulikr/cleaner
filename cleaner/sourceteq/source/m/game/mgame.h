@@ -6,6 +6,7 @@
 @class mbuilding;
 @class mgun;
 @class meffect;
+@class mtext;
 
 @interface mgame:NSObject
 
@@ -17,5 +18,6 @@
 @property(strong, nonatomic)mbuilding *modelbuilding;
 @property(strong, nonatomic)mgun *modelgun;
 @property(strong, nonatomic)meffect *modeleffect;
+@property(strong, nonatomic)mtext *modeltext;
 
 @end
