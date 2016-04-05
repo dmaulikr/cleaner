@@ -11,6 +11,7 @@ static GLsizei const vectorcorners = 6;
 -(void)draw:(GLKBaseEffect*)effect;
 -(void)rasterize;
 -(void)render;
+-(void)firstrender;
 -(void)movetotop;
 
 @property(strong, nonatomic)NSMutableData *dataposition;

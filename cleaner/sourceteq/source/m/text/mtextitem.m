@@ -13,7 +13,7 @@
         NSRange range = NSMakeRange(i, 1);
         NSString *c = [text substringWithRange:range];
         NSUInteger number = c.integerValue;
-        mtextitemglyphnumber *model = [mtextitemglyphnumber number:number x:x y:y];
+        mtextitemglyphnumber *model = [mtextitemglyphnumber number:number x:sumx y:y];
         sumx += model.width;
         [item.glyphs addObject:model];
     }
@@ -36,8 +36,6 @@
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    NSLog(@"dealloced text");
 }
 
 #pragma mark notified

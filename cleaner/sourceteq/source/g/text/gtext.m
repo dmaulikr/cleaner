@@ -33,7 +33,7 @@
     self.pointertexture[4] = GLKVector2Make(self.atlaswidth, self.topmargin);
     self.pointertexture[5] = GLKVector2Make(self.leftmargin, self.topmargin);
     
-    [super rasterize];
+    [super firstrender];
 }
 
 @end

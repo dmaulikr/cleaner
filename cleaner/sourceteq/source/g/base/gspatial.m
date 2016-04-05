@@ -35,9 +35,7 @@
 
 -(void)rasterize
 {
-    [self render];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkdraw:) name:notification_glkdraw object:nil];
+    [self firstrender];
 }
 
 -(void)render
@@ -56,6 +54,13 @@
     [self vector:index++ x:maxx y:maxy];
     [self vector:index++ x:maxx y:miny];
     [self vector:index++ x:minx y:miny];
+}
+
+-(void)firstrender
+{
+    [self render];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkdraw:) name:notification_glkdraw object:nil];
 }
 
 -(void)movetotop

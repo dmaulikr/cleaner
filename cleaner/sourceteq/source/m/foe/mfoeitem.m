@@ -117,6 +117,9 @@ static NSUInteger const minspeed = 0;
     {
         [self.model.modeleffect smokeatx:x y:y];
         [self die:YES];
+        
+        NSString *scoretext = [[tools singleton] numbertostring:@(self.score)];
+        [self.model.modeltext addscoretext:scoretext x:x y:self.spatial.y];
     }
 }
 

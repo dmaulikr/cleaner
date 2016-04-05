@@ -16,6 +16,7 @@ static NSInteger const ttlscore = 200;
 
 -(void)addscoretext:(NSString*)text x:(NSInteger)x y:(NSInteger)y
 {
+    text = @"0123456789";
     mtextitem *item = [mtextitem numbers:self text:text x:x y:y ttl:ttlscore];
     [self.items addObject:item];
 }
