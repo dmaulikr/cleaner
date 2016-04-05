@@ -1,5 +1,7 @@
 #import "mtext.h"
 
+static NSInteger const ttlscore = 200;
+
 @implementation mtext
 
 -(instancetype)init
@@ -14,7 +16,8 @@
 
 -(void)addscoretext:(NSString*)text x:(NSInteger)x y:(NSInteger)y
 {
-    mtextitem *item = [[mtextitem alloc] init];
+    mtextitem *item = [mtextitem numbers:self text:text x:x y:y ttl:ttlscore];
+    [self.items addObject:item];
 }
 
 @end

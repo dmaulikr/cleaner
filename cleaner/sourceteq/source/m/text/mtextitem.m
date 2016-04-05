@@ -2,9 +2,9 @@
 
 @implementation mtextitem
 
-+(instancetype)numbers:(NSString*)text x:(NSInteger)x y:(NSInteger)y
++(instancetype)numbers:(mtext*)model text:(NSString*)text x:(NSInteger)x y:(NSInteger)y ttl:(NSInteger)ttl
 {
-    mtextitem *item = [[mtextitem alloc] init];
+    mtextitem *item = [[mtextitem alloc] init:model ttl:ttl];
     NSUInteger count = text.length;
     NSInteger sumx = x;
     
@@ -21,10 +21,14 @@
     return item;
 }
 
--(instancetype)init
+-(instancetype)init:(mtext*)model ttl:(NSInteger)ttl
 {
     self = [super init];
+    self.model = model;
+    self.ttl = ttl;
     self.glyphs = [NSMutableArray array];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
 }
@@ -32,6 +36,20 @@
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    NSLog(@"dealloced text");
+}
+
+#pragma mark notified
+
+-(void)notifiedglkmove:(NSNotification*)notification
+{
+    self.ttl--;
+    
+    if(self.ttl < 1)
+    {
+        [self.model.items removeObject:self];
+    }
 }
 
 @end
