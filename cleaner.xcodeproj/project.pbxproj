@@ -10,6 +10,9 @@
 		B18D6C00B8D9A96A0AD3BEB9 /* libPods-cleaner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D2B0D75B7C99EFF1C17CB /* libPods-cleaner.a */; };
 		DA22BED71CB424AF00DDF53A /* text.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA22BED61CB424AF00DDF53A /* text.xcassets */; };
 		DA22BEDB1CB425DA00DDF53A /* gtextnumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */; };
+		DA22BEDF1CB42BA100DDF53A /* mtext.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEDE1CB42BA100DDF53A /* mtext.m */; };
+		DA22BEE51CB42BDD00DDF53A /* mtextitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEE41CB42BDD00DDF53A /* mtextitem.m */; };
+		DA22BEE81CB42BE800DDF53A /* mtextitemnumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22BEE71CB42BE800DDF53A /* mtextitemnumber.m */; };
 		DA37B5141CAEBF7A00015AC2 /* foes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA37B5131CAEBF7A00015AC2 /* foes.plist */; };
 		DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5161CAEE89300015AC2 /* gareadust.m */; };
 		DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51C1CAEEDE400015AC2 /* mareadust.m */; };
@@ -104,6 +107,12 @@
 		DA22BED61CB424AF00DDF53A /* text.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = text.xcassets; sourceTree = "<group>"; };
 		DA22BED91CB425DA00DDF53A /* gtextnumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gtextnumber.h; sourceTree = "<group>"; };
 		DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gtextnumber.m; sourceTree = "<group>"; };
+		DA22BEDD1CB42BA100DDF53A /* mtext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtext.h; sourceTree = "<group>"; };
+		DA22BEDE1CB42BA100DDF53A /* mtext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtext.m; sourceTree = "<group>"; };
+		DA22BEE31CB42BDD00DDF53A /* mtextitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtextitem.h; sourceTree = "<group>"; };
+		DA22BEE41CB42BDD00DDF53A /* mtextitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtextitem.m; sourceTree = "<group>"; };
+		DA22BEE61CB42BE800DDF53A /* mtextitemnumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtextitemnumber.h; sourceTree = "<group>"; };
+		DA22BEE71CB42BE800DDF53A /* mtextitemnumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtextitemnumber.m; sourceTree = "<group>"; };
 		DA37B5131CAEBF7A00015AC2 /* foes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foes.plist; sourceTree = "<group>"; };
 		DA37B5151CAEE89300015AC2 /* gareadust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gareadust.h; sourceTree = "<group>"; };
 		DA37B5161CAEE89300015AC2 /* gareadust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gareadust.m; sourceTree = "<group>"; };
@@ -311,6 +320,19 @@
 			children = (
 				DA22BED91CB425DA00DDF53A /* gtextnumber.h */,
 				DA22BEDA1CB425DA00DDF53A /* gtextnumber.m */,
+			);
+			path = text;
+			sourceTree = "<group>";
+		};
+		DA22BEDC1CB42B6E00DDF53A /* text */ = {
+			isa = PBXGroup;
+			children = (
+				DA22BEDD1CB42BA100DDF53A /* mtext.h */,
+				DA22BEDE1CB42BA100DDF53A /* mtext.m */,
+				DA22BEE31CB42BDD00DDF53A /* mtextitem.h */,
+				DA22BEE41CB42BDD00DDF53A /* mtextitem.m */,
+				DA22BEE61CB42BE800DDF53A /* mtextitemnumber.h */,
+				DA22BEE71CB42BE800DDF53A /* mtextitemnumber.m */,
 			);
 			path = text;
 			sourceTree = "<group>";
@@ -604,6 +626,7 @@
 		DA9386681CAC9078006B3213 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DA22BEDC1CB42B6E00DDF53A /* text */,
 				DA38D67F1CB3201C00A02B82 /* effect */,
 				DA37B5211CAF365900015AC2 /* gun */,
 				DAB443971CAC9FB300D04286 /* area */,
@@ -1012,11 +1035,14 @@
 				DA9386F61CAC9078006B3213 /* mgame.m in Sources */,
 				DA37B5291CAF379100015AC2 /* ggunpointer.m in Sources */,
 				DA9386EF1CAC9078006B3213 /* mdb.m in Sources */,
+				DA22BEDF1CB42BA100DDF53A /* mtext.m in Sources */,
+				DA22BEE81CB42BE800DDF53A /* mtextitemnumber.m in Sources */,
 				DA9386D31CAC9078006B3213 /* nsnotification+nsnotificationmain.m in Sources */,
 				DA9386FD1CAC9078006B3213 /* mstorepurchasesitem.m in Sources */,
 				DA9386D41CAC9078006B3213 /* tools.m in Sources */,
 				DA93870A1CAC9078006B3213 /* vblur.m in Sources */,
 				DA9386FC1CAC9078006B3213 /* mstorepurchases.m in Sources */,
+				DA22BEE51CB42BDD00DDF53A /* mtextitem.m in Sources */,
 				DA9386E51CAC9078006B3213 /* gspatial.m in Sources */,
 				DA93870C1CAC9078006B3213 /* vspinner.m in Sources */,
 				DAE218CD1CAD7CC5007AE65C /* mcolor.m in Sources */,

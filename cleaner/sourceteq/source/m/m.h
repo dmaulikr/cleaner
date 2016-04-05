@@ -26,3 +26,6 @@
 #import "meffect.h"
 #import "meffectitemshot.h"
 #import "meffectitemsmoke.h"
+#import "mtext.h"
+#import "mtextitem.h"
+#import "mtextitemnumber.h"
