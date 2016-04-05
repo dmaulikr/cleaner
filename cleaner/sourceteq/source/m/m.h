@@ -28,4 +28,4 @@
 #import "meffectitemsmoke.h"
 #import "mtext.h"
 #import "mtextitem.h"
-#import "mtextitemnumber.h"
+#import "mtextitemglyphnumber.h"

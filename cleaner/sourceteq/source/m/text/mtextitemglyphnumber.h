@@ -1,13 +1,6 @@
-//
-//  mtextitemnumber.h
-//  cleaner
-//
-//  Created by zero on 4/5/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mtextitemglyph.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mtextitemnumber : NSObject
+@interface mtextitemnumber:mtextitemglyph
 
 @end
