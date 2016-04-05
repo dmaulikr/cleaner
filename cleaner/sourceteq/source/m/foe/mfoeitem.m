@@ -20,7 +20,7 @@ static NSUInteger const minspeed = 0;
     NSArray *assets = dictionary[@"assets"];
     CGFloat width = [dictionary[@"width"] floatValue];
     CGFloat height = [dictionary[@"height"] floatValue];
-    self.life = [dictionary[@"life"] integerValue];
+    self.score = self.life = [dictionary[@"life"] integerValue];
     self.spatial.width = width;
     self.spatial.height = height;
     self.spatial.y = -height;
