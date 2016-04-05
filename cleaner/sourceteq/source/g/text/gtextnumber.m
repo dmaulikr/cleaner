@@ -7,6 +7,13 @@ static NSInteger const glyphheight = 34;
 static NSInteger const marginhr = 6;
 static NSInteger const marginvr = 7;
 
+@interface gtextnumber ()
+
+@property(nonatomic)CGFloat leftmargin;
+@property(nonatomic)CGFloat topmargin;
+
+@end
+
 @implementation gtextnumber
 
 -(instancetype)init
