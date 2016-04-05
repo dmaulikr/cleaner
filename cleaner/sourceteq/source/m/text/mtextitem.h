@@ -1,12 +1,4 @@
-//
-//  mtextitem.h
-//  cleaner
-//
-//  Created by zero on 4/5/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
+#import "appdel.h"
 
 @interface mtextitem : NSObject
 

@@ -1,5 +1,9 @@
 #import "appdel.h"
 
-@interface mtext : NSObject
+@class mtextitem;
+
+@interface mtext:NSObject
+
+@property(strong, nonatomic)NSMutableArray<mtextitem*> *items;
 
 @end
