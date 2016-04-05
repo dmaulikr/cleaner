@@ -18,4 +18,10 @@
     [self.items addObject:effect];
 }
 
+-(void)smokeatx:(CGFloat)x y:(CGFloat)y
+{
+    meffectitemsmoke *effect = [[meffectitemsmoke alloc] init:self x:x y:y];
+    [self.items addObject:effect];
+}
+
 @end
