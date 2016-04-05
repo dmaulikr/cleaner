@@ -6,6 +6,8 @@
 
 @interface mtextitemglyph:NSObject
 
+-(void)rasterize;
+
 @property(strong, nonatomic)gtext *spatial;
 @property(copy, nonatomic)NSString *assetname;
 @property(nonatomic)CGFloat atlaswidth;
