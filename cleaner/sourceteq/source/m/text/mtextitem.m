@@ -1,10 +1,13 @@
 #import "mtextitem.h"
 
+static CGFloat const paddingnumbers = 6;
+
 @implementation mtextitem
 
-+(instancetype)numbers:(mtext*)model text:(NSString*)text x:(NSInteger)x y:(NSInteger)y ttl:(NSInteger)ttl
++(instancetype)numbers:(mtext*)model text:(NSString*)text x:(NSInteger)x y:(NSInteger)y ttl:(NSInteger)ttl size:(CGFloat)size
 {
     mtextitem *item = [[mtextitem alloc] init:model ttl:ttl];
+    CGFloat padding = size * paddingnumbers;
     NSUInteger count = text.length;
     NSInteger sumx = x;
     
@@ -13,8 +16,8 @@
         NSRange range = NSMakeRange(i, 1);
         NSString *c = [text substringWithRange:range];
         NSUInteger number = c.integerValue;
-        mtextitemglyphnumber *model = [mtextitemglyphnumber number:number x:sumx y:y];
-        sumx += model.width;
+        mtextitemglyphnumber *model = [mtextitemglyphnumber number:number x:sumx y:y size:size];
+        sumx += model.width - padding;
         [item.glyphs addObject:model];
     }
     

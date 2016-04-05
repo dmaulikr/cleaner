@@ -3,6 +3,6 @@
 
 @interface mtextitemglyphnumber:mtextitemglyph
 
-+(instancetype)number:(NSUInteger)number x:(NSInteger)x y:(NSInteger)y;
++(instancetype)number:(NSUInteger)number x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size;
 
 @end
