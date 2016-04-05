@@ -10,7 +10,7 @@
 
 @property(weak, nonatomic)meffect *model;
 @property(strong, nonatomic)geffect *spatial;
-@property(copy, nonatomic)NSString *assetname;
+@property(strong, nonatomic)NSArray *assets;
 @property(nonatomic)NSInteger ttl;
 
 @end

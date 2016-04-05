@@ -4,8 +4,8 @@
 @implementation gimage
 {
     CGFloat counter;
+    NSInteger currentindex;
     NSUInteger speedcounter;
-    NSUInteger currentindex;
 }
 
 -(instancetype)init
@@ -97,11 +97,16 @@
                            [weakself addimage:image];
                        }
                        
-                       [weakself nextimage];
-                       
                        if(counter > 1)
                        {
+                           currentindex = -1;
+                           [weakself nextimage];
                            [[NSNotificationCenter defaultCenter] addObserver:weakself selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
+                       }
+                       else
+                       {
+                           currentindex = 0;
+                           [weakself loadcurrent];
                        }
                        
                        weakself.loading = NO;

@@ -11,7 +11,7 @@ static NSInteger const shotttl = 25;
     self = [super init:model x:x y:y];
     
     CGFloat shotsize_2 = shotsize / 2.0;
-    self.assetname = shotasset;
+    self.assets = @[shotasset];
     self.spatial.x = -shotsize_2;
     self.spatial.y = -shotsize_2;
     self.spatial.width = shotsize;
