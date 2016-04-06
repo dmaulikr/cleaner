@@ -19,11 +19,6 @@
     return self;
 }
 
--(void)dealloc
-{
-    NSLog(@"dealloced text");
-}
-
 #pragma mark -
 #pragma mark spatial texture
 
