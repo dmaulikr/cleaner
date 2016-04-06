@@ -26,7 +26,7 @@ static NSUInteger const framespersecond = 60;
     [super viewDidLoad];
     [self setPauseOnWillResignActive:YES];
     [self setPreferredFramesPerSecond:framespersecond];
-    [self setResumeOnDidBecomeActive:YES];
+    [self setResumeOnDidBecomeActive:NO];
     [self setDelegate:self];
 }
 

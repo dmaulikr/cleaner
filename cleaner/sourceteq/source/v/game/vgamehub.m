@@ -1,5 +1,7 @@
 #import "vgamehub.h"
 
+static NSUInteger const pausesize = 40;
+
 @interface vgamehub ()
 
 @property(weak, nonatomic)mgun *modelgun;
@@ -24,20 +26,22 @@
     self.modelgun.hub = self;
     
     UIButton *button = [[UIButton alloc] init];
-    [button setBackgroundColor:[UIColor main]];
-    [button setAlpha:0.3];
     [button setClipsToBounds:YES];
-    [button.layer setCornerRadius:25];
+    [button setImage:[[UIImage imageNamed:@"pause"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [button setImage:[[UIImage imageNamed:@"pause"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateHighlighted];
+    [button.imageView setContentMode:UIViewContentModeCenter];
+    [button.imageView setClipsToBounds:YES];
+    [button.imageView setTintColor:[UIColor colorWithWhite:1 alpha:0.3]];
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [button addTarget:self action:@selector(actionexit:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(actionpause:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:button];
     
     NSDictionary *views = @{@"button":button};
-    NSDictionary *metrics = @{};
+    NSDictionary *metrics = @{@"pausesize":@(pausesize)};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(50)]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[button(50)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(pausesize)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(pausesize)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -66,9 +70,9 @@
 
 #pragma mark actions
 
--(void)actionexit:(UIButton*)button
+-(void)actionpause:(UIButton*)button
 {
-    [self.controller exitgame];
+    [self.controller setPaused:YES];
 }
 
 #pragma mark functionality

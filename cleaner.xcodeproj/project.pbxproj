@@ -100,6 +100,7 @@
 		DA93870F1CAC9078006B3213 /* vstorebar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386C11CAC9078006B3213 /* vstorebar.m */; };
 		DA9387101CAC9078006B3213 /* vstorecell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386C31CAC9078006B3213 /* vstorecell.m */; };
 		DA9CCF801CB5B01E00800880 /* area.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9CCF7F1CB5B01E00800880 /* area.xcassets */; };
+		DA9CCF831CB5B7CB00800880 /* vgamepause.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9CCF821CB5B7CB00800880 /* vgamepause.m */; };
 		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
@@ -295,6 +296,8 @@
 		DA9387121CAC92A7006B3213 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA9387131CAC92A7006B3213 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA9CCF7F1CB5B01E00800880 /* area.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = area.xcassets; sourceTree = "<group>"; };
+		DA9CCF811CB5B7CB00800880 /* vgamepause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgamepause.h; sourceTree = "<group>"; };
+		DA9CCF821CB5B7CB00800880 /* vgamepause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgamepause.m; sourceTree = "<group>"; };
 		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
@@ -812,6 +815,8 @@
 				DA9386A41CAC9078006B3213 /* vgame.m */,
 				DA9386A51CAC9078006B3213 /* vgamehub.h */,
 				DA9386A61CAC9078006B3213 /* vgamehub.m */,
+				DA9CCF811CB5B7CB00800880 /* vgamepause.h */,
+				DA9CCF821CB5B7CB00800880 /* vgamepause.m */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -1079,6 +1084,7 @@
 				DA38D6651CB09EA200A02B82 /* ggun.m in Sources */,
 				DA37B5201CAEF52C00015AC2 /* mareadustitem.m in Sources */,
 				DA9386E71CAC9078006B3213 /* gbuilding.m in Sources */,
+				DA9CCF831CB5B7CB00800880 /* vgamepause.m in Sources */,
 				DAB443A01CACA82100D04286 /* gspatialgradient.m in Sources */,
 				DA9386FF1CAC9078006B3213 /* mstorestatusdeferred.m in Sources */,
 				DA9386DD1CAC9078006B3213 /* chome.m in Sources */,
