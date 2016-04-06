@@ -99,6 +99,7 @@
 		DA93870E1CAC9078006B3213 /* vstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386BF1CAC9078006B3213 /* vstore.m */; };
 		DA93870F1CAC9078006B3213 /* vstorebar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386C11CAC9078006B3213 /* vstorebar.m */; };
 		DA9387101CAC9078006B3213 /* vstorecell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386C31CAC9078006B3213 /* vstorecell.m */; };
+		DA9CCF801CB5B01E00800880 /* area.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9CCF7F1CB5B01E00800880 /* area.xcassets */; };
 		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
@@ -293,6 +294,7 @@
 		DA9386C41CAC9078006B3213 /* v.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
 		DA9387121CAC92A7006B3213 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA9387131CAC92A7006B3213 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
+		DA9CCF7F1CB5B01E00800880 /* area.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = area.xcassets; sourceTree = "<group>"; };
 		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				DA38D6781CB31EF700A02B82 /* effect.xcassets */,
 				DA22BED61CB424AF00DDF53A /* text.xcassets */,
 				DA38C92E1CB5A0C100E554CF /* hub.xcassets */,
+				DA9CCF7F1CB5B01E00800880 /* area.xcassets */,
 			);
 			path = imateq;
 			sourceTree = "<group>";
@@ -981,6 +984,7 @@
 				DA9386CD1CAC9078006B3213 /* Localizable.strings in Resources */,
 				DAB443961CAC9C5300D04286 /* cleaner.db in Resources */,
 				DA38D6791CB31EF700A02B82 /* effect.xcassets in Resources */,
+				DA9CCF801CB5B01E00800880 /* area.xcassets in Resources */,
 				DA9386C91CAC9078006B3213 /* loader.xcassets in Resources */,
 				DA9386C61CAC9078006B3213 /* building.xcassets in Resources */,
 				DA9386CC1CAC9078006B3213 /* defs.plist in Resources */,
