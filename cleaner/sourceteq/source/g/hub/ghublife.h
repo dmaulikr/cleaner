@@ -1,13 +1,6 @@
-//
-//  ghublife.h
-//  cleaner
-//
-//  Created by zero on 4/6/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "gspatialtexture.h"
 
-#import <Foundation/Foundation.h>
-
-@interface ghublife : NSObject
+@interface ghublife:gspatialtexture
 
 @end
