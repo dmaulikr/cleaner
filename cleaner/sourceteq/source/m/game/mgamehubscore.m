@@ -10,9 +10,28 @@ static NSUInteger const scorey = 30;
     self = [super init];
     self.model = model;
     self.score = 0;
-    [self printscore];
+    self.shouldprint = YES;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedglkmove:(NSNotification*)notification
+{
+    if(self.shouldprint)
+    {
+        self.shouldprint = NO;
+        
+        [self printscore];
+    }
 }
 
 #pragma mark functionality
@@ -21,6 +40,12 @@ static NSUInteger const scorey = 30;
 {
     NSString *totalstring = [[tools singleton] numbertostring:@(self.score)];
     self.modeltext = [self.model.modeltext addtotalscore:totalstring x:scorex y:scorey];
+}
+
+-(void)addscore:(NSUInteger)addscore
+{
+    self.score += addscore;
+    self.shouldprint = YES;
 }
 
 @end
