@@ -38,7 +38,11 @@ static NSUInteger const buttonheight = 60;
 
 -(void)layoutSubviews
 {
-    
+    CGFloat width = self.bounds.size.width;
+    CGFloat width_button = width - buttonwidth;
+    CGFloat margin = width_button / 2.0;
+    self.layoutpauseleftmargin.constant = margin;
+    self.layoutexitleftmargin.constant = margin;
     
     [super layoutSubviews];
 }
