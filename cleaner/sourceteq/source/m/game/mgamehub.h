@@ -7,5 +7,6 @@
 -(instancetype)init:(mgame*)model;
 
 @property(weak, nonatomic)mgame *model;
+@property(nonatomic)NSInteger life;
 
 @end
