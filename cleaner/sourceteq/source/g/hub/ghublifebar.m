@@ -10,7 +10,6 @@ static CGFloat const alpha = 0.4;
 -(instancetype)init
 {
     self = [super init:[mcolor red:red green:green blue:blue alpha:alpha]];
-    [self rasterize];
     
     return self;
 }

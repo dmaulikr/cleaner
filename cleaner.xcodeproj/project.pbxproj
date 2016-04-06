@@ -29,6 +29,7 @@
 		DA38C9271CB585C200E554CF /* ghubscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9261CB585C200E554CF /* ghubscore.m */; };
 		DA38C92A1CB5873300E554CF /* mgamehublife.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9291CB5873300E554CF /* mgamehublife.m */; };
 		DA38C92D1CB5874500E554CF /* mgamehubscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C92C1CB5874500E554CF /* mgamehubscore.m */; };
+		DA38C92F1CB5A0C100E554CF /* hub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA38C92E1CB5A0C100E554CF /* hub.xcassets */; };
 		DA38D6651CB09EA200A02B82 /* ggun.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6641CB09EA200A02B82 /* ggun.m */; };
 		DA38D6681CB1DD3E00A02B82 /* mgunshot.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6671CB1DD3E00A02B82 /* mgunshot.m */; };
 		DA38D66B1CB2A2D900A02B82 /* ggunfinger.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D66A1CB2A2D900A02B82 /* ggunfinger.m */; };
@@ -151,6 +152,7 @@
 		DA38C9291CB5873300E554CF /* mgamehublife.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgamehublife.m; sourceTree = "<group>"; };
 		DA38C92B1CB5874500E554CF /* mgamehubscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgamehubscore.h; sourceTree = "<group>"; };
 		DA38C92C1CB5874500E554CF /* mgamehubscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgamehubscore.m; sourceTree = "<group>"; };
+		DA38C92E1CB5A0C100E554CF /* hub.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = hub.xcassets; sourceTree = "<group>"; };
 		DA38D6631CB09EA200A02B82 /* ggun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggun.h; sourceTree = "<group>"; };
 		DA38D6641CB09EA200A02B82 /* ggun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggun.m; sourceTree = "<group>"; };
 		DA38D6661CB1DD3E00A02B82 /* mgunshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgunshot.h; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				DA37B52E1CAF3A3400015AC2 /* gun.xcassets */,
 				DA38D6781CB31EF700A02B82 /* effect.xcassets */,
 				DA22BED61CB424AF00DDF53A /* text.xcassets */,
+				DA38C92E1CB5A0C100E554CF /* hub.xcassets */,
 			);
 			path = imateq;
 			sourceTree = "<group>";
@@ -974,6 +977,7 @@
 				DAE218CF1CADF7B0007AE65C /* areacolors.plist in Resources */,
 				DA37B5141CAEBF7A00015AC2 /* foes.plist in Resources */,
 				DA9386CB1CAC9078006B3213 /* buildings.plist in Resources */,
+				DA38C92F1CB5A0C100E554CF /* hub.xcassets in Resources */,
 				DA9386CD1CAC9078006B3213 /* Localizable.strings in Resources */,
 				DAB443961CAC9C5300D04286 /* cleaner.db in Resources */,
 				DA38D6791CB31EF700A02B82 /* effect.xcassets in Resources */,

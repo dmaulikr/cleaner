@@ -36,6 +36,7 @@ static NSInteger const lifemarginvr = 3;
     self.spatiallifebar.y = lifey + lifemarginvr;
     self.spatiallifebar.height = maxlifeheight;
     [self reposlife];
+    [self.spatiallifebar rasterize];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
