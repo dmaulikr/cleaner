@@ -1,13 +1,14 @@
 #import "appdel.h"
 
 @class mgame;
+@class mgamehublife;
+@class mgamehubscore;
 
 @interface mgamehub:NSObject
 
 -(instancetype)init:(mgame*)model;
 
-@property(weak, nonatomic)mgame *model;
-@property(nonatomic)NSUInteger score;
-@property(nonatomic)NSInteger life;
+@property(strong, nonatomic)mgamehublife *life;
+@property(strong, nonatomic)mgamehubscore *score;
 
 @end
