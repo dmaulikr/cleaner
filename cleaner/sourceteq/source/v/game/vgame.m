@@ -49,8 +49,13 @@
     {
         vgamepause *viewpause = [[vgamepause alloc] init:self.controller];
         self.viewpause = viewpause;
-        
         [self addSubview:viewpause];
+        
+        NSDictionary *views = @{@"viewpause":viewpause};
+        NSDictionary *metrics = @{};
+        
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[viewpause]-0-|" options:0 metrics:metrics views:views]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[viewpause]-0-|" options:0 metrics:metrics views:views]];
     }
 }
 
