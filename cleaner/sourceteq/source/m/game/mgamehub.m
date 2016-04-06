@@ -9,6 +9,7 @@ static NSInteger const lifeinitial = 100;
     self = [super init];
     self.model = model;
     self.life = lifeinitial;
+    self.score = 0;
     
     return self;
 }
