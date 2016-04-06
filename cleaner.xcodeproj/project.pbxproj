@@ -101,6 +101,7 @@
 		DA9387101CAC9078006B3213 /* vstorecell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386C31CAC9078006B3213 /* vstorecell.m */; };
 		DA9CCF801CB5B01E00800880 /* area.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9CCF7F1CB5B01E00800880 /* area.xcassets */; };
 		DA9CCF831CB5B7CB00800880 /* vgamepause.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9CCF821CB5B7CB00800880 /* vgamepause.m */; };
+		DA9CCF861CB5C5DA00800880 /* mtextitemtotal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9CCF851CB5C5DA00800880 /* mtextitemtotal.m */; };
 		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
@@ -298,6 +299,8 @@
 		DA9CCF7F1CB5B01E00800880 /* area.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = area.xcassets; sourceTree = "<group>"; };
 		DA9CCF811CB5B7CB00800880 /* vgamepause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgamepause.h; sourceTree = "<group>"; };
 		DA9CCF821CB5B7CB00800880 /* vgamepause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vgamepause.m; sourceTree = "<group>"; };
+		DA9CCF841CB5C5DA00800880 /* mtextitemtotal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtextitemtotal.h; sourceTree = "<group>"; };
+		DA9CCF851CB5C5DA00800880 /* mtextitemtotal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtextitemtotal.m; sourceTree = "<group>"; };
 		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 				DA22BEE41CB42BDD00DDF53A /* mtextitem.m */,
 				DA22BEEF1CB462B900DDF53A /* mtextitemscore.h */,
 				DA22BEF01CB462B900DDF53A /* mtextitemscore.m */,
+				DA9CCF841CB5C5DA00800880 /* mtextitemtotal.h */,
+				DA9CCF851CB5C5DA00800880 /* mtextitemtotal.m */,
 				DA22BEE91CB42FF600DDF53A /* mtextitemglyph.h */,
 				DA22BEEA1CB42FF600DDF53A /* mtextitemglyph.m */,
 				DA22BEE61CB42BE800DDF53A /* mtextitemglyphnumber.h */,
@@ -1127,6 +1132,7 @@
 				DAB4439D1CACA80700D04286 /* gspatialtexture.m in Sources */,
 				DA9387091CAC9078006B3213 /* valert.m in Sources */,
 				DA9386EE1CAC9078006B3213 /* mbuildingitem.m in Sources */,
+				DA9CCF861CB5C5DA00800880 /* mtextitemtotal.m in Sources */,
 				DA9387001CAC9078006B3213 /* mstorestatusnew.m in Sources */,
 				DA38D6851CB3204100A02B82 /* meffectitem.m in Sources */,
 				DA9386D21CAC9078006B3213 /* analytics.m in Sources */,

@@ -31,4 +31,5 @@
 #import "meffectitemsmoke.h"
 #import "mtext.h"
 #import "mtextitemscore.h"
+#import "mtextitemtotal.h"
 #import "mtextitemglyphnumber.h"

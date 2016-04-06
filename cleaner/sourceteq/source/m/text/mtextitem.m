@@ -10,6 +10,7 @@
     self.text = text;
     self.x = x;
     self.y = y;
+    self.ttl = 0;
     self.glyphs = [NSMutableArray array];
     
     return self;
@@ -54,7 +55,10 @@
         [self.glyphs addObject:model];
     }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
+    if(self.ttl)
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
+    }
 }
 
 -(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x
