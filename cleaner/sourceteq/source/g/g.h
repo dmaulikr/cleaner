@@ -9,4 +9,6 @@
 #import "ggunwaves.h"
 #import "geffect.h"
 #import "gtext.h"
-#import "ghub.h"
+#import "ghublife.h"
+#import "ghublifebar.h"
+#import "ghubscore.h"
