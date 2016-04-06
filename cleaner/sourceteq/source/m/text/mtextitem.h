@@ -6,6 +6,7 @@
 @interface mtextitem:NSObject
 
 -(instancetype)init:(mtext*)model text:(NSString*)text x:(NSInteger)x y:(NSInteger)y;
+-(void)notifiedmove;
 -(void)render;
 
 @property(weak, nonatomic)mtext *model;

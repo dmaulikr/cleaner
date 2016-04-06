@@ -24,6 +24,13 @@
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
+    [self notifiedmove];
+}
+
+#pragma mark public
+
+-(void)notifiedmove
+{
     self.ttl--;
     
     if(self.ttl < 1)
@@ -31,8 +38,6 @@
         [self.model.items removeObject:self];
     }
 }
-
-#pragma mark public render
 
 -(void)render
 {
