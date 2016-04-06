@@ -1,7 +1,7 @@
 #import "mgamehubscore.h"
 
 static NSUInteger const scorex = 220;
-static NSUInteger const scorey = 30;
+static NSUInteger const scorey = 12;
 
 @implementation mgamehubscore
 
@@ -39,6 +39,12 @@ static NSUInteger const scorey = 30;
 -(void)printscore
 {
     NSString *totalstring = [[tools singleton] numbertostring:@(self.score)];
+    
+    if(self.modeltext)
+    {
+        [self.model.modeltext.items removeObject:self.modeltext];
+    }
+    
     self.modeltext = [self.model.modeltext addtotalscore:totalstring x:scorex y:scorey];
 }
 

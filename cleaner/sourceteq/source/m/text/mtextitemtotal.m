@@ -1,7 +1,7 @@
 #import "mtextitemtotal.h"
 
-static CGFloat const padding = 6;
-static CGFloat const sizescore = 0.6;
+static CGFloat const padding = 3;
+static CGFloat const sizescore = 0.45;
 
 @implementation mtextitemtotal
 
