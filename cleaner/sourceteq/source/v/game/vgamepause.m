@@ -2,7 +2,7 @@
 
 static NSUInteger const buttonwidth = 140;
 static NSUInteger const buttonheight = 36;
-static NSUInteger const buttonseparation = 50;
+static NSUInteger const buttonseparation = 20;
 
 @implementation vgamepause
 
@@ -10,7 +10,7 @@ static NSUInteger const buttonseparation = 50;
 {
     self = [super init];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor clearColor]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.controller = controller;
     
@@ -22,6 +22,8 @@ static NSUInteger const buttonseparation = 50;
     [buttonresume setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [buttonresume setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
     [buttonresume setTitle:NSLocalizedString(@"game_pause_resume", nil) forState:UIControlStateNormal];
+    [buttonresume addTarget:self action:@selector(actionresume:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonresume.titleLabel setFont:[UIFont boldsize:18]];
     
     UIButton *buttonexit = [[UIButton alloc] init];
     [buttonexit setClipsToBounds:YES];
@@ -31,6 +33,8 @@ static NSUInteger const buttonseparation = 50;
     [buttonexit setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [buttonexit setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
     [buttonexit setTitle:NSLocalizedString(@"game_pause_exit", nil) forState:UIControlStateNormal];
+    [buttonexit addTarget:self action:@selector(actionexit:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonexit.titleLabel setFont:[UIFont boldsize:18]];
     
     [self addSubview:buttonresume];
     [self addSubview:buttonexit];
@@ -44,6 +48,9 @@ static NSUInteger const buttonseparation = 50;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[buttonresume(buttonwidth)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[buttonexit(buttonwidth)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[buttonresume(buttonheight)]-(buttonseparation)-[buttonexit(buttonheight)]" options:0 metrics:metrics views:views]];
+    [self addConstraint:self.layoutpauseleftmargin];
+    [self addConstraint:self.layoutpausetopmargin];
+    [self addConstraint:self.layoutexitleftmargin];
     
     return self;
 }
@@ -67,5 +74,17 @@ static NSUInteger const buttonseparation = 50;
 }
 
 #pragma mark actions
+
+-(void)actionresume:(UIButton*)button
+{
+    [self.controller setPaused:NO];
+    [self removeFromSuperview];
+}
+
+-(void)actionexit:(UIButton*)button
+{
+    [self.controller exitgame];
+    [self removeFromSuperview];
+}
 
 @end
