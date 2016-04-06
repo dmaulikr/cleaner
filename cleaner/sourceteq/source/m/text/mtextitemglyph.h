@@ -6,6 +6,7 @@
 
 @interface mtextitemglyph:NSObject
 
+-(instancetype)init:(NSString*)character x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size;
 -(void)rasterize;
 
 @property(strong, nonatomic)gtext *spatial;
