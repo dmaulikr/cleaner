@@ -1,13 +1,13 @@
 #import "mgamehublife.h"
 
 static NSInteger const maxlife = 100;
-static NSInteger const lifex = 20;
-static NSInteger const lifey = 20;
+static NSInteger const lifex = 10;
+static NSInteger const lifey = 10;
 static NSInteger const lifewidth = 200;
 static NSInteger const lifeheight = 20;
-static NSInteger const lifemarginleft = 20;
-static NSInteger const lifemarginright = 10;
-static NSInteger const lifemarginvr = 3;
+static NSInteger const lifemarginleft = 26;
+static NSInteger const lifemarginright = 8;
+static NSInteger const lifemarginvr = 5;
 
 @implementation mgamehublife
 {
