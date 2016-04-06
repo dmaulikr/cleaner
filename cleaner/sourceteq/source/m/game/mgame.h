@@ -7,6 +7,7 @@
 @class mgun;
 @class meffect;
 @class mtext;
+@class mgamehub;
 
 @interface mgame:NSObject
 
@@ -19,5 +20,6 @@
 @property(strong, nonatomic)mgun *modelgun;
 @property(strong, nonatomic)meffect *modeleffect;
 @property(strong, nonatomic)mtext *modeltext;
+@property(strong, nonatomic)mgamehub *modelhub;
 
 @end
