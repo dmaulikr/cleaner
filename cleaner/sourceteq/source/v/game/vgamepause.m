@@ -66,4 +66,6 @@ static NSUInteger const buttonseparation = 50;
     [super layoutSubviews];
 }
 
+#pragma mark actions
+
 @end
