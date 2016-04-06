@@ -47,14 +47,21 @@
     for(NSInteger i = 0; i < count; i++)
     {
         NSRange range = NSMakeRange(i, 1);
-        NSString *c = [self.text substringWithRange:range];
-        NSUInteger number = c.integerValue;
-        mtextitemglyphnumber *model = [mtextitemglyphnumber number:number x:sumx y:self.y size:self.size];
+        NSString *character = [self.text substringWithRange:range];
+        mtextitemglyph *model = [self glyphwith:character at:sumx];
         sumx += model.width + self.padding;
+        
         [self.glyphs addObject:model];
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
+}
+
+-(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x
+{
+    mtextitemglyph *glyph = [[mtextitemglyph alloc] init:character x:x y:self.y size:self.size];
+    
+    return glyph;
 }
 
 @end

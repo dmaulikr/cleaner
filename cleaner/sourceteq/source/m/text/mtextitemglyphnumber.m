@@ -10,31 +10,24 @@ static CGFloat const glyphheight = 39;
 
 @implementation mtextitemglyphnumber
 
-+(instancetype)number:(NSUInteger)number x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size
+-(instancetype)init:(NSString*)character x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size
 {
+    self = [super init:character x:x y:y size:size];
+    self.width = glyphwidth * size;
+    self.height = glyphheight * size;
+    self.assetname = assetname;
+    
+    NSUInteger number = character.integerValue;
     CGFloat left = (number % 5) * atlaswidth;
     CGFloat top = (number / 5) * atlasheight;
     left += marginhr;
     top += marginvr;
     
-    mtextitemglyphnumber *glyph = [[mtextitemglyphnumber alloc] init:size];
-    glyph.x = x;
-    glyph.y = y;
-    glyph.leftmargin = left;
-    glyph.topmargin = top;
-    glyph.atlaswidth = atlaswidth + left;
-    glyph.atlasheight = atlasheight + top;
-    [glyph rasterize];
-    
-    return glyph;
-}
-
--(instancetype)init:(CGFloat)size
-{
-    self = [super init];
-    self.width = glyphwidth * size;
-    self.height = glyphheight * size;
-    self.assetname = assetname;
+    self.leftmargin = left;
+    self.topmargin = top;
+    self.atlaswidth = atlaswidth + left;
+    self.atlasheight = atlasheight + top;
+    [self rasterize];
     
     return self;
 }

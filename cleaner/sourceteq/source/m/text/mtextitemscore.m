@@ -42,4 +42,14 @@ static NSUInteger const speed = 1;
     [super notifiedmove];
 }
 
+#pragma mark -
+#pragma mark text item
+
+-(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x
+{
+    mtextitemglyphnumber *glyph = [[mtextitemglyphnumber alloc] init:character x:x y:self.y size:self.size];
+    
+    return glyph;
+}
+
 @end

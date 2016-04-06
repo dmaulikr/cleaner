@@ -8,6 +8,7 @@
 -(instancetype)init:(mtext*)model text:(NSString*)text x:(NSInteger)x y:(NSInteger)y;
 -(void)notifiedmove;
 -(void)render;
+-(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x;
 
 @property(weak, nonatomic)mtext *model;
 @property(strong, nonatomic)NSMutableArray<mtextitemglyph*> *glyphs;
