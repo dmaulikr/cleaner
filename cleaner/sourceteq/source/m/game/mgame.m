@@ -31,7 +31,7 @@
                                           weakself.modelbuilding = [[mbuilding alloc] init:weakself.modelarea];
                                           weakself.modelfoe = [[mfoe alloc] init:weakself.modelarea effect:weakself.modeleffect text:weakself.modeltext];
                                           weakself.modelgun = [[mgun alloc] init:weakself.modelarea];
-                                          weakself.modelhub
+                                          weakself.modelhub = [[mgamehub alloc] init];
                                           
                                           dispatch_async(dispatch_get_main_queue(),
                                                          ^
