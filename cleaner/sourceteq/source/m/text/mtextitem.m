@@ -27,7 +27,7 @@ static CGFloat const paddingnumbers = 6;
 
 -(instancetype)init:(mtext*)model
 {
-    self = [super init:model ttl:0];
+    self = [self init:model ttl:0];
     
     return self;
 }
