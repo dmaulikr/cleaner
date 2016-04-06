@@ -8,3 +8,4 @@
 #import "vgameloader.h"
 #import "vgame.h"
 #import "vgamehub.h"
+#import "vgamepause.h"
