@@ -41,6 +41,19 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:notification_glkdraw object:nil userInfo:modeleffect];
 }
 
+#pragma mark public
+
+-(void)pause
+{
+    if(!self.viewpause)
+    {
+        vgamepause *viewpause = [[vgamepause alloc] init:self.controller];
+        self.viewpause = viewpause;
+        
+        [self addSubview:viewpause];
+    }
+}
+
 #pragma mark -
 #pragma mark glkview del
 
