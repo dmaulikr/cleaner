@@ -1,7 +1,8 @@
 #import "vgamepause.h"
 
 static NSUInteger const buttonwidth = 140;
-static NSUInteger const buttonheight = 60;
+static NSUInteger const buttonheight = 36;
+static NSUInteger const buttonseparation = 50;
 
 @implementation vgamepause
 
@@ -25,7 +26,7 @@ static NSUInteger const buttonheight = 60;
     [self addSubview:buttonexit];
     
     NSDictionary *views = @{@"buttonresume":buttonresume, @"buttonexit":buttonexit};
-    NSDictionary *metrics = @{@"buttonwidth":@(buttonwidth), @"buttonheight":@(buttonheight)};
+    NSDictionary *metrics = @{@"buttonwidth":@(buttonwidth), @"buttonheight":@(buttonheight), @"buttonseparation":@(buttonseparation)};
     
     self.layoutpauseleftmargin = [NSLayoutConstraint constraintWithItem:buttonresume attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:0];
     self.layoutexitleftmargin = [NSLayoutConstraint constraintWithItem:buttonexit attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:0];
