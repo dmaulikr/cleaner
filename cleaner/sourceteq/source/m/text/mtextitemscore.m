@@ -18,4 +18,9 @@ static NSInteger const ttlscore = 100;
     return self;
 }
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 @end

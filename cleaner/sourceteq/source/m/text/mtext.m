@@ -14,10 +14,8 @@
 
 -(void)addscoretext:(NSString*)text x:(NSInteger)x y:(NSInteger)y
 {
-    mtextitemscore *model = [[mtextitemscore alloc] init:text];
-    
-    mtextitem *item = [mtextitem numbers:self text:text x:x y:y ttl:ttlscore size:sizescore];
-    [self.items addObject:item];
+    mtextitemscore *model = [[mtextitemscore alloc] init:self text:text x:x y:y];
+    [self.items addObject:model];
 }
 
 @end
