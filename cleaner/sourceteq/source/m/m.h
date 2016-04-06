@@ -14,6 +14,8 @@
 #import "mgame.h"
 #import "mgameeffect.h"
 #import "mgamehub.h"
+#import "mgamehublife.h"
+#import "mgamehubscore.h"
 #import "marea.h"
 #import "mareadust.h"
 #import "mareadustitem.h"

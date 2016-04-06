@@ -27,6 +27,8 @@
 		DA38C9211CB585A500E554CF /* ghublife.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9201CB585A500E554CF /* ghublife.m */; };
 		DA38C9241CB585B000E554CF /* ghublifebar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9231CB585B000E554CF /* ghublifebar.m */; };
 		DA38C9271CB585C200E554CF /* ghubscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9261CB585C200E554CF /* ghubscore.m */; };
+		DA38C92A1CB5873300E554CF /* mgamehublife.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9291CB5873300E554CF /* mgamehublife.m */; };
+		DA38C92D1CB5874500E554CF /* mgamehubscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C92C1CB5874500E554CF /* mgamehubscore.m */; };
 		DA38D6651CB09EA200A02B82 /* ggun.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6641CB09EA200A02B82 /* ggun.m */; };
 		DA38D6681CB1DD3E00A02B82 /* mgunshot.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6671CB1DD3E00A02B82 /* mgunshot.m */; };
 		DA38D66B1CB2A2D900A02B82 /* ggunfinger.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D66A1CB2A2D900A02B82 /* ggunfinger.m */; };
@@ -145,6 +147,10 @@
 		DA38C9231CB585B000E554CF /* ghublifebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ghublifebar.m; sourceTree = "<group>"; };
 		DA38C9251CB585C200E554CF /* ghubscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ghubscore.h; sourceTree = "<group>"; };
 		DA38C9261CB585C200E554CF /* ghubscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ghubscore.m; sourceTree = "<group>"; };
+		DA38C9281CB5873300E554CF /* mgamehublife.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgamehublife.h; sourceTree = "<group>"; };
+		DA38C9291CB5873300E554CF /* mgamehublife.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgamehublife.m; sourceTree = "<group>"; };
+		DA38C92B1CB5874500E554CF /* mgamehubscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgamehubscore.h; sourceTree = "<group>"; };
+		DA38C92C1CB5874500E554CF /* mgamehubscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgamehubscore.m; sourceTree = "<group>"; };
 		DA38D6631CB09EA200A02B82 /* ggun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggun.h; sourceTree = "<group>"; };
 		DA38D6641CB09EA200A02B82 /* ggun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggun.m; sourceTree = "<group>"; };
 		DA38D6661CB1DD3E00A02B82 /* mgunshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgunshot.h; sourceTree = "<group>"; };
@@ -729,6 +735,10 @@
 				DA9386831CAC9078006B3213 /* mgameeffect.m */,
 				DA38C9181CB57F9400E554CF /* mgamehub.h */,
 				DA38C9191CB57F9400E554CF /* mgamehub.m */,
+				DA38C9281CB5873300E554CF /* mgamehublife.h */,
+				DA38C9291CB5873300E554CF /* mgamehublife.m */,
+				DA38C92B1CB5874500E554CF /* mgamehubscore.h */,
+				DA38C92C1CB5874500E554CF /* mgamehubscore.m */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -1079,6 +1089,7 @@
 				DA9386EF1CAC9078006B3213 /* mdb.m in Sources */,
 				DA22BEDF1CB42BA100DDF53A /* mtext.m in Sources */,
 				DA22BEE81CB42BE800DDF53A /* mtextitemglyphnumber.m in Sources */,
+				DA38C92A1CB5873300E554CF /* mgamehublife.m in Sources */,
 				DA9386D31CAC9078006B3213 /* nsnotification+nsnotificationmain.m in Sources */,
 				DA22BEF11CB462B900DDF53A /* mtextitemscore.m in Sources */,
 				DA9386FD1CAC9078006B3213 /* mstorepurchasesitem.m in Sources */,
@@ -1109,6 +1120,7 @@
 				DA38D6881CB3205900A02B82 /* meffectitemshot.m in Sources */,
 				DA93870D1CAC9078006B3213 /* vhome.m in Sources */,
 				DA9387011CAC9078006B3213 /* mstorestatuspurchased.m in Sources */,
+				DA38C92D1CB5874500E554CF /* mgamehubscore.m in Sources */,
 				DA9387021CAC9078006B3213 /* mstorestatuspurchasing.m in Sources */,
 				DA37B52C1CAF38DB00015AC2 /* gguntarget.m in Sources */,
 			);
