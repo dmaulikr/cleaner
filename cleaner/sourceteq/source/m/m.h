@@ -13,6 +13,7 @@
 #import "mstorestatusdeferred.h"
 #import "mgame.h"
 #import "mgameeffect.h"
+#import "mgamehub.h"
 #import "marea.h"
 #import "mareadust.h"
 #import "mareadustitem.h"

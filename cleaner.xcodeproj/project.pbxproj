@@ -23,6 +23,7 @@
 		DA37B5291CAF379100015AC2 /* ggunpointer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5281CAF379100015AC2 /* ggunpointer.m */; };
 		DA37B52C1CAF38DB00015AC2 /* gguntarget.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B52B1CAF38DB00015AC2 /* gguntarget.m */; };
 		DA37B52F1CAF3A3400015AC2 /* gun.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA37B52E1CAF3A3400015AC2 /* gun.xcassets */; };
+		DA38C91A1CB57F9400E554CF /* mgamehub.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9191CB57F9400E554CF /* mgamehub.m */; };
 		DA38D6651CB09EA200A02B82 /* ggun.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6641CB09EA200A02B82 /* ggun.m */; };
 		DA38D6681CB1DD3E00A02B82 /* mgunshot.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6671CB1DD3E00A02B82 /* mgunshot.m */; };
 		DA38D66B1CB2A2D900A02B82 /* ggunfinger.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D66A1CB2A2D900A02B82 /* ggunfinger.m */; };
@@ -133,6 +134,8 @@
 		DA37B52B1CAF38DB00015AC2 /* gguntarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gguntarget.m; sourceTree = "<group>"; };
 		DA37B52D1CAF38FD00015AC2 /* ggunpointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggunpointer.h; sourceTree = "<group>"; };
 		DA37B52E1CAF3A3400015AC2 /* gun.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = gun.xcassets; sourceTree = "<group>"; };
+		DA38C9181CB57F9400E554CF /* mgamehub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgamehub.h; sourceTree = "<group>"; };
+		DA38C9191CB57F9400E554CF /* mgamehub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgamehub.m; sourceTree = "<group>"; };
 		DA38D6631CB09EA200A02B82 /* ggun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggun.h; sourceTree = "<group>"; };
 		DA38D6641CB09EA200A02B82 /* ggun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggun.m; sourceTree = "<group>"; };
 		DA38D6661CB1DD3E00A02B82 /* mgunshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgunshot.h; sourceTree = "<group>"; };
@@ -377,6 +380,13 @@
 			path = gun;
 			sourceTree = "<group>";
 		};
+		DA38C9171CB57F5C00E554CF /* hub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = hub;
+			sourceTree = "<group>";
+		};
 		DA38D67A1CB31F4200A02B82 /* effect */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,6 +585,7 @@
 		DA93864A1CAC9078006B3213 /* g */ = {
 			isa = PBXGroup;
 			children = (
+				DA38C9171CB57F5C00E554CF /* hub */,
 				DA22BED81CB4258200DDF53A /* text */,
 				DA38D67A1CB31F4200A02B82 /* effect */,
 				DA37B5261CAF378200015AC2 /* gun */,
@@ -701,6 +712,8 @@
 				DA9386811CAC9078006B3213 /* mgame.m */,
 				DA9386821CAC9078006B3213 /* mgameeffect.h */,
 				DA9386831CAC9078006B3213 /* mgameeffect.m */,
+				DA38C9181CB57F9400E554CF /* mgamehub.h */,
+				DA38C9191CB57F9400E554CF /* mgamehub.m */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -1039,6 +1052,7 @@
 				DA38D66B1CB2A2D900A02B82 /* ggunfinger.m in Sources */,
 				DA38D6771CB2B9A900A02B82 /* gspatialcolor.m in Sources */,
 				DA9386FA1CAC9078006B3213 /* msettings.m in Sources */,
+				DA38C91A1CB57F9400E554CF /* mgamehub.m in Sources */,
 				DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */,
 				DA38D6741CB2B4E600A02B82 /* mgunwaves.m in Sources */,
 				DA9387101CAC9078006B3213 /* vstorecell.m in Sources */,
