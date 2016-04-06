@@ -1,5 +1,5 @@
 //
-//  ghub.h
+//  ghublifebar.h
 //  cleaner
 //
 //  Created by zero on 4/6/16.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ghub : NSObject
+@interface ghublifebar : NSObject
 
 @end
