@@ -4,3 +4,6 @@
 "game_setup_mission_unknown"="Unknown";
 "game_setup_mission_start"="Start";
 "game_loader_title"="Loading";
+
+"game_pause_resume"="Resume";
+"game_pause_exit"="Exit";
