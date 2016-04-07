@@ -16,7 +16,16 @@
 @property(strong, nonatomic)NSArray *textures_gunfinger;
 @property(strong, nonatomic)NSArray *textures_effectshot;
 @property(strong, nonatomic)NSArray *textures_effectsmoke;
-@property(strong, nonatomic)NSArray *textures_textnumbers;
 @property(strong, nonatomic)NSArray *textures_hublife;
+@property(strong, nonatomic)NSArray *textures_text0;
+@property(strong, nonatomic)NSArray *textures_text1;
+@property(strong, nonatomic)NSArray *textures_text2;
+@property(strong, nonatomic)NSArray *textures_text3;
+@property(strong, nonatomic)NSArray *textures_text4;
+@property(strong, nonatomic)NSArray *textures_text5;
+@property(strong, nonatomic)NSArray *textures_text6;
+@property(strong, nonatomic)NSArray *textures_text7;
+@property(strong, nonatomic)NSArray *textures_text8;
+@property(strong, nonatomic)NSArray *textures_text9;
 
 @end
