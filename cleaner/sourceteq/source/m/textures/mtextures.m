@@ -11,6 +11,20 @@
     return single;
 }
 
+#pragma mark functionality
+
+-(NSNumber*)textureforasset:(NSString*)asset srgb:(BOOL)srgb
+{
+    NSNumber *number;
+    UIImage *image = [UIImage imageNamed:asset];
+    GLKTextureInfo *textureinfo = [GLKTextureLoader textureWithCGImage:image.CGImage options:@{GLKTextureLoaderSRGB:@(srgb)} error:nil];
+    GLuint texture = textureinfo.name;
+    number = @(texture);
+    self.textures[asset] = number;
+    
+    return number;
+}
+
 #pragma mark public
 
 -(void)cleartextures
@@ -30,25 +44,20 @@
 #warning "check"
 }
 
--(void)loadtextures:(NSArray<NSDictionary<NSString*, NSNumber*>*>*)rawtextures
+-(void)loadtextures:(NSArray<NSDictionary*>*)rawtextures
 {
     self.textures = [NSMutableDictionary dictionary];
-}
-
--(NSNumber*)textureforasset:(NSString*)asset srgb:(BOOL)srgb
-{
-    NSNumber *number = self.textures[asset];
+    NSUInteger count = rawtextures.count;
     
-    if(!number)
+    for(NSUInteger i = 0; i < count; i++)
     {
-        UIImage *image = [UIImage imageNamed:asset];
-        GLKTextureInfo *textureinfo = [GLKTextureLoader textureWithCGImage:image.CGImage options:@{GLKTextureLoaderSRGB:@(srgb)} error:nil];
-        GLuint texture = textureinfo.name;
-        number = @(texture);
-        self.textures[asset] = number;
+        NSDictionary *rawtexture = rawtextures[i];
+        NSString *asset = rawtexture[@"asset"];
+        BOOL srgb = [rawtexture[@"srgb"] boolValue];
+        NSNumber *texture = [self textureforasset:asset srgb:srgb];
+        
+        self.textures[asset] = texture;
     }
-    
-    return number;
 }
 
 @end
