@@ -48,7 +48,7 @@ GLKMatrix4 rotationclear;
                                           rotationclear = GLKMatrix4MakeRotation(0, 0, 0, 1);
                                           
                                           weakself.modelarea = [[marea alloc] init];
-                                          weakself.modeleffect = [[meffect alloc] init:weakself.modeltextures];
+                                          weakself.modeleffect = [[meffect alloc] init];
                                           weakself.modeltext = [[mtext alloc] init:weakself.modeltextures];
                                           weakself.modelbuilding = [[mbuilding alloc] init:weakself.modeltextures area:weakself.modelarea];
                                           weakself.modelhub = [[mgamehub alloc] init:weakself];

@@ -2,10 +2,9 @@
 
 @implementation mtext
 
--(instancetype)init:(mtextures*)modeltextures
+-(instancetype)init
 {
     self = [super init];
-    self.modeltextures = modeltextures;
     self.items = [NSMutableArray array];
     
     return self;
