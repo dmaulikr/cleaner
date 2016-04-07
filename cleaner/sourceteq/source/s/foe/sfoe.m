@@ -31,20 +31,27 @@ static NSInteger const minusmaxx = 100;
     mfoeitem *foe;
     NSInteger x = arc4random_uniform(maxx) + minx;
     foe_kind kind = arc4random_uniform(foe_kind_none);
+    Class class;
     
     switch(kind)
     {
         case foe_kind_invader:
             
+            class = [mfoeiteminvader class];
+            
             break;
             
         case foe_kind_octo:
+            
+            class = [mfoeitemocto class];
             
             break;
             
         case foe_kind_none:
             break;
     }
+    
+    foe = [[class alloc] init:self.model x:x];
     
     return foe;
 }
