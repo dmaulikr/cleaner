@@ -1,13 +1,6 @@
-//
-//  mfoeitemocto.h
-//  cleaner
-//
-//  Created by zero on 4/7/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mfoeitem.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mfoeitemocto : NSObject
+@interface mfoeitemocto:mfoeitem
 
 @end
