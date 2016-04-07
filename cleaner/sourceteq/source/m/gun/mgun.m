@@ -51,7 +51,7 @@ static NSInteger const shootspeed = 20;
         NSInteger x = xa - fingersize_2;
         NSInteger y = ya - fingersize_2;
         
-        [self.fingera initialx:x y:y width:fingersize height:fingersize];
+        [self.spatialfingera updateprojection:x dy:y];
     }
     
     if(self.touchend)
@@ -59,7 +59,7 @@ static NSInteger const shootspeed = 20;
         NSInteger x = xb - fingersize_2;
         NSInteger y = yb - fingersize_2;
         
-        [self.fingerb initialx:x y:y width:fingersize height:fingersize];
+        [self.spatialfingerb updateprojection:x dy:y];
     }
     
     if(self.touchstart && self.touchend)
@@ -80,15 +80,15 @@ static NSInteger const shootspeed = 20;
 
 -(void)centerx:(NSInteger)x y:(NSInteger)y
 {
+    shootcurrent++;
+    
     NSInteger initialx = x - gunsize_2;
     NSInteger initialy = y - gunsize_2;
     NSInteger finalx = x + gunsize_2;
     NSInteger finaly = y + gunsize_2;
     
-    [self.spatialpointer initialx:initialx y:initialy width:gunsize height:gunsize];
-    [self.spatialtarget initialx:initialx y:initialy width:gunsize height:gunsize];
-    
-    shootcurrent++;
+    [self.spatialpointer updateprojection:x dy:y];
+    [self.spatialtarget updateprojection:x dy:y];
     
     if(shootcurrent > shootspeed)
     {
@@ -103,10 +103,10 @@ static NSInteger const shootspeed = 20;
 -(void)clearloop
 {
     shootcurrent = 0;
-    self.spatialtarget.active = NO;
-    self.spatialpointer.active = NO;
-    self.fingera.active = NO;
-    self.fingerb.active = NO;
+    [self.spatialtarget deactivate];
+    [self.spatialpointer deactivate];
+    [self.spatialfingera deactivate];
+    [self.spatialfingerb deactivate];
     [self.modelwaves clear];
 }
 

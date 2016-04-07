@@ -21,7 +21,7 @@
 
 #pragma mark public
 
--(void)deacivate
+-(void)deactivate
 {
     active = NO;
 }
