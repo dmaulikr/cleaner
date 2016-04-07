@@ -8,5 +8,7 @@
 -(instancetype)init:(mfoeitem*)model;
 
 @property(weak, nonatomic)mfoeitem *model;
+@property(nonatomic)CGFloat delx;
+@property(nonatomic)CGFloat dely;
 
 @end

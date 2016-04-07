@@ -80,7 +80,7 @@ static NSUInteger const minspeed = 0;
     {
         y++;
         
-        if(self.spatial.y > maxy)
+        if(y > maxy)
         {
             [self die:NO];
         }
@@ -106,11 +106,11 @@ static NSUInteger const minspeed = 0;
                 direction = -1;
             }
             
-            self.spatial.x = x;
-            self.spatial.y = y;
+            self.spatial.delx = self.spatial.x - x;
+            self.spatial.dely = self.spatial.y - y;
             speedcounter = 0;
             
-            [self.spatial render];
+//            [self.spatial render];
         }
     }
 }

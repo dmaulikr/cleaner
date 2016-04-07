@@ -16,6 +16,7 @@ static GLsizei const vectorcorners = 6;
 
 @property(strong, nonatomic)NSMutableData *dataposition;
 @property(nonatomic)GLKVector2 *pointerposition;
+@property(nonatomic)GLKMatrix4 projectionmatrix;
 @property(nonatomic)CGFloat width;
 @property(nonatomic)CGFloat height;
 @property(nonatomic)CGFloat x;

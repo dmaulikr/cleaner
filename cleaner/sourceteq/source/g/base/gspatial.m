@@ -28,6 +28,7 @@
 
 -(void)draw:(GLKBaseEffect*)effect
 {
+    effect.transform.projectionMatrix = self.projectionmatrix;
     glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, 0, self.pointerposition);
     [effect prepareToDraw];
     glDrawArrays(GL_TRIANGLES, 0, vectorcorners);
@@ -58,6 +59,7 @@
 
 -(void)firstrender
 {
+    self.projectionmatrix = GLKMatrix4MakeOrtho(0, self.model.model.modelarea.screenwidth, self.model.model.modelarea.screenheight, 0, 1, -1);
     [self render];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkdraw:) name:notification_glkdraw object:nil];
