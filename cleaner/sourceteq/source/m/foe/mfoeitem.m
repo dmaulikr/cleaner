@@ -1,4 +1,5 @@
 #import "mfoeitem.h"
+#import "appdel.h"
 
 static CGFloat const ratiochangedirection = 30;
 static NSUInteger const maxspeed = 6;
@@ -20,31 +21,11 @@ static NSUInteger const minspeed = 0;
     NSUInteger speedcounter;
 }
 
--(instancetype)init:(NSDictionary*)dictionary model:(mfoe*)model
+-(instancetype)init:(mfoe*)model x:(NSInteger)newx
 {
     self = [super init];
     self.model = model;
-    
-    width = [dictionary[@"width"] floatValue];
-    width_2 = width / 2.0;
-    height = [dictionary[@"height"] floatValue];
-    height_2 = height / 2.0;
-    
-    
-    
-    self.spatial = [[gfoe alloc] init:self];
-    
-    
-    
-    minx = width;
-    maxx = model.modelarea.screenwidth - (width + width);
-    maxy = model.modelarea.screenheight;
-    self.score = self.life = [dictionary[@"life"] integerValue];
-    self.spatial.width = width;
-    self.spatial.height = height;
-    self.spatial.y = y = -height;
-    [self.spatial.image loadtextures:assets model:self.model.modelgame.modeltextures];
-    [self choosedirection];
+    x = newx;
     speed = arc4random_uniform(maxspeed) + minspeed;
     
     return self;
@@ -94,7 +75,7 @@ static NSUInteger const minspeed = 0;
             
             if(!shouldchangedirection)
             {
-                [self choosedirection];
+                direction = arc4random_uniform(3.0) - 1.0;
             }
             
             x += direction;
@@ -139,11 +120,6 @@ static NSUInteger const minspeed = 0;
     }
 }
 
--(void)choosedirection
-{
-    direction = arc4random_uniform(3.0) - 1.0;
-}
-
 -(void)die:(BOOL)points
 {
     if(points)
@@ -160,10 +136,15 @@ static NSUInteger const minspeed = 0;
 
 #pragma mark public
 
--(void)rasterize:(CGFloat)newx
+-(void)spatial:(NSArray<NSNumber*>*)textures width:(NSInteger)newwidth height:(NSInteger)newheight
 {
-    self.spatial.x = x = newx;
-    [self.spatial rasterize];
+    y = - newheight;
+    width = newwidth;
+    height = newheight;
+    minx = newwidth;
+    maxx = screenwidth - (newwidth + newwidth);
+    maxy = screenheight;
+    self.spatial = [[gfoe alloc] init:textures x:x y:y width:width height:height];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedgunshot:) name:notification_gunshot object:nil];

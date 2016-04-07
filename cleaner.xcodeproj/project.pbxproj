@@ -111,6 +111,8 @@
 		DAE218CD1CAD7CC5007AE65C /* mcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE218CC1CAD7CC5007AE65C /* mcolor.m */; };
 		DAE218CF1CADF7B0007AE65C /* areacolors.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAE218CE1CADF7B0007AE65C /* areacolors.plist */; };
 		DAE218D51CAE0D12007AE65C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE218D41CAE0D12007AE65C /* Images.xcassets */; };
+		DAFCC29F1CB6F5C700448EF7 /* mfoeiteminvader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFCC29E1CB6F5C700448EF7 /* mfoeiteminvader.m */; };
+		DAFCC2A21CB6F5D500448EF7 /* mfoeitemocto.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFCC2A11CB6F5D500448EF7 /* mfoeitemocto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -315,6 +317,10 @@
 		DAE218CC1CAD7CC5007AE65C /* mcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcolor.m; sourceTree = "<group>"; };
 		DAE218CE1CADF7B0007AE65C /* areacolors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = areacolors.plist; sourceTree = "<group>"; };
 		DAE218D41CAE0D12007AE65C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		DAFCC29D1CB6F5C700448EF7 /* mfoeiteminvader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mfoeiteminvader.h; sourceTree = "<group>"; };
+		DAFCC29E1CB6F5C700448EF7 /* mfoeiteminvader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mfoeiteminvader.m; sourceTree = "<group>"; };
+		DAFCC2A01CB6F5D500448EF7 /* mfoeitemocto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mfoeitemocto.h; sourceTree = "<group>"; };
+		DAFCC2A11CB6F5D500448EF7 /* mfoeitemocto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mfoeitemocto.m; sourceTree = "<group>"; };
 		E930DA81122C155ADF580860 /* Pods-cleaner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.release.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -737,6 +743,10 @@
 				DA9386781CAC9078006B3213 /* mfoe.m */,
 				DA9386791CAC9078006B3213 /* mfoeitem.h */,
 				DA93867A1CAC9078006B3213 /* mfoeitem.m */,
+				DAFCC29D1CB6F5C700448EF7 /* mfoeiteminvader.h */,
+				DAFCC29E1CB6F5C700448EF7 /* mfoeiteminvader.m */,
+				DAFCC2A01CB6F5D500448EF7 /* mfoeitemocto.h */,
+				DAFCC2A11CB6F5D500448EF7 /* mfoeitemocto.m */,
 			);
 			path = foe;
 			sourceTree = "<group>";
@@ -1121,6 +1131,7 @@
 				DA22BEF11CB462B900DDF53A /* mtextitemscore.m in Sources */,
 				DA9386FD1CAC9078006B3213 /* mstorepurchasesitem.m in Sources */,
 				DA9386D41CAC9078006B3213 /* tools.m in Sources */,
+				DAFCC2A21CB6F5D500448EF7 /* mfoeitemocto.m in Sources */,
 				DA93870A1CAC9078006B3213 /* vblur.m in Sources */,
 				DA9386FC1CAC9078006B3213 /* mstorepurchases.m in Sources */,
 				DA22BEE51CB42BDD00DDF53A /* mtextitem.m in Sources */,
@@ -1131,6 +1142,7 @@
 				DA37B5241CAF366300015AC2 /* mgun.m in Sources */,
 				DA9386ED1CAC9078006B3213 /* mbuilding.m in Sources */,
 				DA9387031CAC9078006B3213 /* vgame.m in Sources */,
+				DAFCC29F1CB6F5C700448EF7 /* mfoeiteminvader.m in Sources */,
 				DA93870B1CAC9078006B3213 /* viewbase.m in Sources */,
 				DA9386FB1CAC9078006B3213 /* mstore.m in Sources */,
 				DA9386F21CAC9078006B3213 /* mfoe.m in Sources */,

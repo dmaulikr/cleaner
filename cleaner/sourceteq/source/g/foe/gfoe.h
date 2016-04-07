@@ -1,14 +1,8 @@
 #import "appdel.h"
 #import "gspatialtexture.h"
 
-@class mfoeitem;
-
 @interface gfoe:gspatialtexture
 
--(instancetype)init:(mfoeitem*)model;
-
-@property(weak, nonatomic)mfoeitem *model;
-@property(nonatomic)CGFloat delx;
-@property(nonatomic)CGFloat dely;
+-(instancetype)init:(NSArray<NSNumber*>*)textures x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height;
 
 @end
