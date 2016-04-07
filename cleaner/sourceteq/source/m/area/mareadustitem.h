@@ -7,7 +7,4 @@
 
 -(instancetype)init:(mareadust*)model x:(NSInteger)newx y:(NSInteger)newy;
 
-@property(strong, nonatomic)gareadust *spatial;
-@property(weak, nonatomic)mareadust *model;
-
 @end

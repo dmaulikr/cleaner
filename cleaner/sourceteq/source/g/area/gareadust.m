@@ -4,9 +4,11 @@ static NSUInteger const size = 11;
 
 @implementation gareadust
 
--(instancetype)init:(mtextures*)modeltextures
+-(instancetype)init:(NSInteger)x y:(NSInteger)y
 {
-    self = [super init];
+    self = [super init:<#(NSArray<NSString *> *)#>];
+    self.x = x;
+    self.y = y;
     self.width = size;
     self.height = size;
     [self.image loadtextures:@[@"area_dust"] model:modeltextures];

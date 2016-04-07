@@ -3,6 +3,6 @@
 
 @interface gareadust:gspatialtexture
 
--(instancetype)init:(mtextures*)modeltextures;
+-(instancetype)init:(NSInteger)x y:(NSInteger)y;
 
 @end

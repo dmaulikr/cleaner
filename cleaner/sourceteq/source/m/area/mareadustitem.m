@@ -3,8 +3,15 @@
 static CGFloat const maxspeed = 10;
 static NSUInteger const minspeed = 1;
 
+@interface mareadustitem ()
+
+@property(weak, nonatomic)mareadust *model;
+
+@end
+
 @implementation mareadustitem
 {
+    gareadust *spatial;
     NSInteger x;
     NSInteger y;
     NSInteger minx;
@@ -19,8 +26,8 @@ static NSUInteger const minspeed = 1;
 {
     self = [super init];
     self.model = model;
-    self.spatial = [[gareadust alloc] init:model.modelarea.modeltextures];
-    self.spatial.x = x = newx;
+    spatial = [[gareadust alloc] init:model.modelarea.modeltextures];
+    spatial.x = x = newx;
     self.spatial.y = y = newy;
     miny = - self.spatial.height;
     minx = - self.spatial.width;
