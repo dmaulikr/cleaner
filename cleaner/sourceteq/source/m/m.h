@@ -12,7 +12,6 @@
 #import "mstorestatuspurchasing.h"
 #import "mstorestatusdeferred.h"
 #import "mgame.h"
-#import "mgameeffect.h"
 #import "mgamehub.h"
 #import "mgamehublife.h"
 #import "mgamehubscore.h"

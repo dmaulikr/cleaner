@@ -78,7 +78,6 @@
 		DA9386F21CAC9078006B3213 /* mfoe.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386781CAC9078006B3213 /* mfoe.m */; };
 		DA9386F31CAC9078006B3213 /* mfoeitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93867A1CAC9078006B3213 /* mfoeitem.m */; };
 		DA9386F61CAC9078006B3213 /* mgame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386811CAC9078006B3213 /* mgame.m */; };
-		DA9386F71CAC9078006B3213 /* mgameeffect.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386831CAC9078006B3213 /* mgameeffect.m */; };
 		DA9386FA1CAC9078006B3213 /* msettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93868C1CAC9078006B3213 /* msettings.m */; };
 		DA9386FB1CAC9078006B3213 /* mstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386901CAC9078006B3213 /* mstore.m */; };
 		DA9386FC1CAC9078006B3213 /* mstorepurchases.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9386921CAC9078006B3213 /* mstorepurchases.m */; };
@@ -249,8 +248,6 @@
 		DA93867A1CAC9078006B3213 /* mfoeitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mfoeitem.m; sourceTree = "<group>"; };
 		DA9386801CAC9078006B3213 /* mgame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgame.h; sourceTree = "<group>"; };
 		DA9386811CAC9078006B3213 /* mgame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgame.m; sourceTree = "<group>"; };
-		DA9386821CAC9078006B3213 /* mgameeffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgameeffect.h; sourceTree = "<group>"; };
-		DA9386831CAC9078006B3213 /* mgameeffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgameeffect.m; sourceTree = "<group>"; };
 		DA93868A1CAC9078006B3213 /* mgeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgeneral.h; sourceTree = "<group>"; };
 		DA93868B1CAC9078006B3213 /* msettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msettings.h; sourceTree = "<group>"; };
 		DA93868C1CAC9078006B3213 /* msettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msettings.m; sourceTree = "<group>"; };
@@ -749,8 +746,6 @@
 			children = (
 				DA9386801CAC9078006B3213 /* mgame.h */,
 				DA9386811CAC9078006B3213 /* mgame.m */,
-				DA9386821CAC9078006B3213 /* mgameeffect.h */,
-				DA9386831CAC9078006B3213 /* mgameeffect.m */,
 				DA38C9181CB57F9400E554CF /* mgamehub.h */,
 				DA38C9191CB57F9400E554CF /* mgamehub.m */,
 				DA38C9281CB5873300E554CF /* mgamehublife.h */,
@@ -1083,7 +1078,6 @@
 				DA38D6821CB3202400A02B82 /* meffect.m in Sources */,
 				DA9386F11CAC9078006B3213 /* mdirs.m in Sources */,
 				DA9386DB1CAC9078006B3213 /* cgameloader.m in Sources */,
-				DA9386F71CAC9078006B3213 /* mgameeffect.m in Sources */,
 				DA9386D11CAC9078006B3213 /* main.m in Sources */,
 				DA9386E11CAC9078006B3213 /* garea.m in Sources */,
 				DA9386E91CAC9078006B3213 /* gfoe.m in Sources */,
