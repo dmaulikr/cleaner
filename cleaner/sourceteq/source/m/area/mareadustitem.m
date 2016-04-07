@@ -5,18 +5,26 @@ static NSUInteger const minspeed = 1;
 
 @implementation mareadustitem
 {
+    CGFloat x;
+    CGFloat y;
+    CGFloat minx;
+    CGFloat maxx;
+    CGFloat miny;
     NSUInteger speed;
     NSUInteger speedcounter;
     NSUInteger direction;
 }
 
--(instancetype)init:(mareadust*)model x:(CGFloat)x y:(CGFloat)y
+-(instancetype)init:(mareadust*)model x:(CGFloat)newx y:(CGFloat)newy
 {
     self = [super init];
     self.model = model;
     self.spatial = [[gareadust alloc] init];
-    self.spatial.x = x;
-    self.spatial.y = y;
+    self.spatial.x = x = newx;
+    self.spatial.y = y = newy;
+    miny = - self.spatial.height;
+    minx = - self.spatial.width;
+    maxx = self.model.modelarea.screenwidth;
     [self.spatial rasterize];
     speedcounter = 0;
     speed = arc4random_uniform(maxspeed) + minspeed;
@@ -29,6 +37,7 @@ static NSUInteger const minspeed = 1;
 
 -(void)dealloc
 {
+    NSLog(@"bye dust");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -42,18 +51,18 @@ static NSUInteger const minspeed = 1;
     {
         BOOL remove = NO;
         speedcounter = 0;
-        self.spatial.x += direction;
-        self.spatial.y--;
+        x += direction;
+        y--;
         
-        if(self.spatial.y < - self.spatial.height)
+        if(y < miny)
         {
             remove = YES;
         }
-        else if(self.spatial.x < - self.spatial.width)
+        else if(x < minx)
         {
             remove = YES;
         }
-        else if(self.spatial.x > self.model.modelarea.screenwidth)
+        else if(x > maxx)
         {
             remove = YES;
         }
@@ -64,6 +73,8 @@ static NSUInteger const minspeed = 1;
         }
         else
         {
+            self.spatial.x = x;
+            self.spatial.y = y;
             [self.spatial render];
         }
     }

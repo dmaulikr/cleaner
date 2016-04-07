@@ -1,6 +1,7 @@
 #import "mfoe.h"
 
-static CGFloat const ratioaddfoe = 30;
+//static CGFloat const ratioaddfoe = 50;
+static CGFloat const ratioaddfoe = 5;
 
 @implementation mfoe
 

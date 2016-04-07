@@ -6,7 +6,7 @@
 @interface mfoeitem:NSObject
 
 -(instancetype)init:(NSDictionary*)dictionary model:(mfoe*)model;
--(void)rasterize:(CGFloat)x;
+-(void)rasterize:(CGFloat)newx;
 
 @property(strong, nonatomic)gfoe *spatial;
 @property(weak, nonatomic)mfoe *model;
