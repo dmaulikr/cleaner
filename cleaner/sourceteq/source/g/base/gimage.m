@@ -3,14 +3,9 @@
 
 static NSUInteger const imagespeed = 30;
 
-@interface gimage ()
-
-@property(strong, nonatomic)NSMutableArray<NSNumber*> *textures;
-
-@end
-
 @implementation gimage
 {
+    NSMutableArray<NSNumber*> *textures;
     CGFloat counter;
     NSInteger currentindex;
     NSUInteger speedcounter;
@@ -20,7 +15,6 @@ static NSUInteger const imagespeed = 30;
 {
     self = [super init];
     self.speed = imagespeed;
-    self.textures = [NSMutableArray array];
     self.random = NO;
     speedcounter = 0;
     [self loadtextures:assets];
@@ -50,32 +44,32 @@ static NSUInteger const imagespeed = 30;
 
 -(void)loadtextures:(NSArray<NSString*>*)assets
 {
-    __weak typeof(self) weakself = self;
-    counter = textures.count;
+    textures = [NSMutableArray array];
+    counter = assets.count;
     
-    for(NSInteger i = 0; i < counter; i++)
+    for(NSUInteger i = 0; i < counter; i++)
     {
-        NSString *texturename = textures[i];
-        NSNumber *number = [modeltextures textureforasset:texturename srgb:self.srgb];
-        [weakself.textures addObject:number];
+        NSString *assetname = assets[i];
+        NSNumber *number = [mtextures singleton].textures[assetname];
+        [textures addObject:number];
     }
     
     if(counter > 1)
     {
         currentindex = -1;
-        [weakself nextimage];
-        [[NSNotificationCenter defaultCenter] addObserver:weakself selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
+        [self nextimage];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     }
     else
     {
         currentindex = 0;
-        [weakself loadcurrent];
+        [self loadcurrent];
     }
 }
 
 -(void)loadcurrent
 {
-    NSNumber *nextnumber = self.textures[currentindex];
+    NSNumber *nextnumber = textures[currentindex];
     self.current = nextnumber.unsignedIntValue;
 }
 
