@@ -14,7 +14,6 @@ extern NSInteger screenheight;
 @class meffect;
 @class mtext;
 @class mgamehub;
-@class mtextures;
 
 @interface mgame:NSObject
 
@@ -28,6 +27,5 @@ extern NSInteger screenheight;
 @property(strong, nonatomic)meffect *modeleffect;
 @property(strong, nonatomic)mtext *modeltext;
 @property(strong, nonatomic)mgamehub *modelhub;
-@property(strong, nonatomic)mtextures *modeltextures;
 
 @end

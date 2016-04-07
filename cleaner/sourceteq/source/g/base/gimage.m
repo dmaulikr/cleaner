@@ -1,6 +1,14 @@
 #import "gimage.h"
 #import "appdel.h"
 
+static NSUInteger const imagespeed = 30;
+
+@interface gimage ()
+
+@property(strong, nonatomic)NSMutableArray<NSNumber*> *textures;
+
+@end
+
 @implementation gimage
 {
     CGFloat counter;
@@ -8,14 +16,14 @@
     NSUInteger speedcounter;
 }
 
--(instancetype)init
+-(instancetype)init:(NSArray<NSString*>*)assets
 {
     self = [super init];
-    self.speed = 30;
+    self.speed = imagespeed;
     self.textures = [NSMutableArray array];
     self.random = NO;
-    self.srgb = NO;
     speedcounter = 0;
+    [self loadtextures:assets];
     
     return self;
 }
@@ -40,6 +48,31 @@
 
 #pragma mark functionality
 
+-(void)loadtextures:(NSArray<NSString*>*)assets
+{
+    __weak typeof(self) weakself = self;
+    counter = textures.count;
+    
+    for(NSInteger i = 0; i < counter; i++)
+    {
+        NSString *texturename = textures[i];
+        NSNumber *number = [modeltextures textureforasset:texturename srgb:self.srgb];
+        [weakself.textures addObject:number];
+    }
+    
+    if(counter > 1)
+    {
+        currentindex = -1;
+        [weakself nextimage];
+        [[NSNotificationCenter defaultCenter] addObserver:weakself selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
+    }
+    else
+    {
+        currentindex = 0;
+        [weakself loadcurrent];
+    }
+}
+
 -(void)loadcurrent
 {
     NSNumber *nextnumber = self.textures[currentindex];
@@ -63,37 +96,6 @@
     }
     
     [self loadcurrent];
-}
-
-#pragma mark public
-
--(void)loadtextures:(NSArray<NSString*>*)textures model:(mtextures*)modeltextures
-{
-    __weak typeof(self) weakself = self;
-    counter = textures.count;
-    
-    dispatch_async(dispatch_get_main_queue(),
-                   ^
-                   {
-                       for(NSInteger i = 0; i < counter; i++)
-                       {
-                           NSString *texturename = textures[i];
-                           NSNumber *number = [modeltextures textureforasset:texturename srgb:self.srgb];
-                           [weakself.textures addObject:number];
-                       }
-                       
-                       if(counter > 1)
-                       {
-                           currentindex = -1;
-                           [weakself nextimage];
-                           [[NSNotificationCenter defaultCenter] addObserver:weakself selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
-                       }
-                       else
-                       {
-                           currentindex = 0;
-                           [weakself loadcurrent];
-                       }
-                   });
 }
 
 @end

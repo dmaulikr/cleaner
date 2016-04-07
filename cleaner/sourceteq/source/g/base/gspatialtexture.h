@@ -4,6 +4,6 @@
 
 @interface gspatialtexture:gspatial
 
--(instancetype)init:(NSArray<NSString*>*)textures;
+-(instancetype)init:(NSArray<NSString*>*)assets;
 
 @end

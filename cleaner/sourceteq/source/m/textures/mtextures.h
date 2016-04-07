@@ -2,6 +2,7 @@
 
 @interface mtextures:NSObject
 
++(instancetype)singleton;
 -(void)cleartextures;
 -(void)loadtextures:(NSArray<NSDictionary*>*)rawtextures;
 
