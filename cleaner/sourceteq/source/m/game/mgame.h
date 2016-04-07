@@ -1,5 +1,10 @@
 #import "appdel.h"
 
+extern GLKBaseEffect *effect;
+extern GLKMatrix4 projectionbase;
+extern NSInteger screenwidth;
+extern NSInteger screenheight;
+
 @class cgameloader;
 @class marea;
 @class mfoe;
@@ -11,9 +16,6 @@
 @class mtextures;
 
 @interface mgame:NSObject
-
-extern NSInteger screenwidth;
-extern NSInteger screenheight;
 
 -(instancetype)init:(cgameloader*)controller;
 

@@ -6,6 +6,10 @@ static CGFloat const deltarighttop = -0.9;
 static CGFloat const deltarightbottom = -0.4;
 static CGFloat const ratioadddust = 100;
 
+GLKMatrix4 projectionbase;
+NSInteger screenwidth;
+NSInteger screenheight;
+
 @implementation marea
 
 -(instancetype)init:(mtextures*)modeltextures
@@ -18,17 +22,18 @@ static CGFloat const ratioadddust = 100;
     
     if(rawscreenwidth > rawscreenheight)
     {
-        self.screenwidth = rawscreenwidth;
-        self.screenheight = rawscreenheight;
+        screenwidth = rawscreenwidth;
+        screenheight = rawscreenheight;
     }
     else
     {
-        self.screenwidth = rawscreenheight;
-        self.screenheight = rawscreenwidth;
+        screenwidth = rawscreenheight;
+        screenheight = rawscreenwidth;
     }
     
-    self.centerx = self.screenwidth / 2.0;
-    self.centery = self.screenheight / 2.0;
+    self.centerx = screenwidth / 2.0;
+    self.centery = screenheight / 2.0;
+    projectionbase = GLKMatrix4MakeOrtho(0, screenwidth, screenheight, 0, 1, -1);
     [self rasterize];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
@@ -76,13 +81,6 @@ static CGFloat const ratioadddust = 100;
     self.spatial = [[garea alloc] init:self];
     [self randomcolor];
     [self.spatial rasterize];
-}
-
--(GLKMatrix4)asprojectionmatrix
-{
-    GLKMatrix4 matrix = GLKMatrix4MakeOrtho(0, self.screenwidth, self.screenheight, 0, 1, -1);
-    
-    return matrix;
 }
 
 @end
