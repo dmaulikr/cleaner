@@ -1,5 +1,6 @@
 #import "appdel.h"
 
+extern GLKVector2 *pointertexture;
 extern GLKBaseEffect *effect;
 extern GLKMatrix4 projectionbase;
 extern NSInteger screenwidth;

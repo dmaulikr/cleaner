@@ -1,22 +1,20 @@
 #import "mtextures.h"
 
-GLKVector2 *pointertexture;
-
 @implementation mtextures
+
++(instancetype)singleton
+{
+    static analytics *single;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^(void) { single = [[self alloc] init]; });
+    
+    return single;
+}
 
 -(instancetype)init
 {
     self = [super init];
     self.textures = [NSMutableDictionary dictionary];
-    
-    self.datatexture = [NSMutableData dataWithLength:vectorcorners * sizeof(GLKVector2)];
-    pointertexture = self.datatexture.mutableBytes;
-    pointertexture[0] = GLKVector2Make(0, 0);
-    pointertexture[1] = GLKVector2Make(0, 1);
-    pointertexture[2] = GLKVector2Make(1, 1);
-    pointertexture[3] = GLKVector2Make(1, 1);
-    pointertexture[4] = GLKVector2Make(1, 0);
-    pointertexture[5] = GLKVector2Make(0, 0);
     
     return self;
 }
