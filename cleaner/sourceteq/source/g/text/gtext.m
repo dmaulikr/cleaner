@@ -4,7 +4,7 @@
 
 -(instancetype)init:(mtextitemglyph*)model
 {
-    self = [super init];
+    self = [super init:[mtextures singleton].textures_textnumbers];
     self.x = model.x;
     self.y = model.y;
     self.width = model.width;
