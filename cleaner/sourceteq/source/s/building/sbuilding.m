@@ -26,13 +26,13 @@ typedef NS_ENUM(NSUInteger, building_kind)
         {
             case building_kind_alpha:
                 
-                [self addalpha:sumx];
+                sumx += [self addalpha:sumx];
                 
                 break;
                 
             case building_kind_beta:
                 
-                [self addbeta:sumx];
+                sumx += [self addbeta:sumx];
                 
                 break;
                 
@@ -49,16 +49,20 @@ typedef NS_ENUM(NSUInteger, building_kind)
 
 #pragma mark functionality
 
--(void)addalpha:(NSInteger)sumx
+-(NSInteger)addalpha:(NSInteger)sumx
 {
     mbuildingitemalpha *item = [[mbuildingitemalpha alloc] init:sumx];
     [self.model.items addObject:item];
+    
+    return item.spatial.width;
 }
 
--(void)addbeta:(NSInteger)sumx
+-(NSInteger)addbeta:(NSInteger)sumx
 {
     mbuildingitembeta *item = [[mbuildingitembeta alloc] init:sumx];
     [self.model.items addObject:item];
+    
+    return item.spatial.width;
 }
 
 @end
