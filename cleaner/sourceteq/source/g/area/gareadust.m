@@ -1,17 +1,16 @@
 #import "gareadust.h"
 
-static NSUInteger const size = 11;
-
 @implementation gareadust
 
--(instancetype)init:(NSInteger)x y:(NSInteger)y
+-(instancetype)init:(NSInteger)x y:(NSInteger)y size:(NSInteger)size
 {
-    self = [super init:<#(NSArray<NSString *> *)#>];
+    self = [super init:[mtextures singleton].textures_areadust];
     self.x = x;
     self.y = y;
     self.width = size;
     self.height = size;
-    [self.image loadtextures:@[@"area_dust"] model:modeltextures];
+    
+    [self render];
     
     return self;
 }

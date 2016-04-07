@@ -2,6 +2,7 @@
 
 static CGFloat const maxspeed = 10;
 static NSUInteger const minspeed = 1;
+static NSUInteger const dustsize = 11;
 
 @interface mareadustitem ()
 
@@ -26,13 +27,13 @@ static NSUInteger const minspeed = 1;
 {
     self = [super init];
     self.model = model;
-    spatial = [[gareadust alloc] init:model.modelarea.modeltextures];
+    x = newx;
+    y = newy;
+    spatial = [[gareadust alloc] init:x y:y size:dustsize];
     spatial.x = x = newx;
-    self.spatial.y = y = newy;
-    miny = - self.spatial.height;
-    minx = - self.spatial.width;
-    maxx = self.model.modelarea.screenwidth;
-    [self.spatial rasterize];
+    miny = - dustsize;
+    minx = - dustsize;
+    maxx = screenwidth;
     speedcounter = 0;
     speed = arc4random_uniform(maxspeed) + minspeed;
     direction = arc4random_uniform(3.0) - 1.0;
@@ -79,9 +80,9 @@ static NSUInteger const minspeed = 1;
         }
         else
         {
-            self.spatial.x = x;
-            self.spatial.y = y;
-            [self.spatial render];
+            spatial.dx = x;
+            spatial.dy = y;
+            [spatial updateprojection];
         }
     }
 }

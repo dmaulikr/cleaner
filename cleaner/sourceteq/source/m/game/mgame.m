@@ -30,7 +30,7 @@ GLKVector2 *pointertexture;
                        weakself.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
                        [EAGLContext setCurrentContext:weakself.context];
                        
-                       [[mtextures singleton] loadtextures:@[]];
+                       [[mtextures singleton] loadtextures];
                        
                        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                                       ^
@@ -44,7 +44,7 @@ GLKVector2 *pointertexture;
                                           pointertexture[4] = GLKVector2Make(1, 0);
                                           pointertexture[5] = GLKVector2Make(0, 0);
                                           
-                                          weakself.modelarea = [[marea alloc] init:weakself.modeltextures];
+                                          weakself.modelarea = [[marea alloc] init];
                                           weakself.modeleffect = [[meffect alloc] init:weakself.modeltextures];
                                           weakself.modeltext = [[mtext alloc] init:weakself.modeltextures];
                                           weakself.modelbuilding = [[mbuilding alloc] init:weakself.modeltextures area:weakself.modelarea];

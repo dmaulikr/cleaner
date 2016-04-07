@@ -9,7 +9,7 @@
 
 @implementation gspatialtexture
 
--(instancetype)init:(NSArray<NSString*>*)assets
+-(instancetype)init:(NSArray<NSNumber*>*)assets
 {
     self = [super init];
     self.image = [[gimage alloc] init:assets];
