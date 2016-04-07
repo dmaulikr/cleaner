@@ -2,14 +2,13 @@
 
 @implementation garea
 
--(instancetype)init:(marea*)model
+-(instancetype)init:(mcolor*)lefttop leftbottom:(mcolor*)leftbottom righttop:(mcolor*)righttop rightbottom:(mcolor*)rightbottom
 {
-    self = [super init];
-    self.model = model;
+    self = [super init:lefttop leftbottom:leftbottom righttop:righttop rightbottom:rightbottom];
     self.x = 0;
     self.y = 0;
-    self.width = model.screenwidth;
-    self.height = model.screenheight;
+    self.width = screenwidth;
+    self.height = screenheight;
     
     return self;
 }

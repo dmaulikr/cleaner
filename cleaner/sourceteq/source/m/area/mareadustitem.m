@@ -1,21 +1,21 @@
 #import "mareadustitem.h"
 
-static CGFloat const maxspeed = 5;
+static CGFloat const maxspeed = 10;
 static NSUInteger const minspeed = 1;
 
 @implementation mareadustitem
 {
-    CGFloat x;
-    CGFloat y;
-    CGFloat minx;
-    CGFloat maxx;
-    CGFloat miny;
+    NSInteger x;
+    NSInteger y;
+    NSInteger minx;
+    NSInteger maxx;
+    NSInteger miny;
     NSUInteger speed;
     NSUInteger speedcounter;
     NSUInteger direction;
 }
 
--(instancetype)init:(mareadust*)model x:(CGFloat)newx y:(CGFloat)newy
+-(instancetype)init:(mareadust*)model x:(NSInteger)newx y:(NSInteger)newy
 {
     self = [super init];
     self.model = model;

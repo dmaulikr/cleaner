@@ -2,10 +2,9 @@
 
 @implementation mareadust
 
--(instancetype)init:(marea*)modelarea
+-(instancetype)init
 {
     self = [super init];
-    self.modelarea = modelarea;
     self.items = [NSMutableArray array];
     
     return self;
@@ -15,8 +14,8 @@
 
 -(void)add
 {
-    CGFloat y = self.modelarea.screenheight;
-    CGFloat x = arc4random_uniform(self.modelarea.screenwidth);
+    NSInteger y = screenheight;
+    NSInteger x = arc4random_uniform((CGFloat)screenwidth);
     mareadustitem *dust = [[mareadustitem alloc] init:self x:x y:y];
     [self.items addObject:dust];
 }

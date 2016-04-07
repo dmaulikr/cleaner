@@ -3,8 +3,4 @@
 
 @interface garea:gspatialgradient
 
--(instancetype)init:(marea*)model;
-
-@property(weak, nonatomic)marea *model;
-
 @end

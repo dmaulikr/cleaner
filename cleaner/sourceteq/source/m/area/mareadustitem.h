@@ -5,7 +5,7 @@
 
 @interface mareadustitem:NSObject
 
--(instancetype)init:(mareadust*)model x:(CGFloat)newx y:(CGFloat)newy;
+-(instancetype)init:(mareadust*)model x:(NSInteger)newx y:(NSInteger)newy;
 
 @property(strong, nonatomic)gareadust *spatial;
 @property(weak, nonatomic)mareadust *model;
