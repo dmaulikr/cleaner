@@ -113,6 +113,7 @@
 		DAE218D51CAE0D12007AE65C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE218D41CAE0D12007AE65C /* Images.xcassets */; };
 		DAFCC29F1CB6F5C700448EF7 /* mfoeiteminvader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFCC29E1CB6F5C700448EF7 /* mfoeiteminvader.m */; };
 		DAFCC2A21CB6F5D500448EF7 /* mfoeitemocto.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFCC2A11CB6F5D500448EF7 /* mfoeitemocto.m */; };
+		DAFCC2A61CB6FFF900448EF7 /* sfoe.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFCC2A51CB6FFF900448EF7 /* sfoe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -321,6 +322,8 @@
 		DAFCC29E1CB6F5C700448EF7 /* mfoeiteminvader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mfoeiteminvader.m; sourceTree = "<group>"; };
 		DAFCC2A01CB6F5D500448EF7 /* mfoeitemocto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mfoeitemocto.h; sourceTree = "<group>"; };
 		DAFCC2A11CB6F5D500448EF7 /* mfoeitemocto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mfoeitemocto.m; sourceTree = "<group>"; };
+		DAFCC2A41CB6FFF900448EF7 /* sfoe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sfoe.h; sourceTree = "<group>"; };
+		DAFCC2A51CB6FFF900448EF7 /* sfoe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sfoe.m; sourceTree = "<group>"; };
 		E930DA81122C155ADF580860 /* Pods-cleaner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleaner.release.xcconfig"; path = "Pods/Target Support Files/Pods-cleaner/Pods-cleaner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -804,6 +807,7 @@
 		DA93869F1CAC9078006B3213 /* s */ = {
 			isa = PBXGroup;
 			children = (
+				DAFCC2A31CB6FFF000448EF7 /* foe */,
 				DA9386A01CAC9078006B3213 /* s.h */,
 			);
 			path = s;
@@ -939,6 +943,15 @@
 				DA93861A1CAC9078006B3213 /* sourceteq */,
 			);
 			path = cleaner;
+			sourceTree = "<group>";
+		};
+		DAFCC2A31CB6FFF000448EF7 /* foe */ = {
+			isa = PBXGroup;
+			children = (
+				DAFCC2A41CB6FFF900448EF7 /* sfoe.h */,
+				DAFCC2A51CB6FFF900448EF7 /* sfoe.m */,
+			);
+			path = foe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1096,6 +1109,7 @@
 				DA9386F31CAC9078006B3213 /* mfoeitem.m in Sources */,
 				DA9386D71CAC9078006B3213 /* updater.m in Sources */,
 				DA9386F01CAC9078006B3213 /* mdbcreate.m in Sources */,
+				DAFCC2A61CB6FFF900448EF7 /* sfoe.m in Sources */,
 				DA9386D61CAC9078006B3213 /* uifont+uifontmain.m in Sources */,
 				DA9386DA1CAC9078006B3213 /* cgame.m in Sources */,
 				DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */,

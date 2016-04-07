@@ -5,16 +5,16 @@ static CGFloat const ratioaddfoe = 5;
 
 @implementation mfoe
 
--(instancetype)init:(mgame*)modelgame area:(marea*)modelarea effect:(meffect*)modeleffect text:(mtext*)modeltext
+-(instancetype)init:(meffect*)modeleffect text:(mtext*)modeltext;
 {
     self = [super init];
-    self.modelgame = modelgame;
-    self.modelarea = modelarea;
     self.modeleffect = modeleffect;
     self.modeltext = modeltext;
     self.items = [NSMutableArray array];
-    self.rawfoes = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"foes" withExtension:@"plist"]];
-    self.modelhubscore = modelgame.modelhub.score;
+    self.rawfoes = @[
+                     [mfoeiteminvader class],
+                     [mfoeitemocto class]
+                     ];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
