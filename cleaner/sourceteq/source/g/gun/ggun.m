@@ -1,37 +1,44 @@
 #import "ggun.h"
 
 @implementation ggun
-
--(instancetype)init:(mtextures*)modeltextures
 {
-    self = [super init];
-    self.active = NO;
+    BOOL active;
+}
+
+-(instancetype)init:(NSArray<NSNumber*>*)textures x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height
+{
+    self = [super init:textures];
+    self.x = x;
+    self.y = y;
+    self.width = width;
+    self.height = height;
+    active = NO;
+    
+    [self render];
     
     return self;
 }
 
 #pragma mark public
 
--(void)initialx:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height
+-(void)deacivate
 {
-    self.active = YES;
-    self.x = x;
-    self.y = y;
-    self.width = width;
-    self.height = height;
-    
-    [self render];
-    [self movetotop];
+    active = NO;
+}
+
+-(void)makeactive
+{
+    active = YES;
 }
 
 #pragma mark -
 #pragma mark gspatial
 
--(void)draw:(GLKBaseEffect*)effect
+-(void)draw
 {
-    if(self.active)
+    if(active)
     {
-        [super draw:effect];
+        [super draw];
     }
 }
 

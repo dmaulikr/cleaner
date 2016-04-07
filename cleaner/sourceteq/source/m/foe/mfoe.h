@@ -8,7 +8,6 @@
 
 -(instancetype)init:(meffect*)modeleffect text:(mtext*)modeltext;
 -(void)addfoe;
--(void)addscore:(NSUInteger)score;
 
 @property(weak, nonatomic)meffect *modeleffect;
 @property(weak, nonatomic)mtext *modeltext;
