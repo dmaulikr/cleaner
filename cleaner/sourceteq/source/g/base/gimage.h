@@ -12,6 +12,5 @@
 @property(nonatomic)NSUInteger speed;
 @property(nonatomic)BOOL random;
 @property(nonatomic)BOOL srgb;
-@property(nonatomic)BOOL loading;
 
 @end

@@ -15,7 +15,6 @@
     self.textures = [NSMutableArray array];
     self.random = NO;
     self.srgb = NO;
-    self.loading = YES;
     speedcounter = 0;
     
     return self;
@@ -94,8 +93,6 @@
                            currentindex = 0;
                            [weakself loadcurrent];
                        }
-                       
-                       weakself.loading = NO;
                    });
 }
 
