@@ -1,28 +1,18 @@
 #import "mtextitemtotal.h"
 
-static CGFloat const padding = 3;
-static CGFloat const sizescore = 0.45;
+static CGFloat const paddingtotal = 3;
+static CGFloat const sizetotal = 0.45;
 
 @implementation mtextitemtotal
 
 -(instancetype)init:(mtext*)model text:(NSString*)text x:(NSInteger)x y:(NSInteger)y
 {
     self = [super init:model text:text x:x y:y];
-    self.size = sizescore;
-    self.padding = - sizescore * padding;
-    [self render];
+    CGFloat padding = - sizetotal * paddingtotal;
+    [self render:text x:x y:y size:sizetotal padding:padding];
+    self.glyphclass = [mtextitemglyphnumber class];
     
     return self;
-}
-
-#pragma mark -
-#pragma mark text item
-
--(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x
-{
-    mtextitemglyphnumber *glyph = [[mtextitemglyphnumber alloc] init:self.model.modeltextures character:character x:x y:self.y size:self.size];
-    
-    return glyph;
 }
 
 @end
