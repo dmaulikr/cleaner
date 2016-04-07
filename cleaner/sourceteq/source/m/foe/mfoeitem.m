@@ -91,11 +91,11 @@ static NSUInteger const minspeed = 0;
                 direction = -1;
             }
             
-            self.spatial.delx = self.spatial.x - x;
-            self.spatial.dely = self.spatial.y - y;
             speedcounter = 0;
+            NSInteger dx = x - self.spatial.x;
+            NSInteger dy = y - self.spatial.y;
             
-//            [self.spatial render];
+            [self.spatial updateprojection:dx dy:dy];
         }
     }
 }
@@ -141,6 +141,8 @@ static NSUInteger const minspeed = 0;
     y = - newheight;
     width = newwidth;
     height = newheight;
+    width_2 = width / 2.0;
+    height_2 = height / 2.0;
     minx = newwidth;
     maxx = screenwidth - (newwidth + newwidth);
     maxy = screenheight;
