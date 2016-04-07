@@ -4,6 +4,6 @@
 
 @interface gspatialtexture:gspatial
 
-@property(strong, nonatomic)gimage *image;
+-(instancetype)init:(NSArray<NSString*>*)textures;
 
 @end

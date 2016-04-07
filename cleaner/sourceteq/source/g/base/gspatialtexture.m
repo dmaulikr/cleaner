@@ -1,9 +1,15 @@
 #import "gspatialtexture.h"
 #import "appdel.h"
 
+@interface gspatialtexture ()
+
+@property(strong, nonatomic)gimage *image;
+
+@end
+
 @implementation gspatialtexture
 
--(instancetype)init
+-(instancetype)init:(NSArray<NSString*>*)textures
 {
     self = [super init];
     self.image = [[gimage alloc] init];
@@ -14,7 +20,7 @@
 #pragma mark -
 #pragma mark spatial
 
--(void)notifiedglkdraw:(NSNotification*)notification
+-(void)draw
 {
     effect.texture2d0.enabled = YES;
     effect.texture2d0.envMode = GLKTextureEnvModeReplace;
@@ -22,7 +28,7 @@
     glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
     glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, pointertexture);
     
-    [super notifiedglkdraw:notification];
+    [super draw];
     
     glDisableVertexAttribArray(GLKVertexAttribTexCoord0);
 }
