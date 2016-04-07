@@ -2,10 +2,10 @@
 
 @implementation ghublife
 
--(instancetype)init
+-(instancetype)init:(mtextures*)modeltextures
 {
     self = [super init];
-    [self.image loadtextures:@[@"hub_life"]];
+    [self.image loadtextures:@[@"hub_life"] model:modeltextures];
     
     return self;
 }

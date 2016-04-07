@@ -2,7 +2,7 @@
 
 @implementation ggun
 
--(instancetype)init
+-(instancetype)init:(mtextures*)modeltextures
 {
     self = [super init];
     self.active = NO;

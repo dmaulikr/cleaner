@@ -47,7 +47,7 @@ static NSUInteger const speed = 1;
 
 -(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x
 {
-    mtextitemglyphnumber *glyph = [[mtextitemglyphnumber alloc] init:character x:x y:self.y size:self.size];
+    mtextitemglyphnumber *glyph = [[mtextitemglyphnumber alloc] init:self.model.modeltextures character:character x:x y:self.y size:self.size];
     
     return glyph;
 }

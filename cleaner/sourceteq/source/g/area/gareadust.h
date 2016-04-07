@@ -3,4 +3,6 @@
 
 @interface gareadust:gspatialtexture
 
+-(instancetype)init:(mtextures*)modeltextures;
+
 @end

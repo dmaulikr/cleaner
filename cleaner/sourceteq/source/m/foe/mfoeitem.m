@@ -39,7 +39,7 @@ static NSUInteger const minspeed = 0;
     self.spatial.width = width;
     self.spatial.height = height;
     self.spatial.y = y = -height;
-    [self.spatial.image loadtextures:assets];
+    [self.spatial.image loadtextures:assets model:self.model.modelgame.modeltextures];
     [self choosedirection];
     speed = arc4random_uniform(maxspeed) + minspeed;
     

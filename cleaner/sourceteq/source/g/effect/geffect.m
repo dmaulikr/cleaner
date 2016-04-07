@@ -24,7 +24,7 @@
 
 -(void)rasterize
 {
-    [self.image loadtextures:self.model.assets];
+    [self.image loadtextures:self.model.assets model:self.model.model.modeltextures];
     self.rotationmatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(self.realx, self.realy, 0), GLKMatrix4MakeRotation(self.rotation, 0, 0, 1));
     self.rotationclear = GLKMatrix4MakeRotation(0, 0, 0, 1);
     [super rasterize];

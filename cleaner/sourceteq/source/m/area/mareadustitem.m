@@ -19,7 +19,7 @@ static NSUInteger const minspeed = 1;
 {
     self = [super init];
     self.model = model;
-    self.spatial = [[gareadust alloc] init];
+    self.spatial = [[gareadust alloc] init:model.modelarea.modeltextures];
     self.spatial.x = x = newx;
     self.spatial.y = y = newy;
     miny = - self.spatial.height;

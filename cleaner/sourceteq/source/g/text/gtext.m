@@ -13,7 +13,7 @@
     self.atlasheight = model.atlasheight;
     self.leftmargin = model.leftmargin;
     self.topmargin = model.topmargin;
-    [self.image loadtextures:@[model.assetname]];
+    [self.image loadtextures:@[model.assetname] model:model.modeltextures];
     [self rasterize];
     
     return self;

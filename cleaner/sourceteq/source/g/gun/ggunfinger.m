@@ -2,10 +2,10 @@
 
 @implementation ggunfinger
 
--(instancetype)init
+-(instancetype)init:(mtextures*)modeltextures
 {
-    self = [super init];
-    [self.image loadtextures:@[@"gun_finger"]];
+    self = [super init:modeltextures];
+    [self.image loadtextures:@[@"gun_finger"] model:modeltextures];
     [self rasterize];
     
     return self;

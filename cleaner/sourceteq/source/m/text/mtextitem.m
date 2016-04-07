@@ -63,7 +63,7 @@
 
 -(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x
 {
-    mtextitemglyph *glyph = [[mtextitemglyph alloc] init:character x:x y:self.y size:self.size];
+    mtextitemglyph *glyph = [[mtextitemglyph alloc] init:self.model.modeltextures character:character x:x y:self.y size:self.size];
     
     return glyph;
 }

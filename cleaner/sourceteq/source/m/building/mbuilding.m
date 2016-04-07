@@ -22,7 +22,7 @@
 {
     NSUInteger index = arc4random_uniform((CGFloat)self.rawbuldings.count);
     NSDictionary *rawbuilding = self.rawbuldings[index];
-    mbuildingitem *building = [[mbuildingitem alloc] init:rawbuilding];
+    mbuildingitem *building = [[mbuildingitem alloc] init:self.modeltextures dictionary:rawbuilding];
     building.spatial.x = x;
     building.spatial.y = self.modelarea.screenheight - building.spatial.height;
     [building.spatial rasterize];

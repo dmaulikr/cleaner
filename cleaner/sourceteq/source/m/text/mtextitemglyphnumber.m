@@ -10,9 +10,9 @@ static CGFloat const glyphheight = 39;
 
 @implementation mtextitemglyphnumber
 
--(instancetype)init:(NSString*)character x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size
+-(instancetype)init:(mtextures*)modeltextures character:(NSString*)character x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size
 {
-    self = [super init:character x:x y:y size:size];
+    self = [super init:modeltextures character:character x:x y:y size:size];
     self.width = glyphwidth * size;
     self.height = glyphheight * size;
     self.assetname = assetname;

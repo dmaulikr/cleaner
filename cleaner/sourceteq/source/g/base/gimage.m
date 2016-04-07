@@ -1,5 +1,5 @@
 #import "gimage.h"
-#import "nsnotification+nsnotificationmain.h"
+#import "appdel.h"
 
 @implementation gimage
 {
@@ -23,13 +23,6 @@
 
 -(void)dealloc
 {
-    for(NSInteger i = counter - 1; i >= 0; i--)
-    {
-        GLuint current = [self.textures[i] unsignedIntValue];
-        [self.textures removeObjectAtIndex:i];
-        glDeleteTextures(1, &current);
-    }
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -73,16 +66,9 @@
     [self loadcurrent];
 }
 
--(void)addimage:(UIImage*)image
-{
-    GLKTextureInfo *textureinfo = [GLKTextureLoader textureWithCGImage:image.CGImage options:@{GLKTextureLoaderSRGB:@(self.srgb)} error:nil];
-    GLuint texture = textureinfo.name;
-    [self.textures addObject:@(texture)];
-}
-
 #pragma mark public
 
--(void)loadtextures:(NSArray<NSString*>*)textures
+-(void)loadtextures:(NSArray<NSString*>*)textures model:(mtextures*)modeltextures
 {
     __weak typeof(self) weakself = self;
     counter = textures.count;
@@ -93,8 +79,8 @@
                        for(NSInteger i = 0; i < counter; i++)
                        {
                            NSString *texturename = textures[i];
-                           UIImage *image = [UIImage imageNamed:texturename];
-                           [weakself addimage:image];
+                           NSNumber *number = [modeltextures textureforasset:texturename srgb:self.srgb];
+                           [weakself.textures addObject:number];
                        }
                        
                        if(counter > 1)

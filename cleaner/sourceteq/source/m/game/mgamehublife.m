@@ -24,7 +24,7 @@ static NSInteger const lifemarginvr = 5;
     maxlifeheight = lifeheight - (lifemarginvr + lifemarginvr);
     maxlifewidth = lifewidth - (lifemarginleft + lifemarginright);
     
-    self.spatiallife = [[ghublife alloc] init];
+    self.spatiallife = [[ghublife alloc] init:model.modeltextures];
     self.spatiallife.x = lifex;
     self.spatiallife.y = lifey;
     self.spatiallife.width = lifewidth;

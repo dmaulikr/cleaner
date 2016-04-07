@@ -2,10 +2,10 @@
 
 @implementation gguntarget
 
--(instancetype)init
+-(instancetype)init:(mtextures*)modeltextures
 {
-    self = [super init];
-    [self.image loadtextures:@[@"gun_target"]];
+    self = [super init:modeltextures];
+    [self.image loadtextures:@[@"gun_target"] model:modeltextures];
     [self rasterize];
     
     return self;

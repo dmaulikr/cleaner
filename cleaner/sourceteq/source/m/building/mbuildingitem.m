@@ -2,9 +2,10 @@
 
 @implementation mbuildingitem
 
--(instancetype)init:(NSDictionary*)dictionary
+-(instancetype)init:(mtextures*)modeltextures dictionary:(NSDictionary*)dictionary
 {
     self = [super init];
+    self.modeltextures = modeltextures;
     self.assetname = dictionary[@"asset"];
     self.spatial = [[gbuilding alloc] init:self];
     self.spatial.width = [dictionary[@"width"] floatValue];
