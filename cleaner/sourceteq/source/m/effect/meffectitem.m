@@ -2,14 +2,14 @@
 #import "appdel.h"
 
 @implementation meffectitem
+{
+    NSInteger ttl;
+}
 
--(instancetype)init:(meffect*)model x:(CGFloat)x y:(CGFloat)y
+-(instancetype)init:(meffect*)model x:(NSInteger)x y:(NSInteger)y
 {
     self = [super init];
     self.model = model;
-    self.spatial = [[geffect alloc] init:self];
-    self.spatial.realx = x;
-    self.spatial.realy = y;
     
     return self;
 }
@@ -23,9 +23,9 @@
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
-    self.ttl--;
+    ttl--;
     
-    if(self.ttl < 1)
+    if(ttl < 1)
     {
         [self.model.items removeObject:self];
     }
@@ -33,10 +33,9 @@
 
 #pragma mark public
 
--(void)rasterize
+-(void)starttimer:(NSInteger)newttl
 {
-    [self.spatial rasterize];
-    
+    ttl = newttl;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
 }
 

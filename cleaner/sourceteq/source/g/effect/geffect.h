@@ -5,11 +5,6 @@
 
 @interface geffect:gspatialtexture
 
--(instancetype)init:(meffectitem*)model;
-
-@property(weak, nonatomic)meffectitem *model;
-@property(nonatomic)CGFloat realx;
-@property(nonatomic)CGFloat realy;
-@property(nonatomic)CGFloat rotation;
+-(instancetype)init:(NSArray*)textures realx:(NSInteger)newrealx realy:(NSInteger)newrealy width:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)newrotation;
 
 @end

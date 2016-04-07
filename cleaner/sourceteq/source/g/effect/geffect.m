@@ -1,20 +1,25 @@
 #import "geffect.h"
 #import "meffectitem.h"
 
-@interface geffect ()
-
-@property(nonatomic)GLKMatrix4 rotationmatrix;
-@property(nonatomic)GLKMatrix4 rotationclear;
-
-@end
-
 @implementation geffect
-
--(instancetype)init:(meffectitem*)model
 {
-    self = [super init];
-    self.model = model;
-    self.image.srgb = YES;
+    GLKMatrix4 rotationmatrix;
+    CGFloat rotation;
+    NSInteger realx;
+    NSInteger realy;
+}
+
+-(instancetype)init:(NSArray*)textures realx:(NSInteger)newrealx realy:(NSInteger)newrealy width:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)newrotation
+{
+    self = [super init:textures];
+    realx = newrealx;
+    realy = newrealy;
+    rotation = newrotation;
+    self.x = width / -2.0;
+    self.y = height / -2.0;
+    self.width = width;
+    self.height = height;
+    [self render];
     
     return self;
 }
@@ -22,19 +27,20 @@
 #pragma mark -
 #pragma mark spatial
 
--(void)rasterize
+-(void)render
 {
-    [self.image loadtextures:self.model.assets model:self.model.model.modeltextures];
-    self.rotationmatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(self.realx, self.realy, 0), GLKMatrix4MakeRotation(self.rotation, 0, 0, 1));
-    self.rotationclear = GLKMatrix4MakeRotation(0, 0, 0, 1);
-    [super rasterize];
+    rotationmatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(realx, realy, 0), GLKMatrix4MakeRotation(rotation, 0, 0, 1));
+    
+    [super render];
 }
 
--(void)draw:(GLKBaseEffect*)effect
+-(void)draw
 {
-    effect.transform.modelviewMatrix = self.rotationmatrix;
-    [super draw:effect];
-    effect.transform.modelviewMatrix = self.rotationclear;
+    effect.transform.modelviewMatrix = rotationmatrix;
+    
+    [super draw];
+    
+    effect.transform.modelviewMatrix = rotationclear;
 }
 
 

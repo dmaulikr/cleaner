@@ -6,4 +6,6 @@
 
 -(instancetype)init:(NSArray<NSNumber*>*)assets;
 
+@property(strong, nonatomic)gimage *image;
+
 @end

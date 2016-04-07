@@ -1,6 +1,7 @@
 #import "mgame.h"
 
 GLKVector2 *pointertexture;
+GLKMatrix4 rotationclear;
 
 @interface mgame ()
 
@@ -43,6 +44,8 @@ GLKVector2 *pointertexture;
                                           pointertexture[3] = GLKVector2Make(1, 1);
                                           pointertexture[4] = GLKVector2Make(1, 0);
                                           pointertexture[5] = GLKVector2Make(0, 0);
+                                          
+                                          rotationclear = GLKMatrix4MakeRotation(0, 0, 0, 1);
                                           
                                           weakself.modelarea = [[marea alloc] init];
                                           weakself.modeleffect = [[meffect alloc] init:weakself.modeltextures];

@@ -3,6 +3,7 @@
 extern GLKVector2 *pointertexture;
 extern GLKBaseEffect *effect;
 extern GLKMatrix4 projectionbase;
+extern GLKMatrix4 rotationclear;
 extern NSInteger screenwidth;
 extern NSInteger screenheight;
 

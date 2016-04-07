@@ -1,12 +1,6 @@
 #import "gspatialtexture.h"
 #import "appdel.h"
 
-@interface gspatialtexture ()
-
-@property(strong, nonatomic)gimage *image;
-
-@end
-
 @implementation gspatialtexture
 
 -(instancetype)init:(NSArray<NSNumber*>*)assets
