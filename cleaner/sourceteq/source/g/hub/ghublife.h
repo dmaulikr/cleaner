@@ -5,6 +5,6 @@
 
 @interface ghublife:gspatialtexture
 
--(instancetype)init:(mtextures*)modeltextures;
+-(instancetype)init:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height;
 
 @end

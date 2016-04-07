@@ -51,7 +51,7 @@ GLKMatrix4 rotationclear;
                                           weakself.modeleffect = [[meffect alloc] init];
                                           weakself.modeltext = [[mtext alloc] init];
                                           weakself.modelbuilding = [[mbuilding alloc] init:weakself.modeltextures area:weakself.modelarea];
-                                          weakself.modelhub = [[mgamehub alloc] init:weakself];
+                                          weakself.modelhub = [[mgamehub alloc] init];
                                           weakself.modelfoe = [[mfoe alloc] init:weakself area:weakself.modelarea effect:weakself.modeleffect text:weakself.modeltext];
                                           weakself.modelgun = [[mgun alloc] init:weakself.modeltextures area:weakself.modelarea];
                                           

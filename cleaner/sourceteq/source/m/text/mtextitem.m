@@ -29,7 +29,7 @@
     
     if(ttl < 1)
     {
-        [self.model.items removeObject:self];
+        [self remove];
     }
 }
 
@@ -61,6 +61,11 @@
     mtextitemglyph *glyph = [[self.glyphclass alloc] init:character x:x y:y size:size];
     
     return glyph;
+}
+
+-(void)remove
+{
+    [self.model.items removeObject:self];
 }
 
 @end

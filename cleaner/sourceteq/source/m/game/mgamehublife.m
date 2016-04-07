@@ -15,16 +15,14 @@ static NSInteger const lifemarginvr = 5;
     NSInteger maxlifeheight;
 }
 
--(instancetype)init:(mgame*)model
+-(instancetype)init
 {
     self = [super init];
-    self.model = model;
     self.amount = maxlife;
-    self.changed = YES;
     maxlifeheight = lifeheight - (lifemarginvr + lifemarginvr);
     maxlifewidth = lifewidth - (lifemarginleft + lifemarginright);
     
-    self.spatiallife = [[ghublife alloc] init:model.modeltextures];
+    self.spatiallife = [[ghublife alloc] init];
     self.spatiallife.x = lifex;
     self.spatiallife.y = lifey;
     self.spatiallife.width = lifewidth;

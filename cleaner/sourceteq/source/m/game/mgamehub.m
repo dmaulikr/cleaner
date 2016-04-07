@@ -2,11 +2,11 @@
 
 @implementation mgamehub
 
--(instancetype)init:(mgame*)model
+-(instancetype)init
 {
     self = [super init];
-    self.life = [[mgamehublife alloc] init:model];
-    self.score = [[mgamehubscore alloc] init:model];
+    self.life = [[mgamehublife alloc] init];
+    self.score = [[mgamehubscore alloc] init];
     
     return self;
 }

@@ -7,9 +7,15 @@ static CGFloat const alpha = 0.5;
 
 @implementation ghublifebar
 
--(instancetype)init
+-(instancetype)init:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height
 {
     self = [super init:[mcolor red:red green:green blue:blue alpha:alpha]];
+    self.x = x;
+    self.y = y;
+    self.width = width;
+    self.height = height;
+    
+    [self render];
     
     return self;
 }
