@@ -5,19 +5,21 @@ static NSUInteger const imagespeed = 30;
 
 @implementation gimage
 {
-    NSMutableArray<NSNumber*> *textures;
+    __weak NSArray<NSNumber*> *textures;
     CGFloat counter;
     NSInteger currentindex;
     NSUInteger speedcounter;
 }
 
--(instancetype)init:(NSArray<NSString*>*)assets
+-(instancetype)init:(NSArray<NSNumber*>*)assets
 {
     self = [super init];
     self.speed = imagespeed;
     self.random = NO;
-    [self loadtextures:assets];
+    textures = assets;
     speedcounter = 0;
+    
+    [self loadedtextures];
     
     return self;
 }
@@ -42,17 +44,9 @@ static NSUInteger const imagespeed = 30;
 
 #pragma mark functionality
 
--(void)loadtextures:(NSArray<NSString*>*)assets
+-(void)loadedtextures
 {
-    textures = [NSMutableArray array];
-    counter = assets.count;
-    
-    for(NSUInteger i = 0; i < counter; i++)
-    {
-        NSString *assetname = assets[i];
-        NSNumber *number = [mtextures singleton].textures[assetname];
-        [textures addObject:number];
-    }
+    counter = textures.count;
     
     if(counter > 1)
     {

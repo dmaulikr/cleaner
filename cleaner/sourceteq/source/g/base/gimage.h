@@ -3,7 +3,7 @@
 
 @interface gimage:NSObject
 
--(instancetype)init:(NSArray<NSString*>*)assets;
+-(instancetype)init:(NSArray<NSNumber*>*)assets;
 
 @property(nonatomic)GLuint current;
 @property(nonatomic)NSUInteger speed;
