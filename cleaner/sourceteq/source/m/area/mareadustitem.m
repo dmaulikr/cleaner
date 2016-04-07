@@ -37,7 +37,6 @@ static NSUInteger const minspeed = 1;
 
 -(void)dealloc
 {
-    NSLog(@"bye dust");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
