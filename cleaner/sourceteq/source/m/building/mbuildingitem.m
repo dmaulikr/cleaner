@@ -1,4 +1,5 @@
 #import "mbuildingitem.h"
+#import "appdel.h"
 
 @implementation mbuildingitem
 

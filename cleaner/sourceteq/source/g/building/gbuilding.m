@@ -2,12 +2,15 @@
 
 @implementation gbuilding
 
--(instancetype)init:(mbuildingitem*)model
+-(instancetype)init:(NSArray<NSNumber*>*)textures x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height
 {
-    self = [super init];
-    self.model = model;
-    self.image.srgb = YES;
-    [self.image loadtextures:@[model.assetname] model:model.modeltextures];
+    self = [super init:textures];
+    self.x = x;
+    self.y = y;
+    self.width = width;
+    self.height = height;
+    
+    [self render];
     
     return self;
 }
