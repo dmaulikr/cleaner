@@ -1,31 +1,30 @@
 #import "mgun.h"
 
-static CGFloat const gunsize = 40;
-static CGFloat const fingersize = 120;
+static NSInteger const gunsize = 40;
+static NSInteger const fingersize = 120;
 static NSInteger const caliber = 5;
 static NSInteger const deltamargin = 5;
 static NSInteger const shootspeed = 20;
 
 @implementation mgun
 {
-    CGFloat gunsize_2;
-    CGFloat fingersize_2;
+    NSInteger gunsize_2;
+    NSInteger fingersize_2;
     NSInteger shootcurrent;
 }
 
--(instancetype)init:(mtextures*)modeltextures area:(marea*)modelarea
+-(instancetype)init
 {
     self = [super init];
-    self.modeltextures = modeltextures;
-    self.modelarea = modelarea;
-    self.spatialpointer = [[ggunpointer alloc] init:modeltextures];
-    self.spatialtarget = [[gguntarget alloc] init:modeltextures];
-    self.fingera = [[ggunfinger alloc] init:modeltextures];
-    self.fingerb = [[ggunfinger alloc] init:modeltextures];
-    self.modelwaves = [[mgunwaves alloc] init];
     gunsize_2 = gunsize / 2.0;
     fingersize_2 = fingersize / 2.0;
     shootcurrent = 0;
+    self.spatialpointer = [[ggun alloc] init:[mtextures singleton].textures_gunpointer width:gunsize height:gunsize];
+    self.spatialtarget = [[ggun alloc] init:[mtextures singleton].textures_guntarget width:gunsize height:gunsize];
+    self.spatialfingera = [[ggun alloc] init:[mtextures singleton].textures_gunfinger width:fingersize height:fingersize];
+    self.spatialfingerb = [[ggun alloc] init:[mtextures singleton].textures_gunfinger width:fingersize height:fingersize];
+    self.modelwaves = [[mgunwaves alloc] init];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;

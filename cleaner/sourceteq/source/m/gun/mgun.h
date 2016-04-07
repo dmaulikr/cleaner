@@ -1,26 +1,19 @@
 #import "appdel.h"
 
 @class vgamehub;
-@class mtextures;
-@class marea;
 @class mgunwaves;
-@class ggunpointer;
-@class gguntarget;
-@class ggunfinger;
+@class ggun;
 
 @interface mgun:NSObject
 
--(instancetype)init:(mtextures*)modeltextures area:(marea*)modelarea;
 -(void)clearloop;
 
-@property(strong, nonatomic)gguntarget *spatialtarget;
-@property(strong, nonatomic)ggunpointer *spatialpointer;
-@property(strong, nonatomic)ggunfinger *fingera;
-@property(strong, nonatomic)ggunfinger *fingerb;
+@property(strong, nonatomic)ggun *spatialtarget;
+@property(strong, nonatomic)ggun *spatialpointer;
+@property(strong, nonatomic)ggun *spatialfingera;
+@property(strong, nonatomic)ggun *spatialfingerb;
 @property(strong, nonatomic)mgunwaves *modelwaves;
 @property(weak, nonatomic)vgamehub *hub;
-@property(weak, nonatomic)mtextures *modeltextures;
-@property(weak, nonatomic)marea *modelarea;
 @property(weak, nonatomic)UITouch *touchstart;
 @property(weak, nonatomic)UITouch *touchend;
 

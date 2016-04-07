@@ -1,9 +1,9 @@
-#import <UIKit/UIKit.h>
+#import "appdel.h"
 #import "gspatialtexture.h"
 
 @interface ggun:gspatialtexture
 
--(instancetype)init:(NSArray<NSNumber*>*)textures x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height;
+-(instancetype)init:(NSArray<NSNumber*>*)textures width:(NSInteger)width height:(NSInteger)height;
 -(void)deacivate;
 -(void)makeactive;
 

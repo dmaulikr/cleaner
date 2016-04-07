@@ -20,8 +20,6 @@
 		DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51C1CAEEDE400015AC2 /* mareadust.m */; };
 		DA37B5201CAEF52C00015AC2 /* mareadustitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B51F1CAEF52C00015AC2 /* mareadustitem.m */; };
 		DA37B5241CAF366300015AC2 /* mgun.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5231CAF366300015AC2 /* mgun.m */; };
-		DA37B5291CAF379100015AC2 /* ggunpointer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B5281CAF379100015AC2 /* ggunpointer.m */; };
-		DA37B52C1CAF38DB00015AC2 /* gguntarget.m in Sources */ = {isa = PBXBuildFile; fileRef = DA37B52B1CAF38DB00015AC2 /* gguntarget.m */; };
 		DA37B52F1CAF3A3400015AC2 /* gun.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA37B52E1CAF3A3400015AC2 /* gun.xcassets */; };
 		DA38C91A1CB57F9400E554CF /* mgamehub.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9191CB57F9400E554CF /* mgamehub.m */; };
 		DA38C9211CB585A500E554CF /* ghublife.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9201CB585A500E554CF /* ghublife.m */; };
@@ -32,7 +30,6 @@
 		DA38C92F1CB5A0C100E554CF /* hub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA38C92E1CB5A0C100E554CF /* hub.xcassets */; };
 		DA38D6651CB09EA200A02B82 /* ggun.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6641CB09EA200A02B82 /* ggun.m */; };
 		DA38D6681CB1DD3E00A02B82 /* mgunshot.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6671CB1DD3E00A02B82 /* mgunshot.m */; };
-		DA38D66B1CB2A2D900A02B82 /* ggunfinger.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D66A1CB2A2D900A02B82 /* ggunfinger.m */; };
 		DA38D6711CB2B29300A02B82 /* ggunwaves.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6701CB2B29300A02B82 /* ggunwaves.m */; };
 		DA38D6741CB2B4E600A02B82 /* mgunwaves.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6731CB2B4E600A02B82 /* mgunwaves.m */; };
 		DA38D6771CB2B9A900A02B82 /* gspatialcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38D6761CB2B9A900A02B82 /* gspatialcolor.m */; };
@@ -141,10 +138,6 @@
 		DA37B51F1CAEF52C00015AC2 /* mareadustitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mareadustitem.m; sourceTree = "<group>"; };
 		DA37B5221CAF366300015AC2 /* mgun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgun.h; sourceTree = "<group>"; };
 		DA37B5231CAF366300015AC2 /* mgun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgun.m; sourceTree = "<group>"; };
-		DA37B5281CAF379100015AC2 /* ggunpointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggunpointer.m; sourceTree = "<group>"; };
-		DA37B52A1CAF38DB00015AC2 /* gguntarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gguntarget.h; sourceTree = "<group>"; };
-		DA37B52B1CAF38DB00015AC2 /* gguntarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gguntarget.m; sourceTree = "<group>"; };
-		DA37B52D1CAF38FD00015AC2 /* ggunpointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggunpointer.h; sourceTree = "<group>"; };
 		DA37B52E1CAF3A3400015AC2 /* gun.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = gun.xcassets; sourceTree = "<group>"; };
 		DA38C9181CB57F9400E554CF /* mgamehub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgamehub.h; sourceTree = "<group>"; };
 		DA38C9191CB57F9400E554CF /* mgamehub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgamehub.m; sourceTree = "<group>"; };
@@ -163,8 +156,6 @@
 		DA38D6641CB09EA200A02B82 /* ggun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggun.m; sourceTree = "<group>"; };
 		DA38D6661CB1DD3E00A02B82 /* mgunshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgunshot.h; sourceTree = "<group>"; };
 		DA38D6671CB1DD3E00A02B82 /* mgunshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgunshot.m; sourceTree = "<group>"; };
-		DA38D6691CB2A2D900A02B82 /* ggunfinger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggunfinger.h; sourceTree = "<group>"; };
-		DA38D66A1CB2A2D900A02B82 /* ggunfinger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggunfinger.m; sourceTree = "<group>"; };
 		DA38D66F1CB2B29300A02B82 /* ggunwaves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggunwaves.h; sourceTree = "<group>"; };
 		DA38D6701CB2B29300A02B82 /* ggunwaves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ggunwaves.m; sourceTree = "<group>"; };
 		DA38D6721CB2B4E600A02B82 /* mgunwaves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgunwaves.h; sourceTree = "<group>"; };
@@ -404,12 +395,6 @@
 			children = (
 				DA38D6631CB09EA200A02B82 /* ggun.h */,
 				DA38D6641CB09EA200A02B82 /* ggun.m */,
-				DA37B52D1CAF38FD00015AC2 /* ggunpointer.h */,
-				DA37B5281CAF379100015AC2 /* ggunpointer.m */,
-				DA37B52A1CAF38DB00015AC2 /* gguntarget.h */,
-				DA37B52B1CAF38DB00015AC2 /* gguntarget.m */,
-				DA38D6691CB2A2D900A02B82 /* ggunfinger.h */,
-				DA38D66A1CB2A2D900A02B82 /* ggunfinger.m */,
 				DA38D66F1CB2B29300A02B82 /* ggunwaves.h */,
 				DA38D6701CB2B29300A02B82 /* ggunwaves.m */,
 			);
@@ -1125,7 +1110,6 @@
 				DA9386FF1CAC9078006B3213 /* mstorestatusdeferred.m in Sources */,
 				DA9386DD1CAC9078006B3213 /* chome.m in Sources */,
 				DA38C9211CB585A500E554CF /* ghublife.m in Sources */,
-				DA38D66B1CB2A2D900A02B82 /* ggunfinger.m in Sources */,
 				DA9CCF8A1CB5E45300800880 /* mtextures.m in Sources */,
 				DA38D6771CB2B9A900A02B82 /* gspatialcolor.m in Sources */,
 				DA9386FA1CAC9078006B3213 /* msettings.m in Sources */,
@@ -1136,7 +1120,6 @@
 				DA9387101CAC9078006B3213 /* vstorecell.m in Sources */,
 				DA9386D51CAC9078006B3213 /* uicolor+uicolormain.m in Sources */,
 				DA9386F61CAC9078006B3213 /* mgame.m in Sources */,
-				DA37B5291CAF379100015AC2 /* ggunpointer.m in Sources */,
 				DA9386EF1CAC9078006B3213 /* mdb.m in Sources */,
 				DA22BEDF1CB42BA100DDF53A /* mtext.m in Sources */,
 				DA22BEE81CB42BE800DDF53A /* mtextitemglyphnumber.m in Sources */,
@@ -1176,7 +1159,6 @@
 				DA9387011CAC9078006B3213 /* mstorestatuspurchased.m in Sources */,
 				DA38C92D1CB5874500E554CF /* mgamehubscore.m in Sources */,
 				DA9387021CAC9078006B3213 /* mstorestatuspurchasing.m in Sources */,
-				DA37B52C1CAF38DB00015AC2 /* gguntarget.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
