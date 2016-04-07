@@ -14,10 +14,10 @@ static NSUInteger const speedscore = 1;
 {
     self = [super init:model text:text x:x y:y];
     current = 0;
+    self.glyphclass = [mtextitemglyphnumber class];
     CGFloat padding = - sizescore * paddingscore;
     [self render:text x:x y:y size:sizescore padding:padding];
     [self starttimer:ttlscore];
-    self.glyphclass = [mtextitemglyphnumber class];
     
     return self;
 }
