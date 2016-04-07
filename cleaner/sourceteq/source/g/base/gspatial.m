@@ -28,9 +28,9 @@
     glDrawArrays(GL_TRIANGLES, 0, vectorcorners);
 }
 
--(void)updateprojection
+-(void)updateprojection:(NSInteger)dx dy:(NSInteger)dy
 {
-    projection = GLKMatrix4Translate(projection, self.dx, self.dy, 0);
+    projection = GLKMatrix4Translate(projection, dx, dy, 0);
 }
 
 -(void)vector:(NSUInteger)index x:(NSInteger)x y:(NSInteger)y
@@ -42,8 +42,6 @@
 
 -(void)render
 {
-    self.dx = 0;
-    self.dy = 0;
     self.dataposition = [NSMutableData data];
     
     NSUInteger index = 0;
@@ -59,7 +57,7 @@
     [self vector:index++ x:maxx y:miny];
     [self vector:index++ x:minx y:miny];
     
-    [self updateprojection];
+    [self updateprojection:0 dy:0];
     [self movetotop];
 }
 

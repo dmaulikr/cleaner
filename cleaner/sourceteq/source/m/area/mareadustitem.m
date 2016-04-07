@@ -29,14 +29,13 @@ static NSUInteger const dustsize = 11;
     self.model = model;
     x = newx;
     y = newy;
-    spatial = [[gareadust alloc] init:x y:y size:dustsize];
-    spatial.x = x = newx;
     miny = - dustsize;
     minx = - dustsize;
     maxx = screenwidth;
     speedcounter = 0;
     speed = arc4random_uniform(maxspeed) + minspeed;
     direction = arc4random_uniform(3.0) - 1.0;
+    spatial = [[gareadust alloc] init:x y:y size:dustsize];
  
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
@@ -80,9 +79,10 @@ static NSUInteger const dustsize = 11;
         }
         else
         {
-            spatial.dx = x;
-            spatial.dy = y;
-            [spatial updateprojection];
+            NSInteger dx = spatial.x - x;
+            NSInteger dy = spatial.y - y;
+            
+            [spatial updateprojection:dx dy:dy];
         }
     }
 }

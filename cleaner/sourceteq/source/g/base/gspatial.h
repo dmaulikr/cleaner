@@ -6,7 +6,7 @@ static GLsizei const vectorcorners = 6;
 @interface gspatial:NSObject
 
 -(void)draw;
--(void)updateprojection;
+-(void)updateprojection:(NSInteger)dx dy:(NSInteger)dy;
 -(void)vector:(NSUInteger)index x:(NSInteger)x y:(NSInteger)y;
 -(void)render;
 -(void)movetotop;
@@ -15,7 +15,5 @@ static GLsizei const vectorcorners = 6;
 @property(nonatomic)NSInteger height;
 @property(nonatomic)NSInteger x;
 @property(nonatomic)NSInteger y;
-@property(nonatomic)NSInteger dx;
-@property(nonatomic)NSInteger dy;
 
 @end
