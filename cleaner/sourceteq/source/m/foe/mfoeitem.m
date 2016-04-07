@@ -1,20 +1,20 @@
 #import "mfoeitem.h"
 
-static CGFloat const maxspeed = 6;
 static CGFloat const ratiochangedirection = 30;
+static NSUInteger const maxspeed = 6;
 static NSUInteger const minspeed = 0;
 
 @implementation mfoeitem
 {
-    CGFloat x;
-    CGFloat y;
-    CGFloat minx;
-    CGFloat maxx;
-    CGFloat maxy;
-    CGFloat width;
-    CGFloat width_2;
-    CGFloat height;
-    CGFloat height_2;
+    NSInteger x;
+    NSInteger y;
+    NSInteger minx;
+    NSInteger maxx;
+    NSInteger maxy;
+    NSInteger width;
+    NSInteger width_2;
+    NSInteger height;
+    NSInteger height_2;
     NSInteger direction;
     NSUInteger speed;
     NSUInteger speedcounter;
@@ -24,13 +24,17 @@ static NSUInteger const minspeed = 0;
 {
     self = [super init];
     self.model = model;
-    self.spatial = [[gfoe alloc] init:self];
     
-    NSArray *assets = dictionary[@"assets"];
     width = [dictionary[@"width"] floatValue];
     width_2 = width / 2.0;
     height = [dictionary[@"height"] floatValue];
     height_2 = height / 2.0;
+    
+    
+    
+    self.spatial = [[gfoe alloc] init:self];
+    
+    
     
     minx = width;
     maxx = model.modelarea.screenwidth - (width + width);
