@@ -5,10 +5,6 @@
 
 @interface gspatialgradient:gspatial
 
-@property(nonatomic)GLKVector4 *pointercolor;
-@property(strong, nonatomic)mcolor *colorlefttop;
-@property(strong, nonatomic)mcolor *colorleftbottom;
-@property(strong, nonatomic)mcolor *colorrighttop;
-@property(strong, nonatomic)mcolor *colorrightbottom;
+-(instancetype)init:(mcolor*)lefttop leftbottom:(mcolor*)leftbottom righttop:(mcolor*)righttop rightbottom:(mcolor*)rightbottom;
 
 @end

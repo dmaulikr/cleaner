@@ -60,7 +60,6 @@
     [self vector:index++ x:minx y:miny];
     
     [self updateprojection];
-    [self render];
     [self movetotop];
 }
 

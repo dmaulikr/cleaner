@@ -1,12 +1,15 @@
 #import "gspatialcolor.h"
-#import "mcolor.h"
+#import "appdel.h"
 
 @implementation gspatialcolor
+{
+    GLKVector4 color;
+}
 
--(instancetype)init:(mcolor*)color
+-(instancetype)init:(mcolor*)modelcolor
 {
     self = [super init];
-    self.color = [color asvector];
+    color = [modelcolor asvector];
     
     return self;
 }
@@ -14,12 +17,12 @@
 #pragma mark -
 #pragma mark spatial
 
--(void)draw:(GLKBaseEffect*)effect
+-(void)draw
 {
     effect.texture2d0.enabled = NO;
-    effect.constantColor = self.color;
+    effect.constantColor = color;
     
-    [super draw:effect];
+    [super draw];
 }
 
 @end

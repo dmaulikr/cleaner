@@ -1,5 +1,5 @@
 #import "gspatialgradient.h"
-#import "mcolor.h"
+#import "appdel.h"
 
 @interface gspatialgradient ()
 
@@ -8,31 +8,49 @@
 @end
 
 @implementation gspatialgradient
+{
+    GLKVector4 *pointercolor;
+    mcolor *colorlefttop;
+    mcolor *colorleftbottom;
+    mcolor *colorrighttop;
+    mcolor *colorrightbottom;
+}
+
+-(instancetype)init:(mcolor*)lefttop leftbottom:(mcolor*)leftbottom righttop:(mcolor*)righttop rightbottom:(mcolor*)rightbottom
+{
+    self = [super init];
+    colorlefttop = lefttop;
+    colorleftbottom = leftbottom;
+    colorrighttop = righttop;
+    colorrightbottom = rightbottom;
+    
+    return self;
+}
 
 #pragma mark -
 #pragma mark spatial
 
--(void)rasterize
+-(void)render
 {
     self.datacolor = [NSMutableData dataWithLength:6 * sizeof(GLKVector4)];
-    self.pointercolor = self.datacolor.mutableBytes;
-    self.pointercolor[0] = [self.colorlefttop asvector];
-    self.pointercolor[1] = [self.colorleftbottom asvector];
-    self.pointercolor[2] = [self.colorrightbottom asvector];
-    self.pointercolor[3] = [self.colorrightbottom asvector];
-    self.pointercolor[4] = [self.colorrighttop asvector];
-    self.pointercolor[5] = [self.colorlefttop asvector];
+    pointercolor = self.datacolor.mutableBytes;
+    pointercolor[0] = [colorlefttop asvector];
+    pointercolor[1] = [colorleftbottom asvector];
+    pointercolor[2] = [colorrightbottom asvector];
+    pointercolor[3] = [colorrightbottom asvector];
+    pointercolor[4] = [colorrighttop asvector];
+    pointercolor[5] = [colorlefttop asvector];
     
-    [super rasterize];
+    [super render];
 }
 
--(void)draw:(GLKBaseEffect*)effect
+-(void)draw
 {
     effect.texture2d0.enabled = NO;
     glEnableVertexAttribArray(GLKVertexAttribColor);
-    glVertexAttribPointer(GLKVertexAttribColor, 4, GL_FLOAT, GL_FALSE, 0, self.pointercolor);
+    glVertexAttribPointer(GLKVertexAttribColor, 4, GL_FLOAT, GL_FALSE, 0, pointercolor);
     
-    [super draw:effect];
+    [super draw];
     
     glDisableVertexAttribArray(GLKVertexAttribColor);
 }

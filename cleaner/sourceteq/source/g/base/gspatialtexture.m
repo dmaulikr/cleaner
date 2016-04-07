@@ -12,7 +12,7 @@
 -(instancetype)init:(NSArray<NSString*>*)assets
 {
     self = [super init];
-    self.image = [[gimage alloc] init];
+    self.image = [[gimage alloc] init:assets];
     
     return self;
 }

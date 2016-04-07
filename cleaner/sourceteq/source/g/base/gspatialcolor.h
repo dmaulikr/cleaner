@@ -5,8 +5,6 @@
 
 @interface gspatialcolor:gspatial
 
--(instancetype)init:(mcolor*)color;
-
-@property(nonatomic)GLKVector4 color;
+-(instancetype)init:(mcolor*)modelcolor;
 
 @end

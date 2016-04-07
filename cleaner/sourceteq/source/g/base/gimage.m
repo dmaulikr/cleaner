@@ -16,8 +16,8 @@ static NSUInteger const imagespeed = 30;
     self = [super init];
     self.speed = imagespeed;
     self.random = NO;
-    speedcounter = 0;
     [self loadtextures:assets];
+    speedcounter = 0;
     
     return self;
 }
