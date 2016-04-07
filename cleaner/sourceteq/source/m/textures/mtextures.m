@@ -46,76 +46,88 @@
     return textures;
 }
 
--(void)load_areadust
+-(void)load_area
 {
     self.textures_areadust = [self loadforassets:@[@"area_dust"] srgb:YES];
     [self.alltextures addObject:self.textures_areadust];
 }
 
--(void)load_building0
+-(void)load_buildings
 {
     self.textures_building0 = [self loadforassets:@[@"building0"] srgb:YES];
     [self.alltextures addObject:self.textures_building0];
-}
-
--(void)load_building1
-{
+    
     self.textures_building1 = [self loadforassets:@[@"building1"] srgb:YES];
     [self.alltextures addObject:self.textures_building1];
 }
 
--(void)load_foeinvader
+-(void)load_foes
 {
     self.textures_foeinvader = [self loadforassets:@[@"foe_invader0", @"foe_invader1", @"foe_invader2"] srgb:YES];
     [self.alltextures addObject:self.textures_foeinvader];
-}
-
--(void)load_foeocto
-{
+    
     self.textures_foeocto = [self loadforassets:@[@"foe_octo0", @"foe_octo1", @"foe_octo2"] srgb:YES];
     [self.alltextures addObject:self.textures_foeocto];
 }
 
--(void)load_gunpointer
+-(void)load_gun
 {
     self.textures_gunpointer = [self loadforassets:@[@"gun_pointer"] srgb:YES];
     [self.alltextures addObject:self.textures_gunpointer];
-}
-
--(void)load_guntarget
-{
+    
     self.textures_guntarget = [self loadforassets:@[@"gun_target"] srgb:YES];
     [self.alltextures addObject:self.textures_guntarget];
-}
-
--(void)load_gunfinger
-{
+    
     self.textures_gunfinger = [self loadforassets:@[@"gun_finger"] srgb:YES];
     [self.alltextures addObject:self.textures_gunfinger];
 }
 
--(void)load_effectshot
+-(void)load_effects
 {
     self.textures_effectshot = [self loadforassets:@[@"effect_shot"] srgb:YES];
     [self.alltextures addObject:self.textures_effectshot];
-}
-
--(void)load_effectsmoke
-{
+    
     self.textures_effectsmoke = [self loadforassets:@[@"effect_smoke0", @"effect_smoke1", @"effect_smoke2", @"effect_smoke3"] srgb:YES];
     [self.alltextures addObject:self.textures_effectsmoke];
 }
 
--(void)load_textnumbers
-{
-    self.textures_textnumbers = [self loadforassets:@[@"text_numbers"] srgb:NO];
-    [self.alltextures addObject:self.textures_textnumbers];
-}
-
--(void)load_hublife
+-(void)load_hub
 {
     self.textures_hublife = [self loadforassets:@[@"hub_life"] srgb:YES];
     [self.alltextures addObject:self.textures_hublife];
+}
+
+-(void)load_text
+{
+    self.textures_text0 = [self loadforassets:@[@"text_0"] srgb:NO];
+    [self.alltextures addObject:self.textures_text0];
+    
+    self.textures_text1 = [self loadforassets:@[@"text_1"] srgb:NO];
+    [self.alltextures addObject:self.textures_text1];
+    
+    self.textures_text2 = [self loadforassets:@[@"text_2"] srgb:NO];
+    [self.alltextures addObject:self.textures_text2];
+    
+    self.textures_text3 = [self loadforassets:@[@"text_3"] srgb:NO];
+    [self.alltextures addObject:self.textures_text3];
+    
+    self.textures_text4 = [self loadforassets:@[@"text_4"] srgb:NO];
+    [self.alltextures addObject:self.textures_text4];
+    
+    self.textures_text5 = [self loadforassets:@[@"text_5"] srgb:NO];
+    [self.alltextures addObject:self.textures_text5];
+    
+    self.textures_text6 = [self loadforassets:@[@"text_6"] srgb:NO];
+    [self.alltextures addObject:self.textures_text6];
+    
+    self.textures_text7 = [self loadforassets:@[@"text_7"] srgb:NO];
+    [self.alltextures addObject:self.textures_text7];
+    
+    self.textures_text8 = [self loadforassets:@[@"text_8"] srgb:NO];
+    [self.alltextures addObject:self.textures_text8];
+    
+    self.textures_text9 = [self loadforassets:@[@"text_9"] srgb:NO];
+    [self.alltextures addObject:self.textures_text9];
 }
 
 #pragma mark public
@@ -141,18 +153,13 @@
 -(void)loadtextures
 {
     self.alltextures = [NSMutableArray array];
-    [self load_areadust];
-    [self load_building0];
-    [self load_building1];
-    [self load_foeinvader];
-    [self load_foeocto];
-    [self load_gunpointer];
-    [self load_guntarget];
-    [self load_gunfinger];
-    [self load_effectshot];
-    [self load_effectsmoke];
-    [self load_textnumbers];
-    [self load_hublife];
+    [self load_area];
+    [self load_buildings];
+    [self load_foes];
+    [self load_gun];
+    [self load_effects];
+    [self load_hub];
+    [self load_text];
 }
 
 @end
