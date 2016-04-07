@@ -4,6 +4,8 @@
 
 @interface mbuildingitem:NSObject
 
+-(instancetype)init:(NSInteger)x;
+
 @property(strong, nonatomic)gbuilding *spatial;
 
 @end
