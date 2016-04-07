@@ -13,9 +13,10 @@ static NSInteger const shootspeed = 20;
     NSInteger shootcurrent;
 }
 
--(instancetype)init:(marea*)modelarea
+-(instancetype)init:(mtextures*)modeltextures area:(marea*)modelarea
 {
     self = [super init];
+    self.modeltextures = modeltextures;
     self.modelarea = modelarea;
     self.spatialpointer = [[ggunpointer alloc] init];
     self.spatialtarget = [[gguntarget alloc] init];

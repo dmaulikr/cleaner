@@ -8,9 +8,10 @@ static CGFloat const ratioadddust = 100;
 
 @implementation marea
 
--(instancetype)init
+-(instancetype)init:(mtextures*)modeltextures
 {
     self = [super init];
+    self.modeltextures = modeltextures;
     
     CGFloat rawscreenwidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat rawscreenheight = [UIScreen mainScreen].bounds.size.height;

@@ -113,18 +113,4 @@
                    });
 }
 
--(void)loadtextureimage:(UIImage*)image
-{
-    __weak typeof(self) weakself = self;
-    
-    dispatch_async(dispatch_get_main_queue(),
-                   ^
-                   {
-                       [weakself addimage:image];
-                       weakself.current = 0;
-                       [weakself loadcurrent];
-                       weakself.loading = NO;
-                   });
-}
-
 @end

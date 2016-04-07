@@ -2,9 +2,10 @@
 
 @implementation meffect
 
--(instancetype)init
+-(instancetype)init:(mtextures*)modeltextures
 {
     self = [super init];
+    self.modeltextures = modeltextures;
     self.items = [NSMutableArray array];
     
     return self;

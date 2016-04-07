@@ -33,3 +33,4 @@
 #import "mtextitemscore.h"
 #import "mtextitemtotal.h"
 #import "mtextitemglyphnumber.h"
+#import "mtextures.h"

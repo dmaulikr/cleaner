@@ -2,9 +2,10 @@
 
 @implementation mbuilding
 
--(instancetype)init:(marea*)modelarea
+-(instancetype)init:(mtextures*)modeltextures area:(marea*)modelarea
 {
     self = [super init];
+    self.modeltextures = modeltextures;
     self.modelarea = modelarea;
     self.items = [NSMutableArray array];
     self.rawbuldings = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"buildings" withExtension:@"plist"]];
