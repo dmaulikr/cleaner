@@ -12,6 +12,9 @@
 
 @interface mgame:NSObject
 
+extern NSInteger screenwidth;
+extern NSInteger screenheight;
+
 -(instancetype)init:(cgameloader*)controller;
 
 @property(strong, nonatomic)EAGLContext *context;
