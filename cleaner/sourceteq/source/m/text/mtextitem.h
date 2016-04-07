@@ -6,17 +6,13 @@
 @interface mtextitem:NSObject
 
 -(instancetype)init:(mtext*)model text:(NSString*)text x:(NSInteger)x y:(NSInteger)y;
--(void)notifiedmove;
--(void)render;
--(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x;
+-(void)move;
+-(void)render:(NSString*)string x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size padding:(NSInteger)padding;
+-(void)starttimer:(NSInteger)newttl;
+-(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x y:(NSInteger)y size:(CGFloat)size;
 
 @property(weak, nonatomic)mtext *model;
 @property(strong, nonatomic)NSMutableArray<mtextitemglyph*> *glyphs;
-@property(copy, nonatomic)NSString *text;
-@property(nonatomic)CGFloat padding;
-@property(nonatomic)CGFloat size;
-@property(nonatomic)NSInteger ttl;
-@property(nonatomic)NSInteger x;
-@property(nonatomic)NSInteger y;
+@property(nonatomic)Class glyphclass;
 
 @end

@@ -3,7 +3,7 @@
 
 @implementation mtextitemglyph
 
--(instancetype)init:(mtextures*)modeltextures character:(NSString*)character x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size
+-(instancetype)init:(NSString*)character x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size
 {
     self = [super init];
     self.modeltextures = modeltextures;

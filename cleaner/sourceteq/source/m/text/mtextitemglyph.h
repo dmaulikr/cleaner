@@ -6,7 +6,7 @@
 
 @interface mtextitemglyph:NSObject
 
--(instancetype)init:(mtextures*)modeltextures character:(NSString*)character x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size;
+-(instancetype)init:(NSString*)character x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size;
 -(void)rasterize;
 
 @property(strong, nonatomic)gtext *spatial;
@@ -17,8 +17,8 @@
 @property(nonatomic)CGFloat leftmargin;
 @property(nonatomic)CGFloat topmargin;
 @property(nonatomic)CGFloat width;
-@property(nonatomic)CGFloat height;
-@property(nonatomic)CGFloat x;
-@property(nonatomic)CGFloat y;
+@property(nonatomic)NSInteger height;
+@property(nonatomic)NSInteger x;
+@property(nonatomic)NSInteger y;
 
 @end

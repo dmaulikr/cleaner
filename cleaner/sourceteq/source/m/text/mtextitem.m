@@ -2,16 +2,16 @@
 #import "appdel.h"
 
 @implementation mtextitem
+{
+    NSInteger ttl;
+}
 
 -(instancetype)init:(mtext*)model text:(NSString*)text x:(NSInteger)x y:(NSInteger)y
 {
     self = [super init];
     self.model = model;
-    self.text = text;
-    self.x = x;
-    self.y = y;
-    self.ttl = 0;
     self.glyphs = [NSMutableArray array];
+    self.glyphclass = [mtextitemglyph class];
     
     return self;
 }
@@ -21,49 +21,44 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark notified
-
--(void)notifiedglkmove:(NSNotification*)notification
-{
-    [self notifiedmove];
-}
-
 #pragma mark public
 
--(void)notifiedmove
+-(void)move
 {
-    self.ttl--;
+    ttl--;
     
-    if(self.ttl < 1)
+    if(ttl < 1)
     {
         [self.model.items removeObject:self];
     }
 }
 
--(void)render
+-(void)render:(NSString*)string x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size padding:(NSInteger)padding
 {
-    NSUInteger count = self.text.length;
-    NSInteger sumx = self.x;
+    NSUInteger count = string.length;
+    NSInteger sumx = x;
     
     for(NSInteger i = 0; i < count; i++)
     {
         NSRange range = NSMakeRange(i, 1);
-        NSString *character = [self.text substringWithRange:range];
-        mtextitemglyph *model = [self glyphwith:character at:sumx];
-        sumx += model.width + self.padding;
+        NSString *character = [string substringWithRange:range];
+        mtextitemglyph *model = [self glyphwith:character at:sumx y:y size:size];
+        sumx += model.width + padding;
         
         [self.glyphs addObject:model];
     }
-    
-    if(self.ttl)
-    {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
-    }
 }
 
--(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x
+-(void)starttimer:(NSInteger)newttl
 {
-    mtextitemglyph *glyph = [[mtextitemglyph alloc] init:self.model.modeltextures character:character x:x y:self.y size:self.size];
+    ttl = newttl;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(move) name:notification_glkmove object:nil];
+}
+
+-(mtextitemglyph*)glyphwith:(NSString*)character at:(NSInteger)x y:(NSInteger)y size:(CGFloat)size
+{
+    mtextitemglyph *glyph = [[self.glyphclass alloc] init:character x:x y:y size:size];
     
     return glyph;
 }
