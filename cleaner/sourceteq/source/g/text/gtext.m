@@ -2,7 +2,7 @@
 
 @implementation gtext
 
--(instancetype)init:(NSArray*)textures x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height
+-(instancetype)init:(NSArray<NSNumber*>*)textures x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height
 {
     self = [super init:textures];
     self.x = x;

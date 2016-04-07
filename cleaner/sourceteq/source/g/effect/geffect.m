@@ -9,7 +9,7 @@
     NSInteger realy;
 }
 
--(instancetype)init:(NSArray*)textures realx:(NSInteger)newrealx realy:(NSInteger)newrealy width:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)newrotation
+-(instancetype)init:(NSArray<NSNumber*>*)textures realx:(NSInteger)newrealx realy:(NSInteger)newrealy width:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)newrotation
 {
     self = [super init:textures];
     realx = newrealx;

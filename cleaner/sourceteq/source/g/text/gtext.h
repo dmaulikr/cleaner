@@ -3,6 +3,6 @@
 
 @interface gtext:gspatialtexture
 
--(instancetype)init:(NSArray*)textures x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height;
+-(instancetype)init:(NSArray<NSNumber*>*)textures x:(NSInteger)x y:(NSInteger)y width:(NSInteger)width height:(NSInteger)height;
 
 @end
