@@ -54,11 +54,11 @@
 
 -(void)load_buildings
 {
-    self.textures_building0 = [self loadforassets:@[@"building0"] srgb:YES];
-    [self.alltextures addObject:self.textures_building0];
+    self.textures_buildingalpha = [self loadforassets:@[@"building_alpha"] srgb:YES];
+    [self.alltextures addObject:self.textures_buildingalpha];
     
-    self.textures_building1 = [self loadforassets:@[@"building1"] srgb:YES];
-    [self.alltextures addObject:self.textures_building1];
+    self.textures_buildingbeta = [self loadforassets:@[@"building_beta"] srgb:YES];
+    [self.alltextures addObject:self.textures_buildingbeta];
 }
 
 -(void)load_foes

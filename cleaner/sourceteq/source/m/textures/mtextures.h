@@ -7,8 +7,8 @@
 -(void)loadtextures;
 
 @property(strong, nonatomic)NSArray *textures_areadust;
-@property(strong, nonatomic)NSArray *textures_building0;
-@property(strong, nonatomic)NSArray *textures_building1;
+@property(strong, nonatomic)NSArray *textures_buildingalpha;
+@property(strong, nonatomic)NSArray *textures_buildingbeta;
 @property(strong, nonatomic)NSArray *textures_foeinvader;
 @property(strong, nonatomic)NSArray *textures_foeocto;
 @property(strong, nonatomic)NSArray *textures_gunpointer;
