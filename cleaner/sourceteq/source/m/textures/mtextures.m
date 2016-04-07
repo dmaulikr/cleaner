@@ -4,22 +4,16 @@
 
 +(instancetype)singleton
 {
-    static analytics *single;
+    static mtextures *single;
     static dispatch_once_t once;
     dispatch_once(&once, ^(void) { single = [[self alloc] init]; });
     
     return single;
 }
 
--(instancetype)init
-{
-    self = [super init];
-    self.textures = [NSMutableDictionary dictionary];
-    
-    return self;
-}
+#pragma mark public
 
--(void)dealloc
+-(void)cleartextures
 {
     NSArray<NSNumber*> *textures = self.textures.allValues;
     NSUInteger counter = textures.count;
@@ -33,12 +27,13 @@
     textures = nil;
     [self.textures removeAllObjects];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
 #warning "check"
 }
 
-#pragma mark public
+-(void)loadtextures:(NSArray<NSDictionary<NSString*, NSNumber*>*>*)rawtextures
+{
+    self.textures = [NSMutableDictionary dictionary];
+}
 
 -(NSNumber*)textureforasset:(NSString*)asset srgb:(BOOL)srgb
 {
