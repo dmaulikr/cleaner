@@ -1,12 +1,7 @@
 #import "mtextitemglyphnumber.h"
 
-static NSString* const assetname = @"text_numbers";
-static CGFloat const atlaswidth = 0.18604;
-static CGFloat const atlasheight = 0.4651;
-static CGFloat const marginhr = 0.03488;
-static CGFloat const marginvr = 0.08139;
-static CGFloat const glyphwidth = 24;
-static CGFloat const glyphheight = 39;
+static NSInteger const glyphwidth = 40;
+static NSInteger const glyphheight = 50;
 
 @implementation mtextitemglyphnumber
 

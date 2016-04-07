@@ -12,11 +12,4 @@
     return self;
 }
 
-#pragma mark public
-
--(void)rasterize
-{
-    self.spatial = [[gtext alloc] init:self];
-}
-
 @end
