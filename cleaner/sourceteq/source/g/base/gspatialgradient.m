@@ -1,14 +1,9 @@
 #import "gspatialgradient.h"
 #import "appdel.h"
 
-@interface gspatialgradient ()
-
-@property(strong, nonatomic)NSMutableData *datacolor;
-
-@end
-
 @implementation gspatialgradient
 {
+    NSMutableData *datacolor;
     GLKVector4 *pointercolor;
     mcolor *colorlefttop;
     mcolor *colorleftbottom;
@@ -32,8 +27,8 @@
 
 -(void)render
 {
-    self.datacolor = [NSMutableData dataWithLength:6 * sizeof(GLKVector4)];
-    pointercolor = self.datacolor.mutableBytes;
+    datacolor = [NSMutableData dataWithLength:6 * sizeof(GLKVector4)];
+    pointercolor = datacolor.mutableBytes;
     pointercolor[0] = [colorlefttop asvector];
     pointercolor[1] = [colorleftbottom asvector];
     pointercolor[2] = [colorrightbottom asvector];

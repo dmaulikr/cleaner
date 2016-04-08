@@ -1,14 +1,9 @@
 #import "gspatial.h"
 #import "appdel.h"
 
-@interface gspatial ()
-
-@property(strong, nonatomic)NSMutableData *dataposition;
-
-@end
-
 @implementation gspatial
 {
+    NSMutableData *dataposition;
     GLKVector2 *pointerposition;
     GLKMatrix4 projection;
 }
@@ -37,28 +32,27 @@
 
 -(void)vector:(NSUInteger)index x:(NSInteger)x y:(NSInteger)y
 {
-    [self.dataposition appendData:[NSMutableData dataWithLength:sizeof(GLKVector2)]];
-    pointerposition = self.dataposition.mutableBytes;
-    pointerposition[index] = GLKVector2Make(x, y);
+    [dataposition appendData:[NSMutableData dataWithLength:sizeof(GLKVector2)]];
+    
+    
 }
 
 -(void)render
 {
-    projection = projectionbase;
-    self.dataposition = [NSMutableData data];
-    
-    NSUInteger index = 0;
     NSInteger minx = self.x;
     NSInteger maxx = minx + self.width;
     NSInteger miny = self.y;
     NSInteger maxy = miny + self.height;
     
-    [self vector:index++ x:minx y:miny];
-    [self vector:index++ x:minx y:maxy];
-    [self vector:index++ x:maxx y:maxy];
-    [self vector:index++ x:maxx y:maxy];
-    [self vector:index++ x:maxx y:miny];
-    [self vector:index++ x:minx y:miny];
+    projection = projectionbase;
+    dataposition = [NSMutableData dataWithLength:lengthdatapos];
+    pointerposition = dataposition.mutableBytes;
+    pointerposition[0] = GLKVector2Make(minx, miny);
+    pointerposition[1] = GLKVector2Make(minx, maxy);
+    pointerposition[2] = GLKVector2Make(maxx, maxy);
+    pointerposition[3] = GLKVector2Make(maxx, maxy);
+    pointerposition[4] = GLKVector2Make(maxx, miny);
+    pointerposition[5] = GLKVector2Make(minx, miny);
     
     [self movetotop];
 }

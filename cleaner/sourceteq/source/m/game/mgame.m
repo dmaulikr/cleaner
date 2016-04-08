@@ -2,6 +2,7 @@
 
 GLKVector2 *pointertexture;
 GLKMatrix4 rotationclear;
+NSUInteger lengthdatapos;
 
 @interface mgame ()
 
@@ -36,7 +37,8 @@ GLKMatrix4 rotationclear;
                        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                                       ^
                                       {
-                                          weakself.datatexture = [NSMutableData dataWithLength:vectorcorners * sizeof(GLKVector2)];
+                                          lengthdatapos = vectorcorners * sizeof(GLKVector2);
+                                          weakself.datatexture = [NSMutableData dataWithLength:lengthdatapos];
                                           pointertexture = weakself.datatexture.mutableBytes;
                                           pointertexture[0] = GLKVector2Make(0, 0);
                                           pointertexture[1] = GLKVector2Make(0, 1);
