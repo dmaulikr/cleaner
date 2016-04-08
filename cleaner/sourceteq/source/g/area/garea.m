@@ -9,6 +9,7 @@
     self.y = 0;
     self.width = screenwidth;
     self.height = screenheight;
+    
     [self render];
     
     return self;

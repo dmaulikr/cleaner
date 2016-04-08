@@ -40,13 +40,6 @@ static NSUInteger const framespersecond = 60;
     return YES;
 }
 
-#pragma mark functionality
-
--(void)notifymove
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:notification_glkmove object:nil userInfo:nil];
-}
-
 #pragma mark public
 
 -(void)exitgame
@@ -67,7 +60,7 @@ static NSUInteger const framespersecond = 60;
 
 -(void)glkViewControllerUpdate:(GLKViewController*)controller
 {
-    [self notifymove];
+    [[NSNotificationCenter defaultCenter] postNotificationName:notification_glkmove object:nil];
 }
 
 @end

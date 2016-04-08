@@ -37,8 +37,7 @@
     
     for(NSUInteger i = 0; i < count; i++)
     {
-        NSDictionary *rawtexture = assets[i];
-        NSString *asset = rawtexture[@"asset"];
+        NSString *asset = assets[i];
         NSNumber *texture = [self textureforasset:asset srgb:srgb];
         [textures addObject:texture];
     }

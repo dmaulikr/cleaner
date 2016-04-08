@@ -24,7 +24,9 @@
 {
     effect.transform.projectionMatrix = projection;
     glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, 0, pointerposition);
+    
     [effect prepareToDraw];
+    
     glDrawArrays(GL_TRIANGLES, 0, vectorcorners);
 }
 
@@ -42,6 +44,7 @@
 
 -(void)render
 {
+    projection = projectionbase;
     self.dataposition = [NSMutableData data];
     
     NSUInteger index = 0;
