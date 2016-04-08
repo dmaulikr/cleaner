@@ -4,12 +4,13 @@ static NSInteger const gunsize = 40;
 static NSInteger const fingersize = 120;
 static NSInteger const caliber = 5;
 static NSInteger const deltamargin = 5;
-static NSInteger const shootspeed = 20;
+static NSInteger const shootspeed = 4;
 static NSInteger const wavesmaxttl = 3;
 
 @implementation mgun
 {
     __weak vgamehub *hub;
+    mgunwaves *modelwaves;
     ggun *spatialtarget;
     ggun *spatialpointer;
     ggun *spatialfingera;
@@ -28,8 +29,8 @@ static NSInteger const wavesmaxttl = 3;
 -(instancetype)init
 {
     self = [super init];
-    gunsize_2 = gunsize / 2.0;
-    fingersize_2 = fingersize / 2.0;
+    gunsize_2 = gunsize / 2;
+    fingersize_2 = fingersize / 2;
     pointermargin = gunsize_2 - deltamargin;
     shootcurrent = 0;
     wavesttl = 0;
@@ -37,7 +38,7 @@ static NSInteger const wavesmaxttl = 3;
     spatialtarget = [[ggun alloc] init:[mtextures singleton].textures_guntarget width:gunsize height:gunsize];
     spatialfingera = [[ggun alloc] init:[mtextures singleton].textures_gunfinger width:fingersize height:fingersize];
     spatialfingerb = [[ggun alloc] init:[mtextures singleton].textures_gunfinger width:fingersize height:fingersize];
-    self.modelwaves = [[mgunwaves alloc] init];
+    modelwaves = [[mgunwaves alloc] init];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
@@ -102,12 +103,12 @@ static NSInteger const wavesmaxttl = 3;
             {
                 NSInteger deltax = xa - xb;
                 NSInteger deltay = ya - yb;
-                NSInteger deltax_2 = deltax / 2.0;
-                NSInteger deltay_2 = deltay / 2.0;
+                NSInteger deltax_2 = deltax / 2;
+                NSInteger deltay_2 = deltay / 2;
                 NSInteger x = xa - deltax_2;
                 NSInteger y = ya - deltay_2;
                 
-                [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:pointermargin];
+                [modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:pointermargin];
                 [self centerx:x y:y];
             }
         }
@@ -160,7 +161,7 @@ static NSInteger const wavesmaxttl = 3;
     [spatialfingera deactivate];
     [spatialfingerb deactivate];
     
-    [self.modelwaves clear];
+    [modelwaves clear];
 }
 
 -(void)receivehub:(vgamehub*)newhub

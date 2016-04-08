@@ -16,7 +16,7 @@ static NSInteger const interitem = 2;
 {
     self = [super init];
     wavelength = waveshort + interitem;
-    waveshort_2 = waveshort / 2.0;
+    waveshort_2 = waveshort / 2;
     
     return self;
 }

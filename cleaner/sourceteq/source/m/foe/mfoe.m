@@ -23,8 +23,8 @@ NSInteger foemaxy;
     self.items = [NSMutableArray array];
     strategy = [[sfoe alloc] init:self];
     
-    foewidth_2 = foewidth / 2.0;
-    foeheight_2 = foeheight / 2.0;
+    foewidth_2 = foewidth / 2;
+    foeheight_2 = foeheight / 2;
     foeminx = foewidth;
     foemaxx = screenwidth - (foewidth + foewidth);
     foemaxy = screenheight;

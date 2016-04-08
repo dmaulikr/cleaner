@@ -9,8 +9,8 @@ NSInteger effectsmokepos;
 {
     self = [super init];
     self.items = [NSMutableArray array];
-    effectshotpos = effectshotsize / -2.0;
-    effectsmokepos = effectsmokesize / -2.0;
+    effectshotpos = effectshotsize / -2;
+    effectsmokepos = effectsmokesize / -2;
     
     return self;
 }
