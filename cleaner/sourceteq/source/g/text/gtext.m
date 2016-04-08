@@ -15,4 +15,14 @@
     return self;
 }
 
+#pragma mark -
+#pragma mark gspatial
+
+-(void)draw
+{
+    [super draw];
+    
+    [self movetotop];
+}
+
 @end

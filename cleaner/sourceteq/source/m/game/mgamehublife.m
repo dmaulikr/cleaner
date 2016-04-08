@@ -50,6 +50,8 @@ static NSInteger const lifemarginvr = 5;
         changed = NO;
         [self reposlife];
     }
+    
+    [spatiallifebar movetotop];
 }
 
 #pragma mark functionality

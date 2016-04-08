@@ -1,7 +1,7 @@
 #import "mtextitemtotal.h"
 
-static CGFloat const paddingtotal = 3;
-static CGFloat const sizetotal = 0.45;
+static CGFloat const paddingtotal = 12;
+static CGFloat const sizetotal = 0.35;
 
 @implementation mtextitemtotal
 
@@ -13,11 +13,6 @@ static CGFloat const sizetotal = 0.45;
     [self render:text x:x y:y size:sizetotal padding:padding];
     
     return self;
-}
-
--(void)dealloc
-{
-    NSLog(@"dealloc total score");
 }
 
 @end

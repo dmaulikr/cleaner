@@ -1,7 +1,7 @@
 #import "mtextitemscore.h"
 
-static CGFloat const sizescore = 0.3;
-static CGFloat const paddingscore = 6;
+static CGFloat const sizescore = 0.2;
+static CGFloat const paddingscore = 14;
 static NSInteger const ttlscore = 70;
 static NSUInteger const speedscore = 1;
 
