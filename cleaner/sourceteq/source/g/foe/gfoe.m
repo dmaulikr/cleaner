@@ -12,8 +12,8 @@ static NSUInteger const imagespeed = 180;
     self.width = width;
     self.height = height;
     
-    [self.image animationspeed:imagespeed];
-    [self.image makerandom];
+    [[self image] animationspeed:imagespeed];
+    [[self image] makerandom];
     [self render];
 
     return self;

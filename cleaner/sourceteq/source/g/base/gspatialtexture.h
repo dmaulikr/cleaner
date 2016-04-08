@@ -5,7 +5,6 @@
 @interface gspatialtexture:gspatial
 
 -(instancetype)init:(NSArray<NSNumber*>*)assets;
-
-@property(strong, nonatomic)gimage *image;
+-(gimage*)image;
 
 @end

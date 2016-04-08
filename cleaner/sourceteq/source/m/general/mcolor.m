@@ -1,6 +1,12 @@
 #import "mcolor.h"
 
 @implementation mcolor
+{
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
+    CGFloat alpha;
+}
 
 +(instancetype)basecolor:(NSDictionary*)basecolor delta:(CGFloat)delta
 {
@@ -27,20 +33,27 @@
 
 +(instancetype)red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha
 {
-    mcolor *color = [[mcolor alloc] init];
-    color.red = red;
-    color.green = green;
-    color.blue = blue;
-    color.alpha = alpha;
+    mcolor *color = [[mcolor alloc] init:red green:green blue:blue alpha:alpha];
     
     return color;
+}
+
+-(instancetype)init:(CGFloat)newred green:(CGFloat)newgreen blue:(CGFloat)newblue alpha:(CGFloat)newalpha
+{
+    self = [super init];
+    red = newred;
+    green = newgreen;
+    blue = newblue;
+    alpha = newalpha;
+    
+    return self;
 }
 
 #pragma mark public
 
 -(GLKVector4)asvector
 {
-    GLKVector4 vector4 = GLKVector4Make(self.red, self.green, self.blue, self.alpha);
+    GLKVector4 vector4 = GLKVector4Make(red, green, blue, alpha);
     
     return vector4;
 }

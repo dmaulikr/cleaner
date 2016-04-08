@@ -2,13 +2,23 @@
 #import "appdel.h"
 
 @implementation gspatialtexture
+{
+    gimage *image;
+}
 
 -(instancetype)init:(NSArray<NSNumber*>*)assets
 {
     self = [super init];
-    self.image = [[gimage alloc] init:assets];
+    image = [[gimage alloc] init:assets];
     
     return self;
+}
+
+#pragma mark public
+
+-(gimage*)image
+{
+    return image;
 }
 
 #pragma mark -
@@ -18,7 +28,7 @@
 {
     effect.texture2d0.enabled = YES;
     effect.texture2d0.envMode = GLKTextureEnvModeReplace;
-    effect.texture2d0.name = self.image.current;
+    effect.texture2d0.name = image.current;
     glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
     glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, pointertexture);
     
