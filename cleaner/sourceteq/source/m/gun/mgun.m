@@ -57,12 +57,12 @@ static NSInteger const shootspeed = 20;
         
         NSInteger x = xa - fingersize_2;
         NSInteger y = ya - fingersize_2;
-        NSInteger dx = spatialfingera.x - x;
-        NSInteger dy = spatialfingera.y - y;
+        NSInteger dx = x - spatialfingera.x;
+        NSInteger dy = y - spatialfingera.y;
         spatialfingera.x = x;
         spatialfingera.y = y;
         
-        [spatialfingera updateprojection:dx dy:dy];
+//        [spatialfingera updateprojection:dx dy:dy];
         [spatialfingera makeactive];
     }
     
@@ -74,12 +74,12 @@ static NSInteger const shootspeed = 20;
         
         NSInteger x = xb - fingersize_2;
         NSInteger y = yb - fingersize_2;
-        NSInteger dx = spatialfingerb.x - x;
-        NSInteger dy = spatialfingerb.y - y;
+        NSInteger dx = x - spatialfingerb.x;
+        NSInteger dy = y - spatialfingerb.y;
         spatialfingerb.x = x;
         spatialfingerb.y = y;
         
-        [spatialfingerb updateprojection:dx dy:dy];
+//        [spatialfingerb updateprojection:dx dy:dy];
         [spatialfingerb makeactive];
     }
     
