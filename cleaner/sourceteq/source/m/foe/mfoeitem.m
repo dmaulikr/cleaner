@@ -42,7 +42,7 @@ static NSUInteger const minspeed = 0;
        {
            if(y < gunshot.maxy)
            {
-               if(y + foeheight_2 > gunshot.miny)
+               if(y + foeheight > gunshot.miny)
                {
                    [self gunshot:gunshot.caliber];
                }

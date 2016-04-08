@@ -4,17 +4,11 @@
 @implementation geffect
 {
     GLKMatrix4 rotationmatrix;
-    CGFloat rotation;
-    NSInteger realx;
-    NSInteger realy;
 }
 
--(instancetype)init:(NSArray<NSNumber*>*)textures realx:(NSInteger)newrealx realy:(NSInteger)newrealy width:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)newrotation
+-(instancetype)init:(NSArray<NSNumber*>*)textures realx:(NSInteger)realx realy:(NSInteger)realy width:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation
 {
     self = [super init:textures];
-    realx = newrealx;
-    realy = newrealy;
-    rotation = newrotation;
     self.x = width / -2.0;
     self.y = height / -2.0;
     self.width = width;

@@ -5,6 +5,6 @@
 
 @interface geffect:gspatialtexture
 
--(instancetype)init:(NSArray<NSNumber*>*)textures realx:(NSInteger)newrealx realy:(NSInteger)newrealy width:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)newrotation;
+-(instancetype)init:(NSArray<NSNumber*>*)textures realx:(NSInteger)realx realy:(NSInteger)realy width:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation;
 
 @end

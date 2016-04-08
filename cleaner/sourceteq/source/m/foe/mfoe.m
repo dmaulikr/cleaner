@@ -23,7 +23,7 @@ NSInteger foemaxy;
     strategy = [[sfoe alloc] init:self];
     
     foewidth_2 = foewidth / 2.0;
-    foeheight_2 = foeheight_2 / 2.0;
+    foeheight_2 = foeheight / 2.0;
     foeminx = foewidth;
     foemaxx = screenwidth - (foewidth + foewidth);
     foemaxy = screenheight;
