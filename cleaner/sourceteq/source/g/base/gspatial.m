@@ -45,7 +45,7 @@
     NSInteger maxy = miny + self.height;
     
     projection = projectionbase;
-    dataposition = [NSMutableData dataWithLength:lengthdatapos];
+    dataposition = [NSMutableData dataWithLength:lengthvector2];
     pointerposition = dataposition.mutableBytes;
     pointerposition[0] = GLKVector2Make(minx, miny);
     pointerposition[1] = GLKVector2Make(minx, maxy);

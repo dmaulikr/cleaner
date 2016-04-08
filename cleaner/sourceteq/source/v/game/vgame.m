@@ -1,6 +1,8 @@
 #import "vgame.h"
 
-GLKBaseEffect *effect;
+GLKBaseEffect *globaleffect;
+GLKEffectPropertyTexture *globaltexture;
+GLKEffectPropertyTransform *globaltransform;
 
 @implementation vgame
 
@@ -32,9 +34,12 @@ GLKBaseEffect *effect;
 
 -(void)starteffect
 {
-    effect = [[GLKBaseEffect alloc] init];
-    effect.transform.projectionMatrix = projectionbase;
-    effect.texture2d0.target = GLKTextureTarget2D;
+    globaleffect = [[GLKBaseEffect alloc] init];
+    globaltransform = globaleffect.transform;
+    globaltexture = globaleffect.texture2d0;
+    
+    globaltransform.projectionMatrix = projectionbase;
+    globaltexture.target = GLKTextureTarget2D;
 }
 
 #pragma mark public

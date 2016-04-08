@@ -1,7 +1,9 @@
 #import "appdel.h"
 
 extern GLKVector2 *pointertexture;
-extern GLKBaseEffect *effect;
+extern GLKBaseEffect *globaleffect;
+extern GLKEffectPropertyTexture *globaltexture;
+extern GLKEffectPropertyTransform *globaltransform;
 extern GLKMatrix4 projectionbase;
 extern GLKMatrix4 rotationclear;
 extern NSInteger screenwidth;

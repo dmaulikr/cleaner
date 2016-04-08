@@ -27,7 +27,7 @@
 
 -(void)render
 {
-    datacolor = [NSMutableData dataWithLength:6 * sizeof(GLKVector4)];
+    datacolor = [NSMutableData dataWithLength:lengthvector4];
     pointercolor = datacolor.mutableBytes;
     pointercolor[0] = [colorlefttop asvector];
     pointercolor[1] = [colorleftbottom asvector];

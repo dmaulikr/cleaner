@@ -12,6 +12,5 @@
 @property(weak, nonatomic)cgame *controller;
 @property(weak, nonatomic)vgamehub *hub;
 @property(weak, nonatomic)vgamepause *viewpause;
-@property(strong, nonatomic)GLKBaseEffect *effect;
 
 @end
