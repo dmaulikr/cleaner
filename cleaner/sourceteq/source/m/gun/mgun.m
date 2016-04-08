@@ -87,19 +87,19 @@ static NSInteger const shootspeed = 20;
         [spatialfingerb updateprojection:dx dy:dy];
         [spatialfingerb makeactive];
         [spatialfingerb movetotop];
-    }
-    
-    if(self.touchstart && self.touchend)
-    {
-        NSInteger deltax = xa - xb;
-        NSInteger deltay = ya - yb;
-        NSInteger deltax_2 = deltax / 2.0;
-        NSInteger deltay_2 = deltay / 2.0;
-        NSInteger x = xa - deltax_2;
-        NSInteger y = ya - deltay_2;
         
-        [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:pointermargin];
-        [self centerx:x y:y];
+        if(self.touchstart)
+        {
+            NSInteger deltax = xa - xb;
+            NSInteger deltay = ya - yb;
+            NSInteger deltax_2 = deltax / 2.0;
+            NSInteger deltay_2 = deltay / 2.0;
+            NSInteger x = xa - deltax_2;
+            NSInteger y = ya - deltay_2;
+            
+            [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:pointermargin];
+            [self centerx:x y:y];
+        }
     }
 }
 
