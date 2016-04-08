@@ -28,7 +28,7 @@ static NSUInteger const dustsize = 11;
     maxx = screenwidth;
     speedcounter = 0;
     speed = arc4random_uniform(maxspeed) + minspeed;
-    direction = arc4random_uniform(3.0) - 1.0;
+    direction = arc4random_uniform(3) - 1.0;
     spatial = [[gareadust alloc] init:x y:y size:dustsize];
  
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];

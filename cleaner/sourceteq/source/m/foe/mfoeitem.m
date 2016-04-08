@@ -69,7 +69,7 @@ static NSUInteger const minspeed = 0;
             
             if(!shouldchangedirection)
             {
-                direction = arc4random_uniform(3.0) - 1.0;
+                direction = arc4random_uniform(3) - 1.0;
             }
             
             if(x < foeminx)
