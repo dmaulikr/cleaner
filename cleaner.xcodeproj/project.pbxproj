@@ -24,7 +24,6 @@
 		DA38C91A1CB57F9400E554CF /* mgamehub.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9191CB57F9400E554CF /* mgamehub.m */; };
 		DA38C9211CB585A500E554CF /* ghublife.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9201CB585A500E554CF /* ghublife.m */; };
 		DA38C9241CB585B000E554CF /* ghublifebar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9231CB585B000E554CF /* ghublifebar.m */; };
-		DA38C9271CB585C200E554CF /* ghubscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9261CB585C200E554CF /* ghubscore.m */; };
 		DA38C92A1CB5873300E554CF /* mgamehublife.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C9291CB5873300E554CF /* mgamehublife.m */; };
 		DA38C92D1CB5874500E554CF /* mgamehubscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38C92C1CB5874500E554CF /* mgamehubscore.m */; };
 		DA38C92F1CB5A0C100E554CF /* hub.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA38C92E1CB5A0C100E554CF /* hub.xcassets */; };
@@ -148,8 +147,6 @@
 		DA38C9201CB585A500E554CF /* ghublife.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ghublife.m; sourceTree = "<group>"; };
 		DA38C9221CB585B000E554CF /* ghublifebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ghublifebar.h; sourceTree = "<group>"; };
 		DA38C9231CB585B000E554CF /* ghublifebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ghublifebar.m; sourceTree = "<group>"; };
-		DA38C9251CB585C200E554CF /* ghubscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ghubscore.h; sourceTree = "<group>"; };
-		DA38C9261CB585C200E554CF /* ghubscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ghubscore.m; sourceTree = "<group>"; };
 		DA38C9281CB5873300E554CF /* mgamehublife.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgamehublife.h; sourceTree = "<group>"; };
 		DA38C9291CB5873300E554CF /* mgamehublife.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mgamehublife.m; sourceTree = "<group>"; };
 		DA38C92B1CB5874500E554CF /* mgamehubscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgamehubscore.h; sourceTree = "<group>"; };
@@ -417,8 +414,6 @@
 				DA38C9201CB585A500E554CF /* ghublife.m */,
 				DA38C9221CB585B000E554CF /* ghublifebar.h */,
 				DA38C9231CB585B000E554CF /* ghublifebar.m */,
-				DA38C9251CB585C200E554CF /* ghubscore.h */,
-				DA38C9261CB585C200E554CF /* ghubscore.m */,
 			);
 			path = hub;
 			sourceTree = "<group>";
@@ -1140,7 +1135,6 @@
 				DA38C91A1CB57F9400E554CF /* mgamehub.m in Sources */,
 				DA37B51D1CAEEDE400015AC2 /* mareadust.m in Sources */,
 				DAFCC2AC1CB70CB200448EF7 /* mbuildingitemalpha.m in Sources */,
-				DA38C9271CB585C200E554CF /* ghubscore.m in Sources */,
 				DA38D6741CB2B4E600A02B82 /* mgunwaves.m in Sources */,
 				DA9387101CAC9078006B3213 /* vstorecell.m in Sources */,
 				DA9386D51CAC9078006B3213 /* uicolor+uicolormain.m in Sources */,

@@ -9,4 +9,3 @@
 #import "gtext.h"
 #import "ghublife.h"
 #import "ghublifebar.h"
-#import "ghubscore.h"

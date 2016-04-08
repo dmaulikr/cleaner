@@ -10,6 +10,8 @@
     return self;
 }
 
+#pragma mark notified
+
 #pragma mark public
 
 -(void)addscoretext:(NSString*)text x:(NSInteger)x y:(NSInteger)y
