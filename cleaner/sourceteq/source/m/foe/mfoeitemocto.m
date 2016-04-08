@@ -1,7 +1,5 @@
 #import "mfoeitemocto.h"
 
-static NSInteger const width = 15;
-static NSInteger const height = 15;
 static NSInteger const life = 15;
 static NSInteger const damage = 5;
 static NSUInteger const score = 8;

@@ -30,13 +30,6 @@
     projection = GLKMatrix4Translate(projection, dx, dy, 0);
 }
 
--(void)vector:(NSUInteger)index x:(NSInteger)x y:(NSInteger)y
-{
-    [dataposition appendData:[NSMutableData dataWithLength:sizeof(GLKVector2)]];
-    
-    
-}
-
 -(void)render
 {
     NSInteger minx = self.x;

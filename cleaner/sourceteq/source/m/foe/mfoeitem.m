@@ -134,10 +134,10 @@ static NSUInteger const minspeed = 0;
 
 #pragma mark public
 
--(void)spatial:(NSArray<NSNumber*>*)textures width:(NSInteger)newwidth height:(NSInteger)newheight
+-(void)spatial:(NSArray<NSNumber*>*)textures
 {
     y = - newheight;
-    width = newwidth;
+    width = foewidth;
     height = newheight;
     width_2 = width / 2.0;
     height_2 = height / 2.0;

@@ -7,7 +7,6 @@ static GLsizei const vectorcorners = 6;
 
 -(void)draw;
 -(void)updateprojection:(NSInteger)dx dy:(NSInteger)dy;
--(void)vector:(NSUInteger)index x:(NSInteger)x y:(NSInteger)y;
 -(void)render;
 -(void)movetotop;
 

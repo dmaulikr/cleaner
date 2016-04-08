@@ -6,7 +6,7 @@
 @interface mfoeitem:NSObject
 
 -(instancetype)init:(mfoe*)model x:(NSInteger)newx;
--(void)spatial:(NSArray<NSNumber*>*)textures width:(NSInteger)newwidth height:(NSInteger)newheight;
+-(void)spatial:(NSArray<NSNumber*>*)textures;
 
 @property(weak, nonatomic)mfoe *model;
 @property(nonatomic)NSInteger life;

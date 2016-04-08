@@ -1,5 +1,13 @@
 #import "appdel.h"
 
+static NSInteger const foewidth = 16;
+static NSInteger const foeheight = 16;
+extern NSInteger foewidth_2;
+extern NSInteger foeheight_2;
+extern NSInteger foeminx;
+extern NSInteger foemaxx;
+extern NSInteger foemaxy;
+
 @class mfoeitem;
 @class meffect;
 @class mtext;
