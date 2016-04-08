@@ -62,7 +62,7 @@ static NSInteger const shootspeed = 20;
         spatialfingera.x = x;
         spatialfingera.y = y;
         
-//        [spatialfingera updateprojection:dx dy:dy];
+        [spatialfingera updateprojection:dx dy:dy];
         [spatialfingera makeactive];
     }
     
@@ -79,7 +79,7 @@ static NSInteger const shootspeed = 20;
         spatialfingerb.x = x;
         spatialfingerb.y = y;
         
-//        [spatialfingerb updateprojection:dx dy:dy];
+        [spatialfingerb updateprojection:dx dy:dy];
         [spatialfingerb makeactive];
     }
     
@@ -107,14 +107,24 @@ static NSInteger const shootspeed = 20;
     NSInteger initialy = y - gunsize_2;
     NSInteger finalx = x + gunsize_2;
     NSInteger finaly = y + gunsize_2;
+    NSInteger dx = initialx - spatialpointer.x;
+    NSInteger dy = initialy - spatialpointer.y;
     
-    [spatialpointer updateprojection:x dy:y];
-    [spatialtarget updateprojection:x dy:y];
+    spatialpointer.x = initialx;
+    spatialpointer.y = initialy;
+    spatialtarget.x = initialx;
+    spatialtarget.y = initialy;
+    
+    [spatialpointer updateprojection:dx dy:dy];
+    [spatialtarget updateprojection:dx dy:dy];
     
     if(shootcurrent > shootspeed)
     {
         shootcurrent = 0;
         mgunshot *gunshot = [[mgunshot alloc] init:caliber minx:initialx miny:initialy maxx:finalx maxy:finaly];
+        [spatialtarget movetotop];
+        [spatialpointer movetotop];
+        
         [[NSNotificationCenter defaultCenter] postNotificationName:notification_gunshot object:nil userInfo:gunshot];
     }
 }
