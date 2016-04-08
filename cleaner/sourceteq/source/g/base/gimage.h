@@ -4,9 +4,9 @@
 @interface gimage:NSObject
 
 -(instancetype)init:(NSArray<NSNumber*>*)assets;
+-(void)makerandom;
+-(void)animationspeed:(NSInteger)newspeed;
 
 @property(nonatomic)GLuint current;
-@property(nonatomic)NSUInteger speed;
-@property(nonatomic)BOOL random;
 
 @end

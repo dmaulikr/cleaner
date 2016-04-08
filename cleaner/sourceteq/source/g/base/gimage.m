@@ -1,21 +1,21 @@
 #import "gimage.h"
 #import "appdel.h"
 
-static NSUInteger const imagespeed = 30;
-
 @implementation gimage
 {
     __weak NSArray<NSNumber*> *textures;
     CGFloat counter;
+    NSInteger speed;
     NSInteger currentindex;
-    NSUInteger speedcounter;
+    NSInteger speedcounter;
+    BOOL random;
 }
 
 -(instancetype)init:(NSArray<NSNumber*>*)assets
 {
     self = [super init];
-    self.speed = imagespeed;
-    self.random = NO;
+    speed = 0;
+    random = NO;
     textures = assets;
     speedcounter = 0;
     
@@ -35,7 +35,7 @@ static NSUInteger const imagespeed = 30;
 {
     speedcounter++;
     
-    if(speedcounter >= self.speed)
+    if(speedcounter > speed)
     {
         speedcounter = 0;
         [self nextimage];
@@ -69,7 +69,7 @@ static NSUInteger const imagespeed = 30;
 
 -(void)nextimage
 {
-    if(self.random)
+    if(random)
     {
         currentindex = arc4random_uniform(counter);
     }
@@ -84,6 +84,18 @@ static NSUInteger const imagespeed = 30;
     }
     
     [self loadcurrent];
+}
+
+#pragma mark public
+
+-(void)makerandom
+{
+    random = YES;
+}
+
+-(void)animationspeed:(NSInteger)newspeed
+{
+    speed = newspeed;
 }
 
 @end
