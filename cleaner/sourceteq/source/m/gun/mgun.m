@@ -8,6 +8,10 @@ static NSInteger const shootspeed = 20;
 
 @implementation mgun
 {
+    ggun *spatialtarget;
+    ggun *spatialpointer;
+    ggun *spatialfingera;
+    ggun *spatialfingerb;
     NSInteger gunsize_2;
     NSInteger fingersize_2;
     NSInteger shootcurrent;
@@ -19,10 +23,10 @@ static NSInteger const shootspeed = 20;
     gunsize_2 = gunsize / 2.0;
     fingersize_2 = fingersize / 2.0;
     shootcurrent = 0;
-    self.spatialpointer = [[ggun alloc] init:[mtextures singleton].textures_gunpointer width:gunsize height:gunsize];
-    self.spatialtarget = [[ggun alloc] init:[mtextures singleton].textures_guntarget width:gunsize height:gunsize];
-    self.spatialfingera = [[ggun alloc] init:[mtextures singleton].textures_gunfinger width:fingersize height:fingersize];
-    self.spatialfingerb = [[ggun alloc] init:[mtextures singleton].textures_gunfinger width:fingersize height:fingersize];
+    spatialpointer = [[ggun alloc] init:[mtextures singleton].textures_gunpointer width:gunsize height:gunsize];
+    spatialtarget = [[ggun alloc] init:[mtextures singleton].textures_guntarget width:gunsize height:gunsize];
+    spatialfingera = [[ggun alloc] init:[mtextures singleton].textures_gunfinger width:fingersize height:fingersize];
+    spatialfingerb = [[ggun alloc] init:[mtextures singleton].textures_gunfinger width:fingersize height:fingersize];
     self.modelwaves = [[mgunwaves alloc] init];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
@@ -50,16 +54,24 @@ static NSInteger const shootspeed = 20;
     {
         NSInteger x = xa - fingersize_2;
         NSInteger y = ya - fingersize_2;
+        NSInteger dx = spatialfingera.x - x;
+        NSInteger dy = spatialfingera.y - y;
+        spatialfingera.x = x;
+        spatialfingera.y = y;
         
-        [self.spatialfingera updateprojection:x dy:y];
+        [spatialfingera updateprojection:dx dy:dy];
     }
     
     if(self.touchend)
     {
         NSInteger x = xb - fingersize_2;
         NSInteger y = yb - fingersize_2;
+        NSInteger dx = spatialfingerb.x - x;
+        NSInteger dy = spatialfingerb.y - y;
+        spatialfingerb.x = x;
+        spatialfingerb.y = y;
         
-        [self.spatialfingerb updateprojection:x dy:y];
+        [spatialfingerb updateprojection:dx dy:dy];
     }
     
     if(self.touchstart && self.touchend)
@@ -87,8 +99,8 @@ static NSInteger const shootspeed = 20;
     NSInteger finalx = x + gunsize_2;
     NSInteger finaly = y + gunsize_2;
     
-    [self.spatialpointer updateprojection:x dy:y];
-    [self.spatialtarget updateprojection:x dy:y];
+    [spatialpointer updateprojection:x dy:y];
+    [spatialtarget updateprojection:x dy:y];
     
     if(shootcurrent > shootspeed)
     {
@@ -103,10 +115,10 @@ static NSInteger const shootspeed = 20;
 -(void)clearloop
 {
     shootcurrent = 0;
-    [self.spatialtarget deactivate];
-    [self.spatialpointer deactivate];
-    [self.spatialfingera deactivate];
-    [self.spatialfingerb deactivate];
+    [spatialtarget deactivate];
+    [spatialpointer deactivate];
+    [spatialfingera deactivate];
+    [spatialfingerb deactivate];
     [self.modelwaves clear];
 }
 
