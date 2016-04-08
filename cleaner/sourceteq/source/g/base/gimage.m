@@ -1,6 +1,8 @@
 #import "gimage.h"
 #import "appdel.h"
 
+static NSInteger const defaultspeed = 30;
+
 @implementation gimage
 {
     __weak NSArray<NSNumber*> *textures;
@@ -14,7 +16,7 @@
 -(instancetype)init:(NSArray<NSNumber*>*)assets
 {
     self = [super init];
-    speed = 0;
+    speed = defaultspeed;
     random = NO;
     textures = assets;
     speedcounter = 0;
