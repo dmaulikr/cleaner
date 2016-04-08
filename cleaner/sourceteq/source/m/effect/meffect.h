@@ -3,8 +3,8 @@
 static NSInteger const effectshotsize = 40;
 static NSInteger const effectsmokesize = 50;
 
-extern NSInteger effectshot_pos;
-extern NSInteger effectsmoke_pos;
+extern NSInteger effectshotpos;
+extern NSInteger effectsmokepos;
 
 @class meffectitem;
 

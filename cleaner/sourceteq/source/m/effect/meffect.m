@@ -1,7 +1,7 @@
 #import "meffect.h"
 
-NSInteger effectshot_pos;
-NSInteger effectsmoke_pos;
+NSInteger effectshotpos;
+NSInteger effectsmokepos;
 
 @implementation meffect
 
@@ -9,8 +9,8 @@ NSInteger effectsmoke_pos;
 {
     self = [super init];
     self.items = [NSMutableArray array];
-    effectshot_pos = effectshotsize / -2.0;
-    effectsmoke_pos = effectsmokesize / -2.0;
+    effectshotpos = effectshotsize / -2.0;
+    effectsmokepos = effectsmokesize / -2.0;
     
     return self;
 }
