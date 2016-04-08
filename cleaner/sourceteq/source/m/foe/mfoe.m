@@ -26,7 +26,7 @@ NSInteger foemaxy;
     foewidth_2 = foewidth / 2.0;
     foeheight_2 = foeheight_2 / 2.0;
     foeminx = foewidth;
-    foemaxx = foewidth + foewidth;
+    foemaxx = screenwidth - (foewidth + foewidth);
     foemaxy = screenheight;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];

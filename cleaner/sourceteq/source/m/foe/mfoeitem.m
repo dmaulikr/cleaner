@@ -10,13 +10,6 @@ static NSUInteger const minspeed = 0;
     gfoe *spatial;
     NSInteger x;
     NSInteger y;
-    NSInteger minx;
-    NSInteger maxx;
-    NSInteger maxy;
-    NSInteger width;
-    NSInteger width_2;
-    NSInteger height;
-    NSInteger height_2;
     NSInteger direction;
     NSUInteger speed;
     NSUInteger speedcounter;
@@ -45,11 +38,11 @@ static NSUInteger const minspeed = 0;
     
     if(x < gunshot.maxx)
     {
-       if(x + width > gunshot.minx)
+       if(x + foewidth > gunshot.minx)
        {
            if(y < gunshot.maxy)
            {
-               if(y + height > gunshot.miny)
+               if(y + foeheight_2 > gunshot.miny)
                {
                    [self gunshot:gunshot.caliber];
                }
@@ -66,7 +59,7 @@ static NSUInteger const minspeed = 0;
     {
         y++;
         
-        if(y > maxy)
+        if(y > foemaxy)
         {
             [self die:NO];
         }
@@ -79,19 +72,16 @@ static NSUInteger const minspeed = 0;
                 direction = arc4random_uniform(3.0) - 1.0;
             }
             
-            x += direction;
-            
-            if(x < minx)
+            if(x < foeminx)
             {
-                x = minx;
                 direction = 1;
             }
-            else if(x > maxx)
+            else if(x > foemaxx)
             {
-                x = maxx;
                 direction = -1;
             }
             
+            x += direction;
             speedcounter = 0;
             [spatial updateprojection:direction dy:+1];
         }
@@ -102,8 +92,8 @@ static NSUInteger const minspeed = 0;
 
 -(void)gunshot:(NSInteger)caliber
 {
-    CGFloat centerx = x + width_2;
-    CGFloat centery = y + height_2;
+    CGFloat centerx = x + foewidth_2;
+    CGFloat centery = y + foeheight_2;
     
     [self.model.modeleffect shotatx:centerx y:centery];
     self.life -= caliber;
@@ -136,15 +126,8 @@ static NSUInteger const minspeed = 0;
 
 -(void)spatial:(NSArray<NSNumber*>*)textures
 {
-    y = - newheight;
-    width = foewidth;
-    height = newheight;
-    width_2 = width / 2.0;
-    height_2 = height / 2.0;
-    minx = newwidth;
-    maxx = screenwidth - (newwidth + newwidth);
-    maxy = screenheight;
-    spatial = [[gfoe alloc] init:textures x:x y:y width:width height:height];
+    y = -foeheight;
+    spatial = [[gfoe alloc] init:textures x:x y:y];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedgunshot:) name:notification_gunshot object:nil];

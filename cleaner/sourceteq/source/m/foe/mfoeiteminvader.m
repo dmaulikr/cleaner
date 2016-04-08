@@ -13,7 +13,7 @@ static NSUInteger const score = 5;
     self.damage = damage;
     self.score = score;
     
-    [self spatial:[mtextures singleton].textures_foeinvader width:width height:height];
+    [self spatial:[mtextures singleton].textures_foeinvader];
     
     return self;
 }
