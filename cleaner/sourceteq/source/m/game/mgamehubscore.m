@@ -9,7 +9,7 @@ static NSUInteger const scorey = 12;
     BOOL shouldprint;
 }
 
--(instancetype)init
+-(instancetype)init:(mtext*)model
 {
     self = [super init];
     score = 0;
@@ -44,7 +44,7 @@ static NSUInteger const scorey = 12;
     NSString *totalstring = [[tools singleton] numbertostring:@(score)];
     
     [self.modeltext remove];
-    self.modeltext = [self.model.modeltext addtotalscore:totalstring x:scorex y:scorey];
+    self.modeltext = [self.model addtotalscore:totalstring x:scorex y:scorey];
 }
 
 -(void)addscore:(NSUInteger)addscore
