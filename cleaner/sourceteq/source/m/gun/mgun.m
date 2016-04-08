@@ -59,11 +59,13 @@ static NSInteger const shootspeed = 20;
         NSInteger y = ya - fingersize_2;
         NSInteger dx = x - spatialfingera.x;
         NSInteger dy = y - spatialfingera.y;
+        
         spatialfingera.x = x;
         spatialfingera.y = y;
         
         [spatialfingera updateprojection:dx dy:dy];
         [spatialfingera makeactive];
+        [spatialfingera movetotop];
     }
     
     if(self.touchend)
@@ -76,11 +78,13 @@ static NSInteger const shootspeed = 20;
         NSInteger y = yb - fingersize_2;
         NSInteger dx = x - spatialfingerb.x;
         NSInteger dy = y - spatialfingerb.y;
+        
         spatialfingerb.x = x;
         spatialfingerb.y = y;
         
         [spatialfingerb updateprojection:dx dy:dy];
         [spatialfingerb makeactive];
+        [spatialfingerb movetotop];
     }
     
     if(self.touchstart && self.touchend)
@@ -138,6 +142,7 @@ static NSInteger const shootspeed = 20;
     [spatialpointer deactivate];
     [spatialfingera deactivate];
     [spatialfingerb deactivate];
+    
     [self.modelwaves clear];
 }
 
