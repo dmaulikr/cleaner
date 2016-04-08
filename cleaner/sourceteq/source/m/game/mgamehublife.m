@@ -13,8 +13,8 @@ static NSInteger const lifemarginvr = 5;
 {
     NSInteger maxlifewidth;
     NSInteger maxlifeheight;
-    NSInteger lifex;
-    NSInteger lifey;
+    NSInteger barlifex;
+    NSInteger barlifey;
     BOOL changed;
 }
 
@@ -24,8 +24,8 @@ static NSInteger const lifemarginvr = 5;
     self.amount = maxlife;
     maxlifeheight = lifeheight - (lifemarginvr + lifemarginvr);
     maxlifewidth = lifewidth - (lifemarginleft + lifemarginright);
-    lifex = lifex + lifemarginleft;
-    lifey = lifey + lifemarginvr;
+    barlifex = lifex + lifemarginleft;
+    barlifey = lifey + lifemarginvr;
     changed = YES;
     
     self.spatiallife = [[ghublife alloc] init:lifex y:lifey width:lifewidth height:lifeheight];
@@ -57,7 +57,7 @@ static NSInteger const lifemarginvr = 5;
     CGFloat percent = self.amount / (CGFloat)maxlife;
     NSInteger lifewidth = percent * maxlifewidth;
     
-    self.spatiallifebar = [[ghublifebar alloc] init:lifex y:lifey width:lifewidth height:maxlifeheight];
+    self.spatiallifebar = [[ghublifebar alloc] init:barlifex y:barlifey width:lifewidth height:maxlifeheight];
 }
 
 @end

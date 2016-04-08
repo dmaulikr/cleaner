@@ -1,5 +1,7 @@
 #import "vgame.h"
 
+GLKBaseEffect *effect;
+
 @implementation vgame
 
 -(instancetype)init:(cgame*)controller
@@ -30,15 +32,9 @@
 
 -(void)starteffect
 {
-    self.effect = [[GLKBaseEffect alloc] init];
-    self.effect.transform.projectionMatrix = [self.controller.model.modelarea asprojectionmatrix];
-    self.effect.texture2d0.target = GLKTextureTarget2D;
-}
-
--(void)notifydraw
-{
-    mgameeffect *modeleffect = [[mgameeffect alloc] init:self.effect];
-    [[NSNotificationCenter defaultCenter] postNotificationName:notification_glkdraw object:nil userInfo:modeleffect];
+    effect = [[GLKBaseEffect alloc] init];
+    effect.transform.projectionMatrix = projectionbase;
+    effect.texture2d0.target = GLKTextureTarget2D;
 }
 
 #pragma mark public
@@ -71,7 +67,7 @@
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glEnableVertexAttribArray(GLKVertexAttribPosition);
     
-    [self notifydraw];
+    [[NSNotificationCenter defaultCenter] postNotificationName:notification_glkdraw object:nil];
     
     glDisableVertexAttribArray(GLKVertexAttribPosition);
     glDisable(GL_BLEND);
