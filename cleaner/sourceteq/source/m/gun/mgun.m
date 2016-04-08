@@ -122,6 +122,9 @@ static NSInteger const shootspeed = 20;
     [spatialpointer updateprojection:dx dy:dy];
     [spatialtarget updateprojection:dx dy:dy];
     
+    [spatialpointer makeactive];
+    [spatialtarget makeactive];
+    
     if(shootcurrent > shootspeed)
     {
         shootcurrent = 0;
