@@ -1,6 +1,6 @@
 #import "sbuilding.h"
 
-static NSInteger const interitem = 150;
+static NSInteger const interitem = 100;
 
 typedef NS_ENUM(NSUInteger, building_kind)
 {

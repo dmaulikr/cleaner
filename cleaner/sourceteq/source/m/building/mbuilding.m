@@ -2,9 +2,10 @@
 
 @implementation mbuilding
 
--(instancetype)init:(mtextures*)modeltextures area:(marea*)modelarea
+-(instancetype)init
 {
     self = [super init];
+    self.items = [NSMutableArray array];
     self.strategy = [[sbuilding alloc] init:self];
     
     return self;
