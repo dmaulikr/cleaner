@@ -18,7 +18,9 @@ static CGFloat const alpha = 0.6;
     self.width = width;
     self.height = height;
     
-    rotationmatrix = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(realx, realy, 0), GLKMatrix4MakeRotation(rotation, 0, 0, 1));
+    GLKMatrix4 transmat = GLKMatrix4MakeTranslation(realx, realy, 0);
+    GLKMatrix4 rotmat = GLKMatrix4MakeRotation(rotation, 0, 0, 1);
+    rotationmatrix = GLKMatrix4Multiply(transmat, rotmat);
     [self render];
     
     return self;

@@ -19,6 +19,7 @@
     self.y = height / -2.0;
     self.width = width;
     self.height = height;
+    
     [self render];
     
     return self;
