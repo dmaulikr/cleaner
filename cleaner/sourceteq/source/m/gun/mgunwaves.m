@@ -116,7 +116,7 @@ static NSInteger const wavemargin = 12;
             
             if(i > wavemargin)
             {
-                if(fabs(auxx - centerx) >= pointermargin)
+                if(fabs(auxx - centerx) > pointermargin)
                 {
                     draw = YES;
                     wy = -randomwave_2;
@@ -131,7 +131,7 @@ static NSInteger const wavemargin = 12;
             
             if(i > wavemargin)
             {
-                if(fabs(auxy - centery) >= pointermargin)
+                if(fabs(auxy - centery) > pointermargin)
                 {
                     draw = YES;
                     wx = -randomwave_2;
