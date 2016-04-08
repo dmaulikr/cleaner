@@ -1,6 +1,5 @@
 #import "meffectitemshot.h"
 
-static NSInteger const shotsize = 40;
 static NSInteger const shotttl = 25;
 
 @implementation meffectitemshot

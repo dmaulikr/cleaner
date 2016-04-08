@@ -1,6 +1,5 @@
 #import "meffectitemsmoke.h"
 
-static NSInteger const smokesize = 50;
 static NSInteger const smokettl = 60;
 
 @implementation meffectitemsmoke

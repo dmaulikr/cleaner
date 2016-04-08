@@ -59,7 +59,7 @@ NSUInteger lengthvector4;
                                           weakself.modeltext = [[mtext alloc] init];
                                           weakself.modelbuilding = [[mbuilding alloc] init];
                                           weakself.modelhub = [[mgamehub alloc] init:weakself.modeltext];
-                                          weakself.modelfoe = [[mfoe alloc] init:weakself.modeleffect text:weakself.modeltext scorer:weakself.modelhub.score];
+                                          weakself.modelfoe = [[mfoe alloc] init:weakself.modeleffect text:weakself.modeltext scorer:weakself.modelhub.score life:weakself.modelhub.life];
                                           weakself.modelgun = [[mgun alloc] init];
                                           
                                           dispatch_async(dispatch_get_main_queue(),

@@ -6,13 +6,13 @@
     GLKMatrix4 rotationmatrix;
 }
 
--(instancetype)init:(NSArray<NSNumber*>*)textures realx:(NSInteger)realx realy:(NSInteger)realy width:(NSInteger)width height:(NSInteger)height rotation:(CGFloat)rotation
+-(instancetype)init:(NSArray<NSNumber*>*)textures realx:(NSInteger)realx realy:(NSInteger)realy size:(NSInteger)size pos:(NSInteger)pos rotation:(CGFloat)rotation
 {
     self = [super init:textures];
-    self.x = width / -2.0;
-    self.y = height / -2.0;
-    self.width = width;
-    self.height = height;
+    self.x = pos;
+    self.y = pos;
+    self.width = size;
+    self.height = size;
     
     GLKMatrix4 transmat = GLKMatrix4MakeTranslation(realx, realy, 0);
     GLKMatrix4 rotmat = GLKMatrix4MakeRotation(rotation, 0, 0, 1);
