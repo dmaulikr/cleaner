@@ -103,13 +103,9 @@ static NSInteger const wavemargin = 12;
     
     total_margin = total - wavemargin;
     
-    for(NSInteger i = 0; i < total_margin; i++)
+    if(horizontal)
     {
-        CGFloat randomwave_2 = arc4random_uniform(maxwavelong) + minwavelong;
-        CGFloat randomwave = randomwave_2 + randomwave_2;
-        BOOL draw = NO;
-        
-        if(horizontal)
+        for(NSInteger i = 0; i < total_margin; i++)
         {
             auxx += waveshorteditor;
             auxy += deltaothereditor;
@@ -118,13 +114,22 @@ static NSInteger const wavemargin = 12;
             {
                 if(fabs(auxx - centerx) > pointermargin)
                 {
-                    draw = YES;
+                    CGFloat randomwave_2 = arc4random_uniform(maxwavelong) + minwavelong;
+                    CGFloat randomwave = randomwave_2 + randomwave_2;
                     wy = -randomwave_2;
                     wheight = randomwave;
+                    
+                    ggunwaves *wave = [[ggunwaves alloc] init:angle x:wx y:wy width:wwidth height:wheight realx:auxx realy:auxy];
+                    [items addObject:wave];
                 }
             }
+            
+            auxx += interitemeditor;
         }
-        else
+    }
+    else
+    {
+        for(NSInteger i = 0; i < total_margin; i++)
         {
             auxx += deltaothereditor;
             auxy += waveshorteditor;
@@ -133,25 +138,16 @@ static NSInteger const wavemargin = 12;
             {
                 if(fabs(auxy - centery) > pointermargin)
                 {
-                    draw = YES;
+                    CGFloat randomwave_2 = arc4random_uniform(maxwavelong) + minwavelong;
+                    CGFloat randomwave = randomwave_2 + randomwave_2;
                     wx = -randomwave_2;
                     wwidth = randomwave;
+                    
+                    ggunwaves *wave = [[ggunwaves alloc] init:angle x:wx y:wy width:wwidth height:wheight realx:auxx realy:auxy];
+                    [items addObject:wave];
                 }
             }
-        }
-        
-        if(draw)
-        {
-            ggunwaves *wave = [[ggunwaves alloc] init:angle x:wx y:wy width:wwidth height:wheight realx:auxx realy:auxy];
-            [items addObject:wave];
-        }
-        
-        if(horizontal)
-        {
-            auxx += interitemeditor;
-        }
-        else
-        {
+            
             auxy += interitemeditor;
         }
     }
