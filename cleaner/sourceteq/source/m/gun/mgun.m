@@ -15,6 +15,7 @@ static NSInteger const shootspeed = 20;
     ggun *spatialfingerb;
     NSInteger gunsize_2;
     NSInteger fingersize_2;
+    NSInteger pointermargin;
     NSInteger shootcurrent;
 }
 
@@ -23,6 +24,7 @@ static NSInteger const shootspeed = 20;
     self = [super init];
     gunsize_2 = gunsize / 2.0;
     fingersize_2 = fingersize / 2.0;
+    pointermargin = gunsize_2 - deltamargin;
     shootcurrent = 0;
     spatialpointer = [[ggun alloc] init:[mtextures singleton].textures_gunpointer width:gunsize height:gunsize];
     spatialtarget = [[ggun alloc] init:[mtextures singleton].textures_guntarget width:gunsize height:gunsize];
@@ -89,14 +91,14 @@ static NSInteger const shootspeed = 20;
     
     if(self.touchstart && self.touchend)
     {
-        CGFloat deltax = xa - xb;
-        CGFloat deltay = ya - yb;
-        CGFloat deltax_2 = deltax / 2.0;
-        CGFloat deltay_2 = deltay / 2.0;
-        NSInteger x = roundf(xa - deltax_2);
-        NSInteger y = roundf(ya - deltay_2);
+        NSInteger deltax = xa - xb;
+        NSInteger deltay = ya - yb;
+        NSInteger deltax_2 = deltax / 2.0;
+        NSInteger deltay_2 = deltay / 2.0;
+        NSInteger x = xa - deltax_2;
+        NSInteger y = ya - deltay_2;
         
-        [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:gunsize_2 - deltamargin];
+        [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:pointermargin];
         [self centerx:x y:y];
     }
 }
