@@ -79,10 +79,7 @@ static NSUInteger const dustsize = 11;
         }
         else
         {
-            NSInteger dx = spatial.x - x;
-            NSInteger dy = spatial.y - y;
-            
-            [spatial updateprojection:dx dy:dy];
+            [spatial updateprojection:direction dy:-1];
         }
     }
 }

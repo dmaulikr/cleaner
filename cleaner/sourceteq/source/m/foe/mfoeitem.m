@@ -2,11 +2,12 @@
 #import "appdel.h"
 
 static CGFloat const ratiochangedirection = 30;
-static NSUInteger const maxspeed = 6;
+static NSUInteger const maxspeed = 10;
 static NSUInteger const minspeed = 0;
 
 @implementation mfoeitem
 {
+    gfoe *spatial;
     NSInteger x;
     NSInteger y;
     NSInteger minx;
@@ -92,10 +93,7 @@ static NSUInteger const minspeed = 0;
             }
             
             speedcounter = 0;
-            NSInteger dx = x - self.spatial.x;
-            NSInteger dy = y - self.spatial.y;
-            
-            [self.spatial updateprojection:dx dy:dy];
+            [spatial updateprojection:direction dy:+1];
         }
     }
 }
@@ -146,7 +144,7 @@ static NSUInteger const minspeed = 0;
     minx = newwidth;
     maxx = screenwidth - (newwidth + newwidth);
     maxy = screenheight;
-    self.spatial = [[gfoe alloc] init:textures x:x y:y width:width height:height];
+    spatial = [[gfoe alloc] init:textures x:x y:y width:width height:height];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedgunshot:) name:notification_gunshot object:nil];
