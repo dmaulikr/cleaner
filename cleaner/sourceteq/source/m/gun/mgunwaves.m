@@ -4,6 +4,7 @@ static NSInteger const maxwavelong = 10;
 static NSInteger const minwavelong = 1;
 static NSInteger const waveshort = 2;
 static NSInteger const interitem = 2;
+static NSInteger const wavemargin = 12;
 
 @implementation mgunwaves
 {
@@ -41,6 +42,7 @@ static NSInteger const interitem = 2;
     CGFloat wheight = 0;
     CGFloat deltaothereditor;
     NSInteger total;
+    NSInteger total_margin;
     NSInteger editorhr = 0;
     NSInteger editorvr = 0;
     NSInteger interitemeditor;
@@ -99,7 +101,9 @@ static NSInteger const interitem = 2;
         wwidth = waveshort;
     }
     
-    for(NSInteger i = 0; i < total; i++)
+    total_margin = total - wavemargin;
+    
+    for(NSInteger i = 0; i < total_margin; i++)
     {
         CGFloat randomwave_2 = arc4random_uniform(maxwavelong) + minwavelong;
         CGFloat randomwave = randomwave_2 + randomwave_2;
@@ -110,11 +114,14 @@ static NSInteger const interitem = 2;
             auxx += waveshorteditor;
             auxy += deltaothereditor;
             
-            if(fabs(auxx - centerx) >= pointermargin)
+            if(i > wavemargin)
             {
-                draw = YES;
-                wy = -randomwave_2;
-                wheight = randomwave;
+                if(fabs(auxx - centerx) >= pointermargin)
+                {
+                    draw = YES;
+                    wy = -randomwave_2;
+                    wheight = randomwave;
+                }
             }
         }
         else
@@ -122,11 +129,14 @@ static NSInteger const interitem = 2;
             auxx += deltaothereditor;
             auxy += waveshorteditor;
             
-            if(fabs(auxy - centery) >= pointermargin)
+            if(i > wavemargin)
             {
-                draw = YES;
-                wx = -randomwave_2;
-                wwidth = randomwave;
+                if(fabs(auxy - centery) >= pointermargin)
+                {
+                    draw = YES;
+                    wx = -randomwave_2;
+                    wwidth = randomwave;
+                }
             }
         }
         
