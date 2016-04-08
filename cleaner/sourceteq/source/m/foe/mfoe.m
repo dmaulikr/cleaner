@@ -13,12 +13,13 @@ NSInteger foemaxy;
     sfoe *strategy;
 }
 
--(instancetype)init:(meffect*)modeleffect text:(mtext*)modeltext scorer:(mgamehubscore*)modelscorer
+-(instancetype)init:(meffect*)modeleffect text:(mtext*)modeltext scorer:(mgamehubscore*)modelscorer life:(mgamehublife*)modellife
 {
     self = [super init];
     self.modeleffect = modeleffect;
     self.modeltext = modeltext;
     self.modelscorer = modelscorer;
+    self.modellife = modellife;
     self.items = [NSMutableArray array];
     strategy = [[sfoe alloc] init:self];
     

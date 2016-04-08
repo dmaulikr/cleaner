@@ -15,12 +15,13 @@ extern NSInteger foemaxy;
 
 @interface mfoe:NSObject
 
--(instancetype)init:(meffect*)modeleffect text:(mtext*)modeltext scorer:(mgamehubscore*)modelscorer;
+-(instancetype)init:(meffect*)modeleffect text:(mtext*)modeltext scorer:(mgamehubscore*)modelscorer life:(mgamehublife*)modellife;
 -(void)addfoe;
 
 @property(weak, nonatomic)meffect *modeleffect;
 @property(weak, nonatomic)mtext *modeltext;
 @property(weak, nonatomic)mgamehubscore *modelscorer;
+@property(weak, nonatomic)mgamehublife *modellife;
 @property(strong, nonatomic)NSMutableArray<mfoeitem*> *items;
 
 @end
