@@ -5,6 +5,7 @@ static NSInteger const fingersize = 120;
 static NSInteger const caliber = 5;
 static NSInteger const deltamargin = 5;
 static NSInteger const shootspeed = 20;
+static NSInteger const wavesmaxttl = 3;
 
 @implementation mgun
 {
@@ -17,6 +18,11 @@ static NSInteger const shootspeed = 20;
     NSInteger fingersize_2;
     NSInteger pointermargin;
     NSInteger shootcurrent;
+    NSInteger xa;
+    NSInteger ya;
+    NSInteger xb;
+    NSInteger yb;
+    NSInteger wavesttl;
 }
 
 -(instancetype)init
@@ -26,6 +32,7 @@ static NSInteger const shootspeed = 20;
     fingersize_2 = fingersize / 2.0;
     pointermargin = gunsize_2 - deltamargin;
     shootcurrent = 0;
+    wavesttl = 0;
     spatialpointer = [[ggun alloc] init:[mtextures singleton].textures_gunpointer width:gunsize height:gunsize];
     spatialtarget = [[ggun alloc] init:[mtextures singleton].textures_guntarget width:gunsize height:gunsize];
     spatialfingera = [[ggun alloc] init:[mtextures singleton].textures_gunfinger width:fingersize height:fingersize];
@@ -46,11 +53,6 @@ static NSInteger const shootspeed = 20;
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
-    CGFloat xa = 0;
-    CGFloat ya = 0;
-    CGFloat xb = 0;
-    CGFloat yb = 0;
-    
     if(self.touchstart)
     {
         CGPoint pointstart = [self.touchstart locationInView:hub];
@@ -88,17 +90,26 @@ static NSInteger const shootspeed = 20;
         [spatialfingerb makeactive];
         [spatialfingerb movetotop];
         
-        if(self.touchstart)
+        if(wavesttl)
         {
-            NSInteger deltax = xa - xb;
-            NSInteger deltay = ya - yb;
-            NSInteger deltax_2 = deltax / 2.0;
-            NSInteger deltay_2 = deltay / 2.0;
-            NSInteger x = xa - deltax_2;
-            NSInteger y = ya - deltay_2;
+            wavesttl--;
+        }
+        else
+        {
+            wavesttl = wavesmaxttl;
             
-            [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:pointermargin];
-            [self centerx:x y:y];
+            if(self.touchstart)
+            {
+                NSInteger deltax = xa - xb;
+                NSInteger deltay = ya - yb;
+                NSInteger deltax_2 = deltax / 2.0;
+                NSInteger deltay_2 = deltay / 2.0;
+                NSInteger x = xa - deltax_2;
+                NSInteger y = ya - deltay_2;
+                
+                [self.modelwaves restart:xa inity:ya centerx:x centery:y finalx:xb finaly:yb pointermargin:pointermargin];
+                [self centerx:x y:y];
+            }
         }
     }
 }
@@ -142,6 +153,7 @@ static NSInteger const shootspeed = 20;
 
 -(void)clearloop
 {
+    wavesttl = 0;
     shootcurrent = 0;
     [spatialtarget deactivate];
     [spatialpointer deactivate];
