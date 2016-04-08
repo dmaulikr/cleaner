@@ -43,7 +43,7 @@
         NSRange range = NSMakeRange(i, 1);
         NSString *character = [string substringWithRange:range];
         mtextitemglyph *model = [self glyphwith:character at:sumx y:y size:size];
-        sumx += model.width + padding;
+        sumx += model.spatial.width + padding;
         
         [self.glyphs addObject:model];
     }

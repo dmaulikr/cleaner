@@ -10,6 +10,5 @@
 
 @property(weak, nonatomic)meffect *model;
 @property(strong, nonatomic)geffect *spatial;
-@property(strong, nonatomic)NSArray *assets;
 
 @end

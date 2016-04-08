@@ -71,7 +71,6 @@ static NSInteger const glyphheight = 50;
             
         case 9:
             
-            
             textures = [mtextures singleton].textures_text9;
             break;
     }

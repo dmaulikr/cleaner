@@ -6,8 +6,6 @@
 -(instancetype)init:(NSString*)character x:(NSInteger)x y:(NSInteger)y size:(CGFloat)size
 {
     self = [super init];
-    self.x = x;
-    self.y = y;
     
     return self;
 }

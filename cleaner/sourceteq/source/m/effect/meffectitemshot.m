@@ -8,7 +8,7 @@ static NSInteger const shotttl = 25;
 -(instancetype)init:(meffect*)model x:(NSInteger)x y:(NSInteger)y
 {
     self = [super init:model x:x y:y];
-    CGFloat rotation = arc4random_uniform(360.0) * M_PI / 180.0;
+    CGFloat rotation = arc4random_uniform(360.0) * degtorad;
     self.spatial = [[geffect alloc] init:[mtextures singleton].textures_effectshot realx:x realy:y width:shotsize height:shotsize rotation:rotation];
     [self starttimer:shotttl];
     

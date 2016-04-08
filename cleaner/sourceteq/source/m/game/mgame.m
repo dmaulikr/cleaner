@@ -2,6 +2,7 @@
 
 GLKVector2 *pointertexture;
 GLKMatrix4 rotationclear;
+CGFloat degtorad;
 NSUInteger lengthvector2;
 NSUInteger lengthvector4;
 
@@ -38,6 +39,7 @@ NSUInteger lengthvector4;
                        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                                       ^
                                       {
+                                          degtorad = M_PI / 180.0;
                                           lengthvector2 = vectorcorners * sizeof(GLKVector2);
                                           lengthvector4 = vectorcorners * sizeof(GLKVector4);
                                           

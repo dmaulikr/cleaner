@@ -6,6 +6,7 @@ extern GLKEffectPropertyTexture *globaltexture;
 extern GLKEffectPropertyTransform *globaltransform;
 extern GLKMatrix4 projectionbase;
 extern GLKMatrix4 rotationclear;
+extern CGFloat degtorad;
 extern NSInteger screenwidth;
 extern NSInteger screenheight;
 extern NSUInteger lengthvector2;
