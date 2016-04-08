@@ -1,13 +1,10 @@
 #import "appdel.h"
 
-@class mtextitem;
+@class mtext;
 
 @interface mgamehubscore:NSObject
 
--(instancetype)init:(mtext*)model;
+-(instancetype)init:(mtext*)newmodel;
 -(void)addscore:(NSUInteger)addscore;
-
-@property(weak, nonatomic)mtext *model;
-@property(weak, nonatomic)mtextitem *modeltext;
 
 @end

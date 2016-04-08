@@ -18,10 +18,9 @@
     [self.items addObject:model];
 }
 
--(mtextitem*)addtotalscore:(NSString*)text x:(NSInteger)x y:(NSInteger)y
+-(mtextitem*)totalscore:(NSString*)text x:(NSInteger)x y:(NSInteger)y
 {
     mtextitemtotal *model = [[mtextitemtotal alloc] init:self text:text x:x y:y];
-    [self.items addObject:model];
     
     return model;
 }

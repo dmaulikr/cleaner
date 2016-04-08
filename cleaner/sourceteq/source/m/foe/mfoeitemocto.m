@@ -14,6 +14,7 @@ static NSUInteger const score = 8;
     self.life = life;
     self.damage = damage;
     self.score = score;
+    
     [self spatial:[mtextures singleton].textures_foeocto width:width height:height];
     
     return self;

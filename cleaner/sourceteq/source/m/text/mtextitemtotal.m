@@ -15,4 +15,9 @@ static CGFloat const sizetotal = 0.45;
     return self;
 }
 
+-(void)dealloc
+{
+    NSLog(@"dealloc total score");
+}
+
 @end

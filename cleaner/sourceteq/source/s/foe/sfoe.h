@@ -5,9 +5,7 @@
 
 @interface sfoe:NSObject
 
--(instancetype)init:(mfoe*)model;
+-(instancetype)init:(mfoe*)newmodel;
 -(mfoeitem*)foe;
-
-@property(weak, nonatomic)mfoe *model;
 
 @end

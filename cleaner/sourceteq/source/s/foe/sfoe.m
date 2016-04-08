@@ -12,13 +12,15 @@ static NSInteger const minusmaxx = 100;
 
 @implementation sfoe
 {
+    
+    __weak mfoe *model;
     CGFloat maxx;
 }
 
--(instancetype)init:(mfoe*)model
+-(instancetype)init:(mfoe*)newmodel
 {
     self = [super init];
-    self.model = model;
+    model = newmodel;
     maxx = screenwidth - minusmaxx;
     
     return self;
@@ -51,7 +53,7 @@ static NSInteger const minusmaxx = 100;
             break;
     }
     
-    foe = [[class alloc] init:self.model x:x];
+    foe = [[class alloc] init:model x:x];
     
     return foe;
 }

@@ -11,6 +11,8 @@ static NSInteger const lifemarginvr = 5;
 
 @implementation mgamehublife
 {
+    ghublife *spatiallife;
+    ghublifebar *spatiallifebar;
     NSInteger maxlifewidth;
     NSInteger maxlifeheight;
     NSInteger barlifex;
@@ -28,7 +30,7 @@ static NSInteger const lifemarginvr = 5;
     barlifey = lifey + lifemarginvr;
     changed = YES;
     
-    self.spatiallife = [[ghublife alloc] init:lifex y:lifey width:lifewidth height:lifeheight];
+    spatiallife = [[ghublife alloc] init:lifex y:lifey width:lifewidth height:lifeheight];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
@@ -57,7 +59,7 @@ static NSInteger const lifemarginvr = 5;
     CGFloat percent = self.amount / (CGFloat)maxlife;
     NSInteger lifewidth = percent * maxlifewidth;
     
-    self.spatiallifebar = [[ghublifebar alloc] init:barlifex y:barlifey width:lifewidth height:maxlifeheight];
+    spatiallifebar = [[ghublifebar alloc] init:barlifex y:barlifey width:lifewidth height:maxlifeheight];
 }
 
 @end

@@ -4,12 +4,6 @@ static CGFloat const maxspeed = 10;
 static NSUInteger const minspeed = 1;
 static NSUInteger const dustsize = 11;
 
-@interface mareadustitem ()
-
-@property(weak, nonatomic)mareadust *model;
-
-@end
-
 @implementation mareadustitem
 {
     gareadust *spatial;

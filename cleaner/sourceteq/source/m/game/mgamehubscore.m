@@ -5,15 +5,18 @@ static NSUInteger const scorey = 12;
 
 @implementation mgamehubscore
 {
+    __weak mtext *model;
+    mtextitem *modeltext;
     NSUInteger score;
     BOOL shouldprint;
 }
 
--(instancetype)init:(mtext*)model
+-(instancetype)init:(mtext*)newmodel
 {
     self = [super init];
     score = 0;
     shouldprint = YES;
+    model = newmodel;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
@@ -43,8 +46,7 @@ static NSUInteger const scorey = 12;
 {
     NSString *totalstring = [[tools singleton] numbertostring:@(score)];
     
-    [self.modeltext remove];
-    self.modeltext = [self.model addtotalscore:totalstring x:scorex y:scorey];
+    modeltext = [model totalscore:totalstring x:scorex y:scorey];
 }
 
 #pragma mark public
