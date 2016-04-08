@@ -1,6 +1,6 @@
 #import "mgamehublife.h"
 
-static NSInteger const maxlife = 100;
+static NSInteger const maxlife = 1000;
 static NSInteger const lifex = 10;
 static NSInteger const lifey = 10;
 static NSInteger const lifewidth = 200;
@@ -13,6 +13,9 @@ static NSInteger const lifemarginvr = 5;
 {
     NSInteger maxlifewidth;
     NSInteger maxlifeheight;
+    NSInteger lifex;
+    NSInteger lifey;
+    BOOL changed;
 }
 
 -(instancetype)init
@@ -21,21 +24,11 @@ static NSInteger const lifemarginvr = 5;
     self.amount = maxlife;
     maxlifeheight = lifeheight - (lifemarginvr + lifemarginvr);
     maxlifewidth = lifewidth - (lifemarginleft + lifemarginright);
+    lifex = lifex + lifemarginleft;
+    lifey = lifey + lifemarginvr;
+    changed = YES;
     
-    self.spatiallife = [[ghublife alloc] init];
-    self.spatiallife.x = lifex;
-    self.spatiallife.y = lifey;
-    self.spatiallife.width = lifewidth;
-    self.spatiallife.height = lifeheight;
-    [self.spatiallife rasterize];
-    
-    self.spatiallifebar = [[ghublifebar alloc] init];
-    self.spatiallifebar.x = lifex + lifemarginleft;
-    self.spatiallifebar.y = lifey + lifemarginvr;
-    self.spatiallifebar.height = maxlifeheight;
-    [self reposlife];
-    [self.spatiallifebar rasterize];
-    
+    self.spatiallife = [[ghublife alloc] init:lifex y:lifey width:lifewidth height:lifeheight];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
     return self;
@@ -50,10 +43,10 @@ static NSInteger const lifemarginvr = 5;
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
-    if(self.changed)
+    if(changed)
     {
-        self.changed = NO;
-        [self.spatiallifebar render];
+        changed = NO;
+        [self reposlife];
     }
 }
 
@@ -63,7 +56,8 @@ static NSInteger const lifemarginvr = 5;
 {
     CGFloat percent = self.amount / (CGFloat)maxlife;
     NSInteger lifewidth = percent * maxlifewidth;
-    self.spatiallifebar.width = lifewidth;
+    
+    self.spatiallifebar = [[ghublifebar alloc] init:lifex y:lifey width:lifewidth height:maxlifeheight];
 }
 
 @end
