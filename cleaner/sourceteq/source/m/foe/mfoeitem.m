@@ -124,7 +124,7 @@ static NSUInteger const minspeed = 0;
 {
     if(points)
     {
-//        [self.model addscore:self.score];
+        [self.model.modelscorer addscore:self.score];
     }
     else
     {

@@ -47,6 +47,8 @@ static NSUInteger const scorey = 12;
     self.modeltext = [self.model addtotalscore:totalstring x:scorex y:scorey];
 }
 
+#pragma mark public
+
 -(void)addscore:(NSUInteger)addscore
 {
     score += addscore;

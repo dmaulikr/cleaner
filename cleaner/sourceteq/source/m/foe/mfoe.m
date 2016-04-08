@@ -8,11 +8,12 @@ static CGFloat const ratioaddfoe = 5;
     sfoe *strategy;
 }
 
--(instancetype)init:(meffect*)modeleffect text:(mtext*)modeltext;
+-(instancetype)init:(meffect*)modeleffect text:(mtext*)modeltext scorer:(mgamehubscore*)modelscorer
 {
     self = [super init];
     self.modeleffect = modeleffect;
     self.modeltext = modeltext;
+    self.modelscorer = modelscorer;
     self.items = [NSMutableArray array];
     strategy = [[sfoe alloc] init:self];
     
