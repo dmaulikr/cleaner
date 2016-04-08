@@ -17,10 +17,10 @@
 
 -(void)draw
 {
-    effect.transform.projectionMatrix = projection;
+    globaltransform.projectionMatrix = projection;
     glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, 0, pointerposition);
     
-    [effect prepareToDraw];
+    [globaleffect prepareToDraw];
     
     glDrawArrays(GL_TRIANGLES, 0, vectorcorners);
 }

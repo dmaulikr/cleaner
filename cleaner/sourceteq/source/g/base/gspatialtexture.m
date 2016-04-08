@@ -26,9 +26,9 @@
 
 -(void)draw
 {
-    effect.texture2d0.enabled = YES;
-    effect.texture2d0.envMode = GLKTextureEnvModeReplace;
-    effect.texture2d0.name = image.current;
+    globaltexture.enabled = YES;
+    globaltexture.envMode = GLKTextureEnvModeReplace;
+    globaltexture.name = image.current;
     glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
     glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, pointertexture);
     

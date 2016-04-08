@@ -19,8 +19,8 @@
 
 -(void)draw
 {
-    effect.texture2d0.enabled = NO;
-    effect.constantColor = color;
+    globaltexture.enabled = NO;
+    globaleffect.constantColor = color;
     
     [super draw];
 }

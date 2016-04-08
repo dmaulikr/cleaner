@@ -34,11 +34,11 @@
 
 -(void)draw
 {
-    effect.transform.modelviewMatrix = rotationmatrix;
+    globaltransform.modelviewMatrix = rotationmatrix;
     
     [super draw];
     
-    effect.transform.modelviewMatrix = rotationclear;
+    globaltransform.modelviewMatrix = rotationclear;
 }
 
 @end

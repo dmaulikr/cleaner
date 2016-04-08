@@ -41,7 +41,7 @@
 
 -(void)draw
 {
-    effect.texture2d0.enabled = NO;
+    globaltexture.enabled = NO;
     glEnableVertexAttribArray(GLKVertexAttribColor);
     glVertexAttribPointer(GLKVertexAttribColor, 4, GL_FLOAT, GL_FALSE, 0, pointercolor);
     
