@@ -119,11 +119,7 @@ static NSInteger const maxttl = 3;
                 auxx += waveshorteditor;
                 auxy += deltaothereditor;
                 
-                if(fabs(auxx - centerx) < pointermargin)
-                {
-                    draw = NO;
-                }
-                else
+                if(fabs(auxx - centerx) >= pointermargin)
                 {
                     draw = YES;
                     wy = -randomwave_2;
@@ -135,11 +131,7 @@ static NSInteger const maxttl = 3;
                 auxx += deltaothereditor;
                 auxy += waveshorteditor;
                 
-                if(fabs(auxy - centery) < pointermargin)
-                {
-                    draw = NO;
-                }
-                else
+                if(fabs(auxy - centery) >= pointermargin)
                 {
                     draw = YES;
                     wx = -randomwave_2;

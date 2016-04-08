@@ -1,7 +1,6 @@
 #import "mfoe.h"
 
-//static CGFloat const ratioaddfoe = 50;
-static CGFloat const ratioaddfoe = 2;
+static CGFloat const ratioaddfoe = 50;
 
 NSInteger foewidth_2;
 NSInteger foeheight_2;
