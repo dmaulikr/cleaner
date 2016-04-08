@@ -6,7 +6,8 @@ extern GLKMatrix4 projectionbase;
 extern GLKMatrix4 rotationclear;
 extern NSInteger screenwidth;
 extern NSInteger screenheight;
-extern NSUInteger lengthdatapos;
+extern NSUInteger lengthvector2;
+extern NSUInteger lengthvector4;
 
 @class cgameloader;
 @class marea;
