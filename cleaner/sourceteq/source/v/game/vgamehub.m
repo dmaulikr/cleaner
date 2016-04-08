@@ -23,7 +23,7 @@ static NSUInteger const pausesize = 40;
     [self setMultipleTouchEnabled:YES];
     self.controller = controller;
     self.modelgun = controller.model.modelgun;
-    self.modelgun.hub = self;
+    [self.modelgun receivehub:self];
     
     UIButton *button = [[UIButton alloc] init];
     [button setClipsToBounds:YES];

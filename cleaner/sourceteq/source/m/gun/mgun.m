@@ -8,6 +8,7 @@ static NSInteger const shootspeed = 20;
 
 @implementation mgun
 {
+    __weak vgamehub *hub;
     ggun *spatialtarget;
     ggun *spatialpointer;
     ggun *spatialfingera;
@@ -43,15 +44,17 @@ static NSInteger const shootspeed = 20;
 
 -(void)notifiedglkmove:(NSNotification*)notification
 {
-    CGPoint pointstart = [self.touchstart locationInView:self.hub];
-    CGPoint pointend = [self.touchend locationInView:self.hub];
-    CGFloat xa = pointstart.x;
-    CGFloat ya = pointstart.y;
-    CGFloat xb = pointend.x;
-    CGFloat yb = pointend.y;
+    CGFloat xa = 0;
+    CGFloat ya = 0;
+    CGFloat xb = 0;
+    CGFloat yb = 0;
     
     if(self.touchstart)
     {
+        CGPoint pointstart = [self.touchstart locationInView:hub];
+        xa = pointstart.x;
+        ya = pointstart.y;
+        
         NSInteger x = xa - fingersize_2;
         NSInteger y = ya - fingersize_2;
         NSInteger dx = spatialfingera.x - x;
@@ -60,10 +63,15 @@ static NSInteger const shootspeed = 20;
         spatialfingera.y = y;
         
         [spatialfingera updateprojection:dx dy:dy];
+        [spatialfingera makeactive];
     }
     
     if(self.touchend)
     {
+        CGPoint pointend = [self.touchend locationInView:hub];
+        xb = pointend.x;
+        yb = pointend.y;
+        
         NSInteger x = xb - fingersize_2;
         NSInteger y = yb - fingersize_2;
         NSInteger dx = spatialfingerb.x - x;
@@ -72,6 +80,7 @@ static NSInteger const shootspeed = 20;
         spatialfingerb.y = y;
         
         [spatialfingerb updateprojection:dx dy:dy];
+        [spatialfingerb makeactive];
     }
     
     if(self.touchstart && self.touchend)
@@ -120,6 +129,11 @@ static NSInteger const shootspeed = 20;
     [spatialfingera deactivate];
     [spatialfingerb deactivate];
     [self.modelwaves clear];
+}
+
+-(void)receivehub:(vgamehub*)newhub
+{
+    hub = newhub;
 }
 
 @end

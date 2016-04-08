@@ -36,7 +36,7 @@
 
 -(void)draw
 {
-    if(active)
+    if(1)
     {
         [super draw];
     }
