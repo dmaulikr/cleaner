@@ -68,7 +68,14 @@ static NSInteger const lifemarginvr = 5;
 
 -(void)receivedamage:(NSInteger)amount
 {
+    self.amount -= amount;
     
+    if(self.amount < 1)
+    {
+#warning "game over"
+    }
+    
+    changed = YES;
 }
 
 @end

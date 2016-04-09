@@ -116,9 +116,7 @@ static NSUInteger const minspeed = 0;
     }
     else
     {
-        self.model.modellife
-        
-//        NSLog(@"foe achieved");
+        [self.model.modellife receivedamage:self.damage];
     }
     
     [self.model.items removeObject:self];
