@@ -9,6 +9,7 @@ static NSInteger const wavemargin = 12;
 @implementation mgunwaves
 {
     NSMutableArray<ggunwaves*> *items;
+    NSMutableArray<NSNumber*> *wavelengths;
     NSInteger wavelength;
     NSInteger waveshort_2;
 }
@@ -18,6 +19,7 @@ static NSInteger const wavemargin = 12;
     self = [super init];
     wavelength = waveshort + interitem;
     waveshort_2 = waveshort / 2;
+    wavelengths = [NSMutableArray array];
     
     return self;
 }
@@ -138,8 +140,8 @@ static NSInteger const wavemargin = 12;
             {
                 if(fabs(auxy - centery) > pointermargin)
                 {
-                    CGFloat randomwave_2 = arc4random_uniform(maxwavelong) + minwavelong;
-                    CGFloat randomwave = randomwave_2 + randomwave_2;
+                    NSInteger randomwave_2 = arc4random_uniform(maxwavelong) + minwavelong;
+                    NSInteger randomwave = randomwave_2 + randomwave_2;
                     wx = -randomwave_2;
                     wwidth = randomwave;
                     
