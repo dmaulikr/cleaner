@@ -64,4 +64,11 @@ static NSInteger const lifemarginvr = 5;
     spatiallifebar = [[ghublifebar alloc] init:barlifex y:barlifey width:lifewidth height:maxlifeheight];
 }
 
+#pragma mark public
+
+-(void)receivedamage:(NSInteger)amount
+{
+    
+}
+
 @end
