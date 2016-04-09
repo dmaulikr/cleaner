@@ -116,6 +116,8 @@ static NSUInteger const minspeed = 0;
     }
     else
     {
+        self.model.modellife
+        
 //        NSLog(@"foe achieved");
     }
     
