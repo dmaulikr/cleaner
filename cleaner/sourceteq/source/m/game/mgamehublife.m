@@ -73,6 +73,7 @@ static NSInteger const lifemarginvr = 5;
     if(self.amount < 1)
     {
 #warning "game over"
+#warning "do notification"
     }
     
     changed = YES;
