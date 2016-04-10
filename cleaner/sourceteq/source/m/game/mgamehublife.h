@@ -1,10 +1,12 @@
 #import "appdel.h"
 
+@class cgame;
+
 @interface mgamehublife:NSObject
 
--(instancetype)init:(mgamehub*)
 -(void)receivedamage:(NSInteger)amount;
 
+@property(weak, nonatomic)cgame *controller;
 @property(nonatomic)NSInteger amount;
 
 @end

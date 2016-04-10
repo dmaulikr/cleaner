@@ -17,6 +17,7 @@ static NSUInteger const framespersecond = 60;
 {
     self = [super init];
     self.model = model;
+    model.modelhub.life.controller = self;
     
     return self;
 }
