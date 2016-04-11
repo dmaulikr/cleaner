@@ -20,4 +20,14 @@ static CGFloat const alpha = 1;
     return self;
 }
 
+#pragma mark -
+#pragma mark spatial
+
+-(void)draw
+{
+    [super draw];
+    
+    [self movetotop];
+}
+
 @end
