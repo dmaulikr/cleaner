@@ -48,6 +48,16 @@ static NSUInteger const framespersecond = 60;
     [[cmain singleton].pages sectionhome:YES direction:UIPageViewControllerNavigationDirectionReverse];
 }
 
+-(void)gameover
+{
+    
+}
+
+-(void)gamefinished
+{
+    
+}
+
 #pragma mark -
 #pragma mark glk del
 
