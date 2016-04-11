@@ -1,13 +1,6 @@
-//
-//  meffectitembombing.h
-//  cleaner
-//
-//  Created by zero on 4/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "meffectitem.h"
 
-#import <Foundation/Foundation.h>
-
-@interface meffectitembombing : NSObject
+@interface meffectitembombing:meffectitem
 
 @end

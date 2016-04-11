@@ -3,6 +3,7 @@
 NSInteger effectshotpos;
 NSInteger effectsmokepos;
 NSInteger effectcrownpos;
+NSInteger effectbombingpos;
 
 @implementation meffect
 
@@ -13,6 +14,7 @@ NSInteger effectcrownpos;
     effectshotpos = effectshotsize / -2;
     effectsmokepos = effectsmokesize / -2;
     effectcrownpos = effectcrownsize / -2;
+    effectbombingpos = effectbombingsize / -2;
     
     return self;
 }
@@ -41,7 +43,7 @@ NSInteger effectcrownpos;
 
 -(void)bombingatx:(NSInteger)x y:(NSInteger)y
 {
-    meffectitembombin *effect = [[meffectitemshot alloc] init:self x:x y:y];
+    meffectitembombing *effect = [[meffectitembombing alloc] init:self x:x y:y];
     [self.items addObject:effect];
 }
 
