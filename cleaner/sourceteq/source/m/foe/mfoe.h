@@ -1,7 +1,7 @@
 #import "appdel.h"
 
-static NSInteger const foewidth = 16;
-static NSInteger const foeheight = 16;
+static NSInteger const foewidth = 24;
+static NSInteger const foeheight = 24;
 extern NSInteger foewidth_2;
 extern NSInteger foeheight_2;
 extern NSInteger foeminx;
