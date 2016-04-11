@@ -132,6 +132,12 @@
     [self.alltextures addObject:self.textures_text9];
 }
 
+-(void)load_trap
+{
+    self.textures_trapbomb = [self loadforassets:@[@"trap_bomb"] srgb:NO];
+    [self.alltextures addObject:self.textures_trapbomb];
+}
+
 #pragma mark public
 
 -(void)cleartextures
@@ -162,6 +168,7 @@
     [self load_effects];
     [self load_hub];
     [self load_text];
+    [self load_trap];
 }
 
 @end

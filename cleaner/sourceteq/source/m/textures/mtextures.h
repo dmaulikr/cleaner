@@ -28,5 +28,6 @@
 @property(strong, nonatomic)NSArray *textures_text7;
 @property(strong, nonatomic)NSArray *textures_text8;
 @property(strong, nonatomic)NSArray *textures_text9;
+@property(strong, nonatomic)NSArray *textures_trapbomb;
 
 @end

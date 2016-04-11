@@ -20,6 +20,7 @@ extern NSUInteger lengthvector4;
 @class meffect;
 @class mtext;
 @class mgamehub;
+@class mtrap;
 
 @interface mgame:NSObject
 
@@ -33,5 +34,6 @@ extern NSUInteger lengthvector4;
 @property(strong, nonatomic)meffect *modeleffect;
 @property(strong, nonatomic)mtext *modeltext;
 @property(strong, nonatomic)mgamehub *modelhub;
+@property(strong, nonatomic)mtrap *modeltrap;
 
 @end
