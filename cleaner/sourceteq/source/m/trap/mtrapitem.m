@@ -4,7 +4,7 @@
 static NSUInteger const maxspeed = 4;
 static NSUInteger const minspeed = 0;
 
-@implementation mfoeitem
+@implementation mtrapitem
 {
     gtrap *spatial;
     NSInteger x;
@@ -14,7 +14,7 @@ static NSUInteger const minspeed = 0;
     NSUInteger speedcounter;
 }
 
--(instancetype)init:(mfoe*)model x:(NSInteger)newx
+-(instancetype)init:(mtrap*)model x:(NSInteger)newx
 {
     self = [super init];
     self.model = model;
@@ -37,11 +37,11 @@ static NSUInteger const minspeed = 0;
     
     if(x < gunshot.maxx)
     {
-        if(x + foewidth > gunshot.minx)
+        if(x + trapwidth > gunshot.minx)
         {
             if(y < gunshot.maxy)
             {
-                if(y + foeheight > gunshot.miny)
+                if(y + trapheight > gunshot.miny)
                 {
                     [self gunshot:gunshot.caliber];
                 }
@@ -58,24 +58,17 @@ static NSUInteger const minspeed = 0;
     {
         y++;
         
-        if(y > foemaxy)
+        if(y > trapmaxy)
         {
             [self die:NO];
         }
         else
         {
-            NSUInteger shouldchangedirection = arc4random_uniform(ratiochangedirection);
-            
-            if(!shouldchangedirection)
-            {
-                direction = arc4random_uniform(3) - 1.0;
-            }
-            
-            if(x < foeminx)
+            if(x < trapminx)
             {
                 direction = 1;
             }
-            else if(x > foemaxx)
+            else if(x > trapmaxx)
             {
                 direction = -1;
             }
@@ -95,32 +88,10 @@ static NSUInteger const minspeed = 0;
     CGFloat centery = y + foeheight_2;
     
     [self.model.modeleffect shotatx:centerx y:centery];
-    self.life -= caliber;
-    
-    if(self.life < 1)
-    {
-        [self.model.modeleffect smokeatx:centerx y:centery];
-        [self die:YES];
-        
-        NSString *scoretext = [[tools singleton] numbertostring:@(self.score)];
-        [self.model.modeltext addscoretext:scoretext x:centerx y:y];
-    }
 }
 
 -(void)die:(BOOL)points
 {
-    if(points)
-    {
-        [self.model.modelscorer addscore:self.score];
-    }
-    else
-    {
-        CGFloat centerx = x + foewidth_2;
-        
-        [self.model.modeleffect crownat:centerx];
-        [self.model.modellife receivedamage:self.damage];
-    }
-    
     [self.model.items removeObject:self];
 }
 
@@ -129,7 +100,7 @@ static NSUInteger const minspeed = 0;
 -(void)spatial:(NSArray<NSNumber*>*)textures
 {
     y = -foeheight;
-    spatial = [[gfoe alloc] init:textures x:x y:y];
+    spatial = [[gtrap alloc] init:textures x:x y:y];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedgunshot:) name:notification_gunshot object:nil];

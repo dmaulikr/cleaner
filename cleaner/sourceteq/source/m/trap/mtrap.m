@@ -23,8 +23,8 @@ NSInteger trapmaxy;
     
     trapwidth_2 = trapwidth / 2;
     trapheight_2 = trapheight / 2;
-    trapminx = trapwidth;
-    trapmaxx = screenwidth - (trapwidth + trapwidth);
+    trapminx = 0;
+    trapmaxx = screenwidth - trapwidth;
     trapmaxy = screenheight;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];

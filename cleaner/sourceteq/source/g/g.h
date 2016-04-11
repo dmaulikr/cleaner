@@ -9,3 +9,4 @@
 #import "gtext.h"
 #import "ghublife.h"
 #import "ghublifebar.h"
+#import "gtrap.h"
