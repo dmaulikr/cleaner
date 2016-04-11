@@ -6,6 +6,7 @@ static NSInteger const effectcrownsize = 117;
 
 extern NSInteger effectshotpos;
 extern NSInteger effectsmokepos;
+extern NSInteger effectcrownpos;
 
 @class meffectitem;
 

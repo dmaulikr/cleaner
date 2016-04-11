@@ -2,6 +2,7 @@
 
 NSInteger effectshotpos;
 NSInteger effectsmokepos;
+NSInteger effectcrownpos;
 
 @implementation meffect
 
@@ -11,6 +12,7 @@ NSInteger effectsmokepos;
     self.items = [NSMutableArray array];
     effectshotpos = effectshotsize / -2;
     effectsmokepos = effectsmokesize / -2;
+    effectcrownpos = effectcrownsize / -2;
     
     return self;
 }
@@ -31,7 +33,9 @@ NSInteger effectsmokepos;
 
 -(void)crownat:(NSInteger)x
 {
-    meffectitemcrown *effect = [[meffectitemcrown alloc] init:self x:x y:screenheight - effectcrownsize];
+    NSInteger y = screenheight - effectcrownsize;
+    
+    meffectitemcrown *effect = [[meffectitemcrown alloc] init:self x:x y:y];
     [self.items addObject:effect];
 }
 
