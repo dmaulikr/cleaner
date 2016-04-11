@@ -100,6 +100,7 @@
 		DA9CCF8A1CB5E45300800880 /* mtextures.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9CCF891CB5E45300800880 /* mtextures.m */; };
 		DAA721921CBBEBDB00D75A3D /* meffectitemcrown.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA721911CBBEBDB00D75A3D /* meffectitemcrown.m */; };
 		DAA721941CBC195500D75A3D /* trap.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA721931CBC195500D75A3D /* trap.xcassets */; };
+		DAA721981CBC1A7900D75A3D /* mtrap.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA721971CBC1A7900D75A3D /* mtrap.m */; };
 		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
@@ -300,6 +301,8 @@
 		DAA721901CBBEBDB00D75A3D /* meffectitemcrown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meffectitemcrown.h; sourceTree = "<group>"; };
 		DAA721911CBBEBDB00D75A3D /* meffectitemcrown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = meffectitemcrown.m; sourceTree = "<group>"; };
 		DAA721931CBC195500D75A3D /* trap.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = trap.xcassets; sourceTree = "<group>"; };
+		DAA721961CBC1A7900D75A3D /* mtrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtrap.h; sourceTree = "<group>"; };
+		DAA721971CBC1A7900D75A3D /* mtrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtrap.m; sourceTree = "<group>"; };
 		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
@@ -688,6 +691,7 @@
 		DA9386681CAC9078006B3213 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DAA721951CBC1A5F00D75A3D /* trap */,
 				DA9CCF871CB5E44800800880 /* textures */,
 				DA22BEDC1CB42B6E00DDF53A /* text */,
 				DA38D67F1CB3201C00A02B82 /* effect */,
@@ -903,6 +907,15 @@
 				DA9CCF891CB5E45300800880 /* mtextures.m */,
 			);
 			path = textures;
+			sourceTree = "<group>";
+		};
+		DAA721951CBC1A5F00D75A3D /* trap */ = {
+			isa = PBXGroup;
+			children = (
+				DAA721961CBC1A7900D75A3D /* mtrap.h */,
+				DAA721971CBC1A7900D75A3D /* mtrap.m */,
+			);
+			path = trap;
 			sourceTree = "<group>";
 		};
 		DAB443971CAC9FB300D04286 /* area */ = {
@@ -1181,6 +1194,7 @@
 				DA9CCF861CB5C5DA00800880 /* mtextitemtotal.m in Sources */,
 				DA9387001CAC9078006B3213 /* mstorestatusnew.m in Sources */,
 				DA38D6851CB3204100A02B82 /* meffectitem.m in Sources */,
+				DAA721981CBC1A7900D75A3D /* mtrap.m in Sources */,
 				DA9386D21CAC9078006B3213 /* analytics.m in Sources */,
 				DA93870E1CAC9078006B3213 /* vstore.m in Sources */,
 				DA38D6881CB3205900A02B82 /* meffectitemshot.m in Sources */,
