@@ -1,6 +1,6 @@
 #import "mtrap.h"
 
-static CGFloat const ratioaddtrap = 60;
+static CGFloat const ratioaddtrap = 500;
 
 NSInteger trapwidth_2;
 NSInteger trapheight_2;

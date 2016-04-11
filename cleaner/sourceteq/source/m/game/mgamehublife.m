@@ -1,6 +1,6 @@
 #import "mgamehublife.h"
 
-static NSInteger const maxlife = 1000;
+static NSInteger const maxlife = 100;
 static NSInteger const lifex = 10;
 static NSInteger const lifey = 10;
 static NSInteger const lifewidth = 200;
