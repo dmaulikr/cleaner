@@ -1,7 +1,7 @@
 #import "appdel.h"
 
-static NSInteger const trapwidth = 14;
-static NSInteger const trapheight = 14;
+static NSInteger const trapwidth = 18;
+static NSInteger const trapheight = 18;
 extern NSInteger trapwidth_2;
 extern NSInteger trapheight_2;
 extern NSInteger trapminx;
