@@ -110,6 +110,7 @@
 		DAB4439A1CACA00E00D04286 /* marea.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB443991CACA00E00D04286 /* marea.m */; };
 		DAB4439D1CACA80700D04286 /* gspatialtexture.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4439C1CACA80700D04286 /* gspatialtexture.m */; };
 		DAB443A01CACA82100D04286 /* gspatialgradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB4439F1CACA82100D04286 /* gspatialgradient.m */; };
+		DAC3B7701CBC24F100C35C16 /* gtrap.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC3B76F1CBC24F100C35C16 /* gtrap.m */; };
 		DAE218CD1CAD7CC5007AE65C /* mcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE218CC1CAD7CC5007AE65C /* mcolor.m */; };
 		DAE218CF1CADF7B0007AE65C /* areacolors.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAE218CE1CADF7B0007AE65C /* areacolors.plist */; };
 		DAE218D51CAE0D12007AE65C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE218D41CAE0D12007AE65C /* Images.xcassets */; };
@@ -322,6 +323,8 @@
 		DAB4439E1CACA82100D04286 /* gspatialgradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gspatialgradient.h; sourceTree = "<group>"; };
 		DAB4439F1CACA82100D04286 /* gspatialgradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gspatialgradient.m; sourceTree = "<group>"; };
 		DAB7A05D1CAC8C210047A49E /* cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC3B76E1CBC24F100C35C16 /* gtrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gtrap.h; sourceTree = "<group>"; };
+		DAC3B76F1CBC24F100C35C16 /* gtrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gtrap.m; sourceTree = "<group>"; };
 		DAE218CB1CAD7CC5007AE65C /* mcolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcolor.h; sourceTree = "<group>"; };
 		DAE218CC1CAD7CC5007AE65C /* mcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcolor.m; sourceTree = "<group>"; };
 		DAE218CE1CADF7B0007AE65C /* areacolors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = areacolors.plist; sourceTree = "<group>"; };
@@ -638,6 +641,7 @@
 		DA93864A1CAC9078006B3213 /* g */ = {
 			isa = PBXGroup;
 			children = (
+				DAC3B76D1CBC24D900C35C16 /* trap */,
 				DA38C9171CB57F5C00E554CF /* hub */,
 				DA22BED81CB4258200DDF53A /* text */,
 				DA38D67A1CB31F4200A02B82 /* effect */,
@@ -983,6 +987,15 @@
 			path = cleaner;
 			sourceTree = "<group>";
 		};
+		DAC3B76D1CBC24D900C35C16 /* trap */ = {
+			isa = PBXGroup;
+			children = (
+				DAC3B76E1CBC24F100C35C16 /* gtrap.h */,
+				DAC3B76F1CBC24F100C35C16 /* gtrap.m */,
+			);
+			path = trap;
+			sourceTree = "<group>";
+		};
 		DAFCC2A31CB6FFF000448EF7 /* foe */ = {
 			isa = PBXGroup;
 			children = (
@@ -1165,6 +1178,7 @@
 				DA9386DA1CAC9078006B3213 /* cgame.m in Sources */,
 				DAA721A21CBC212100D75A3D /* strap.m in Sources */,
 				DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */,
+				DAC3B7701CBC24F100C35C16 /* gtrap.m in Sources */,
 				DA93870F1CAC9078006B3213 /* vstorebar.m in Sources */,
 				DA9386DE1CAC9078006B3213 /* cmain.m in Sources */,
 				DA9387051CAC9078006B3213 /* vgameloader.m in Sources */,

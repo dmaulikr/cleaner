@@ -3,11 +3,15 @@
 static CGFloat const ratioaddtrap = 600;
 
 @implementation mtrap
+{
+    strap *strategy;
+}
 
 -(instancetype)init
 {
     self = [super init];
     self.items = [NSMutableArray array];
+    strategy = [[strap alloc] init:self];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedglkmove:) name:notification_glkmove object:nil];
     
@@ -35,8 +39,8 @@ static CGFloat const ratioaddtrap = 600;
 
 -(void)addtrap
 {
-    mfoeitem *foe = [strategy foe];
-    [self.items addObject:foe];
+    mtrapitem *trap = [strategy trap];
+    [self.items addObject:trap];
 }
 
 @end

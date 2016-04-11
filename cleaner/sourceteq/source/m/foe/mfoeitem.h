@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
 
-@class gfoe;
 @class mfoe;
 
 @interface mfoeitem:NSObject
