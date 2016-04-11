@@ -1,6 +1,6 @@
 #import "meffectitemcrown.h"
 
-static NSInteger const crownttl = 20;
+static NSInteger const crownttl = 40;
 
 @implementation meffectitemcrown
 
