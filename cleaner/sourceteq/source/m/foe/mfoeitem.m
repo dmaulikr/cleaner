@@ -2,7 +2,7 @@
 #import "appdel.h"
 
 static CGFloat const ratiochangedirection = 30;
-static NSUInteger const maxspeed = 10;
+static NSUInteger const maxspeed = 5;
 static NSUInteger const minspeed = 0;
 
 @implementation mfoeitem
@@ -83,7 +83,7 @@ static NSUInteger const minspeed = 0;
             
             x += direction;
             speedcounter = 0;
-            [spatial updateprojection:direction dy:+1];
+            [spatial updateprojection:direction dy:1];
         }
     }
 }

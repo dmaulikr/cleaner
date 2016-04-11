@@ -1,7 +1,7 @@
 #import "mtrapitem.h"
 #import "appdel.h"
 
-static NSUInteger const maxspeed = 4;
+static NSUInteger const maxspeed = 10;
 static NSUInteger const minspeed = 0;
 
 @implementation mtrapitem
@@ -9,7 +9,6 @@ static NSUInteger const minspeed = 0;
     gtrap *spatial;
     NSInteger x;
     NSInteger y;
-    NSInteger direction;
     NSUInteger speed;
     NSUInteger speedcounter;
 }
@@ -64,18 +63,8 @@ static NSUInteger const minspeed = 0;
         }
         else
         {
-            if(x < trapminx)
-            {
-                direction = 1;
-            }
-            else if(x > trapmaxx)
-            {
-                direction = -1;
-            }
-            
-            x += direction;
             speedcounter = 0;
-            [spatial updateprojection:direction dy:+1];
+            [spatial updateprojection:0 dy:1];
         }
     }
 }
