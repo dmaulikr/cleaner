@@ -3,7 +3,7 @@
 static NSInteger const effectshotsize = 40;
 static NSInteger const effectsmokesize = 50;
 static NSInteger const effectcrownsize = 175;
-static NSInteger const effectbombingsize = 80;
+static NSInteger const effectbombingsize = 90;
 
 extern NSInteger effectshotpos;
 extern NSInteger effectsmokepos;
