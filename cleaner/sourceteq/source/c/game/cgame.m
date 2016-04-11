@@ -50,12 +50,12 @@ static NSUInteger const framespersecond = 60;
 
 -(void)gameover
 {
-    
+    [self setPaused:YES];
 }
 
 -(void)gamefinished
 {
-    
+    [self setPaused:YES];
 }
 
 #pragma mark -
