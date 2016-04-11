@@ -31,7 +31,8 @@ NSInteger effectsmokepos;
 
 -(void)crownat:(NSInteger)x
 {
-    
+    meffectitemcrown *effect = [[meffectitemcrown alloc] init:self x:x y:screenheight - effectcrownsize];
+    [self.items addObject:effect];
 }
 
 @end

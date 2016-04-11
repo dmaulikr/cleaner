@@ -30,6 +30,7 @@
 #import "meffect.h"
 #import "meffectitemshot.h"
 #import "meffectitemsmoke.h"
+#import "meffectitemcrown.h"
 #import "mtext.h"
 #import "mtextitemscore.h"
 #import "mtextitemtotal.h"

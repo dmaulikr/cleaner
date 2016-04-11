@@ -2,6 +2,7 @@
 
 static NSInteger const effectshotsize = 40;
 static NSInteger const effectsmokesize = 50;
+static NSInteger const effectcrownsize = 117;
 
 extern NSInteger effectshotpos;
 extern NSInteger effectsmokepos;

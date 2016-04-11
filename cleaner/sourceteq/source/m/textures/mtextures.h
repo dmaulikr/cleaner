@@ -16,6 +16,7 @@
 @property(strong, nonatomic)NSArray *textures_gunfinger;
 @property(strong, nonatomic)NSArray *textures_effectshot;
 @property(strong, nonatomic)NSArray *textures_effectsmoke;
+@property(strong, nonatomic)NSArray *textures_effectcrown;
 @property(strong, nonatomic)NSArray *textures_hublife;
 @property(strong, nonatomic)NSArray *textures_text0;
 @property(strong, nonatomic)NSArray *textures_text1;
