@@ -101,6 +101,8 @@
 		DAA721921CBBEBDB00D75A3D /* meffectitemcrown.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA721911CBBEBDB00D75A3D /* meffectitemcrown.m */; };
 		DAA721941CBC195500D75A3D /* trap.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA721931CBC195500D75A3D /* trap.xcassets */; };
 		DAA721981CBC1A7900D75A3D /* mtrap.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA721971CBC1A7900D75A3D /* mtrap.m */; };
+		DAA7219B1CBC1BC600D75A3D /* mtrapitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA7219A1CBC1BC600D75A3D /* mtrapitem.m */; };
+		DAA7219E1CBC1BE500D75A3D /* mtrapitembomb.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA7219D1CBC1BE500D75A3D /* mtrapitembomb.m */; };
 		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
@@ -303,6 +305,10 @@
 		DAA721931CBC195500D75A3D /* trap.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = trap.xcassets; sourceTree = "<group>"; };
 		DAA721961CBC1A7900D75A3D /* mtrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtrap.h; sourceTree = "<group>"; };
 		DAA721971CBC1A7900D75A3D /* mtrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtrap.m; sourceTree = "<group>"; };
+		DAA721991CBC1BC600D75A3D /* mtrapitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtrapitem.h; sourceTree = "<group>"; };
+		DAA7219A1CBC1BC600D75A3D /* mtrapitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtrapitem.m; sourceTree = "<group>"; };
+		DAA7219C1CBC1BE500D75A3D /* mtrapitembomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtrapitembomb.h; sourceTree = "<group>"; };
+		DAA7219D1CBC1BE500D75A3D /* mtrapitembomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtrapitembomb.m; sourceTree = "<group>"; };
 		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
@@ -914,6 +920,10 @@
 			children = (
 				DAA721961CBC1A7900D75A3D /* mtrap.h */,
 				DAA721971CBC1A7900D75A3D /* mtrap.m */,
+				DAA721991CBC1BC600D75A3D /* mtrapitem.h */,
+				DAA7219A1CBC1BC600D75A3D /* mtrapitem.m */,
+				DAA7219C1CBC1BE500D75A3D /* mtrapitembomb.h */,
+				DAA7219D1CBC1BE500D75A3D /* mtrapitembomb.m */,
 			);
 			path = trap;
 			sourceTree = "<group>";
@@ -1117,10 +1127,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAB4439A1CACA00E00D04286 /* marea.m in Sources */,
+				DAA7219B1CBC1BC600D75A3D /* mtrapitem.m in Sources */,
 				DA9386E41CAC9078006B3213 /* gimage.m in Sources */,
 				DA38D6681CB1DD3E00A02B82 /* mgunshot.m in Sources */,
 				DA38D6711CB2B29300A02B82 /* ggunwaves.m in Sources */,
 				DA9387041CAC9078006B3213 /* vgamehub.m in Sources */,
+				DAA7219E1CBC1BE500D75A3D /* mtrapitembomb.m in Sources */,
 				DA38D67D1CB31F4D00A02B82 /* geffect.m in Sources */,
 				DA22BEEB1CB42FF600DDF53A /* mtextitemglyph.m in Sources */,
 				DA38D6821CB3202400A02B82 /* meffect.m in Sources */,
