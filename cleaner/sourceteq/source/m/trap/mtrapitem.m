@@ -76,11 +76,17 @@ static NSUInteger const minspeed = 0;
     CGFloat centerx = x + foewidth_2;
     CGFloat centery = y + foeheight_2;
     
-    [self.model.modeleffect shotatx:centerx y:centery];
+    [self.model.modeleffect bombingatx:centerx y:centery];
+    [self die:YES];
 }
 
--(void)die:(BOOL)points
+-(void)die:(BOOL)damage
 {
+    if(damage)
+    {
+        [self.model.modellife receivedamage:self.damage];
+    }
+    
     [self.model.items removeObject:self];
 }
 
