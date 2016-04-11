@@ -91,6 +91,9 @@
     
     self.textures_effectcrown = [self loadforassets:@[@"effect_crown0", @"effect_crown1", @"effect_crown2", @"effect_crown3", @"effect_crown4"] srgb:YES];
     [self.alltextures addObject:self.textures_effectcrown];
+    
+    self.textures_effectbombing = [self loadforassets:@[@"effect_bombing"] srgb:YES];
+    [self.alltextures addObject:self.textures_effectbombing];
 }
 
 -(void)load_hub

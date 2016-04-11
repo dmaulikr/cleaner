@@ -15,6 +15,7 @@ extern NSInteger effectcrownpos;
 -(void)shotatx:(NSInteger)x y:(NSInteger)y;
 -(void)smokeatx:(NSInteger)x y:(NSInteger)y;
 -(void)crownat:(NSInteger)x;
+-(void)bombingatx:(NSInteger)x y:(NSInteger)y;
 
 @property(strong, nonatomic)NSMutableArray<meffectitem*> *items;
 

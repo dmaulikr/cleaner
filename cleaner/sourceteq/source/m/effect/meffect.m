@@ -39,4 +39,10 @@ NSInteger effectcrownpos;
     [self.items addObject:effect];
 }
 
+-(void)bombingatx:(NSInteger)x y:(NSInteger)y
+{
+    meffectitembombin *effect = [[meffectitemshot alloc] init:self x:x y:y];
+    [self.items addObject:effect];
+}
+
 @end
