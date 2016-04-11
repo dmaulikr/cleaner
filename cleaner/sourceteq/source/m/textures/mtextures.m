@@ -89,7 +89,7 @@
     self.textures_effectsmoke = [self loadforassets:@[@"effect_smoke0", @"effect_smoke1", @"effect_smoke2", @"effect_smoke3"] srgb:YES];
     [self.alltextures addObject:self.textures_effectsmoke];
     
-    self.textures_effectcrown = [self loadforassets:@[@"effect_crown0", @"effect_crown0", @"effect_crown0", @"effect_crown0"] srgb:YES];
+    self.textures_effectcrown = [self loadforassets:@[@"effect_crown0", @"effect_crown1", @"effect_crown2", @"effect_crown3", @"effect_crown4"] srgb:YES];
     [self.alltextures addObject:self.textures_effectcrown];
 }
 
