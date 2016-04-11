@@ -116,6 +116,9 @@ static NSUInteger const minspeed = 0;
     }
     else
     {
+        CGFloat centerx = x + foewidth_2;
+        
+        [self.model.modeleffect crownat:centerx];
         [self.model.modellife receivedamage:self.damage];
     }
     
