@@ -36,3 +36,5 @@
 #import "mtextitemtotal.h"
 #import "mtextitemglyphnumber.h"
 #import "mtextures.h"
+#import "mtrap.h"
+#import "mtrapitembomb.h"

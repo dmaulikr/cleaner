@@ -6,6 +6,6 @@
 @interface strap:NSObject
 
 -(instancetype)init:(mtrap*)newmodel;
--(mtrapitem*)foe;
+-(mtrapitem*)trap;
 
 @end

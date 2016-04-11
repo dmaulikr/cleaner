@@ -12,7 +12,6 @@ static NSInteger const minusmaxx = 100;
 
 @implementation sfoe
 {
-    
     __weak mfoe *model;
     CGFloat maxx;
 }
