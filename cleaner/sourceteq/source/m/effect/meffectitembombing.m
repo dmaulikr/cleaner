@@ -1,6 +1,6 @@
 #import "meffectitembombing.h"
 
-static NSInteger const bombingttl = 90;
+static NSInteger const bombingttl = 35;
 
 @implementation meffectitembombing
 
