@@ -7,7 +7,7 @@ static NSInteger const lifewidth = 200;
 static NSInteger const lifeheight = 20;
 static NSInteger const lifemarginleft = 26;
 static NSInteger const lifemarginright = 8;
-static NSInteger const lifemarginvr = 5;
+static NSInteger const lifemarginvr = 6;
 
 @implementation mgamehublife
 {

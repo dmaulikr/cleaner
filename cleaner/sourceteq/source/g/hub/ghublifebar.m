@@ -3,7 +3,7 @@
 static CGFloat const red = 0.01568;
 static CGFloat const green = 0.76862;
 static CGFloat const blue = 0.85098;
-static CGFloat const alpha = 0.5;
+static CGFloat const alpha = 1;
 
 @implementation ghublifebar
 
