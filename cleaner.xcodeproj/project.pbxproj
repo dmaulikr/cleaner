@@ -103,6 +103,7 @@
 		DAA721981CBC1A7900D75A3D /* mtrap.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA721971CBC1A7900D75A3D /* mtrap.m */; };
 		DAA7219B1CBC1BC600D75A3D /* mtrapitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA7219A1CBC1BC600D75A3D /* mtrapitem.m */; };
 		DAA7219E1CBC1BE500D75A3D /* mtrapitembomb.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA7219D1CBC1BE500D75A3D /* mtrapitembomb.m */; };
+		DAA721A21CBC212100D75A3D /* strap.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA721A11CBC212100D75A3D /* strap.m */; };
 		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
@@ -309,6 +310,8 @@
 		DAA7219A1CBC1BC600D75A3D /* mtrapitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtrapitem.m; sourceTree = "<group>"; };
 		DAA7219C1CBC1BE500D75A3D /* mtrapitembomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtrapitembomb.h; sourceTree = "<group>"; };
 		DAA7219D1CBC1BE500D75A3D /* mtrapitembomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtrapitembomb.m; sourceTree = "<group>"; };
+		DAA721A01CBC212100D75A3D /* strap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strap.h; sourceTree = "<group>"; };
+		DAA721A11CBC212100D75A3D /* strap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = strap.m; sourceTree = "<group>"; };
 		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
@@ -818,6 +821,7 @@
 		DA93869F1CAC9078006B3213 /* s */ = {
 			isa = PBXGroup;
 			children = (
+				DAA7219F1CBC211300D75A3D /* trap */,
 				DAFCC2B01CB7120800448EF7 /* building */,
 				DAFCC2A31CB6FFF000448EF7 /* foe */,
 				DA9386A01CAC9078006B3213 /* s.h */,
@@ -924,6 +928,15 @@
 				DAA7219A1CBC1BC600D75A3D /* mtrapitem.m */,
 				DAA7219C1CBC1BE500D75A3D /* mtrapitembomb.h */,
 				DAA7219D1CBC1BE500D75A3D /* mtrapitembomb.m */,
+			);
+			path = trap;
+			sourceTree = "<group>";
+		};
+		DAA7219F1CBC211300D75A3D /* trap */ = {
+			isa = PBXGroup;
+			children = (
+				DAA721A01CBC212100D75A3D /* strap.h */,
+				DAA721A11CBC212100D75A3D /* strap.m */,
 			);
 			path = trap;
 			sourceTree = "<group>";
@@ -1150,6 +1163,7 @@
 				DAFCC2A61CB6FFF900448EF7 /* sfoe.m in Sources */,
 				DA9386D61CAC9078006B3213 /* uifont+uifontmain.m in Sources */,
 				DA9386DA1CAC9078006B3213 /* cgame.m in Sources */,
+				DAA721A21CBC212100D75A3D /* strap.m in Sources */,
 				DA37B5171CAEE89300015AC2 /* gareadust.m in Sources */,
 				DA93870F1CAC9078006B3213 /* vstorebar.m in Sources */,
 				DA9386DE1CAC9078006B3213 /* cmain.m in Sources */,
