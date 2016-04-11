@@ -134,7 +134,7 @@
 
 -(void)load_trap
 {
-    self.textures_trapbomb = [self loadforassets:@[@"trap_bomb"] srgb:NO];
+    self.textures_trapbomb = [self loadforassets:@[@"trap_bomb"] srgb:YES];
     [self.alltextures addObject:self.textures_trapbomb];
 }
 

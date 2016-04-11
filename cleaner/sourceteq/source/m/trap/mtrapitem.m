@@ -1,7 +1,7 @@
 #import "mtrapitem.h"
 #import "appdel.h"
 
-static NSUInteger const maxspeed = 4;
+static NSUInteger const maxspeed = 2;
 static NSUInteger const minspeed = 0;
 
 @implementation mtrapitem
