@@ -33,7 +33,7 @@ NSInteger effectcrownpos;
 
 -(void)crownat:(NSInteger)x
 {
-    NSInteger y = screenheight - effectcrownsize;
+    NSInteger y = screenheight + effectcrownpos;
     
     meffectitemcrown *effect = [[meffectitemcrown alloc] init:self x:x y:y];
     [self.items addObject:effect];
