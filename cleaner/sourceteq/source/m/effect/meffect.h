@@ -12,6 +12,7 @@ extern NSInteger effectsmokepos;
 
 -(void)shotatx:(NSInteger)x y:(NSInteger)y;
 -(void)smokeatx:(NSInteger)x y:(NSInteger)y;
+-(void)crownat:(NSInteger)x;
 
 @property(strong, nonatomic)NSMutableArray<meffectitem*> *items;
 

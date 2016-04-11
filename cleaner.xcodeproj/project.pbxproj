@@ -98,6 +98,7 @@
 		DA9CCF831CB5B7CB00800880 /* vgamepause.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9CCF821CB5B7CB00800880 /* vgamepause.m */; };
 		DA9CCF861CB5C5DA00800880 /* mtextitemtotal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9CCF851CB5C5DA00800880 /* mtextitemtotal.m */; };
 		DA9CCF8A1CB5E45300800880 /* mtextures.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9CCF891CB5E45300800880 /* mtextures.m */; };
+		DAA721921CBBEBDB00D75A3D /* meffectitemcrown.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA721911CBBEBDB00D75A3D /* meffectitemcrown.m */; };
 		DAB443931CAC97D500D04286 /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443911CAC97D500D04286 /* libdb.a */; };
 		DAB443941CAC97D500D04286 /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB443921CAC97D500D04286 /* libtimerbg.a */; };
 		DAB443961CAC9C5300D04286 /* cleaner.db in Resources */ = {isa = PBXBuildFile; fileRef = DAB443951CAC9C5300D04286 /* cleaner.db */; };
@@ -295,6 +296,8 @@
 		DA9CCF851CB5C5DA00800880 /* mtextitemtotal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtextitemtotal.m; sourceTree = "<group>"; };
 		DA9CCF881CB5E45300800880 /* mtextures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtextures.h; sourceTree = "<group>"; };
 		DA9CCF891CB5E45300800880 /* mtextures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtextures.m; sourceTree = "<group>"; };
+		DAA721901CBBEBDB00D75A3D /* meffectitemcrown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meffectitemcrown.h; sourceTree = "<group>"; };
+		DAA721911CBBEBDB00D75A3D /* meffectitemcrown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = meffectitemcrown.m; sourceTree = "<group>"; };
 		DAB443911CAC97D500D04286 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DAB443921CAC97D500D04286 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
 		DAB443951CAC9C5300D04286 /* cleaner.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cleaner.db; sourceTree = "<group>"; };
@@ -438,6 +441,8 @@
 				DA38D6871CB3205900A02B82 /* meffectitemshot.m */,
 				DA38D6891CB3398800A02B82 /* meffectitemsmoke.h */,
 				DA38D68A1CB3398800A02B82 /* meffectitemsmoke.m */,
+				DAA721901CBBEBDB00D75A3D /* meffectitemcrown.h */,
+				DAA721911CBBEBDB00D75A3D /* meffectitemcrown.m */,
 			);
 			path = effect;
 			sourceTree = "<group>";
@@ -1175,6 +1180,7 @@
 				DA9386D21CAC9078006B3213 /* analytics.m in Sources */,
 				DA93870E1CAC9078006B3213 /* vstore.m in Sources */,
 				DA38D6881CB3205900A02B82 /* meffectitemshot.m in Sources */,
+				DAA721921CBBEBDB00D75A3D /* meffectitemcrown.m in Sources */,
 				DA93870D1CAC9078006B3213 /* vhome.m in Sources */,
 				DA9387011CAC9078006B3213 /* mstorestatuspurchased.m in Sources */,
 				DA38C92D1CB5874500E554CF /* mgamehubscore.m in Sources */,

@@ -29,4 +29,9 @@ NSInteger effectsmokepos;
     [self.items addObject:effect];
 }
 
+-(void)crownat:(NSInteger)x
+{
+    
+}
+
 @end
